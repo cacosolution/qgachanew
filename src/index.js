@@ -1,28 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './pages';
-import Jackpot from './pages/jackpot';
-import Affiliate from './pages/affiliate';
-import Authen from './pages/authen';
-import Balance from './pages/balance';
-import Buy5ticket from './pages/buy5ticket';
-import Deposit from './pages/deposit';
-import Event from './pages/event';
-import Faq from './pages/faq';
-import FourNumber from './pages/fournumber';
-import LuckyNumber from './pages/luckynumber';
-import Setting from './pages/setting';
-import TicketForm from './pages/ticket-form';
-import Transaction from './pages/transaction';
-import UserAction from './pages/user-action';
-import WithDraw from './pages/withdraw';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages";
+import Jackpot from "./pages/jackpot";
+import Affiliate from "./pages/affiliate";
+import Authen from "./pages/authen";
+import Balance from "./pages/balance";
+import Buy5ticket from "./pages/buy5ticket";
+import Deposit from "./pages/deposit";
+import Event from "./pages/event";
+import Faq from "./pages/faq";
+import FourNumber from "./pages/fournumber";
+import LuckyNumber from "./pages/luckynumber";
+import Setting from "./pages/setting";
+import TicketForm from "./pages/ticket-form";
+import Transaction from "./pages/transaction";
+import UserAction from "./pages/user-action";
+import WithDraw from "./pages/withdraw";
+import BuyTicket from "./pages/buy-ticket";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/buy5ticket",
     element: <Buy5ticket />,
+  },
+  {
+    path: "/buyTicket",
+    element: <BuyTicket />,
   },
   {
     path: "/deposit",
@@ -87,10 +88,10 @@ const router = createBrowserRouter([
   {
     path: "/withdraw",
     element: <WithDraw />,
-  }
+  },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
