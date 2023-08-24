@@ -4,7 +4,7 @@ import "../../css/flickity.css";
 import "../../css/base.css";
 import "../../css/home.css";
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className="main-home">
       <div class="main-content"></div>
@@ -151,4 +151,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

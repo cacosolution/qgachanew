@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Navbar = () => {
+    const [isChat, setIsChat] = useState(false)
+    const [isNofi, setIsNofi] = useState(false)
+    const [isProfile, setIsProfile] = useState(false)
+
+
     return (
         <header class="d-flex align-items-center">
             <div class="header-menu d-flex align-items-center justify-content-center">
@@ -20,11 +27,11 @@ const Navbar = () => {
                     </button>
 
                     <div class="noti-container">
-                        <img class="noti-icon" src="./images/icons/bell.png" alt="" />
-                        <div class="box-noti" id="box-noti">
+                        <img class="noti-icon" onClick={() => setIsNofi(!isNofi)} src="./images/icons/bell.png" alt="" />
+                        <div class={isNofi == true ? `box-noti active` : `box-noti`} id="box-noti">
                             <div class="box-header d-flex justify-content-between">
                                 Notification
-                                <button class="btn__exit-noti">
+                                <button class="btn__exit-noti" onClick={() => setIsNofi(!isNofi)}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
@@ -48,11 +55,11 @@ const Navbar = () => {
                     </div>
 
                     <div class="chat-container">
-                        <img class="chat-icon" src="./images/icons/chat.svg" alt="" />
-                        <div class="box-chat" id="box-chat">
+                        <img class="chat-icon " onClick={() => setIsChat(!isChat)} src="./images/icons/chat.svg" alt="" />
+                        <div class={isChat == true ? `box-chat active` : `box-chat`} id="box-chat">
                             <div class="box-header d-flex justify-content-between">
                                 Online Chat
-                                <button class="btn__exit-chat">
+                                <button class="btn__exit-chat" onClick={() => setIsChat(!isChat)}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
@@ -133,8 +140,8 @@ const Navbar = () => {
                     </div>
 
                     <div class="ava-container">
-                        <img class="ava-icon ms-3" src="./images/icons/avatar-default.svg" alt="" />
-                        <div id="box-ava">
+                        <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
+                        <div id="box-ava" class={isProfile == true ? `active` : ``}>
                             <div class="feature-item d-flex align-items-center">
                                 <img src="./images/icons/credit-card.svg" alt="" />
                                 <h5 class="feature-content">
