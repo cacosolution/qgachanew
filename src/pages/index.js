@@ -427,6 +427,35 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                <div class="box__refer-overlay">
+                    <div id="box-refer">
+                        <div class="box-item">
+                            <div class="box-header d-flex align-items-center justify-content-between">
+                                Refer a friend
+                                <div class="icon__exit-refer">
+                                    <img src="./images/icons/deposit/icon-exit.svg" alt="icon__exit-refer" />
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="main-img">
+                                    <h4>Invite your friends and get amazing <a href="">rewards</a></h4>
+                                    <img src="./images/refer-friends.png" alt="" />
+                                </div>
+                                <div class="main-content d-flex flex-column">
+                                    <a class="align-self-center" href="">Learn more</a>
+                                    <div class="link-share">
+                                        <p>Share your referral link:</p>
+                                        <div class="share-value d-flex align-items-center justify-content-between">
+                                            <input disabled type="text" value="https://q-gacha/abcdefgh" />
+                                            <img src="./images/icons/deposit/icon-copy.svg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
 
         </div>
