@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
-
+    const [isActiveShow, setIsActiveShow] = useState(true)
 
     return (
-        <div class="side-bar">
+        <div className={isActiveShow === true ? "side-bar active-show" : "side-bar"}>
+            <div class="header-menu d-flex align-items-center justify-content-center">
+                <img class="mobile" src="./images/icons/logo-mobile.svg" alt="" />
+                <img id="menu-sidebar" onClick={() => setIsActiveShow(!isActiveShow)} class="pc" style={{ width: "20px" }} src="./images/icons/menu-icon.svg"
+                    alt="header-logo" />
+                <span>Menu</span>
+                <div class="line-yblue"></div>
+            </div>
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
                     <div class="wrap-box d-flex align-items-center justify-content-center">
@@ -18,6 +25,15 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div class="sidebar__list-item">
+                    <div class="sidebar-item tag-icon d-flex align-items-center">
+                        <img style={{ width: "24px" }} src="./images/icons/tagicon.svg" alt="" class="item-icon" />
+                    </div>
+                    <div class="sidebar-item quest-icon d-flex align-items-center">
+                        <img style={{ width: "24px" }} src="./images/icons/quest.png" alt="" class="item-icon" />
+                    </div>
+                    <div class="sidebar-item spin-icon d-flex align-items-center">
+                        <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" class="item-icon" />
+                    </div>
                     <div class="sidebar-item refer-feature d-flex align-items-center">
                         <img style={{ width: "46px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
                         <div class="item-content">REFER</div>
@@ -62,17 +78,17 @@ const Sidebar = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <a class="d-flex align-items-center" href="" >
                                             <img src="./images/icons/upgrade-gacha.png" alt="" />Upgrade Gacha
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <a class="d-flex align-items-center" href="" >
                                             <img src="./images/icons/icon-mystery.png" alt="" />Mystery Gacha
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <a class="d-flex align-items-center" href="" >
                                             <img src="./images/icons/sugoroku.png" alt="" />Sugoroku Gacha
                                         </a>
                                     </li>
@@ -105,9 +121,9 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" to={"/fournumber"}>
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="d-flex align-items-center" href="">
@@ -167,6 +183,9 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" class="item-icon" />
                         <div class="item-content">Tournament</div>
                     </div>
+                    <div class="sidebar-item vip-small d-flex align-items-center">
+                        <img style={{ width: "40px" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
+                    </div>
                     <div class="sidebar-vipclub">
                         <img style={{ width: "287px" }} src="./images/vipclub-wrap.svg" alt="" class="item-icon" />
                         <div class="vipclub-content d-flex text-center align-items-center flex-column">
@@ -198,9 +217,9 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/livesupport.png" alt="" class="item-icon" />
                         <div class="item-content">Live Support</div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div >
+            </div >
+        </div >
 
 
     );
