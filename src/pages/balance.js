@@ -6,6 +6,7 @@ import "../css/deposit.css";
 import "../css/balance.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
+import Footer from "../component/Footer/footer";
 
 const balance = () => {
   return (
@@ -104,6 +105,7 @@ const balance = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
