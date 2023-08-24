@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/flickity.css"
 import "../css/base.css"
 import "../css/home.css"
+import "../css/responsive.css"
 import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
@@ -15,76 +16,6 @@ const Home = () => {
             <main>
                 <Sidebar />
                 <div class="main-home">
-                    <div class="carousel list-buy mt-3"
-                        data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="item-buy d-flex align-items-center justify-content-center">
-                                <img src="./images/icons/avatar-default.svg" alt="" class="avatar me-2" />
-                                <p>Name1: Đã mua (03:05)</p>
-                            </div>
-                        </div>
-
-                    </div>
                     <div class="main-content">
                         <div class="big-prize">
                             <div class="fire d-flex align-items-center">
@@ -154,6 +85,7 @@ const Home = () => {
                             </div>
                         </section>
                     </div>
+
                     <Footer />
                 </div>
                 <button class="btn-support">
