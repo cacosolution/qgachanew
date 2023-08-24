@@ -3,20 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/flickity.css";
 import "../css/base.css";
 import "../css/home.css";
-
+import Navbar from "../component/Navbar/navbar";
+import Sidebar from "../component/Sidebar/sidebar";
+import Footer from "../component/Footer/footer";
 const affiliate = () => {
   return (
-    <div className="container-wrapper">
-      <div className="d-flex align-items-center">
-        <div className="header-menu d-flex align-items-center justify-content-center">
-          <img
-            className={{}}
-            src="../images/icons/menu-icon.svg"
-            alt=""
-          />
-          Menu
-        </div>
-      </div>
+    <div class="container-wrapper">
+      <Navbar />
+      <main>
+        <Sidebar />
+        <Footer />
+      </main>
     </div>
   );
 };
