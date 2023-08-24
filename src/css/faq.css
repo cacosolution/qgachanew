@@ -1,12 +1,12 @@
 .main-faq {
+  margin: 0 auto;
   height: 100%;
-  width: calc(100% - 340px);
 }
 .main-faq .main-content {
   max-width: 1580px;
   width: 100%;
   margin-top: 22px;
-  margin-left: 80px;
+  margin-left: 25%;
 }
 .main-faq .main-content button.btn-faq {
   border-radius: 3px;

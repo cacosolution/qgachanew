@@ -4,3 +4,22 @@
     width: max-content;
   }
 }
+@media (min-width: 577px) {
+  .mobile {
+    display: none !important;
+  }
+  .pc {
+    display: block !important;
+  }
+}
+@media (max-width: 576px) {
+  .mobile {
+    display: block !important;
+  }
+  .pc {
+    display: none !important;
+  }
+  main .side-bar {
+    width: 100%;
+  }
+}
