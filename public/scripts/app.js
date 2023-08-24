@@ -81,7 +81,7 @@ if (window.location.pathname === "/home.html") {
       spinBox.classList.add("active");
     }
   });
-  spinBox.addEventListener("click", (e) => {});
+  spinBox.addEventListener("click", (e) => { });
 
   // show quest box
   const questBtn = document.querySelector(`img[alt="quest"]`);
