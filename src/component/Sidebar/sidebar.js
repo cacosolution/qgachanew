@@ -121,14 +121,14 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to={"/fournumber"}>
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to={"/jackpot"}>
                                             <img src="./images/icons/box-gacha.png" alt="" />Jackpot
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -201,10 +201,13 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" class="item-icon" />
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
-                    <div class="sidebar-item d-flex align-items-center">
-                        <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
-                        <div class="item-content">Affiliate</div>
-                    </div>
+                    <Link to={"/affiliate"}>
+                        <div class="sidebar-item d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
+                            <div class="item-content">Affiliate</div>
+                        </div>
+                    </Link>
+
                     <div class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" class="item-icon" />
                         <div class="item-content">Forum <span>(Upcoming)</span></div>

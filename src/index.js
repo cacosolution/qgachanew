@@ -42,12 +42,12 @@ const router = createBrowserRouter([
     element: <Balance />,
   },
   {
-    path: "/BuyTicket",
+    path: "/buyTicket",
     element: <BuyTicket />,
   },
 
   {
-    path: "/Deposit",
+    path: "/deposit",
     element: <Deposit />,
   },
   {
