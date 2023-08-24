@@ -34,17 +34,18 @@ const router = createBrowserRouter([
     element: <Affiliate />,
   },
   {
-    path: "/balance",
+    path: "/authen",
+    element: <Authen />,
+  },
+  {
+    path: "/Balance",
     element: <Balance />,
   },
   {
     path: "/buyTicket",
     element: <BuyTicket />,
   },
-  {
-    path: "/authen",
-    element: <Authen />,
-  },
+
   {
     path: "/deposit",
     element: <Deposit />,

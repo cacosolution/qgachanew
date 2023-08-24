@@ -9,7 +9,9 @@ import Footer from "../component/Footer/footer";
 const affiliate = () => {
   return (
     <div class="container-wrapper">
+      <Navbar />
       <div>
+        <Sidebar />
         <div class="main-home">
           <div class="main-content"></div>
           <footer>
@@ -155,8 +157,6 @@ const affiliate = () => {
             </div>
           </footer>
         </div>
-
-        
       </div>
     </div>
   );

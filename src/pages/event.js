@@ -14,256 +14,41 @@ const event = () => {
       <main>
         <Sidebar />
         <div className="main-home">
-          <div className="main-content">
-            <div class="box-auth sign-up mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Sign Up
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
-              <form id="form-signup">
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder=" Login Password"
-                  />
-
-                  <img src="./images/icons/eye.svg" alt="show-pass" />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Re-Enter Password"
-                  />
-                  <img src="./images/icons/eye.svg" alt="show-pass" />
-                </div>
-                <div class="form-group resend">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Verification Code"
-                  />
-                  <span class="resend">Resend(60s)</span>
-                </div>
-                <div class="form-group">
-                  <label for="inputRePassword4">
-                    Enter Referral/Promo Code
-                  </label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Enter Referral/Promo Code(Optional)"
-                  />
-                </div>
-
-                <div class="form-group check">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" />
-                    <label class="form-check-label" for="gridCheck">
-                      I agree to the User Agreement & confirm I am at least 18
-                      years old
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group check">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" />
-                    <label class="form-check-label" for="gridCheck">
-                      I agree to receive marketing promotions from QGACHA.
-                    </label>
-                  </div>
-                </div>
-                <div class="submit d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">
-                    Sign Up
-                  </button>
-                </div>
-                <p class="text-start" style={{ color: "#9E9E9E" }}>
-                  Already have an account?
-                  <a class="btn-redirect">Sign In</a>
-                </p>
-              </form>
+          <div class="main-content main-event">
+            <button class="btn-event">Event</button>
+            <div class="banner-event">
+              <img src="./images/event1.png" alt="banner-home" />
+            </div>
+            <div class="group__btn-event d-flex align-items-center">
+              <button class="btn-event btn-last">Latest Event</button>
+              <button class="btn-event btn-archived">Archived</button>
             </div>
 
-            <div class="box-auth signin mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Sign In
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
+            <table>
+              <tr>
+                <th>Ordinal</th>
+                <th>Date</th>
+                <th>Event</th>
+                <th>archive</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>10/8/2023</td>
+                <td>Name Event</td>
+                <td>Reward event</td>
+                <td class="status confirm">Confirmed</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>10/8/2023</td>
+                <td>Name Event</td>
+                <td>Reward event</td>
+                <td class="status unconfirm">Unconfirmed</td>
+              </tr>
+            </table>
 
-              <form>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Login Password"
-                  />
-                  <img src="./images/icons/eye.svg" alt="show-pass" />
-                  <label class="forgot-pass" for="">
-                    Forgot Your Password?
-                  </label>
-                </div>
-                <div class="form-group mt-0">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Verification Code"
-                  />
-                </div>
-                <div class="submit d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">
-                    Sign In
-                  </button>
-                </div>
-                <p class="text-start" style={{ color: "#9E9E9E" }}>
-                  New to Qgacha?
-                  <a class="btn-redirect">Create account</a>
-                </p>
-              </form>
-            </div>
-
-            <div class="box-auth enter-email mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Reset Password
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
-              <form>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="submit d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">
-                    Submit
-                  </button>
-                </div>
-                <p class="text-start" style={{ color: "#9E9E9E" }}>
-                  Already have an account?
-                  <a class="btn-redirect">Sign In</a>
-                </p>
-              </form>
-            </div>
-
-            <div class="box-auth reset-password mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Reset Account Password
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
-
-              <form>
-                <div class="form-group">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="New password"
-                  />
-                  <img src="./images/icons/eye.svg" alt="show-pass" />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="New password again"
-                  />
-                  <img src="./images/icons/eye.svg" alt="show-pass" />
-                </div>
-                <div class="form-group resend">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Verification Code"
-                  />
-                  <span class="resend">Resend(60s)</span>
-                </div>
-                <p class="notice">
-                  Please enter the 6-digit verification code sent to your email.
-                  The code is valid for 10 minutes.
-                </p>
-                <div class="submit d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">
-                    Confirm
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            <div class="box-auth two-factor mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Two-factor authentication
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
-
-              <form>
-                <p class="text-center">
-                  Please enter the 6-digit authentication Code.
-                </p>
-                <div class="list-input-number d-flex">
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                  <div class="num-item">
-                    <input type="text" />
-                  </div>
-                </div>
-              </form>
-            </div>
-
-            <div class="box-auth noti-success mt-4">
-              <div class="box-header d-flex justify-content-between align-items-center">
-                Reset Password
-                <button class="btn__exit-chat">
-                  <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                </button>
-              </div>
-              <div class="box-content">
-                <h3>Password changed successfully</h3>
-                <div class="submit d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">
-                    Confirm
-                  </button>
-                </div>
-              </div>
-            </div>
+            <div class="spacer mb-5 pb-5"></div>
           </div>
 
           <Footer />
