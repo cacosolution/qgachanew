@@ -81,7 +81,7 @@ if (window.location.pathname === "/home.html") {
       spinBox.classList.add("active");
     }
   });
-  spinBox.addEventListener("click", (e) => { });
+  spinBox.addEventListener("click", (e) => {});
 
   // show quest box
   const questBtn = document.querySelector(`img[alt="quest"]`);
@@ -111,18 +111,37 @@ if (window.location.pathname === "/home.html") {
   });
 }
 
-// confirm security
-const boxSecurity = document.querySelector("#box-security");
-document.querySelector("#confirm-withdraw").addEventListener("click", () => {
-  if (!boxSecurity.classList.contains("active")) {
-    document
-      .querySelector(".container-wrapper")
-      .classList.add("active-overlay");
-    boxSecurity.classList.add("active");
+// // confirm security
+// const boxSecurity = document.querySelector("#box-security");
+// document.querySelector("#confirm-withdraw").addEventListener("click", () => {
+//   if (!boxSecurity.classList.contains("active")) {
+//     document
+//       .querySelector(".container-wrapper")
+//       .classList.add("active-overlay");
+//     boxSecurity.classList.add("active");
+//   }
+// });
+// document.querySelector(".btn__exit-security").addEventListener("click", () => {
+//   if (boxSecurity.classList.contains("active")) {
+//     boxSecurity.classList.remove("active");
+//   }
+// });
+
+const header = document.querySelector("header");
+const headerMenu = document.querySelector(".header-menu");
+const onHeaderScroll = () => {
+  if (window.scrollY > header.offsetTop) {
+    header.classList.add("fixed-active");
+  } else {
+    header.classList.remove("fixed-active");
   }
-});
-document.querySelector(".btn__exit-security").addEventListener("click", () => {
-  if (boxSecurity.classList.contains("active")) {
-    boxSecurity.classList.remove("active");
-  }
-});
+};
+window.addEventListener("scroll", onHeaderScroll);
+
+
+const menuSidebar = document.querySelector("#menu-sidebar");
+const sidebarElem = document.querySelector(".side-bar");
+const toggleSidebar = () => {
+  sidebarElem.classList.toggle("active-show");
+};
+menuSidebar.addEventListener("click", toggleSidebar);

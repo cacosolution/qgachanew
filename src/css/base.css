@@ -92,15 +92,14 @@ header {
   height: 65px;
   width: 100%;
 }
+header select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+}
 header .line-yblue {
   height: 47px;
-}
-header .header-menu {
-  width: 339px;
-}
-header .header-menu img {
-  cursor: pointer;
-  margin-right: 9px;
 }
 header .header-content {
   position: relative;
@@ -182,22 +181,30 @@ header .header-content .header-action img.ava-icon {
   height: 36px;
   width: 36px;
 }
-header .header-content .header-action select#user-money {
+header .header-content .header-action .select-currency {
+  width: 90px;
   padding: 4px 5px;
   border-radius: 2px;
   border: 1px solid #787878;
   background: linear-gradient(180deg, rgba(71, 71, 71, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
+}
+header .header-content .header-action .select-currency img.curreny {
+  position: absolute;
+  right: 0;
+}
+header .header-content .header-action .select-currency select#user-money {
+  text-align: center;
+  border: none;
   color: #fff;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: 14px;
+  background: inherit;
 }
-header .header-content .header-action select#user-money::before {
-  content: url("../images/icons/deposit/usdt.svg");
-  height: 18px;
-  width: 18px;
+header .header-content .header-action .select-currency svg {
+  width: 12px;
 }
 header .header-content .header-action .box-chat,
 header .header-content .header-action .box-noti,
@@ -408,17 +415,86 @@ header .header-right {
   width: 450px;
   margin-left: 19px;
 }
-header .header-right select {
+header .header-right .select-right {
+  width: 84px;
   border-radius: 5px;
   border: 1px solid #393636;
   background: linear-gradient(180deg, rgba(71, 71, 71, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
   padding: 4px 10px;
+}
+header .header-right .select-right select {
+  flex-grow: 1;
   color: #fff;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
+  background: inherit;
+  border: none;
+}
+@media (max-width: 1800px) {
+  header .header-right {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  header .header-content .header-action {
+    position: static;
+    padding-right: 0;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1068px) {
+  header .header-right {
+    display: none;
+  }
+  header .header-content {
+    border-right: none;
+  }
+  header .pc {
+    display: none;
+  }
+  header .noti-container,
+  header .chat-container {
+    display: none;
+  }
+  header .header-menu {
+    display: none !important;
+  }
+}
+@media (max-width: 576px) {
+  header .ava-container img.ava-icon {
+    width: 27px;
+    height: 27px;
+    margin-left: 6px !important;
+  }
+  header .header-content .header-action button.btn-deposit {
+    margin-left: 10px;
+    margin-right: 9px;
+  }
+}
+@media (min-width: 577px) {
+  header .mobile {
+    display: none !important;
+  }
+  header .pc {
+    display: block !important;
+  }
+}
+@media (max-width: 576px) {
+  header .mobile {
+    display: block !important;
+  }
+  header .pc {
+    display: none !important;
+  }
+}
+
+header.fixed-active {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: 0.3s;
 }
 
 footer {
@@ -446,11 +522,11 @@ footer .copy-right {
 }
 footer .footer-content {
   width: 1274px;
-  margin-left: 136px;
+  margin-left: 340px;
 }
 @media (max-width: 1800px) {
   footer .footer-content {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 }
@@ -913,7 +989,7 @@ img {
 .container-wrapper main button.btn-support {
   position: fixed;
   right: 96px;
-  top: 50%;
+  bottom: 20px;
   border: none;
   background-color: inherit;
 }

@@ -4,6 +4,7 @@
   height: 340px;
   flex-shrink: 0;
   margin: 0 auto;
+  margin-left: 50%;
 }
 .buy-five-ticket p {
   margin: 0;

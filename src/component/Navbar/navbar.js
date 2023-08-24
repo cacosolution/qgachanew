@@ -4,6 +4,7 @@ const Navbar = () => {
     const [isChat, setIsChat] = useState(false)
     const [isNofi, setIsNofi] = useState(false)
     const [isProfile, setIsProfile] = useState(false)
+    const [isLang, setIsLang] = useState(false)
 
 
     return (
@@ -131,8 +132,8 @@ const Navbar = () => {
                     </div>
 
                     <div class="language-container">
-                        <img class="language-icon" src="./images/icons/language.svg" alt="" />
-                        <div id="box-language">
+                        <img onClick={() => setIsLang(!isLang)} class="language-icon" src="./images/icons/language.svg" alt="" />
+                        <div id="box-language" class={isLang == true ? ` active` : ``}>
                             <div class="language-item">
                                 English
                             </div>

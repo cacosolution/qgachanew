@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
@@ -104,9 +105,9 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to={"/fournumber"}>
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <a class="d-flex align-items-center" href="">
