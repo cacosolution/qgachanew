@@ -1,0 +1,8 @@
+@mixin title-text($color, $fontSize, $fontWeight: 500) {
+  color: $color;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}

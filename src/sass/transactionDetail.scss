@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixin";
+
+.transaction-detail {
+  margin-top: 10px !important;
+  max-width: 546px;
+  margin: 0 auto;
+}
+.transaction-detail-content {
+  background-color: #291a3a;
+  padding: 20px;
+}
+.transaction-detail-currency {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 96px;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    margin-right: 3px;
+    @include title-text(var(--text, #e275f9), 24px, 700);
+  }
+  span {
+    @include title-text(#fff, 24px, 700);
+  }
+}
+.transaction-detail-info {
+  margin: 20px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    padding: 10px 0;
+    @include title-text(#fff, 15px);
+  }
+  img {
+    width: 13px;
+    height: 14px;
+  }
+  span {
+    @include title-text(var(--xm, #9e9e9e), 15px);
+  }
+  #status {
+    @include title-text(#fff, 15px);
+  }
+}

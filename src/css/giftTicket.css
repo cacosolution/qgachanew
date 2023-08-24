@@ -1,0 +1,234 @@
+.section-gift-ticket {
+  margin-top: 30px !important;
+  max-width: 803px;
+  width: 100%;
+  background-color: #1b172f;
+  margin: 0 auto;
+}
+
+.gift-ticket-header {
+  padding: 20px;
+  width: 100%;
+  height: 48px;
+  background-color: #1b172f;
+  display: flex;
+  justify-content: space-between;
+}
+.gift-ticket-header p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-header img {
+  width: 10px;
+  height: 10px;
+}
+
+.gift-ticket-content {
+  width: 100%;
+  padding: 8px 4px;
+}
+.gift-ticket-content .gift-ticket-title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.gift-ticket-content .gift-ticket-title img {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gift-ticket-content .gift-ticket-title h6 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-title p {
+  margin-top: 10px;
+  color: var(--xm, #9e9e9e);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-code {
+  padding: 0 74px;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__title {
+  display: flex;
+  justify-content: space-between;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__title p {
+  margin-bottom: 5px;
+  color: var(--xm, #9e9e9e);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content {
+  display: flex;
+  margin-bottom: 5px;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: #1b172f;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content div p {
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+  align-self: center;
+  margin: 0 10px;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content div img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content div:nth-child(1) {
+  flex-grow: 2;
+  margin-right: 2px;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content div:nth-child(2) {
+  flex-grow: 1;
+}
+.gift-ticket-content .gift-ticket-code .gift-ticket-code__content p {
+  color: var(--xm, #9e9e9e);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-social {
+  padding: 0 74px;
+  margin-top: 20px;
+}
+.gift-ticket-content .gift-ticket-social div {
+  margin-top: 5px;
+}
+.gift-ticket-content .gift-ticket-social img[alt=twitter] {
+  width: 32px;
+  height: 28px;
+}
+.gift-ticket-content .gift-ticket-social img[alt=telegram] {
+  height: 30px;
+}
+.gift-ticket-content .gift-ticket-received-title {
+  text-align: center;
+}
+.gift-ticket-content .gift-ticket-received-title img {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gift-ticket-content .gift-ticket-received-title h6 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+.gift-ticket-content .gift-ticket-received-title p {
+  margin-top: 10px;
+  text-transform: uppercase !important;
+  color: var(--text, #e275f9);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-variant: small-caps;
+}
+.gift-ticket-content .gift-ticket-received-title span {
+  text-align: center;
+  display: block !important;
+  text-transform: lowercase !important;
+  padding: 15px 0;
+  color: #f5f5f5;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-received-content {
+  text-align: center;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-user {
+  margin: 0 auto;
+  max-width: 645px;
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: #2d3035;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-user span {
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-user p {
+  margin: 5px 0;
+  color: var(--xm, #9e9e9e);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-user p img {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  margin: 0 16px;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-expiryTime {
+  margin-top: 30px;
+  text-transform: lowercase !important;
+  color: #f5f5f5;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.gift-ticket-content .gift-ticket-received-content .gift-ticket-received-button {
+  margin-top: 11px;
+  margin-bottom: 40px;
+  width: 162px;
+  height: 48px;
+  border-radius: 3px;
+  background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}

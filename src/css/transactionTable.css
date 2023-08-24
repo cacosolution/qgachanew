@@ -1,0 +1,78 @@
+.transaction-table {
+  margin-top: 10px !important;
+  max-width: 983px;
+  margin: 0 auto;
+  height: auto;
+}
+.transaction-table table {
+  width: 100%;
+  background: #291a3a;
+}
+.transaction-table table thead {
+  padding: 10px;
+}
+.transaction-table table thead tr {
+  margin-top: 5px;
+  background: #1b172f;
+}
+.transaction-table table thead th {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+  padding: 15px;
+  text-align: center;
+}
+.transaction-table table tbody {
+  padding: 10px;
+}
+.transaction-table table tbody td {
+  padding: 15px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+  text-align: center;
+}
+.transaction-table table tbody td[th=Amount] {
+  color: #f00;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.transaction-table table tfoot {
+  padding: 0 !important;
+}
+.transaction-table table tfoot tr {
+  background-color: #000;
+}
+.transaction-table table tfoot td {
+  padding: 10px;
+}
+.transaction-table table tfoot div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.transaction-table table tfoot div button {
+  margin: 0 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid var(--xm, #9e9e9e);
+  background: #2d3035;
+  color: #9e9e9e;
+}
+.transaction-table table tfoot div img {
+  width: 5.71px;
+  height: 6px;
+  stroke-width: 1px;
+  stroke: #9e9e9e;
+  margin-bottom: 4px;
+}

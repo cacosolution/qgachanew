@@ -1,0 +1,73 @@
+.rules .lucky-container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 803px;
+}
+.rules .top {
+  padding: 12px 0 41px 0;
+}
+.rules .top span {
+  font-size: 700;
+  font-size: 15px;
+  line-height: 1;
+}
+.rules .top img {
+  width: 10px;
+  cursor: pointer;
+}
+.rules .play h3 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5769230769;
+}
+.rules .play p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5769230769;
+}
+.rules .title-play {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 20px 0;
+}
+.rules table th {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.1538461538;
+  color: #9e9e9e;
+}
+.rules table td {
+  font-size: 700;
+  font-size: 14px;
+  line-height: 1.0714285714;
+}
+.rules table tbody tr:hover td {
+  color: #cb6ae1;
+}
+.rules table tbody tr:hover td.name-jackpot {
+  font-style: italic;
+}
+.rules table th,
+.rules table td {
+  width: 20%;
+  padding-bottom: 32px;
+  text-transform: capitalize;
+}
+.rules .content {
+  padding-bottom: 40px;
+}
+.rules .content-title, .rules .content-list li {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6666666667;
+  color: #9e9e9e;
+}
+.rules .content-list__dots {
+  width: 4px;
+  height: 4px;
+  background-color: #9e9e9e;
+}
+.rules #box-gift .lucky-container .gift-header button {
+  border: none;
+}

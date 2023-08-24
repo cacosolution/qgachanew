@@ -1,0 +1,24 @@
+<svg width="152" height="43" viewBox="0 0 152 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ii_1257_6061)">
+<path d="M1.69686 19.4547L13.4063 1.8906C13.7772 1.3342 14.4017 1 15.0704 1H137.906C138.588 1 139.222 1.34697 139.59 1.92067L150.848 19.483C151.249 20.1084 151.27 20.9044 150.903 21.5503L139.575 41.488C139.22 42.1136 138.556 42.5 137.836 42.5H15.1413C14.4339 42.5 13.7792 42.1264 13.4194 41.5175L1.63911 21.5816C1.24838 20.9203 1.27082 20.0938 1.69686 19.4547Z" fill="#534CA4"/>
+</g>
+<path d="M1.69686 19.4547L13.4063 1.8906C13.7772 1.3342 14.4017 1 15.0704 1H137.906C138.588 1 139.222 1.34697 139.59 1.92067L150.848 19.483C151.249 20.1084 151.27 20.9044 150.903 21.5503L139.575 41.488C139.22 42.1136 138.556 42.5 137.836 42.5H15.1413C14.4339 42.5 13.7792 42.1264 13.4194 41.5175L1.63911 21.5816C1.24838 20.9203 1.27082 20.0938 1.69686 19.4547Z" stroke="#CF3464"/>
+<defs>
+<filter id="filter0_ii_1257_6061" x="-0.140625" y="-1.5" width="153.805" height="48.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-1" dy="5"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1257_6061"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="-2"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.572549 0 0 0 0 0.54902 0 0 0 0 0.878431 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_1257_6061" result="effect2_innerShadow_1257_6061"/>
+</filter>
+</defs>
+</svg>
