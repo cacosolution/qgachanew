@@ -8,8 +8,6 @@ import Jackpot from "./pages/jackpot";
 import Affiliate from "./pages/affiliate";
 import Authen from "./pages/authen";
 import Balance from "./pages/balance";
-import Buy5ticket from "./pages/buy5ticket";
-import Deposit from "./pages/deposit";
 import Event from "./pages/event";
 import Faq from "./pages/faq";
 import FourNumber from "./pages/fournumber";
@@ -19,7 +17,9 @@ import TicketForm from "./pages/ticket-form";
 import Transaction from "./pages/transaction";
 import UserAction from "./pages/user-action";
 import WithDraw from "./pages/withdraw";
+import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,23 +34,19 @@ const router = createBrowserRouter([
     element: <Affiliate />,
   },
   {
+    path: "/Balance",
+    element: <Balance />,
+  },
+  {
+    path: "/BuyTicket",
+    element: <BuyTicket />,
+  },
+  {
     path: "/authen",
     element: <Authen />,
   },
   {
-    path: "/balance",
-    element: <Balance />,
-  },
-  {
-    path: "/buy5ticket",
-    element: <Buy5ticket />,
-  },
-  {
-    path: "/buyTicket",
-    element: <BuyTicket />,
-  },
-  {
-    path: "/deposit",
+    path: "/Deposit",
     element: <Deposit />,
   },
   {
