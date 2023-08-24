@@ -6,8 +6,7 @@ import "../../css/home.css";
 
 const Footer = () => {
   return (
-    <div className="main-home">
-      <div class="main-content"></div>
+    
       <footer>
         <div class="footer-content">
           <h4 class="pl-100">PARTNER</h4>
@@ -147,7 +146,6 @@ const Footer = () => {
           Copyright QGacha ©2023 All Rights Reserved.
         </div>
       </footer>
-    </div>
   );
 };
 

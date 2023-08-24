@@ -12,7 +12,6 @@ const authen = () => {
     <div class="container-wrapper">
       <Navbar />
       <main>
-        <Sidebar />
         <div className="main-home">
           <div className="main-content">
             <div class="box-auth sign-up mt-4">
@@ -265,7 +264,6 @@ const authen = () => {
               </div>
             </div>
           </div>
-
           <Footer />
         </div>
       </main>
