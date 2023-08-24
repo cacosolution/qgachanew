@@ -34,6 +34,10 @@ const router = createBrowserRouter([
     element: <Affiliate />,
   },
   {
+    path: "/authen",
+    element: <Authen />,
+  },
+  {
     path: "/Balance",
     element: <Balance />,
   },
@@ -41,10 +45,7 @@ const router = createBrowserRouter([
     path: "/BuyTicket",
     element: <BuyTicket />,
   },
-  {
-    path: "/authen",
-    element: <Authen />,
-  },
+
   {
     path: "/Deposit",
     element: <Deposit />,
