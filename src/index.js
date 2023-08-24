@@ -19,7 +19,7 @@ import UserAction from "./pages/user-action";
 import WithDraw from "./pages/withdraw";
 import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
-
+import Buy5ticket from "./pages/buy5ticket";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +45,10 @@ const router = createBrowserRouter([
     path: "/buyTicket",
     element: <BuyTicket />,
   },
-
+  {
+    path: "/Buy5ticket",
+    element: <Buy5ticket />,
+  },
   {
     path: "/deposit",
     element: <Deposit />,
