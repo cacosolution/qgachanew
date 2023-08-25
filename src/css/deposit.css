@@ -1,6 +1,17 @@
 .side-bar.active-show {
   width: 340px;
 }
+@media (max-width: 576px) {
+  .side-bar.active-show {
+    width: 100%;
+  }
+  .side-bar.active-show .header-menu img {
+    display: block;
+  }
+  .side-bar.active-show .header-menu span {
+    display: block;
+  }
+}
 .side-bar.active-show .header-menu span {
   display: block;
 }
@@ -390,6 +401,7 @@
 .main-deposit {
   max-width: 1360px;
   width: 100%;
+  height: 100vh;
   margin-left: 22%;
 }
 .main-deposit p {

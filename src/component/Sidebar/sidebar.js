@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className={isActiveShow === true ? "side-bar active-show" : "side-bar"}>
             <div class="header-menu d-flex align-items-center justify-content-center">
                 <img class="mobile" src="./images/icons/logo-mobile.svg" alt="" />
-                <img id="menu-sidebar" onClick={() => setIsActiveShow(!isActiveShow)} class="pc" style={{ width: "20px" }} src="./images/icons/menu-icon.svg"
+                <img id="menu-sidebar" class="pc" onClick={() => setIsActiveShow(!isActiveShow)}  style={{ width: "20px" }} src="./images/icons/menu-icon.svg"
                     alt="header-logo" />
                 <span>Menu</span>
                 <div class="line-yblue"></div>
@@ -201,12 +201,12 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" class="item-icon" />
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
-                    <Link to={"/affiliate"}>
-                        <div class="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
-                            <div class="item-content">Affiliate</div>
-                        </div>
-                    </Link>
+
+                    <div class="sidebar-item d-flex align-items-center">
+                        <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
+                        <Link to={"/affiliate"}>  <div class="item-content">Affiliate</div>              </Link>
+                    </div>
+
 
                     <div class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" class="item-icon" />

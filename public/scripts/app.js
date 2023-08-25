@@ -97,6 +97,7 @@ if (window.location.pathname === "/home.html") {
   // show refer box
   const referSidebar = document.querySelector(`.refer-feature`);
   const referBox = document.querySelector(`.box__refer-overlay`);
+  console.log(referSidebar);
   referSidebar.addEventListener("click", () => {
     if (referBox.classList.contains("active")) {
       referBox.classList.remove("active");
@@ -110,22 +111,25 @@ if (window.location.pathname === "/home.html") {
     referBox.classList.remove("active");
   });
 }
-
-// // confirm security
-// const boxSecurity = document.querySelector("#box-security");
-// document.querySelector("#confirm-withdraw").addEventListener("click", () => {
-//   if (!boxSecurity.classList.contains("active")) {
-//     document
-//       .querySelector(".container-wrapper")
-//       .classList.add("active-overlay");
-//     boxSecurity.classList.add("active");
-//   }
-// });
-// document.querySelector(".btn__exit-security").addEventListener("click", () => {
-//   if (boxSecurity.classList.contains("active")) {
-//     boxSecurity.classList.remove("active");
-//   }
-// });
+if (location.pathname === "/withdraw.html") {
+  // confirm security
+  const boxSecurity = document.querySelector("#box-security");
+  document.querySelector("#confirm-withdraw").addEventListener("click", () => {
+    if (!boxSecurity.classList.contains("active")) {
+      document
+        .querySelector(".container-wrapper")
+        .classList.add("active-overlay");
+      boxSecurity.classList.add("active");
+    }
+  });
+  document
+    .querySelector(".btn__exit-security")
+    .addEventListener("click", () => {
+      if (boxSecurity.classList.contains("active")) {
+        boxSecurity.classList.remove("active");
+      }
+    });
+}
 
 const header = document.querySelector("header");
 const headerMenu = document.querySelector(".header-menu");
@@ -138,10 +142,14 @@ const onHeaderScroll = () => {
 };
 window.addEventListener("scroll", onHeaderScroll);
 
-
 const menuSidebar = document.querySelector("#menu-sidebar");
 const sidebarElem = document.querySelector(".side-bar");
 const toggleSidebar = () => {
   sidebarElem.classList.toggle("active-show");
 };
 menuSidebar.addEventListener("click", toggleSidebar);
+
+let width = screen.width;
+if (width <= 576) {
+  sidebarElem.classList.toggle("active-show");
+}

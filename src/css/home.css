@@ -1,6 +1,17 @@
 .side-bar.active-show {
   width: 340px;
 }
+@media (max-width: 576px) {
+  .side-bar.active-show {
+    width: 100%;
+  }
+  .side-bar.active-show .header-menu img {
+    display: block;
+  }
+  .side-bar.active-show .header-menu span {
+    display: block;
+  }
+}
 .side-bar.active-show .header-menu span {
   display: block;
 }
@@ -438,7 +449,7 @@
   margin-right: 4px;
 }
 .main-home .main-content .big-prize .big-item:first-child img {
-  width: 25;
+  width: 25px;
 }
 .main-home .main-content .big-prize .big-item {
   padding: 8px 12px;
