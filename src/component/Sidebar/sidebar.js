@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className={isActiveShow === true ? "side-bar active-show" : "side-bar"}>
             <div class="header-menu d-flex align-items-center justify-content-center">
                 <img class="mobile" src="./images/icons/logo-mobile.svg" alt="" />
-                <img id="menu-sidebar" class="pc" onClick={() => setIsActiveShow(!isActiveShow)}  style={{ width: "20px" }} src="./images/icons/menu-icon.svg"
+                <img id="menu-sidebar" class="pc" style={{ width: "20px" }} onClick={() => setIsActiveShow(!isActiveShow)} src="./images/icons/menu-icon.svg"
                     alt="header-logo" />
                 <span>Menu</span>
                 <div class="line-yblue"></div>

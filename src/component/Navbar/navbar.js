@@ -7,6 +7,9 @@ const Navbar = () => {
     const [isProfile, setIsProfile] = useState(false)
     const [isLang, setIsLang] = useState(false)
 
+
+
+    
     return (
         <header class="d-flex align-items-center">
             <div class="header-content d-flex align-items-center justify-content-center">

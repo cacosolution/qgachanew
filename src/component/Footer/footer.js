@@ -168,19 +168,23 @@ const Footer = () => {
             <img src="./images/icons/gacha.png" alt="" />
             <div class="name-feature">Gacha</div>
           </div>
-          <div class="menu-feature upgrade d-flex flex-column justify-content-center align-items-center">
+          <div
+            class="menu-feature upgrade d-flex flex-column justify-content-center align-items-center">
             <img src="./images/icons/upgrademobile.svg" alt="" />
             <div class="name-feature">Upgrade</div>
           </div>
-          <div class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
+          <div
+            class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
             <img src="./images/icons/icon-cardmobile.svg" alt="" />
             <div class="name-feature">Wallet</div>
           </div>
-          <div class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
+          <div
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
             <img src="./images/icons/chat.svg" alt="" />
             <div class="name-feature">Chat</div>
           </div>
-          <div class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
+          <div
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
             <img src="./images/icons/menu-icon.svg" alt="" />
             <div class="name-feature">Menu</div>
           </div>
