@@ -100,9 +100,7 @@ const ticketform = () => {
                   <div class="gift-ticket-received-user">
                     <p class="d-flex align-items-center justify-content-center">
                       <span>From: </span>{" "}
-                      <img
-                        src="./images/icons/avatar-default.svg"
-                        />
+                      <img src="./images/icons/avatar-default.svg" />
                       <span>Name 1</span>
                     </p>
 
