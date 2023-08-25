@@ -75,6 +75,7 @@ const Transaction = () => {
 
 
                     </div>
+                    <Footer />
                 </div>
 
                 <button class="btn-support">

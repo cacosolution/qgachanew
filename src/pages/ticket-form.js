@@ -213,6 +213,9 @@ const ticketform = () => {
           </div>
           <Footer />
         </div>
+        <button class="btn-support">
+          <img src="images/icons/livesupport-icon.svg" alt="" />
+        </button>
       </main>
     </div>
   );

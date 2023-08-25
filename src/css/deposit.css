@@ -1,25 +1,31 @@
 .side-bar.active-show {
   width: 340px;
 }
+
 @media (max-width: 576px) {
   .side-bar.active-show {
     width: 100%;
   }
+
   .side-bar.active-show .header-menu img {
     display: block;
   }
+
   .side-bar.active-show .header-menu span {
     display: block;
   }
 }
+
 .side-bar.active-show .header-menu span {
   display: block;
 }
+
 .side-bar.active-show .sidebar-content {
   box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.43);
   padding: 20px 15px 20px 26px;
   border-right: 1px solid #787878;
 }
+
 .side-bar.active-show .sidebar-content .event {
   display: flex !important;
   border-radius: 6px;
@@ -29,6 +35,7 @@
   box-shadow: 0px 0px 7px 0px #fff inset;
   padding: 25px 37px 15px 24px;
 }
+
 .side-bar.active-show .sidebar-content .event .wrap-box {
   display: flex !important;
   background: url("../images/icons/event-wrapbox.svg") no-repeat;
@@ -36,44 +43,55 @@
   width: 152px;
   margin-bottom: 20px;
 }
+
 .side-bar.active-show .sidebar-content .event .feature-event {
   flex-direction: row;
 }
+
 .side-bar.active-show .sidebar-content .event .feature-event img {
   cursor: pointer;
 }
+
 .side-bar.active-show .sidebar-content .event img {
   width: 108px;
 }
+
 .side-bar.active-show .sidebar-content .event img[alt=spin] {
   margin-left: 10px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item {
   padding: 0 22px;
   margin-top: 15px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item:first-child {
   padding: 4px;
   background: #1b172f;
   box-shadow: unset;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item:first-child .item-content {
   max-width: 140px;
   width: 100%;
   text-align: center;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.refer-feature {
   cursor: pointer;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.vip-small,
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.tag-icon,
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.quest-icon,
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.spin-icon {
   display: none !important;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item img {
   margin-right: 10px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item .item-content {
   display: block;
   color: #fff;
@@ -82,6 +100,7 @@
   font-weight: 500;
   line-height: 19px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item .item-content span {
   color: var(--xm, #9e9e9e);
   font-size: 13px;
@@ -89,11 +108,13 @@
   font-weight: 500;
   line-height: 28px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card {
   background: inherit;
   width: 100%;
   border: none;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header.active__sidebar-item {
   border-radius: 3px;
   border: 1px solid #393636;
@@ -101,6 +122,7 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header {
   padding: 16px;
   border-radius: 3px;
@@ -109,6 +131,7 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header button {
   padding: 0;
   color: #fff;
@@ -121,44 +144,55 @@
   outline: none;
   width: 100%;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header button svg {
   display: block;
   transform: rotate(-90deg);
   transition: 0.3s;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header button[aria-expanded=true] svg {
   transform: rotate(0);
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header button:focus {
   box-shadow: none;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-body {
   display: block;
   padding: 0;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-body ul li {
   padding: 12px 0 12px 52px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-body ul li a {
   color: #fff;
   font-size: 15px;
   font-weight: 400;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-body ul li img {
   width: 24px;
   margin-right: 10px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-body ul :hover {
   transition: 0.3s;
   background-color: #53386a;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.allow-expand {
   padding: 0;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item:not(:first-child) {
   margin-top: 3px;
   margin-bottom: 0;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.active__sidebar-item {
   border-radius: 3px;
   border: 1px solid #393636;
@@ -166,22 +200,26 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item.live-support {
   border-radius: 3px;
   border: 1px solid var(--1, #05e8ff);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-vipclub {
   display: block;
   margin: 19px -20px 0;
   position: relative;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content {
   position: absolute;
   top: 0px;
   left: calc(50% - 75px);
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content div {
   max-width: 150px;
   width: 100%;
@@ -194,6 +232,7 @@
   font-weight: 500;
   line-height: 14.5px;
 }
+
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content div strong {
   color: #000;
   font-size: 15px;
@@ -213,59 +252,74 @@
   height: auto;
   background: linear-gradient(180deg, rgb(44, 39, 93) 17%, rgb(71, 48, 100) 30%, rgb(53, 49, 111) 50%, rgb(41, 38, 72) 72%);
 }
+
 .side-bar .line-yblue {
   height: 47px;
   position: absolute;
   right: 1px;
 }
+
 .side-bar .header-menu {
   padding-top: 21px;
   padding-bottom: 19px;
   border-bottom: 1px solid #787878;
 }
+
 .side-bar .header-menu img {
   cursor: pointer;
   margin-right: 9px;
 }
+
 .side-bar .header-menu span {
   display: none;
 }
+
 .side-bar .sidebar-content .event {
   display: none !important;
 }
+
 .side-bar .sidebar-content .event .wrap-box {
   display: none !important;
 }
+
 .side-bar .sidebar-content .event .feature-event {
   flex-direction: column;
 }
+
 .side-bar .sidebar-content .event .feature-event img {
   cursor: pointer;
 }
+
 .side-bar .sidebar-content .event img {
   width: 108px;
 }
+
 .side-bar .sidebar-content .event img[alt=spin] {
   margin-left: 10px;
 }
+
 .side-bar .sidebar-content .sidebar__list-item {
   padding-left: 15px;
   padding-right: 13px;
   margin-top: 15px;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature {
   padding: 4px;
   background: #1b172f;
   box-shadow: unset;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature .item-content {
   max-width: 140px;
   width: 100%;
   text-align: center;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature {
   cursor: pointer;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item {
   padding: 16px;
   border-radius: 3px;
@@ -274,18 +328,22 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item img {
   margin-right: 0;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item .item-content {
   display: none;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card {
   margin-top: 8px;
   background: inherit;
   width: 100%;
   border: none;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header.active__sidebar-item {
   border-radius: 3px;
   border: 1px solid #393636;
@@ -293,6 +351,7 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header {
   padding: 16px;
   border-radius: 3px;
@@ -301,6 +360,7 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header button {
   padding: 0;
   color: #fff;
@@ -313,48 +373,60 @@
   outline: none;
   width: 100%;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header button svg {
   display: none;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header button[aria-expanded=true] svg {
   transform: rotate(0);
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-header button:focus {
   box-shadow: none;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-body {
   display: none;
   padding: 0;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-body ul li {
   padding: 12px 0 12px 52px;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-body ul li a {
   color: #fff;
   font-size: 15px;
   font-weight: 400;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-body ul li img {
   width: 24px;
   margin-right: 10px;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .card .card-body ul :hover {
   transition: 0.3s;
   background-color: #53386a;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.allow-expand {
   padding: 0;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.vip-small,
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.tag-icon,
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.quest-icon,
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.spin-icon {
   display: block;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item:not(:first-child) {
   margin-top: 8px;
   margin-bottom: 0;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.active__sidebar-item {
   border-radius: 3px;
   border: 1px solid #393636;
@@ -362,22 +434,26 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.live-support {
   border-radius: 3px;
   border: 1px solid var(--1, #05e8ff);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-vipclub {
   display: none;
   margin: 19px -20px 0;
   position: relative;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content {
   position: absolute;
   top: 0px;
   left: calc(50% - 75px);
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content div {
   max-width: 150px;
   width: 100%;
@@ -390,6 +466,7 @@
   font-weight: 500;
   line-height: 14.5px;
 }
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-vipclub .vipclub-content div strong {
   color: #000;
   font-size: 15px;
@@ -401,12 +478,19 @@
 .main-deposit {
   max-width: 1360px;
   width: 100%;
-  height: 100vh;
-  margin-left: 22%;
+  height: 150vh;
 }
+
+.main-setting {
+  max-width: 1360px;
+  width: 100%;
+  height: 250vh;
+}
+
 .main-deposit p {
   margin: 0;
 }
+
 .main-deposit .text-15 {
   color: #fff;
   font-size: 15px;
@@ -414,24 +498,29 @@
   line-height: 24px;
   font-weight: 400;
 }
+
 .main-deposit .deposit-content {
   padding: 22px 0 0 72px;
 }
+
 .main-deposit .deposit-content .btn-wallet {
   background-color: #291a3a;
   padding: 10px 17px;
   border: none;
   font-weight: 500;
 }
+
 .main-deposit .deposit-content .feature-content {
   padding-top: 33px;
   max-height: 720px;
   height: 100%;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature,
 .main-deposit .deposit-content .feature-content .feature-detail {
   background-color: #291a3a;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature {
   width: 278px;
   margin-right: 11px;
@@ -439,71 +528,87 @@
   height: -moz-max-content;
   height: max-content;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item {
   transition: 0.3s;
   cursor: pointer;
   padding: 10px;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item img {
   width: 24px;
   height: 24px;
   margin-right: 10px;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item img h4 {
   font-weight: 400;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item:hover {
   background-color: #1b172f;
   opacity: 0.8;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item.active {
   background-color: #1b172f;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item.active h4 {
   font-weight: 600;
 }
+
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item:last-child {
   border-top: 1px solid #6b6b6b;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail {
   max-width: 983px;
   width: 100%;
   height: 100%;
   padding: 40px 36px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail ul li.nav-item {
   width: 50%;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail ul li.nav-item button {
   width: 100%;
   color: #fff;
   border: none;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail ul li.nav-item button.active {
   background-color: inherit;
   border-bottom: 2px solid #d769ee;
   font-weight: 600;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .list-currency button.currency:last-child {
   padding: 0 18px 2px 2px;
   margin-left: 12px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .list-currency button.currency {
   padding: 3px 12px 2px 4px;
   border-radius: 21px;
   border: 0.5px solid var(--text, #e275f9);
   background: #1b172f;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .list-currency button.currency .text-cur {
   color: #fff;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .list-currency button.currency img {
   width: 30px;
   height: 30px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .currency-show {
   padding: 10px 16px;
   margin-top: 10px;
@@ -511,11 +616,13 @@
   border: 1px solid #393636;
   background: #1b172f;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .currency-show img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .select-network {
   border-radius: 6px;
   border: 1px solid #393636;
@@ -523,26 +630,30 @@
   padding: 12px 20px;
   position: relative;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .select-network select {
   background-color: inherit;
   border: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   flex-grow: 1;
   z-index: 2;
   position: static;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .select-network svg {
   position: absolute;
   right: 24px;
   top: calc(50% - 5px);
   z-index: 2;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .info-address {
   padding: 14px 30px 14px 14px;
   background: #1b172f;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .info-address .qr {
   width: 168px;
   height: 168px;
@@ -551,15 +662,18 @@
   margin-right: 26px;
   color: #000;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .info-address .address-code {
   flex-grow: 1;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .info-address .address-code .address-wrapper {
   border-radius: 6px;
   border: 1px solid #393636;
   background: #000;
   padding: 25px 20px 25px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .info-address .address-code .address-wrapper button {
   border-radius: 3px;
   background: #291a3a;
@@ -567,13 +681,16 @@
   padding: 0 20px;
   line-height: 28px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .notice {
   border-radius: 3px;
   background: rgba(180, 60, 202, 0.2);
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .notice p {
   padding: 18px 7px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .notice p strong {
   color: var(--text, #e275f9);
   font: 600px;
