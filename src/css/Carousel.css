@@ -1,0 +1,23 @@
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.slick-slide>div {
+    margin: 0 5px;
+}
+
+.silder {
+    margin: 0 auto;
+    position: relative;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+.slick-prev:before{
+    display: none;
+}
+.slick-next:before {
+    display: none;
+}

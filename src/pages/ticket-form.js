@@ -11,7 +11,7 @@ import "../css/transactionTable.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
-
+import Carousel from "../component/Carousel/Carousel";
 const ticketform = () => {
   return (
     <div class="container-wrapper">
@@ -20,6 +20,9 @@ const ticketform = () => {
         <Sidebar />
         <div class="main-home">
           <div class="main-content">
+            <div>
+              <Carousel />
+            </div>
             <section class="section-gift-ticket">
               <div class="gift-ticket-header">
                 <p>Gift Ticket</p>
