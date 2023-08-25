@@ -38,15 +38,15 @@ const router = createBrowserRouter([
     element: <Authen />,
   },
   {
-    path: "/Balance",
+    path: "/balance",
     element: <Balance />,
   },
   {
-    path: "/buyTicket",
+    path: "/buyticket",
     element: <BuyTicket />,
   },
   {
-    path: "/Buy5ticket",
+    path: "/buy5ticket",
     element: <Buy5ticket />,
   },
   {
