@@ -7,13 +7,23 @@ const Sidebar = () => {
 
     return (
         <div className={isActiveShow === true ? "side-bar active-show" : "side-bar"}>
-            <div class="header-menu d-flex align-items-center justify-content-center">
-                <img class="mobile" src="./images/icons/logo-mobile.svg" alt="" />
-                <img id="menu-sidebar" class="pc" style={{ width: "20px" }} onClick={() => setIsActiveShow(!isActiveShow)} src="./images/icons/menu-icon.svg"
-                    alt="header-logo" />
-                <span>Menu</span>
-                <div class="line-yblue"></div>
+            <div class="header-menu pc">
+                <div class=" d-flex align-items-center justify-content-center">
+                    <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => setIsActiveShow(!isActiveShow)} src="./images/icons/menu-icon.svg"
+                        alt="header-logo" />
+                    <span>Menu</span>
+                    <div class="line-yblue"></div>
+                </div>
+
+
             </div>
+            <div class="mobile">
+                <div class="header-menu-mobile d-flex align-items-center justify-content-between ">
+                    <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
+                    <img id="exit__sidebar-mobile" src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsActiveShow(!isActiveShow)} alt="icon-exit" />
+                </div>
+            </div>
+
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
                     <div class="wrap-box d-flex align-items-center justify-content-center">
@@ -78,17 +88,17 @@ const Sidebar = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="" >
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/upgrade-gacha.png" alt="" />Upgrade Gacha
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="" >
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/icon-mystery.png" alt="" />Mystery Gacha
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="" >
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/sugoroku.png" alt="" />Sugoroku Gacha
                                         </a>
                                     </li>
@@ -121,14 +131,14 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" to={"/fournumber"}>
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link class="d-flex align-items-center" to={"/jackpot"}>
+                                        <a class="d-flex align-items-center" href="">
                                             <img src="./images/icons/box-gacha.png" alt="" />Jackpot
-                                        </Link>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -187,7 +197,7 @@ const Sidebar = () => {
                         <img style={{ width: "40px" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
                     </div>
                     <div class="sidebar-vipclub">
-                        <img style={{ width: "287px" }} src="./images/vipclub-wrap.svg" alt="" class="item-icon" />
+                        <img src="./images/vipclub-wrap.svg" alt="" class="item-icon" />
                         <div class="vipclub-content d-flex text-center align-items-center flex-column">
                             <img style={{ width: "34px" }} src="./images/icons/vipclub.png" alt="" />
                             <div><strong>VIP Club</strong> (Upcoming)</div>
@@ -201,13 +211,10 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" class="item-icon" />
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
-
                     <div class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
-                        <Link to={"/affiliate"}>  <div class="item-content">Affiliate</div>              </Link>
+                        <div class="item-content">Affiliate</div>
                     </div>
-
-
                     <div class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" class="item-icon" />
                         <div class="item-content">Forum <span>(Upcoming)</span></div>
@@ -220,8 +227,8 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/livesupport.png" alt="" class="item-icon" />
                         <div class="item-content">Live Support</div>
                     </div>
-                </div >
-            </div >
+                </div>
+            </div>
         </div >
 
 

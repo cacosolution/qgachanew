@@ -143,24 +143,6 @@ header .header-content .header-action .btn-deposit {
 header .header-content .header-action .btn-deposit {
   padding: 4px 20px 4px 10px;
 }
-header .header-content .header-action .noti-container,
-header .header-content .header-action .chat-container,
-header .header-content .header-action .language-container,
-header .header-content .header-action .ava-container {
-  position: relative;
-}
-header .header-content .header-action #box-noti,
-header .header-content .header-action #box-chat,
-header .header-content .header-action #box-language,
-header .header-content .header-action #box-ava {
-  display: none;
-}
-header .header-content .header-action #box-noti.active,
-header .header-content .header-action #box-chat.active,
-header .header-content .header-action #box-language.active,
-header .header-content .header-action #box-ava.active {
-  display: block;
-}
 header .header-content .header-action img {
   width: 18px;
   height: 18px;
@@ -206,211 +188,6 @@ header .header-content .header-action .select-currency select#user-money {
 header .header-content .header-action .select-currency svg {
   width: 12px;
 }
-header .header-content .header-action .box-chat,
-header .header-content .header-action .box-noti,
-header .header-content .header-action #box-language,
-header .header-content .header-action #box-ava {
-  border-radius: 3px 0px 11px 11px;
-  border: 1px solid #787878;
-  background: #282546;
-  box-shadow: -5px 2px 8px 0px rgba(0, 0, 0, 0.43);
-  z-index: 100;
-}
-header .header-content .header-action .box-chat .box-header,
-header .header-content .header-action .box-noti .box-header,
-header .header-content .header-action #box-language .box-header,
-header .header-content .header-action #box-ava .box-header {
-  border-bottom: 1px solid var(--xm, #9e9e9e);
-  background: #1b172f;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 16px;
-}
-header .header-content .header-action .box-chat .box-header button,
-header .header-content .header-action .box-noti .box-header button,
-header .header-content .header-action #box-language .box-header button,
-header .header-content .header-action #box-ava .box-header button {
-  border: none;
-  background-color: inherit;
-}
-header .header-content .header-action .box-chat .box-header button img,
-header .header-content .header-action .box-noti .box-header button img,
-header .header-content .header-action #box-language .box-header button img,
-header .header-content .header-action #box-ava .box-header button img {
-  width: 10px;
-  height: auto;
-}
-header .header-content .header-action .box-chat .list-user-online,
-header .header-content .header-action .box-chat .list-noti,
-header .header-content .header-action .box-noti .list-user-online,
-header .header-content .header-action .box-noti .list-noti,
-header .header-content .header-action #box-language .list-user-online,
-header .header-content .header-action #box-language .list-noti,
-header .header-content .header-action #box-ava .list-user-online,
-header .header-content .header-action #box-ava .list-noti {
-  overflow-y: scroll;
-  max-height: 400px;
-  margin-right: -8px;
-}
-header .header-content .header-action .box-chat .list-user-online::-webkit-scrollbar,
-header .header-content .header-action .box-chat .list-noti::-webkit-scrollbar,
-header .header-content .header-action .box-noti .list-user-online::-webkit-scrollbar,
-header .header-content .header-action .box-noti .list-noti::-webkit-scrollbar,
-header .header-content .header-action #box-language .list-user-online::-webkit-scrollbar,
-header .header-content .header-action #box-language .list-noti::-webkit-scrollbar,
-header .header-content .header-action #box-ava .list-user-online::-webkit-scrollbar,
-header .header-content .header-action #box-ava .list-noti::-webkit-scrollbar {
-  width: 5px;
-  background-color: inherit;
-}
-header .header-content .header-action .box-chat .list-user-online::-webkit-scrollbar-thumb,
-header .header-content .header-action .box-chat .list-noti::-webkit-scrollbar-thumb,
-header .header-content .header-action .box-noti .list-user-online::-webkit-scrollbar-thumb,
-header .header-content .header-action .box-noti .list-noti::-webkit-scrollbar-thumb,
-header .header-content .header-action #box-language .list-user-online::-webkit-scrollbar-thumb,
-header .header-content .header-action #box-language .list-noti::-webkit-scrollbar-thumb,
-header .header-content .header-action #box-ava .list-user-online::-webkit-scrollbar-thumb,
-header .header-content .header-action #box-ava .list-noti::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgb(151, 151, 151);
-}
-header .header-content .header-action .box-chat {
-  width: 340px;
-  position: absolute;
-  top: 42px;
-  left: 0;
-}
-header .header-content .header-action .box-chat .list-user-online .info-user:not(:first-child) {
-  padding-top: 24px;
-}
-header .header-content .header-action .box-chat .list-user-online .info-user .ava-user {
-  background-color: #9163ee;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-header .header-content .header-action .box-chat .list-user-online .info-user .message .user-name {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-}
-header .header-content .header-action .box-chat .list-user-online .info-user .message .user-name span.time {
-  color: var(--xm, #9e9e9e);
-  font-size: 13px;
-  font-weight: 300;
-}
-header .header-content .header-action .box-chat .list-user-online .info-user .message .cur-mess {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-}
-header .header-content .header-action .box-chat .box-action {
-  padding: 0px 10px 20px;
-}
-header .header-content .header-action .box-chat .box-action input {
-  border-radius: 3px;
-  border: 1px solid var(--text, #e275f9);
-  background: #291a3a;
-  flex-grow: 1;
-  line-height: 46px;
-  padding: 0 20px;
-  color: #fff;
-}
-header .header-content .header-action .box-chat .box-action button {
-  margin-left: 6px;
-  padding: 13px 18px;
-  border-radius: 3px;
-  border: 1px solid var(--text, #e275f9);
-  background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
-}
-header .header-content .header-action .box-chat .box-action button img {
-  height: 20px;
-  width: auto;
-}
-header .header-content .header-action .box-noti {
-  width: 340px;
-  position: absolute;
-  top: 45px;
-  right: 0;
-}
-header .header-content .header-action .box-noti .box-body {
-  padding: 12px 20px 30px;
-}
-header .header-content .header-action .box-noti .box-body .wrapper-title {
-  border-bottom: 1px solid #9e9e9e;
-}
-header .header-content .header-action .box-noti .box-body .wrapper-title h4 {
-  color: #fff;
-  text-align: center;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: start;
-  line-height: 46px;
-  border-bottom: 2px solid #d769ee;
-  width: 50%;
-}
-header .header-content .header-action .box-noti .box-body .list-noti {
-  margin-top: 12px;
-}
-header .header-content .header-action .box-noti .box-body .list-noti .noti-item {
-  width: 299px;
-  height: 175px;
-  flex-shrink: 0;
-  background-color: #801c92;
-}
-header .header-content .header-action .box-noti .box-body .list-noti .noti-item:not(:first-child) {
-  margin-top: 42px;
-}
-header .header-content .header-action #box-language {
-  width: 156px;
-  border-radius: 0px 0px 6px 6px;
-  background: #282546;
-  top: 40px;
-  right: 0;
-}
-header .header-content .header-action #box-language .language-item {
-  color: #fff;
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px;
-  padding: 20px;
-}
-header .header-content .header-action #box-ava {
-  top: 50px;
-  right: 0;
-  width: 236px;
-  border-radius: 0px 0px 6px 6px;
-  background: #282546;
-  box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.25);
-}
-header .header-content .header-action #box-ava .feature-item {
-  padding: 20px;
-}
-header .header-content .header-action #box-ava .feature-item img {
-  width: 16px;
-  height: 16px;
-  margin-right: 12px;
-}
-header .header-content .header-action #box-ava .feature-item h5 {
-  color: #fff;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 0px;
-}
-header .header-content .header-action #box-ava .feature-item:hover {
-  transition: 0.3s;
-  background-color: #53386a;
-}
-header .header-content .header-action #box-language,
-header .header-content .header-action #box-ava {
-  border: none;
-  position: absolute;
-}
 header .header-right {
   width: 450px;
   margin-left: 19px;
@@ -422,7 +199,7 @@ header .header-right .select-right {
   background: linear-gradient(180deg, rgba(71, 71, 71, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
-  padding: 4px 10px;
+  padding: 2px 10px;
 }
 header .header-right .select-right select {
   flex-grow: 1;
@@ -432,6 +209,228 @@ header .header-right .select-right select {
   font-weight: 400;
   background: inherit;
   border: none;
+}
+header #box-chat,
+header #box-noti,
+header #box-language,
+header #box-ava {
+  border-radius: 3px 0px 11px 11px;
+  border: 1px solid #787878;
+  background: #282546;
+  box-shadow: -5px 2px 8px 0px rgba(0, 0, 0, 0.43);
+  z-index: 100;
+}
+header #box-chat .box-header,
+header #box-noti .box-header,
+header #box-language .box-header,
+header #box-ava .box-header {
+  border-bottom: 1px solid var(--xm, #9e9e9e);
+  background: #1b172f;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+header #box-chat .box-header button,
+header #box-noti .box-header button,
+header #box-language .box-header button,
+header #box-ava .box-header button {
+  border: none;
+  background-color: inherit;
+}
+header #box-chat .box-header button img,
+header #box-noti .box-header button img,
+header #box-language .box-header button img,
+header #box-ava .box-header button img {
+  width: 10px;
+  height: auto;
+}
+header #box-chat .list-noti,
+header #box-chat .list-user-online,
+header #box-noti .list-noti,
+header #box-noti .list-user-online,
+header #box-language .list-noti,
+header #box-language .list-user-online,
+header #box-ava .list-noti,
+header #box-ava .list-user-online {
+  overflow-y: scroll;
+  margin-right: -8px;
+  max-height: 622px;
+}
+header #box-chat .list-user-online::-webkit-scrollbar,
+header #box-chat .list-noti::-webkit-scrollbar,
+header #box-noti .list-user-online::-webkit-scrollbar,
+header #box-noti .list-noti::-webkit-scrollbar,
+header #box-language .list-user-online::-webkit-scrollbar,
+header #box-language .list-noti::-webkit-scrollbar,
+header #box-ava .list-user-online::-webkit-scrollbar,
+header #box-ava .list-noti::-webkit-scrollbar {
+  width: 5px;
+  background-color: inherit;
+}
+header #box-chat .list-user-online::-webkit-scrollbar-thumb,
+header #box-chat .list-noti::-webkit-scrollbar-thumb,
+header #box-noti .list-user-online::-webkit-scrollbar-thumb,
+header #box-noti .list-noti::-webkit-scrollbar-thumb,
+header #box-language .list-user-online::-webkit-scrollbar-thumb,
+header #box-language .list-noti::-webkit-scrollbar-thumb,
+header #box-ava .list-user-online::-webkit-scrollbar-thumb,
+header #box-ava .list-noti::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(151, 151, 151);
+}
+header #box-chat {
+  width: 340px;
+  position: absolute;
+  top: 63px;
+  right: 0;
+  height: 822px;
+}
+header #box-chat .list-user-online .info-user:not(:first-child) {
+  padding-top: 24px;
+}
+header #box-chat .list-user-online .info-user .ava-user {
+  background-color: #9163ee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header #box-chat .list-user-online .info-user .message .user-name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+header #box-chat .list-user-online .info-user .message .user-name span.time {
+  color: var(--xm, #9e9e9e);
+  font-size: 13px;
+  font-weight: 300;
+}
+header #box-chat .list-user-online .info-user .message .cur-mess {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+header #box-chat .box-body {
+  height: 700px;
+}
+header .box-action {
+  padding: 0px 10px 20px;
+}
+header .box-action input {
+  border-radius: 3px;
+  border: 1px solid var(--text, #e275f9);
+  background: #291a3a;
+  flex-grow: 1;
+  line-height: 46px;
+  padding: 0 20px;
+  color: #fff;
+}
+header .box-action button {
+  margin-left: 6px;
+  padding: 13px 18px;
+  border-radius: 3px;
+  border: 1px solid var(--text, #e275f9);
+  background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
+}
+header .box-action button img {
+  height: 20px;
+  width: auto;
+}
+header #box-noti {
+  width: 340px;
+  position: absolute;
+  top: 63px;
+  right: 0;
+  height: 822px;
+}
+header #box-noti .box-body {
+  padding: 12px 20px 30px;
+}
+header #box-noti .box-body .wrapper-title {
+  border-bottom: 1px solid #9e9e9e;
+}
+header #box-noti .box-body .wrapper-title h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: start;
+  line-height: 46px;
+  border-bottom: 2px solid #d769ee;
+  width: 50%;
+}
+header #box-noti .box-body .list-noti {
+  margin-top: 12px;
+}
+header #box-noti .box-body .list-noti .noti-item {
+  width: 299px;
+  height: 175px;
+  flex-shrink: 0;
+  background-color: #801c92;
+}
+header #box-noti .box-body .list-noti .noti-item:not(:first-child) {
+  margin-top: 42px;
+}
+header #box-language {
+  width: 156px;
+  border-radius: 0px 0px 6px 6px;
+  background: #282546;
+  top: 40px;
+  right: 0;
+}
+header #box-language .language-item {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 20px;
+}
+header #box-ava {
+  top: 48px;
+  right: 0;
+  width: 236px;
+  border-radius: 0px 0px 6px 6px;
+  background: #282546;
+  box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+header #box-ava .feature-item {
+  padding: 20px;
+}
+header #box-ava .feature-item img {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+}
+header #box-ava .feature-item h5 {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0px;
+}
+header #box-ava .feature-item:hover {
+  transition: 0.3s;
+  background-color: #53386a;
+}
+header #box-language,
+header #box-ava {
+  border: none;
+  position: absolute;
+}
+header #box-noti,
+header #box-chat,
+header #box-language,
+header #box-ava {
+  display: none;
+}
+header #box-noti.active,
+header #box-chat.active,
+header #box-language.active,
+header #box-ava.active {
+  display: block;
 }
 @media (max-width: 1800px) {
   header .header-right {
@@ -823,9 +822,34 @@ footer .footer-content .footer-info .box-docs {
   margin: 0;
   font-weight: 400;
 }
+.box-auth.sign-up form .risk-level {
+  margin: 2px 0;
+}
+.box-auth.sign-up form .risk-level .process-item {
+  margin-right: 7px;
+  width: 127px;
+  height: 7px;
+  border-radius: 3px;
+  background: var(--xm, #9e9e9e);
+}
+.box-auth.sign-up form .risk-level .process-item.error {
+  background: #ff004f;
+}
+.box-auth.sign-up form .risk-level span {
+  color: #ff004f;
+  text-align: right;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31.565px;
+  text-transform: capitalize;
+}
 .box-auth.sign-up form .form-check .form-check-input {
   background-color: inherit !important;
   border: 2px solid #e275f9;
+}
+.box-auth.sign-up form .form-group.enter-pass {
+  margin-top: 0;
 }
 
 .box-auth.signin form,
@@ -848,6 +872,15 @@ footer .footer-content .footer-info .box-docs {
   margin-bottom: 0;
   line-height: 39px;
   font-weight: 400;
+}
+
+.box-auth.signin form .resend .enter-code {
+  position: absolute;
+  background-color: #fff;
+  width: 91px;
+  height: 32px;
+  top: 7px;
+  right: 7px;
 }
 
 .box-auth.enter-email form {
@@ -980,6 +1013,10 @@ img {
   text-transform: capitalize;
 }
 
+input {
+  color: #fff;
+}
+
 .container-wrapper main {
   display: flex;
   height: 100%;
@@ -1062,8 +1099,8 @@ img {
 .box__support-chat.active {
   display: block;
   position: fixed;
-  right: 100px;
-  top: 200px;
+  right: 10px;
+  bottom: 20px;
 }
 
 .box__support-chat {

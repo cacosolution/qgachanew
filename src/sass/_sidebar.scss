@@ -1,32 +1,63 @@
-.side-bar {
+.side-bar.active-show {
     width: 340px;
-    border-right: 1px solid #787878;
-    background: linear-gradient(
-        180deg,
-        rgba(44, 39, 93, 1) 17%,
-        rgba(71, 48, 100, 1) 30%,
-        rgba(53, 49, 111, 1) 50%,
-        rgba(41, 38, 72, 1) 72%
-    );
-    box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.43);
-    .sidebar-content {
-        padding: 20px 15px 0 26px;
+    @media (max-width: 576px) {
+        width: 100%;
+        .header-menu {
+            img {
+                display: block;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
+    .header-menu {
+        span {
+            display: block;
+        }
+    }
 
+    .sidebar-content {
+        box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.43);
+        padding: 20px 15px 20px 26px;
+        border-right: 1px solid #787878;
         .event {
+            display: flex !important;
             border-radius: 6px;
             border: 1px solid #393636;
             background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
             background-blend-mode: hue;
             box-shadow: 0px 0px 7px 0px #fff inset;
             padding: 25px 37px 15px 24px;
+            color: #fff;
+            font-family: "Montserrat";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 15px;
+            text-transform: uppercase;
+
             .wrap-box {
+                display: flex !important;
                 background: url("../images/icons/event-wrapbox.svg") no-repeat;
-                height: 42px;
+                height: 44px;
                 width: 152px;
                 margin-bottom: 20px;
+                position: relative;
+                padding-left: 16px;
+                text-shadow: 2px 0 #50a7ab, -2px 0 #50a7ab, 0 2px #50a7ab, 0 -2px #50a7ab, 1px 1px #50a7ab,
+                    -1px -1px #50a7ab, 1px -1px #50a7ab, -1px 1px #50a7ab;
+            }
+            .wrap-box::after {
+                content: url("../images/icons/tag.svg");
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 20px;
             }
 
             .feature-event {
+                flex-direction: row;
                 img {
                     cursor: pointer;
                 }
@@ -56,19 +87,19 @@
             .sidebar-item.refer-feature {
                 cursor: pointer;
             }
+            .sidebar-item.vip-small,
+            .sidebar-item.tag-icon,
+            .sidebar-item.quest-icon,
+            .sidebar-item.spin-icon {
+                display: none !important;
+            }
             .sidebar-item {
-                padding: 16px;
-                border-radius: 3px;
-                border: 1px solid #393636;
-                background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
-                background-blend-mode: hue;
-                box-shadow: 0px 0px 7px 0px #fff inset;
-
                 img {
                     margin-right: 10px;
                 }
 
                 .item-content {
+                    display: block;
                     color: #fff;
                     font-size: 15px;
                     font-style: normal;
@@ -97,7 +128,7 @@
                 }
                 .card-header {
                     padding: 16px;
-                    border-radius: 3px;
+                    border-radius: 10px;
                     border: 1px solid #393636;
                     background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
                     background-blend-mode: hue;
@@ -115,6 +146,7 @@
                         width: 100%;
 
                         svg {
+                            display: block;
                             transform: rotate(-90deg);
                             transition: 0.3s;
                         }
@@ -130,6 +162,7 @@
                     }
                 }
                 .card-body {
+                    display: block;
                     padding: 0;
                     ul {
                         li {
@@ -156,9 +189,10 @@
             }
             .sidebar-item:not(:first-child) {
                 margin-top: 3px;
+                margin-bottom: 0;
             }
             .sidebar-item.active__sidebar-item {
-                border-radius: 3px;
+                border-radius: 10px;
                 border: 1px solid #393636;
                 background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
                 background-blend-mode: hue;
@@ -166,13 +200,248 @@
             }
 
             .sidebar-item.live-support {
-                border-radius: 3px;
+                border-radius: 10px;
                 border: 1px solid var(--1, #05e8ff);
                 background-blend-mode: hue;
                 box-shadow: 0px 0px 7px 0px #fff inset;
             }
 
             .sidebar-vipclub {
+                display: block;
+                margin: 19px -20px 0;
+                position: relative;
+                .vipclub-content {
+                    position: absolute;
+                    top: 0px;
+                    left: calc(50% - 75px);
+
+                    div {
+                        max-width: 150px;
+                        width: 100%;
+                        line-height: 0;
+                        color: #050505;
+                        text-align: center;
+                        text-shadow: 0px 0px 1px #fff;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 14.5px;
+
+                        strong {
+                            color: #000;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 14.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.side-bar.active-show,
+.side-bar {
+    .sidebar-content {
+        overflow-y: scroll;
+        max-height: calc(100vh - 65px);
+    }
+
+    .sidebar-content::-webkit-scrollbar,
+    .sidebar-content::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.side-bar {
+    position: fixed;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    width: 84px;
+    z-index: 2000;
+    overflow-x: hidden;
+    height: auto;
+    .line-yblue {
+        height: 47px;
+        position: absolute;
+        right: 1px;
+    }
+
+    background: linear-gradient(
+        180deg,
+        rgba(44, 39, 93, 1) 17%,
+        rgba(71, 48, 100, 1) 30%,
+        rgba(53, 49, 111, 1) 50%,
+        rgba(41, 38, 72, 1) 72%
+    );
+
+    .header-menu {
+        padding-top: 21px;
+        padding-bottom: 19px;
+        img {
+            cursor: pointer;
+            margin-right: 9px;
+        }
+        border-bottom: 1px solid #787878;
+        span {
+            display: none;
+        }
+    }
+    .sidebar-content {
+        .event {
+            display: none !important;
+            .wrap-box {
+                display: none !important;
+            }
+
+            .feature-event {
+                flex-direction: column;
+                img {
+                    cursor: pointer;
+                }
+            }
+            img {
+                width: 108px;
+            }
+            img[alt="spin"] {
+                margin-left: 10px;
+            }
+        }
+
+        .sidebar__list-item {
+            padding-left: 15px;
+            padding-right: 13px;
+            margin-top: 15px;
+            .sidebar-item.refer-feature {
+                padding: 4px;
+                background: #1b172f;
+                box-shadow: unset;
+
+                .item-content {
+                    max-width: 140px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .sidebar-item.refer-feature {
+                cursor: pointer;
+            }
+            .sidebar-item {
+                padding: 16px;
+                border-radius: 10px;
+                border: 1px solid #393636;
+                background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
+                background-blend-mode: hue;
+                box-shadow: 0px 0px 7px 0px #fff inset;
+
+                img {
+                    margin-right: 0;
+                }
+
+                .item-content {
+                    display: none;
+                }
+            }
+            .card {
+                margin-top: 8px;
+                background: inherit;
+                width: 100%;
+                border: none;
+                .card-header.active__sidebar-item {
+                    border-radius: 10px;
+                    border: 1px solid #393636;
+                    background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
+                    background-blend-mode: hue;
+                    box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
+                }
+                .card-header {
+                    padding: 16px;
+                    border-radius: 10px;
+                    border: 1px solid #393636;
+                    background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
+                    background-blend-mode: hue;
+                    box-shadow: 0px 0px 7px 0px #fff inset;
+                    button {
+                        padding: 0;
+                        color: #fff;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 15px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        outline: none;
+                        width: 100%;
+
+                        svg {
+                            display: none;
+                        }
+                    }
+
+                    button[aria-expanded="true"] {
+                        svg {
+                            transform: rotate(0);
+                        }
+                    }
+                    button:focus {
+                        box-shadow: none;
+                    }
+                }
+                .card-body {
+                    display: none;
+                    padding: 0;
+                    ul {
+                        li {
+                            a {
+                                color: #fff;
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+                            padding: 12px 0 12px 52px;
+                            img {
+                                width: 24px;
+                                margin-right: 10px;
+                            }
+                        }
+                        & :hover {
+                            transition: 0.3s;
+                            background-color: #53386a;
+                        }
+                    }
+                }
+            }
+            .sidebar-item.allow-expand {
+                padding: 0;
+            }
+            .sidebar-item.vip-small,
+            .sidebar-item.tag-icon,
+            .sidebar-item.quest-icon,
+            .sidebar-item.spin-icon {
+                display: block;
+            }
+            .sidebar-item:not(:first-child) {
+                margin-top: 8px;
+                margin-bottom: 0;
+            }
+            .sidebar-item.active__sidebar-item {
+                border-radius: 10px;
+                border: 1px solid #393636;
+                background: linear-gradient(180deg, rgb(46 46 47 / 90%) 0%, rgba(255, 255, 255, 0) 100%);
+                background-blend-mode: hue;
+                box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
+            }
+
+            .sidebar-item.live-support {
+                border-radius: 10px;
+                border: 1px solid var(--1, #05e8ff);
+                background-blend-mode: hue;
+                box-shadow: 0px 0px 7px 0px #fff inset;
+            }
+
+            .sidebar-vipclub {
+                display: none;
                 margin: 19px -20px 0;
                 position: relative;
                 .vipclub-content {

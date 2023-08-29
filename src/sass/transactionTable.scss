@@ -11,19 +11,17 @@
     width: 100%;
     background: #291a3a;
     thead {
-      padding: 10px;
       tr {
         margin-top: 5px;
         background: #1b172f;
       }
       th {
         @include title-text(#fff, 15px);
-        padding: 15px;
         text-align: center;
+        padding: 20px;
       }
     }
     tbody {
-      padding: 10px;
       td {
         padding: 15px;
         @include title-text(#fff, 13px);
@@ -39,9 +37,6 @@
       padding: 0 !important;
       tr {
         background-color: #000;
-      }
-      td {
-        padding: 10px;
       }
       div {
         display: flex;
@@ -63,7 +58,78 @@
           height: 6px;
           stroke-width: 1px;
           stroke: #9e9e9e;
-          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+.transaction-table.detail-trans {
+  width: 983px;
+  height: 168px;
+  padding: 14px 14px 0;
+  background-color: #291a3a;
+  position: relative;
+
+  table {
+    width: 960px;
+    height: 155px !important;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    height: 100%;
+    td.amount,
+    td.status {
+      color: #e275f9;
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    tfoot {
+      height: 51px;
+      margin: 0 -14px;
+      .pagination {
+        justify-content: end;
+        .page {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  .footer-bg {
+    background-color: #000;
+    width: 983px;
+    height: 51px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .transaction-table.transaction-table.detail-trans {
+    height: 364px;
+    padding: 0;
+    table {
+      height: 364px;
+      thead {
+        height: 40px;
+      }
+      tbody {
+        tr {
+          height: 80px;
+        }
+      }
+      tfoot {
+        position: relative;
+        .pagination {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
         }
       }
     }

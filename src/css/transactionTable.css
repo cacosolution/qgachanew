@@ -8,9 +8,6 @@
   width: 100%;
   background: #291a3a;
 }
-.transaction-table table thead {
-  padding: 10px;
-}
 .transaction-table table thead tr {
   margin-top: 5px;
   background: #1b172f;
@@ -22,11 +19,8 @@
   line-height: 15px;
   text-transform: capitalize;
   font-style: normal;
-  padding: 15px;
   text-align: center;
-}
-.transaction-table table tbody {
-  padding: 10px;
+  padding: 20px;
 }
 .transaction-table table tbody td {
   padding: 15px;
@@ -52,9 +46,6 @@
 .transaction-table table tfoot tr {
   background-color: #000;
 }
-.transaction-table table tfoot td {
-  padding: 10px;
-}
 .transaction-table table tfoot div {
   display: flex;
   flex-direction: row;
@@ -74,5 +65,72 @@
   height: 6px;
   stroke-width: 1px;
   stroke: #9e9e9e;
-  margin-bottom: 4px;
+}
+
+.transaction-table.detail-trans {
+  width: 983px;
+  height: 168px;
+  padding: 14px 14px 0;
+  background-color: #291a3a;
+  position: relative;
+}
+.transaction-table.detail-trans table {
+  width: 960px;
+  height: 155px !important;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  height: 100%;
+}
+.transaction-table.detail-trans table td.amount,
+.transaction-table.detail-trans table td.status {
+  color: #e275f9;
+}
+.transaction-table.detail-trans table td.amount svg,
+.transaction-table.detail-trans table td.status svg {
+  transform: rotate(-90deg);
+}
+.transaction-table.detail-trans table tfoot {
+  height: 51px;
+  margin: 0 -14px;
+}
+.transaction-table.detail-trans table tfoot .pagination {
+  justify-content: end;
+}
+.transaction-table.detail-trans table tfoot .pagination .page {
+  margin: 0 20px;
+}
+.transaction-table.detail-trans .footer-bg {
+  background-color: #000;
+  width: 983px;
+  height: 51px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  .transaction-table.transaction-table.detail-trans {
+    height: 364px;
+    padding: 0;
+  }
+  .transaction-table.transaction-table.detail-trans table {
+    height: 364px;
+  }
+  .transaction-table.transaction-table.detail-trans table thead {
+    height: 40px;
+  }
+  .transaction-table.transaction-table.detail-trans table tbody tr {
+    height: 80px;
+  }
+  .transaction-table.transaction-table.detail-trans table tfoot {
+    position: relative;
+  }
+  .transaction-table.transaction-table.detail-trans table tfoot .pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }

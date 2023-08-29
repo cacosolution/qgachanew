@@ -9,6 +9,21 @@
   margin-left: 2px;
   color: #fff;
 }
+@media (max-width: 576px) {
+  .feature-detail .tab-content .currency-show.balance span strong {
+    font-weight: 400;
+  }
+}
+@media (max-width: 576px) {
+  .feature-detail .tab-content .currency-show {
+    padding: 8px 10px !important;
+  }
+}
+@media (max-width: 576px) {
+  .feature-detail .tab-content .currency-show p {
+    font-size: 11px;
+  }
+}
 .feature-detail .tab-content .currency-show.value-withdraw {
   padding: 16px 24px;
 }
@@ -27,6 +42,23 @@
 }
 .feature-detail .tab-content .currency-show.value-withdraw .value-item:last-child span {
   color: #e275f9;
+}
+.feature-detail .tab-content .currency-show.show-list {
+  font-size: 11px;
+}
+.feature-detail .tab-content .currency-show.show-list .list-amount .amount-item {
+  margin-left: 2px;
+  width: 60px;
+  height: 31px;
+  line-height: 31px;
+  border-radius: 3px;
+  background: #000;
+}
+@media (max-width: 576px) {
+  .feature-detail .tab-content .currency-show.show-list .list-amount .amount-item {
+    width: 40px;
+    font-size: 11px;
+  }
 }
 .feature-detail .tab-content .confirm-wrap {
   margin-top: 30px;

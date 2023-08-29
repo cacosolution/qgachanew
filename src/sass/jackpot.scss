@@ -1,8 +1,70 @@
 #jackpot {
   width: 1227px;
-  margin: 0 auto;
+  margin-left: 500px;
+  margin-top: 30px;
   p {
     margin: 0;
+  }
+
+  .banner-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+    button {
+      color: #fff;
+      border-radius: 5px;
+      border: 1px solid #575757;
+      background: #ce3464;
+      box-shadow: -1px 0px 8px 6px #938de1;
+      font-weight: 500;
+    }
+
+    button.btn-play {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 107px;
+      line-height: 23px;
+      text-transform: capitalize;
+    }
+    h5 {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Montserrat;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 15px; /* 115.385% */
+      text-transform: capitalize;
+    }
+    h3 {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 15px; /* 75% */
+      text-transform: lowercase;
+      margin-top: 6px;
+    }
+    .info-lucky {
+      position: absolute;
+      bottom: 22px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        width: 169px;
+        height: 35px;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+    }
   }
   .navbar-wrapper {
     display: flex;

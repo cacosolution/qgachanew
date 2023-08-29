@@ -4,6 +4,8 @@
 .main-deposit {
     max-width: 1360px;
     width: 100%;
+    margin-left: 22%;
+    height: 2000px;
     p {
         margin: 0;
     }
@@ -13,9 +15,13 @@
         font-style: normal;
         line-height: 24px;
         font-weight: 400;
+
+        @media (max-width: 576px) {
+            font-size: 11px;
+        }
     }
     .deposit-content {
-        padding: 22px 0 0 72px;
+        padding-top: 22px;
         .btn-wallet {
             background-color: $purple-dark;
             padding: 10px 17px;
@@ -105,10 +111,17 @@
                                 font-size: 15px;
                                 font-style: normal;
                                 font-weight: 500;
+                                @media (max-width: 576px) {
+                                    font-size: 13px;
+                                }
                             }
                             img {
                                 width: 30px;
                                 height: 30px;
+                                @media (max-width: 576px) {
+                                    width: 18px;
+                                    height: 18px;
+                                }
                             }
                         }
                     }
@@ -128,6 +141,9 @@
                     }
 
                     .select-network {
+                        @media (max-width: 576px) {
+                            padding: 8px 10px;
+                        }
                         border-radius: 6px;
                         border: 1px solid #393636;
                         background: #1b172f;
@@ -153,6 +169,7 @@
                     .info-address {
                         padding: 14px 30px 14px 14px;
                         background: #1b172f;
+
                         .qr {
                             width: 168px;
                             height: 168px;
@@ -179,6 +196,32 @@
                                 }
                             }
                         }
+
+                        @media (max-width: 576px) {
+                            padding: 26px 9px 14px 13px;
+                            .qr {
+                                margin-right: 0;
+                            }
+
+                            .address-code {
+                                width: 100%;
+                                margin-top: 12px;
+                                .address-wrapper {
+                                    border-radius: 6px;
+                                    border: 1px solid #393636;
+                                    background: #000;
+                                    padding: 10px 11px;
+
+                                    button {
+                                        border-radius: 3px;
+                                        background: #291a3a;
+                                        border: none;
+                                        padding: 0 20px;
+                                        line-height: 28px;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .notice {
@@ -190,9 +233,115 @@
                                 color: var(--text, #e275f9);
                                 font: 600px;
                             }
+
+                            @media (max-width: 576px) {
+                                font-size: 9px;
+                            }
                         }
                     }
                 }
+            }
+
+            .transaction-detail {
+                .list-button {
+                    margin-bottom: 24px;
+                    button {
+                        display: flex;
+                        align-items: center;
+                        width: 164px;
+                        height: 52px;
+                        padding: 25px 13px 25px 20px;
+                        border-radius: 3px;
+                        border: 1px solid #393636;
+                        background: #291a3a;
+                        color: #fff;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        justify-content: space-between;
+                        svg {
+                            transform: rotate(-90deg);
+                        }
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .feature-content.setting {
+            max-height: unset;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-deposit {
+        margin-left: 0;
+        height: max-content;
+        margin-bottom: 300px;
+        .deposit-content {
+            padding-top: 0;
+            button.btn-wallet {
+                height: 58px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1.069px solid var(--xm, #545454);
+                background: #1b172f;
+                box-shadow: 0px 4.277372360229492px 4.277372360229492px 0px rgba(0, 0, 0, 0.25);
+                width: 100%;
+                img {
+                    width: 14px;
+                }
+            }
+            margin-bottom: 20px;
+            .list-feature {
+                display: none;
+            }
+            .feature-content {
+                padding: 16px;
+                .feature-detail {
+                    padding: 16px;
+                }
+
+                .transaction-detail {
+                    .list-button {
+                        max-width: 400px;
+                        row-gap: 8px;
+                        column-gap: 12px;
+                        flex-wrap: wrap;
+
+                        button {
+                            width: 48%;
+                            margin-right: 0;
+                            font-size: 11px;
+                            padding: 0 12px;
+                            height: 36px;
+                            border-color: #393636;
+                        }
+                    }
+                }
+
+                section.transaction-table.detail-trans {
+                    width: 100%;
+                    max-width: unset;
+                    background-color: unset;
+                    table {
+                        position: static;
+                        width: 100%;
+                        tr {
+                            td,
+                            th {
+                                font-size: 11px;
+                                padding: 0 3px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .notice {
+                border-radius: 1.511px;
+                background: rgba(180, 60, 202, 0.2);
             }
         }
     }

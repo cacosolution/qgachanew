@@ -10,6 +10,21 @@
                 strong {
                     margin-left: 2px;
                     color: #fff;
+                    @media (max-width: 576px) {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            .currency-show {
+                padding: 8px 10px !important;
+            }
+        }
+        .currency-show {
+            @media (max-width: 576px) {
+                p {
+                    font-size: 11px;
                 }
             }
         }
@@ -35,7 +50,24 @@
                 }
             }
         }
+        .currency-show.show-list {
+            font-size: 11px;
+            .list-amount {
+                .amount-item {
+                    margin-left: 2px;
+                    width: 60px;
+                    height: 31px;
+                    line-height: 31px;
+                    border-radius: 3px;
+                    background: #000;
 
+                    @media (max-width: 576px) {
+                        width: 40px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
         .confirm-wrap {
             margin-top: 30px;
 
