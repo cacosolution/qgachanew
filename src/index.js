@@ -27,6 +27,17 @@ import Completedgacha from "./pages/completedgacha";
 import Eventdetail from './pages/eventdetail'
 import Eventlastest from './pages/eventlastest'
 import EventNodata from './pages/event-nodata'
+import Mystery from './pages/mystery'
+import Pvpcomming from './pages/pvpcomming'
+import Qgccomming from './pages/qgccomming'
+import Reference from './pages/reference'
+import Reroll from './pages/reroll'
+import Security from './pages/security'
+import Sugoroku from './pages/sugoroku'
+import Tournament from './pages/tournament'
+import Upgrade from './pages/upgrade'
+import Upgradesoon from './pages/upgradesoon'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -101,16 +112,56 @@ const router = createBrowserRouter([
     element: <LuckyNumber />,
   },
   {
+    path: "/mystery",
+    element: <Mystery />,
+  },
+  {
+    path: "/pvpcomming",
+    element: <Pvpcomming />,
+  },
+  {
+    path: "/qgccomming",
+    element: <Qgccomming />,
+  },
+  {
+    path: "/reference",
+    element: <Reference />,
+  },
+  {
+    path: "/reroll",
+    element: <Reroll />,
+  },
+  {
+    path: "/security",
+    element: <Security />,
+  },
+  {
     path: "/setting",
     element: <Setting />,
+  },
+  {
+    path: "/sugoroku",
+    element: <Sugoroku />,
   },
   {
     path: "/ticket-form",
     element: <TicketForm />,
   },
   {
+    path: "/tournament",
+    element: <Tournament />,
+  },
+  {
     path: "/transaction",
     element: <Transaction />,
+  },
+  {
+    path: "/upgrade",
+    element: <Upgrade />,
+  },
+  {
+    path:"/upgradesoon",
+    element: <Upgradesoon />,
   },
   {
     path: "/user-action",
