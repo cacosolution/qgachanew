@@ -804,6 +804,33 @@
   margin-right: 10px;
 }
 
+.customtran .list-button button {
+  display: flex;
+  align-items: center;
+  width: 164px;
+  height: 52px;
+  padding: 25px 13px 25px 20px;
+  border-radius: 3px;
+  border: 1px solid #393636;
+  background: #291a3a;
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.list-button {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
+
+.items {
+  flex: 2 1 150px;
+}
+
 .main-deposit .deposit-content .feature-content .transaction-detail .list-button button svg {
   transform: rotate(-90deg);
 }
