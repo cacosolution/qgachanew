@@ -23,7 +23,9 @@ import Buy5ticket from "./pages/buy5ticket";
 import Bakacomming from './pages/bakacomming'
 import Boxgacha from './pages/boxgacha'
 import Completedgacha from "./pages/completedgacha";
-
+import Eventdetail from './pages/eventdetail'
+import Eventlastest from './pages/eventlastest'
+import EventNodata from './pages/event-nodata'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +74,18 @@ const router = createBrowserRouter([
   {
     path: "/event",
     element: <Event />,
+  },
+  {
+    path: "/eventdetail",
+    element: <Eventdetail />,
+  },
+  {
+    path: "/eventlastest",
+    element: <Eventlastest />,
+  },
+  {
+    path: "/eventnodata",
+    element: <EventNodata />,
   },
   {
     path: "/faq",
