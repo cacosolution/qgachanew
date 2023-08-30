@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { SidebarContext } from "../../context/sideBarContext";
 
 const Navbar = () => {
     const [isChat, setIsChat] = useState(false)
     const [isNofi, setIsNofi] = useState(false)
     const [isProfile, setIsProfile] = useState(false)
     const [isLang, setIsLang] = useState(false)
+
+    const {
+        isOpenProfileAll,
+        setIsOpenProfileAll,
+        setIsOpenProfileDetail,
+        setIsOpenProfileEdit,
+    } = useContext(SidebarContext)
+    const handlerChangeProfile = () => {
+        if (isOpenProfileAll === true) {
+            setIsOpenProfileAll(false)
+            setIsOpenProfileDetail(false)
+            setIsOpenProfileEdit(false)
+        } else {
+            setIsOpenProfileAll(true)
+            setIsOpenProfileDetail(false)
+            setIsOpenProfileEdit(false)
+        }
+    };
 
     return (
         <header class="d-flex align-items-center">
@@ -52,9 +71,10 @@ const Navbar = () => {
                         </div>
                     </div>
                     {/* <!-- BOX AVATAR --> */}
-                    <div class="ava-container">
-                        <img class="ava-icon ms-3" src="./images/icons/avatar-default.svg" alt="" />
-                        <div id="box-ava">
+                    <div class="ava-container" style={{ zIndex: 999 }}>
+                        <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
+                        <div id="box-ava" class={isProfile == true ? `active` : ``}>
+
                             <div class="feature-item d-flex align-items-center">
                                 <img src="./images/icons/credit-card.svg" alt="" />
                                 <h5 class="feature-content">
@@ -85,13 +105,13 @@ const Navbar = () => {
                                     <h5 class="feature-content">Affiliate</h5>
                                 </div>
                             </Link>
-                            <Link to={"/"}>
 
-                                <div class="feature-item d-flex align-items-center">
-                                    <img src="./images/icons/profile.svg" alt="" />
-                                    <h5 class="feature-content">Profile</h5>
-                                </div>
-                            </Link>
+
+                            <div class="feature-item d-flex align-items-center " onClick={handlerChangeProfile}>
+                                <img src="./images/icons/profile.svg" alt="" />
+                                <h5 class="feature-content">Profile</h5>
+                            </div>
+
                             <Link to={"/setting"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/setting-icon.svg" alt="" />

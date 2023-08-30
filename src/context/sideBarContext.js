@@ -9,7 +9,11 @@ export const SidebarProvider = ({ children }) => {
     const [isOpenQuest, setIsOpenQuest] = useState(false)
     const [isOpenRefer, setIsOpenRefer] = useState(false)
     const [isOpenSupport, setIsOpenSupport] = useState(false)
-    
+    const [isOpenProfile, setIsOpenProfile] = useState(false)
+    const [isOpenProfileAll, setIsOpenProfileAll] = useState(false)
+    const [isOpenProfileDetail, setIsOpenProfileDetail] = useState(false)
+    const [isOpenProfileEdit, setIsOpenProfileEdit] = useState(false)
+
     const value = {
         isOpenSideBar,
         setIsOpenSideBar,
@@ -20,7 +24,15 @@ export const SidebarProvider = ({ children }) => {
         isOpenRefer,
         setIsOpenRefer,
         isOpenSupport,
-        setIsOpenSupport
+        setIsOpenSupport,
+        isOpenProfile,
+        setIsOpenProfile,
+        isOpenProfileDetail,
+        setIsOpenProfileDetail,
+        isOpenProfileEdit,
+        setIsOpenProfileEdit,
+        isOpenProfileAll,
+        setIsOpenProfileAll
     }
     return <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>;
 }
