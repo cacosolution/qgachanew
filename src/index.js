@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { SidebarProvider } from "./context/sideBarContext";
 import Home from "./pages";
 import Jackpot from "./pages/jackpot";
 import Affiliate from "./pages/affiliate";
@@ -20,7 +21,9 @@ import WithDraw from "./pages/withdraw";
 import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
 import Buy5ticket from "./pages/buy5ticket";
-import { SidebarProvider } from "./context/sideBarContext";
+import Bakacomming from './pages/bakacomming'
+import Boxgacha from './pages/boxgacha'
+import Completedgacha from "./pages/completedgacha";
 
 const router = createBrowserRouter([
   {
@@ -40,8 +43,16 @@ const router = createBrowserRouter([
     element: <Authen />,
   },
   {
+    path: "/bakacomming",
+    element: <Bakacomming />,
+  },
+  {
     path: "/balance",
     element: <Balance />,
+  },
+  {
+    path: "/boxgacha",
+    element: <Boxgacha />,
   },
   {
     path: "/buyticket",
@@ -50,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/buy5ticket",
     element: <Buy5ticket />,
+  },
+  {
+    path: "/completedgacha",
+    element: <Completedgacha />,
   },
   {
     path: "/deposit",
