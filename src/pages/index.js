@@ -8,7 +8,7 @@ import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -113,33 +113,54 @@ const Home = () => {
 
                         <section class="feature mb-5">
                             <div class="row gx-3">
+
                                 <div class="col-12 col-sm-6">
-                                    <img src="./images/img-main2.png" alt="" />
+                                    <Link to="/upgrade">
+                                        <img src="./images/img-main2.png" alt="" />
+                                    </Link>
                                 </div>
+
+
                                 <div class="col-12 col-sm-6">
-                                    <img src="./images/img-main3.png" alt="" />
+                                    <Link to="/tournament">
+                                        <img src="./images/img-main3.png" alt="" />
+                                    </Link>
                                 </div>
                             </div>
                             <div class="row g-3 mt-3">
+
                                 <div class="col-12 col-sm-4 d-flex flex-column justify-content-end">
-                                    <img src="./images/img-main4.png" alt="" />
+                                    <Link to="/upgradesoon">
+                                        <img src="./images/img-main4.png" alt="" />
+
+                                    </Link>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <img src="./images/img-main5.png" alt="" />
+                                    <Link to="/boxgacha">
+                                        <img src="./images/img-main5.png" alt="" />
+                                    </Link>
                                 </div>
                                 <div class="col-12 col-sm-4  d-flex flex-column justify-content-end">
-                                    <img src="./images/img-main6.png" alt="" />
+                                    <Link to="/mystery">
+                                        <img src="./images/img-main6.png" alt="" />
+                                    </Link>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <img src="./images/img-main7.png" alt="" />
+                                    <Link to="/completedgacha">
+                                        <img src="./images/img-main7.png" alt="" />
+                                    </Link>
                                 </div>
 
                                 <div class="col-12 col-sm-4">
-                                    <img src="./images/img-main8.png" alt="" />
+                                    <Link to="/reroll">
+                                        <img src="./images/img-main8.png" alt="" />
+                                    </Link>
                                 </div>
 
                                 <div class="col-12 col-sm-4">
-                                    <img src="./images/img-main9.png" alt="" />
+                                    <Link to="/sugoroku">
+                                        <img src="./images/img-main9.png" alt="" />
+                                    </Link>
                                 </div>
                             </div>
                         </section>

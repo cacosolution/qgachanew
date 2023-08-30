@@ -46,11 +46,14 @@ const Navbar = () => {
                                 fill="white" />
                         </svg>
                     </div>
-                    <button class="btn-auth btn-deposit d-flex align-items-center ms-3">
+                    <Link to="/deposit">
+                        <button class="btn-auth btn-deposit d-flex align-items-center ms-3">
 
-                        <img class="me-1" style={{ width: "24px" }} src="./images/icons/credit-card.svg" alt="" /> deposit
+                            <img class="me-1" style={{ width: "24px" }} src="./images/icons/credit-card.svg" alt="" /> deposit
 
-                    </button>
+                        </button>
+                    </Link>
+
                     {/* <!-- BOX NOTIFICATION --> */}
 
 

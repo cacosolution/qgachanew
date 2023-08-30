@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
+import BoxOverlay from "../Box/BoxOverlay";
 
 
 const Sidebar = () => {
@@ -98,34 +99,36 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/completedgacha">
                                             <img src="./images/icons/com-gaga.png" alt="" />Complete Gacha
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/boxgacha">
                                             <img src="./images/icons/box-gacha.png" alt="" />Box Gacha
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/reroll">
                                             <img src="./images/icons/reroll.png" alt="" />Re-roll Gacha
-                                        </a>
+                                        </Link>
                                     </li>
+
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/upgradesoon">
                                             <img src="./images/icons/upgrade-gacha.png" alt="" />Upgrade Gacha
-                                        </a>
+                                        </Link>
                                     </li>
+
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/mystery">
                                             <img src="./images/icons/icon-mystery.png" alt="" />Mystery Gacha
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/sugoroku">
                                             <img src="./images/icons/sugoroku.png" alt="" />Sugoroku Gacha
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -156,14 +159,14 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/fournumber">
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
+                                        <Link class="d-flex align-items-center" to="/luckynumber">
                                             <img src="./images/icons/box-gacha.png" alt="" />Jackpot
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -194,30 +197,32 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a class="d-flex align-items-center" href="">
-                                            <img src="./images/icons/coin-gold.svg" alt="" />Up comming
-                                        </a>
+                                        <Link class="d-flex align-items-center" to="/qgccomming">
+                                            <img src="./images/icons/qgc-coin.png" alt="" style={{ width: "30px" }} />QCC Game
+                                        </Link>
                                     </li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar-item d-flex align-items-center">
+                    <Link to="/bakacomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/baka.png" alt="" class="item-icon" />
                         <div class="item-content">BAKA <span>(Upcoming)</span></div>
-                    </div>
-                    <div class="sidebar-item d-flex align-items-center">
+                    </Link>
+                    <Link to="/pvpcomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" class="item-icon" />
                         <div class="item-content">PVP <span>(Upcoming)</span></div>
-                    </div>
-                    <div class="sidebar-item d-flex align-items-center">
+                    </Link>
+                    <Link to="/upgrade" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/upgrade-gacha.png" alt="" class="item-icon" />
                         <div class="item-content">Upgrade <span>(Upcoming)</span></div>
-                    </div>
-                    <div class="sidebar-item d-flex align-items-center">
+                    </Link>
+
+                    <Link to="/tournament" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" class="item-icon" />
                         <div class="item-content">Tournament</div>
-                    </div>
+                    </Link>
                     <div class="sidebar-item vip-small d-flex align-items-center">
                         <img style={{ width: "40px" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
                     </div>
@@ -248,12 +253,14 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/blog.png" alt="" class="item-icon" />
                         <div class="item-content">Blog <span>(Upcoming)</span></div>
                     </div>
-                    <div class="sidebar-item live-support d-flex align-items-center">
+                    <button style={{ width: "100%" }} class="sidebar-item live-support d-flex align-items-center" onClick={() => setIsOpenSupport(!isOpenSupport)}>
                         <img style={{ width: "24px" }} src="./images/icons/livesupport.png" alt="" class="item-icon" />
                         <div class="item-content">Live Support</div>
-                    </div>
+                    </button>
+
                 </div>
             </div>
+            <BoxOverlay />
         </div >
 
 

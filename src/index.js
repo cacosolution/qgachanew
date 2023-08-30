@@ -37,6 +37,7 @@ import Sugoroku from './pages/sugoroku'
 import Tournament from './pages/tournament'
 import Upgrade from './pages/upgrade'
 import Upgradesoon from './pages/upgradesoon'
+import BoxOverlay from "./component/Box/BoxOverlay";
 
 const router = createBrowserRouter([
   {
@@ -160,7 +161,7 @@ const router = createBrowserRouter([
     element: <Upgrade />,
   },
   {
-    path:"/upgradesoon",
+    path: "/upgradesoon",
     element: <Upgradesoon />,
   },
   {
@@ -171,6 +172,10 @@ const router = createBrowserRouter([
     path: "/withdraw",
     element: <WithDraw />,
   },
+  {
+    path: "/boxoverlay",
+    element: <BoxOverlay />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
