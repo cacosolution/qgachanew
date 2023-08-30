@@ -32,7 +32,8 @@ export const SidebarProvider = ({ children }) => {
         isOpenProfileEdit,
         setIsOpenProfileEdit,
         isOpenProfileAll,
-        setIsOpenProfileAll
+        setIsOpenProfileAll,
+
     }
     return <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>;
 }

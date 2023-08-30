@@ -838,12 +838,32 @@ footer .footer-content .footer-info .box-docs {
   padding-left: 83px;
 }
 
-.box-auth {
-  max-width: 546px;
-  width: 100%;
-  background-color: #291a3a;
-  font-size: 15px;
+@media (min-width: 768px) {
+  .box-auth {
+    max-width: 576px;
+    width: 100%;
+    background-color: #291a3a;
+    font-size: 15px;
+    position: absolute;
+    z-index: 999;
+    margin-left: 20%;
+
+  }
 }
+
+@media (max-width: 576px) {
+  .box-auth {
+    max-width: 576px;
+    width: 90%;
+    background-color: #291a3a;
+    font-size: 15px;
+    position: absolute;
+    z-index: 999;
+    margin-left: 1%;
+
+  }
+}
+
 
 .box-auth input.form-control {
   border-radius: 3px;
@@ -971,7 +991,7 @@ footer .footer-content .footer-info .box-docs {
 
 .box-auth.sign-up form .risk-level .process-item {
   margin-right: 7px;
-  width: 127px;
+  width: 33%;
   height: 7px;
   border-radius: 3px;
   background: var(--xm, #9e9e9e);
@@ -981,6 +1001,12 @@ footer .footer-content .footer-info .box-docs {
   background: #ff004f;
 }
 
+.box-auth.sign-up form .risk-level .process-item.success {
+  background: #25c22a;
+}
+.box-auth.sign-up form .risk-level .process-item.average {
+  background: #cfe228;
+}
 .box-auth.sign-up form .risk-level span {
   color: #ff004f;
   text-align: right;

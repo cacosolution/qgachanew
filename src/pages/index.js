@@ -7,10 +7,13 @@ import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useState } from 'react';
 
 
 
 const Home = () => {
+    const [isOpenResgiter, setIsOpenResgiter] = useState(false)
+
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -18,6 +21,71 @@ const Home = () => {
                 <Sidebar />
                 <div class="main-home">
                     <div class="main-content">
+                        {isOpenResgiter && (
+                            <div class="box-auth sign-up mt-4">
+                                <div class="box-header d-flex justify-content-between align-items-center">
+                                    Sign Up
+                                    <button class="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
+                                        <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                                    </button>
+                                </div>
+                                <form id="form-signup">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder=" Login Password" />
+                                        <img src="./images/icons/eye.svg" alt="show-pass" />
+                                    </div>
+                                    <div class="risk-level d-flex align-items-center">
+                                        <div class="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+                                            <div class="process-item error"></div>
+                                            <div class="process-item average"></div>
+                                            <div class="process-item secure"></div>
+                                        </div>
+                                        <span style={{ width: "40%" }}>High Risk</span>
+                                    </div>
+                                    <div class="form-group enter-pass">
+                                        <input type="password" class="form-control" placeholder="Re-Enter Password" />
+                                        <img src="./images/icons/eye.svg" alt="show-pass" />
+                                    </div>
+                                    <div class="form-group resend">
+                                        <input type="text" class="form-control" placeholder="Verification Code" />
+                                        <span class="resend">Resend(60s)</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputRePassword4">Enter Referral/Promo Code</label>
+                                        <input type="password" class="form-control"
+                                            placeholder="Enter Referral/Promo Code(Optional)" />
+                                    </div>
+
+                                    <div class="form-group check">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" />
+                                            <label class="form-check-label" for="gridCheck">
+                                                I agree to the User Agreement & confirm I am at least 18 years old
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group check">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" />
+                                            <label class="form-check-label" for="gridCheck">
+                                                I agree to receive marketing promotions from QGACHA.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="submit d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    </div>
+                                    <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                                        <a class="btn-redirect">Sign In</a>
+                                    </p>
+
+                                </form>
+                            </div>
+                        )}
+
                         <div class="big-prize">
                             <div class="fire d-flex align-items-center">
                                 <img width="14px" src="./images/icons/fire.svg" alt="" />
@@ -38,7 +106,7 @@ const Home = () => {
                             <div class="banner-content">
                                 <h3>Join and enjoy rewards</h3>
                                 <h1>up to <span>100.000$</span></h1>
-                                <button>SIGN UP NOW</button>
+                                <button onClick={() => setIsOpenResgiter(!isOpenResgiter)}>SIGN UP NOW</button>
                             </div>
                             <img src="./images/img-main1.png" alt="banner-home" />
                         </div>
