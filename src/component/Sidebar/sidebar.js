@@ -1,15 +1,40 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { SidebarContext } from "../../context/sideBarContext";
 
 
 const Sidebar = () => {
     const [isActiveShow, setIsActiveShow] = useState(true)
+    const {
+        isOpenSideBar,
+        setIsOpenSideBar,
+        isOpenSpin,
+        setIsOpenSpin,
+        isOpenQuest,
+        setIsOpenQuest,
+        isOpenRefer,
+        setIsOpenRefer,
+        isOpenSupport,
+        setIsOpenSupport
+    } = useContext(SidebarContext)
+
+    useEffect(() => {
+        const updateWindowState = () => {
+            if (window.innerWidth < 576) {
+                setIsOpenSideBar(false);
+            } else {
+                setIsOpenSideBar(true);
+            }
+        };
+
+        updateWindowState();
+    }, [window.innerWidth])
 
     return (
-        <div className={isActiveShow === true ? "side-bar active-show" : "side-bar"}>
-            <div class="header-menu pc">
+        <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
+            <div class="header-menu pc fixed-active">
                 <div class=" d-flex align-items-center justify-content-center">
-                    <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => setIsActiveShow(!isActiveShow)} src="./images/icons/menu-icon.svg"
+                    <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => setIsOpenSideBar(!isOpenSideBar)} src="./images/icons/menu-icon.svg"
                         alt="header-logo" />
                     <span>Menu</span>
                     <div class="line-yblue"></div>
@@ -20,7 +45,7 @@ const Sidebar = () => {
             <div class="mobile">
                 <div class="header-menu-mobile d-flex align-items-center justify-content-between ">
                     <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
-                    <img id="exit__sidebar-mobile" src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsActiveShow(!isActiveShow)} alt="icon-exit" />
+                    <img id="exit__sidebar-mobile" onClick={() => setIsOpenSideBar(!isOpenSideBar)} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
                 </div>
             </div>
 
@@ -30,21 +55,21 @@ const Sidebar = () => {
                         EVENT
                     </div>
                     <div class="d-flex feature-event">
-                        <img src="./images/icons/quest.svg" alt="quest" />
-                        <img src="./images/icons/spin.svg" alt="spin" />
+                        <img src="./images/icons/quest.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="quest" />
+                        <img src="./images/icons/spin.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="spin" />
                     </div>
                 </div>
                 <div class="sidebar__list-item">
                     <div class="sidebar-item tag-icon d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/tagicon.svg" alt="" class="item-icon" />
                     </div>
-                    <div class="sidebar-item quest-icon d-flex align-items-center">
+                    <div class="sidebar-item quest-icon d-flex align-items-center" >
                         <img style={{ width: "24px" }} src="./images/icons/quest.png" alt="" class="item-icon" />
                     </div>
                     <div class="sidebar-item spin-icon d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" class="item-icon" />
                     </div>
-                    <div class="sidebar-item refer-feature d-flex align-items-center">
+                    <div class="sidebar-item refer-feature d-flex align-items-center" onClick={() => setIsOpenRefer(!isOpenRefer)}>
                         <img style={{ width: "46px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
                         <div class="item-content">REFER</div>
                     </div>

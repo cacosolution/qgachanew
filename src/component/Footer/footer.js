@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/flickity.css";
 import "../../css/base.css";
 import "../../css/home.css";
+import { SidebarContext } from "../../context/sideBarContext";
 
 const Footer = () => {
+  const { isOpenSideBar, setIsOpenSideBar } = useContext(SidebarContext)
+
   return (
 
     <footer>
@@ -184,7 +187,7 @@ const Footer = () => {
             <div class="name-feature">Chat</div>
           </div>
           <div
-            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
             <img src="./images/icons/menu-icon.svg" alt="" />
             <div class="name-feature">Menu</div>
           </div>
