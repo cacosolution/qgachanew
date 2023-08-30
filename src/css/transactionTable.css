@@ -68,14 +68,14 @@
 }
 
 .transaction-table.detail-trans {
-  width: 983px;
+  width: 883px;
   height: 168px;
   padding: 14px 14px 0;
   background-color: #291a3a;
   position: relative;
 }
 .transaction-table.detail-trans table {
-  width: 960px;
+  width: 860px;
   height: 155px !important;
   z-index: 2;
   position: absolute;

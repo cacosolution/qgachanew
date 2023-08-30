@@ -18,11 +18,13 @@ const ticketform = () => {
       <Navbar />
       <main>
         <Sidebar />
+
         <div class="main-home">
-          <div class="main-content">
-            <div>
-              <Carousel />
-            </div>
+
+
+          <div class="main-content" style={{ width: "80%" }}>
+
+
             <section class="section-gift-ticket">
               <div class="gift-ticket-header">
                 <p>Gift Ticket</p>
@@ -33,10 +35,7 @@ const ticketform = () => {
                 <div class="gift-ticket-title">
                   <img src="./images/gift.png" alt="gift" />
                   <h6>Successfully bought [N] lottery tickets!</h6>
-                  <p>
-                    Share to your friends and they can choose lottery numbers
-                    themselves
-                  </p>
+                  <p>Share to your friends and they can choose lottery numbers themselves</p>
                 </div>
 
                 <div class="gift-ticket-code">
@@ -47,42 +46,30 @@ const ticketform = () => {
                   <div class="gift-ticket-code__content">
                     <div>
                       <p>Try your luck, man!</p>
-                      <img
-                        src="./images/icons/deposit/icon-copy.svg"
-                        alt="copy"
-                      />
+                      <img src="./images/icons/deposit/icon-copy.svg" alt="copy" />
                     </div>
                     <div>
                       <p>Referral Code</p>
-                      <img
-                        src="./images/icons/deposit/icon-copy.svg"
-                        alt="copy"
-                      />
+                      <img src="./images/icons/deposit/icon-copy.svg" alt="copy" />
                     </div>
+
                   </div>
-                  <p>
-                    *This link is available for 24 hours from the time of
-                    generation. If the link is not used within this time frame,
-                    the amount you paid will be refunded to your wallet.
+                  <p>*This link is available for 24 hours from the time of generation. If the link is not
+                    used within this time frame, the amount you paid will be refunded to your wallet.
                   </p>
                 </div>
 
                 <div class="gift-ticket-social">
                   <p>Or Share With</p>
                   <div class="d-flex">
-                    <a href="#">
-                      <img
-                        src="./images/twitter--media-twitter-social.png"
-                        alt="twitter"
-                      />
-                    </a>
-                    <a class="ms-4" href="#">
-                      <img src="./images/telegramgift.svg" alt="telegram" />
-                    </a>
+                    <a href="#"><img src="./images/twitter--media-twitter-social.png"
+                      alt="twitter" /></a>
+                    <a class="ms-4" href="#"><img src="./images/telegramgift.svg" alt="telegram" /></a>
                   </div>
                 </div>
               </div>
             </section>
+
 
             <section class="section-gift-ticket">
               <div class="gift-ticket-header">
@@ -102,23 +89,21 @@ const ticketform = () => {
                 <div class="gift-ticket-received-content">
                   <div class="gift-ticket-received-user">
                     <p class="d-flex align-items-center justify-content-center">
-                      <span>From: </span>{" "}
-                      <img src="./images/icons/avatar-default.svg" />
+                      <span>From: </span> <img src="./images/icons/avatar-default.svg" />
                       <span>Name 1</span>
                     </p>
 
                     <p>“Try your luck, bro!”</p>
                   </div>
 
-                  <p class="gift-ticket-received-expiryTime">
-                    tickets expire in: 00h:00m:00s
-                  </p>
+                  <p class="gift-ticket-received-expiryTime">tickets expire in: 00h:00m:00s</p>
                   <button class="gift-ticket-received-button">
                     claim tickets
                   </button>
                 </div>
               </div>
             </section>
+
 
             <section class="transaction-detail">
               <div class="gift-ticket-header">
@@ -142,25 +127,15 @@ const ticketform = () => {
                   </div>
                   <div>
                     <p>Txid</p>
-                    <span class="d-flex">
-                      abc123456789{" "}
-                      <img
-                        class="ms-1"
-                        src="./images/icons/deposit/icon-copy.svg"
-                        alt="copy"
-                      />
-                    </span>
+                    <span class="d-flex">abc123456789 <img class="ms-1"
+                      src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
+
                   </div>
                   <div>
                     <p>Order ID</p>
-                    <span class="d-flex">
-                      ABC7878y7990890{" "}
-                      <img
-                        class="ms-1"
-                        src="./images/icons/deposit/icon-copy.svg"
-                        alt="copy"
-                      />
-                    </span>
+                    <span class="d-flex">ABC7878y7990890 <img class="ms-1"
+                      src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
+
                   </div>
                   <div>
                     <p>Time</p>
@@ -170,9 +145,11 @@ const ticketform = () => {
               </div>
             </section>
 
+
             <section class="transaction-table">
               <table>
                 <thead>
+
                   <tr>
                     <th>Type</th>
                     <th>Merchant ID</th>
@@ -180,9 +157,11 @@ const ticketform = () => {
                     <th>Time</th>
                     <th>Status</th>
                   </tr>
+
                 </thead>
 
                 <tbody>
+
                   <tr>
                     <td>Deposit</td>
                     <td></td>
@@ -196,22 +175,25 @@ const ticketform = () => {
                     <td colspan="4"></td>
                     <td colspan="1">
                       <div>
+
                         <p>Total</p>
                         <p>1</p>
-                        <div>
-                          {" "}
-                          <button class="d-flex align-items-center justify-content-center">
-                            <img src="./images/icons/pre.png" alt="previous" />
-                          </button>
-                          <button class="d-flex align-items-center justify-content-center">
-                            <img src="./images/icons/next.png" alt="next" />
-                          </button>
+                        <div> <button class="d-flex align-items-center justify-content-center"><img
+                          src="./images/icons/pre.png" alt="previous" /></button>
+                          <button class="d-flex align-items-center justify-content-center"><img
+                            src="./images/icons/next.png" alt="next" /></button>
                         </div>
                       </div>
+
+
                     </td>
+
+
                   </tr>
                 </tfoot>
               </table>
+
+
             </section>
           </div>
           <Footer />

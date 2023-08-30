@@ -1209,6 +1209,7 @@ input {
 
 .container-wrapper main button.btn-support {
   position: fixed;
+  z-index: 99999;
   right: 96px;
   bottom: 20px;
   border: none;
