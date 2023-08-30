@@ -20,6 +20,10 @@ import WithDraw from "./pages/withdraw";
 import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
 import Buy5ticket from "./pages/buy5ticket";
+import Bakacomming from './pages/bakacomming'
+import Boxgacha from './pages/boxgacha'
+import Completedgacha from "./pages/completedgacha";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,8 +42,16 @@ const router = createBrowserRouter([
     element: <Authen />,
   },
   {
+    path: "/bakacomming",
+    element: <Bakacomming />,
+  },
+  {
     path: "/balance",
     element: <Balance />,
+  },
+  {
+    path: "/boxgacha",
+    element: <Boxgacha />,
   },
   {
     path: "/buyticket",
@@ -48,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/buy5ticket",
     element: <Buy5ticket />,
+  },
+  {
+    path: "/completedgacha",
+    element: <Completedgacha />,
   },
   {
     path: "/deposit",
