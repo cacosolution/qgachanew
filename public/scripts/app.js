@@ -143,7 +143,7 @@ const onHeaderScroll = () => {
 window.addEventListener("scroll", onHeaderScroll);
 
 const menuSidebar = document.querySelector("#menu-sidebar");
-const sidebarElem = document.querySelector(".side-bar");
+const sidebarElem = document.querySelector(".-bar")side;
 const toggleSidebar = () => {
   sidebarElem.classList.toggle("active-show");
 };

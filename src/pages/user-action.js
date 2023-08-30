@@ -456,9 +456,9 @@ const UserAction = () => {
                     </div>
                 </div>
 
-                <div class="box__info-overlay">
+                <div class="box__info-overlay ">
 
-                    <div id="box__user-info">
+                    <div id="box__user-info ">
                         <div class="box-header d-flex justify-content-between">
                             User Information
                             <button class="btn__exit-noti">

@@ -20,6 +20,8 @@ import WithDraw from "./pages/withdraw";
 import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
 import Buy5ticket from "./pages/buy5ticket";
+import { SidebarProvider } from "./context/sideBarContext";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -94,7 +96,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <SidebarProvider >
+      <RouterProvider router={router} />
+    </SidebarProvider>
   </React.StrictMode>
 );
 

@@ -4,6 +4,10 @@
   }
 }
 
+.container-wrapper main button.btn-support img {
+  width: 70px;
+}
+
 @media (max-width: 1368px) {
   header .header-right {
     width: -moz-max-content;
@@ -38,8 +42,13 @@
 }
 
 @media (max-width: 576px) {
-  button.btn-support {
-    display: none;
+  .container-wrapper main button.btn-support img {
+    width: 50px;
+  }
+
+  .container-wrapper main button.btn-support {
+    right: 40px;
+    bottom: 100px;
   }
 
   .mobile {
