@@ -529,6 +529,29 @@
     display: block !important;
   }
 
+  .main-home .main-content.main-event img[alt=banner-nft] {
+    width: 100%;
+    height: 150px;
+  }
+
+  .main-home .main-content.main-event .info-guide .total-max {
+    width: 100%;
+  }
+
+  .main-home .main-content.main-event .info-guide .total-max span.total {
+    font-size: 15px;
+    max-width: 50%;
+  }
+
+  .main-home .main-content.main-event .info-guide .total-max span.max {
+    font-size: 15px;
+    max-width: 50%;
+
+  }
+
+  .main-home .main-content.main-event .info-guide .guide {
+    width: 100%;
+  }
 
   .pc {
     display: none !important;
