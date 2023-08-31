@@ -804,6 +804,73 @@
   margin-right: 10px;
 }
 
+.list-button {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-options {
+  position: absolute;
+  z-index: 9;
+  top: 110%;
+  left: 0;
+  border-radius: 10px;
+  background-color: #291a3a;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 165px;
+}
+
+.dropdown-options2 {
+  position: absolute;
+  z-index: 9;
+  top: 110%;
+  left: 175px;
+  border-radius: 10px;
+  background-color: #291a3a;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 165px;
+}
+
+.dropdown-options3 {
+  position: absolute;
+  z-index: 9;
+  top: 110%;
+  left: 350px;
+  border-radius: 10px;
+  background-color: #291a3a;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 165px;
+}
+
+.dropdown-options4 {
+  position: absolute;
+  z-index: 9;
+  top: 110%;
+  left: 525px;
+  border-radius: 10px;
+  background-color: #291a3a;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 165px;
+}
+
+.option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
 .customtran .list-button button {
   display: flex;
   align-items: center;
