@@ -85,7 +85,7 @@ const Navbar = () => {
                                     </h5>
                                 </div>
                             </Link>
-                            <Link to={"/withdraw"}>
+                            <Link to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/withdrawdollar.svg" alt="" />
                                     <h5 class="feature-content">
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 </div>
                             </Link>
 
-                            <Link to={"/transaction"}>
+                            <Link to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/transaction-ava.svg" alt="" />
                                     <h5 class="feature-content">
