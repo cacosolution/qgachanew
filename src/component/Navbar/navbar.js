@@ -77,7 +77,7 @@ const Navbar = () => {
                     <div class="ava-container" style={{ zIndex: 999 }}>
                         <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
-                            <Link to="/balance">
+                            <Link to="/wallet">
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/credit-card.svg" alt="" />
                                     <h5 class="feature-content">
