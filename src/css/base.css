@@ -235,12 +235,16 @@ header .header-right .select-right {
 
 header .header-right .select-right select {
   flex-grow: 1;
-  color: #fff;
+  color: white;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   background: inherit;
   border: none;
+}
+
+.select-text {
+  color: black;
 }
 
 header #box-chat,
@@ -450,7 +454,7 @@ header #box-language .language-item {
 
 header #box-ava {
   top: 48px;
-  right: 0;
+  right: 348px;
   width: 236px;
   border-radius: 0px 0px 6px 6px;
   background: #282546;
@@ -976,6 +980,18 @@ footer .footer-content .footer-info .box-docs {
 .box-auth.sign-up form {
   padding-bottom: 31px;
 }
+
+.signAuthen {
+  top: 50px;
+  left: 150px;
+}
+
+@media (max-width: 576px) {
+  .signAuthen {
+    left: 15px;
+  }
+}
+
 
 .box-auth.sign-up form button[type=submit] {
   width: 169px;

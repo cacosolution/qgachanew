@@ -4,6 +4,7 @@ import "../css/base.css"
 import "../css/home.css"
 import "../css/responsive.css"
 import Navbar from '../component/Navbar/navbar';
+import NavAuthen from '../component/Navbar/navAuthen';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
@@ -58,7 +59,7 @@ const Authen = () => {
   }
   return (
     <div className="container-wrapper">
-      <Navbar />
+      <NavAuthen />
       <main>
         <Sidebar />
         <div className="main-home">
