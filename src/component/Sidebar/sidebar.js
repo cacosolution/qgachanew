@@ -52,9 +52,9 @@ const Sidebar = () => {
 
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
-                    <div class="wrap-box d-flex align-items-center justify-content-center">
+                    <Link to={"/event"} class="wrap-box d-flex align-items-center justify-content-center">
                         EVENT
-                    </div>
+                    </Link>
                     <div class="d-flex feature-event">
                         <img src="./images/icons/quest.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="quest" />
                         <img src="./images/icons/spin.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="spin" />
@@ -241,10 +241,11 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" class="item-icon" />
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
-                    <div class="sidebar-item d-flex align-items-center">
+
+                    <Link to={"/affiliate"} class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
                         <div class="item-content">Affiliate</div>
-                    </div>
+                    </Link>
                     <div class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" class="item-icon" />
                         <div class="item-content">Forum <span>(Upcoming)</span></div>
