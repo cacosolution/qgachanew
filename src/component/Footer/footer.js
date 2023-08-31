@@ -173,7 +173,7 @@ const Footer = () => {
       </div>
       <div class="line-white top-copy"></div>
       <div class="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
-      <div class="mobile menu-bottom">
+      <div class="mobile menu-bottom" style={{ zIndex: 999999 }}>
         <div class="list-feature">
           <div class="menu-feature d-flex flex-column justify-content-center align-items-center w-49">
             <img src="./images/icons/gacha.png" alt="" />

@@ -13,6 +13,14 @@ const Navbar = () => {
         setIsOpenProfileAll,
         setIsOpenProfileDetail,
         setIsOpenProfileEdit,
+        isOpenBalance,
+        SetIsOpenBalance,
+        isOpenDeposit,
+        SetIsOpenDeposit,
+        isOpenWithdraw,
+        SetIsOpenWithdraw,
+        isOpenTransaction,
+        SetIsOpenTransaction
     } = useContext(SidebarContext)
     const handlerChangeProfile = () => {
         if (isOpenProfileAll === true) {
@@ -25,12 +33,42 @@ const Navbar = () => {
             setIsOpenProfileEdit(false)
         }
     };
+    const handlerChangeBalance = () => {
+        SetIsOpenBalance(true)
+        SetIsOpenDeposit(false)
+        SetIsOpenWithdraw(false)
+        SetIsOpenTransaction(false)
+    }
 
+    const handlerChangeDeposit = () => {
+        SetIsOpenDeposit(true)
+        SetIsOpenBalance(false)
+        SetIsOpenWithdraw(false)
+        SetIsOpenTransaction(false)
+
+    }
+
+    const handlerChangeWithdraw = () => {
+        SetIsOpenWithdraw(true)
+        SetIsOpenBalance(false)
+        SetIsOpenTransaction(false)
+        SetIsOpenDeposit(false)
+
+    }
+    const handlerChangeTransaction = () => {
+        SetIsOpenTransaction(true)
+        SetIsOpenBalance(false)
+        SetIsOpenWithdraw(false)
+
+        SetIsOpenDeposit(false)
+    }
     return (
         <header class="d-flex align-items-center">
             <div class="header-content d-flex align-items-center justify-content-center">
-                <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
-                <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
+                <Link to={"/"}>
+                    <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
+                    <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
+                </Link>
                 <div class="header-action d-flex align-items-center">
                     <div class="select-currency d-flex align-items-center   ">
                         <img class="currency" src="./images/icons/deposit/usdt.svg" alt="" />
@@ -46,8 +84,9 @@ const Navbar = () => {
                                 fill="white" />
                         </svg>
                     </div>
-                    <Link to="/deposit">
-                        <button class="btn-auth btn-deposit d-flex align-items-center ms-3">
+                    <Link onClick={handlerChangeDeposit} to="/wallet">
+
+                        <button class="btn-auth btn-deposit d-flex align-items-center ms-3" >
 
                             <img class="me-1" style={{ width: "24px" }} src="./images/icons/credit-card.svg" alt="" /> deposit
 
@@ -77,7 +116,7 @@ const Navbar = () => {
                     <div class="ava-container" style={{ zIndex: 999 }}>
                         <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
-                            <Link to="/wallet">
+                            <Link onClick={handlerChangeBalance} to="/wallet" >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/credit-card.svg" alt="" />
                                     <h5 class="feature-content">
@@ -85,7 +124,7 @@ const Navbar = () => {
                                     </h5>
                                 </div>
                             </Link>
-                            <Link to={"/wallet"}>
+                            <Link onClick={handlerChangeWithdraw} to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/withdrawdollar.svg" alt="" />
                                     <h5 class="feature-content">
@@ -94,7 +133,7 @@ const Navbar = () => {
                                 </div>
                             </Link>
 
-                            <Link to={"/wallet"}>
+                            <Link onClick={handlerChangeTransaction} to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/transaction-ava.svg" alt="" />
                                     <h5 class="feature-content">

@@ -65,7 +65,7 @@ const Authen = () => {
         <div className="main-home">
           <div className="main-content">
             {isOpenResgiter && (
-              <div className="box-auth sign-up mt-4">
+              <div className="box-auth sign-up mt-4 signAuthen">
                 <div className="box-header d-flex justify-content-between align-items-center">
                   Sign Up
                   <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
@@ -181,7 +181,7 @@ const Authen = () => {
               </div>
             )}
             {isOpenConfirmResgiter && (
-              <div class="box-auth noti-success mt-4">
+              <div class="box-auth noti-success mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   <div></div>
                   <button class="btn__exit-chat">
@@ -196,12 +196,8 @@ const Authen = () => {
                 </div>
               </div>
             )}
-
-
-
-
             {isOpenLogin && (
-              <div class="box-auth signin mt-4">
+              <div class="box-auth signin mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   Sign In
                   <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
@@ -239,7 +235,7 @@ const Authen = () => {
               </div>
             )}
             {isOpenVerification && (
-              <div class="box-auth two-factor mt-4">
+              <div class="box-auth two-factor mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   Two-factor authentication
                   <button class="btn__exit-chat" onClick={handlerLoginVerification}>
@@ -262,7 +258,7 @@ const Authen = () => {
               </div>
             )}
             {isOpenResetPassword && (
-              <div class="box-auth enter-email mt-4">
+              <div class="box-auth enter-email mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   Reset Password
                   <button class="btn__exit-chat" onClick={handlerResetPassword}>
@@ -285,7 +281,7 @@ const Authen = () => {
             )}
             {isOpenResetAccount && (
 
-              <div class="box-auth reset-password mt-4">
+              <div class="box-auth reset-password mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   Reset Account Password
                   <button class="btn__exit-chat">
@@ -324,7 +320,7 @@ const Authen = () => {
             )}
 
             {isOpenConfirmResetAccount && (
-              <div class="box-auth noti-success mt-4">
+              <div class="box-auth noti-success mt-4 signAuthen">
                 <div class="box-header d-flex justify-content-between align-items-center">
                   Reset Password
                   <button class="btn__exit-chat">
