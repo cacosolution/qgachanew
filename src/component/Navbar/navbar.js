@@ -78,12 +78,14 @@ const Navbar = () => {
                         <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
 
-                            <div class="feature-item d-flex align-items-center">
-                                <img src="./images/icons/credit-card.svg" alt="" />
-                                <h5 class="feature-content">
-                                    Wallet
-                                </h5>
-                            </div>
+                            <Link to={"/withdraw"}>
+                                <div class="feature-item d-flex align-items-center">
+                                    <img src="./images/icons/credit-card.svg" alt="" />
+                                    <h5 class="feature-content">
+                                        Wallet
+                                    </h5>
+                                </div>
+                            </Link>
                             <Link to={"/withdraw"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/withdrawdollar.svg" alt="" />
