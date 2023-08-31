@@ -1,5 +1,5 @@
 .swiper-container {
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 
@@ -15,9 +15,11 @@
 .slick-list {
     margin: 0 -10px;
 }
-.slick-prev:before{
+
+.slick-prev:before {
     display: none;
 }
+
 .slick-next:before {
     display: none;
 }

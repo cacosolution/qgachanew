@@ -73,10 +73,10 @@ const Navbar = () => {
                     <div class="select-currency d-flex align-items-center   ">
                         <img class="currency" src="./images/icons/deposit/usdt.svg" alt="" />
                         <select name="money" id="user-money">
-                            <option value="usdt">$9,999</option>
-                            <option value="Moon">$BTC</option>
-                            <option value="trx">$ETH</option>
-                            <option value="bnb">$BNB</option>
+                            <option value="usdt" className='select-text'>$9,999</option>
+                            <option value="Moon" className='select-text'>$BTC</option>
+                            <option value="trx" className='select-text'>$ETH</option>
+                            <option value="bnb" className='select-text'>$BNB</option>
                         </select>
                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -173,10 +173,10 @@ const Navbar = () => {
             <div class="header-right">
                 <div class="select-right d-flex align-items-center">
                     <select name="currency" id="currentcy">
-                        <option value="usdt">$USDT</option>
-                        <option value="Moon">$BTC</option>
-                        <option value="trx">$ETH</option>
-                        <option value="bnb">$BNB</option>
+                        <option value="usdt" className='select-text'>$USDT</option>
+                        <option value="Moon" className='select-text'>$BTC</option>
+                        <option value="trx" className='select-text'>$ETH</option>
+                        <option value="bnb" className='select-text'>$BNB</option>
                     </select>
                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

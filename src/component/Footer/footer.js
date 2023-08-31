@@ -4,6 +4,7 @@ import "../../css/flickity.css";
 import "../../css/base.css";
 import "../../css/home.css";
 import { SidebarContext } from "../../context/sideBarContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { isOpenSideBar, setIsOpenSideBar } = useContext(SidebarContext)
@@ -164,7 +165,7 @@ const Footer = () => {
             <div class="list-link">
               <h4>GET HELP</h4>
               <ul>
-                <li><a href="">FAQ</a></li>
+                <li><Link to="/faq">FAQ</Link></li>
               </ul>
             </div>
 

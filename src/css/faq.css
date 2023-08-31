@@ -1,13 +1,15 @@
 .main-faq {
   margin: 0 auto;
-  height: 100%;
+  height: 80%;
 }
+
 .main-faq .main-content {
   max-width: 1580px;
   width: 100%;
   margin-top: 22px;
-  margin-left: 25%;
+  margin-left: 200px;
 }
+
 .main-faq .main-content button.btn-faq {
   border-radius: 3px;
   background: #291a3a;
@@ -20,11 +22,13 @@
   border: none;
   color: #fff;
 }
+
 .main-faq .main-content section.section-faq {
   margin-top: 22px;
   margin-bottom: 39px;
   max-width: 1197px;
 }
+
 .main-faq .main-content section.section-faq h2 {
   color: #fff;
   text-align: center;
@@ -34,6 +38,7 @@
   line-height: 35px;
   text-transform: uppercase;
 }
+
 .main-faq .main-content section.section-faq .faq-box {
   margin-top: 18px;
   padding: 44px 57px;
@@ -41,17 +46,21 @@
   border: 0.5px solid var(--xm, #9e9e9e);
   background: #291a3a;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card:not(:first-child) {
   margin-top: 12px;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card {
   background-color: unset;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header {
   background-color: #1b172f;
   border-bottom: none;
   padding: 10px 25px;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header button {
   color: #fff;
   font-size: 15px;
@@ -63,6 +72,7 @@
   outline: none;
   width: 100%;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header button span.no-faq {
   color: var(--xm, #9e9e9e);
   text-align: center;
@@ -73,16 +83,20 @@
   text-transform: capitalize;
   margin-right: 12px;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header button svg {
   transform: rotate(-90deg);
   transition: 0.3s;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header button[aria-expanded=true] svg {
   transform: rotate(0);
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-header button:focus {
   box-shadow: none;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-body {
   padding: 15px 50px;
   border-radius: 0px 0px 3px 3px;
@@ -94,6 +108,7 @@
   line-height: 23px;
   text-transform: capitalize;
 }
+
 .main-faq .main-content section.section-faq .faq-box .card .card-body a {
   color: white;
   text-decoration: underline;

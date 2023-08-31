@@ -520,6 +520,10 @@
     width: 50px;
   }
 
+  .main-faq .main-content {
+    margin-left: 0px !important;
+  }
+
   .container-wrapper main button.btn-support {
     right: 40px;
     bottom: 100px;

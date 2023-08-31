@@ -2,9 +2,33 @@
   width: 340px;
 }
 
+.caurousel-index {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .feature {
+    display: none;
+  }
+
+  .caurousel-index {
+    display: block;
+    margin-top: 150px;
+  }
+}
+
 @media (max-width: 576px) {
   .side-bar.active-show {
     width: 100%;
+  }
+
+  .feature {
+    display: none;
+  }
+
+  .caurousel-index {
+    margin-top: 80px;
+    display: block;
   }
 
   .side-bar.active-show .header-menu img {

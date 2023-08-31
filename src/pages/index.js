@@ -9,6 +9,7 @@ import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CarouselIndex from '../component/Carousel/carouselIndex';
 
 
 const Home = () => {
@@ -61,7 +62,7 @@ const Home = () => {
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className="main-home" style={{ width: "100%" }}>
                     <div className="main-content">
                         {isOpenResgiter && (
                             <div className="box-auth sign-up mt-4 signAuthen">
@@ -368,6 +369,7 @@ const Home = () => {
                             </div>
                         </div>
 
+
                         <section class="feature mb-5">
                             <div class="row gx-3">
 
@@ -421,6 +423,13 @@ const Home = () => {
                                 </div>
                             </div>
                         </section>
+
+                        <div className='caurousel-index '>
+                            <CarouselIndex />
+                        </div>
+
+
+
                         <section className="section-list-news pc">
                             <div className="news-item">
                                 <h2>Top Rated Games</h2>
