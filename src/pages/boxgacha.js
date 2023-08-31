@@ -11,6 +11,7 @@ import { BiChevronRight } from 'react-icons/bi'
 import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
+import BoxOverlay from '../component/Box/BoxOverlay';
 
 const boxgacha = () => {
     return (
@@ -40,18 +41,16 @@ const boxgacha = () => {
                                     <img src="./images/box-gacha2.png" alt="" />
                                     <img src="./images/box-comming-soon.png" alt="" />
                                     <img src="./images/box-com2.png" alt="" />
-                                    <img src="./images/box-comming-soon2.png" alt="" />
+
                                 </div>
                             </div>
                         </section>
-                        <div class="spacer my-5 py-5"></div>
+
 
                     </div>
                     <Footer />
                 </div>
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
         </div>
     )

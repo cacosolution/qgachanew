@@ -11,6 +11,8 @@ import "../css/deposit.css";
 import "../css/transactionTable.css";
 import "../css/responsive.css";
 import ListFeature from '../component/SectionList/listFeature';
+import BoxOverlay from "../component/Box/BoxOverlay";
+
 const Transaction = () => {
     const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
     const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
@@ -217,9 +219,7 @@ const Transaction = () => {
                     </div>
                 </div>
 
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
             <Footer />
 

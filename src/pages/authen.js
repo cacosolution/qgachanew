@@ -6,6 +6,7 @@ import "../css/home.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
+import BoxOverlay from "../component/Box/BoxOverlay";
 
 const authen = () => {
   return (
@@ -219,9 +220,7 @@ const authen = () => {
           </div>
           <Footer />
         </div>
-        <button class="btn-support">
-          <img src="images/icons/livesupport-icon.svg" alt="" />
-        </button>
+        <BoxOverlay />
       </main>
     </div>
   );

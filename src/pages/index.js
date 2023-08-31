@@ -362,7 +362,14 @@ const Home = () => {
                                 <h1>up to <span>100.000$</span></h1>
                                 <button >SIGN UP NOW</button>
                             </div>
-                            <img src="./images/img-main1.png" alt="banner-home" />
+                            <img src="./images/img-main1.png" alt="banner-home"  />
+                            <div class="mobile">
+                                <div class="list-social d-flex">
+                                    <div class="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>
+                                    <div class="social-item"><img src="./images/icons/twitter.svg" alt="" /></div>
+                                    <div class="social-item"><img src="./images/icons/tele.svg" alt="" /></div>
+                                </div>
+                            </div>
                         </div>
 
                         <section class="feature mb-5">

@@ -10,7 +10,7 @@ import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
 import ListFeature from "../component/SectionList/listFeature";
-
+import BoxOverlay from "../component/Box/BoxOverlay";
 import { Link } from "react-router-dom";
 
 const balance = () => {
@@ -60,9 +60,7 @@ const balance = () => {
           </div>
 
         </div>
-        <button class="btn-support">
-          <img src="images/icons/livesupport-icon.svg" alt="" />
-        </button>
+        <BoxOverlay />
 
         {/* <div class="box__spin-overlay">
           <div id="box-spin">

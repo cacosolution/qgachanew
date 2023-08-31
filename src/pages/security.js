@@ -9,6 +9,7 @@ import "../css/responsive.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
+import BoxOverlay from "../component/Box/BoxOverlay";
 
 const security = () => {
     return (
@@ -133,9 +134,7 @@ const security = () => {
 
                     </div>
                 </div>
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
             <Footer />
         </div>
