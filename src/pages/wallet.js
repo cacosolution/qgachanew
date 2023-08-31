@@ -346,7 +346,7 @@ const Wallet = () => {
                                 </div>
                             ) : isOpenTransaction && (
                                 <Transaction />
-                                
+
                             )}
 
 
@@ -362,7 +362,9 @@ const Wallet = () => {
 
 
             </main>
-            <Footer />
+            <div style={{}}>
+                <Footer />
+            </div>
 
         </div>
     );
