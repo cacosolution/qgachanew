@@ -62,9 +62,48 @@ const Wallet = () => {
                     <div class="deposit-content">
                         <button class="btn-wallet text-15">Wallet <img class="mobile"
                             src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
-                        <div class="feature-content d-flex">
+                        <div class="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
                             <div>
-                                <div class="list-feature">
+                                <div class="list-feature hide-pc">
+                                    <ul>
+
+                                        <li class="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
+                                            <img src="./images/icons/deposit/wallet.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">Balance</h4>
+                                        </li>
+                                        <li class="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
+                                            <img src="./images/icons/deposit/deposit.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">Deposit</h4>
+                                        </li>
+                                        <li class="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
+
+                                            <img src="./images/icons/deposit/withdraw.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">Withdraw</h4>
+                                        </li>
+                                        <li class="feature-item d-flex align-items-center">
+                                            <img src="./images/icons/deposit/buy.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">Buy Crypto <span>(Coming Soon)</span></h4>
+                                        </li>
+                                        <li class="feature-item d-flex align-items-center">
+                                            <img src="./images/icons/deposit/nft.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">NFTs <span>(Coming Soon)</span></h4>
+                                        </li>
+
+                                        <li class="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
+                                            <img src="./images/icons/deposit/transaction.svg" alt="" class="feature-icon" />
+                                            <h4 class="feature-title text-15">Transaction</h4>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="feature-content  d-flex">
+                            <div>
+                                <div class="list-feature hide-mobi">
                                     <ul>
 
                                         <li class="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>

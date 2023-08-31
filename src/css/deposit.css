@@ -524,6 +524,28 @@
   font-weight: 400;
 }
 
+@media (min-width: 800px) {
+  .hide-pc {
+    display: none;
+  }
+
+  .hide-mobi {
+    display: block;
+  }
+
+}
+
+@media (max-width: 950px) {
+  .hide-mobi {
+    display: none;
+  }
+
+  .hide-pc {
+    display: block;
+  }
+}
+
+
 @media (max-width: 576px) {
   .main-deposit .text-15 {
     font-size: 11px;
@@ -554,7 +576,7 @@
 }
 
 .main-deposit .deposit-content .feature-content .list-feature {
-  width: 278px;
+  width: 300px;
   margin-right: 11px;
   padding: 11px;
   height: -moz-max-content;
@@ -675,6 +697,9 @@
   padding: 12px 20px;
   position: relative;
 }
+
+
+
 
 @media (max-width: 576px) {
   .main-deposit .deposit-content .feature-content .feature-detail .tab-content .select-network {
@@ -906,7 +931,9 @@
   max-height: unset;
 }
 
-@media (max-width: 576px) {
+@media(max-width: 900px) {
+
+
   .main-deposit {
     height: -moz-max-content;
     height: max-content;
@@ -933,8 +960,81 @@
     width: 14px;
   }
 
-  .main-deposit .deposit-content .list-feature {
-    display: none;
+  .main-deposit .deposit-content .feature-content {
+    padding: 16px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail {
+    padding: 16px;
+  }
+
+  .main-deposit .deposit-content .feature-content .transaction-detail .list-button {
+    max-width: 400px;
+    row-gap: 8px;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .main-deposit .deposit-content .feature-content .transaction-detail .list-button button {
+    width: 48%;
+    margin-right: 0;
+    font-size: 11px;
+    padding: 0 12px;
+    height: 36px;
+    border-color: #393636;
+  }
+
+  .main-deposit .deposit-content .feature-content section.transaction-table.detail-trans {
+    width: 100%;
+    max-width: unset;
+    background-color: unset;
+  }
+
+  .main-deposit .deposit-content .feature-content section.transaction-table.detail-trans table {
+    position: static;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .feature-content section.transaction-table.detail-trans table tr td,
+  .main-deposit .deposit-content .feature-content section.transaction-table.detail-trans table tr th {
+    font-size: 11px;
+    padding: 0 3px;
+  }
+
+  .main-deposit .deposit-content .notice {
+    border-radius: 1.511px;
+    background: rgba(180, 60, 202, 0.2);
+  }
+}
+
+@media (max-width: 576px) {
+
+
+  .main-deposit {
+    height: -moz-max-content;
+    height: max-content;
+    margin-bottom: 300px;
+  }
+
+  .main-deposit .deposit-content {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-deposit .deposit-content button.btn-wallet {
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.069px solid var(--xm, #545454);
+    background: #1b172f;
+    box-shadow: 0px 4.2773723602px 4.2773723602px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content button.btn-wallet img {
+    width: 14px;
   }
 
   .main-deposit .deposit-content .feature-content {
