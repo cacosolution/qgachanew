@@ -10,7 +10,7 @@ import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
 import BoxOverlay from '../component/Box/BoxOverlay';
 
-const bakacomming = () => {
+const Bakacomming = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -34,4 +34,4 @@ const bakacomming = () => {
     )
 }
 
-export default bakacomming
+export default Bakacomming

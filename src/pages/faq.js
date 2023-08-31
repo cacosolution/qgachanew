@@ -11,7 +11,7 @@ import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
 import BoxOverlay from "../component/Box/BoxOverlay";
 
-const faq = () => {
+const Faq = () => {
   return (
     <div class="container-wrapper">
       <Navbar />
@@ -293,4 +293,4 @@ const faq = () => {
   );
 };
 
-export default faq;
+export default Faq;
