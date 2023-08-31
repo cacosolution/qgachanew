@@ -33,7 +33,7 @@ const Setting = () => {
         setIsReferences(true);
     }
 
-    
+
     const handlerLoginVerification = () => {
         setIsOpenVerification(!isOpenVerification)
     }
@@ -225,31 +225,37 @@ const Setting = () => {
                             ) : (
                                 <></>
                             )}
+                            {isOpenVerification && (
+                                <div class="box-auth two-factor mt-4 transaction-detail2">
+                                    <div>
+                                        <div class="box-header d-flex justify-content-between align-items-center">
+                                            Two-factor authentication
+                                            <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                                                <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                                            </button>
+                                        </div>
 
-                        </div>
-                        {isOpenVerification && (
-                            <div class="box-auth two-factor mt-4">
-                                <div class="box-header d-flex justify-content-between align-items-center">
-                                    Two-factor authentication
-                                    <button class="btn__exit-chat" onClick={handlerLoginVerification}>
-                                        <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                                    </button>
-                                </div>
+                                        <div className="transaction-detail-content">
+                                            <form>
+                                                <p class="text-center">Please enter the 6-digit authentication Code.</p>
+                                                <div class="list-input-number d-flex">
+                                                    <div class="num-item"><input type="text" /></div>
+                                                    <div class="num-item"><input type="text" /></div>
+                                                    <div class="num-item"><input type="text" /></div>
+                                                    <div class="num-item"><input type="text" /></div>
+                                                    <div class="num-item"><input type="text" /></div>
+                                                    <div class="num-item"><input type="text" /></div>
+                                                </div>
 
-                                <form>
-                                    <p class="text-center">Please enter the 6-digit authentication Code.</p>
-                                    <div class="list-input-number d-flex">
-                                        <div class="num-item"><input type="text" /></div>
-                                        <div class="num-item"><input type="text" /></div>
-                                        <div class="num-item"><input type="text" /></div>
-                                        <div class="num-item"><input type="text" /></div>
-                                        <div class="num-item"><input type="text" /></div>
-                                        <div class="num-item"><input type="text" /></div>
+                                            </form>
+                                        </div>
                                     </div>
 
-                                </form>
-                            </div>
-                        )}
+
+                                </div>
+                            )}
+                        </div>
+
 
                     </div>
 
