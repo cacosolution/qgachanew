@@ -10,6 +10,7 @@ import "../css/home.css";
 import "../css/deposit.css";
 import "../css/transactionTable.css";
 import "../css/responsive.css";
+import BoxOverlay from '../component/Box/BoxOverlay';
 const Transaction = () => {
     return (
         <div class="container-wrapper">
@@ -163,9 +164,7 @@ const Transaction = () => {
                     </div>
                 </div>
 
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
             <Footer />
 

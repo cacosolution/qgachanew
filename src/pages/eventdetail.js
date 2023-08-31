@@ -8,6 +8,7 @@ import Footer from '../component/Footer/footer'
 import Sidebar from '../component/Sidebar/sidebar'
 import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
+import BoxOverlay from '../component/Box/BoxOverlay';
 
 const eventdetail = () => {
     return (
@@ -59,9 +60,7 @@ const eventdetail = () => {
                     </div>
 
                 </div>
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
             <Footer />
         </div>

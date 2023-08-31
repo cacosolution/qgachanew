@@ -9,7 +9,7 @@ import "../css/responsive.css";
 import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
-import { BiChevronRight } from 'react-icons/bi'
+import BoxOverlay from '../component/Box/BoxOverlay';
 
 const tournament = () => {
     return (
@@ -29,9 +29,7 @@ const tournament = () => {
                     </div>
                     <Footer />
                 </div>
-                <button class="btn-support">
-                    <img src="images/icons/livesupport-icon.svg" alt="" />
-                </button>
+                <BoxOverlay />
             </main>
         </div>
     )

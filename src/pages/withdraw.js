@@ -8,6 +8,7 @@ import "../css/responsive.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
+import BoxOverlay from "../component/Box/BoxOverlay";
 
 const withdraw = () => {
   return (
@@ -181,7 +182,7 @@ const withdraw = () => {
             </div>
           </form>
         </div>
-
+        <BoxOverlay />
       </main>
       <Footer />
 

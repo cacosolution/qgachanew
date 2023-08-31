@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .container-wrapper main button.btn-support img {
     width: 50px;
   }
@@ -99,6 +99,7 @@
     height: 180px;
     background: unset;
     margin-top: 13px;
+    margin-bottom: 60px;
   }
 
   main .main-home .main-content .banner-main .banner-content {
@@ -563,7 +564,7 @@
   }
 
   main .main-home .main-content {
-    width: 100%;
+    width: 90%;
 
   }
 
@@ -571,6 +572,7 @@
     height: 180px;
     background: unset;
     margin-top: 13px;
+    margin-bottom: 50px;
   }
 
   main .main-home .main-content .banner-main .banner-content {
@@ -600,11 +602,12 @@
     font-size: 40px;
     position: absolute;
     bottom: 0;
+    z-index: 99;
   }
 
   main .main-home .main-content .banner-main .list-social {
     position: absolute;
-    bottom: -10px;
+    bottom: -42px;
     left: calc(50% - 57.5px);
   }
 

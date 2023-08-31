@@ -11,20 +11,15 @@ import "../css/transactionTable.css";
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
-import Carousel from "../component/Carousel/Carousel";
+import BoxOverlay from "../component/Box/BoxOverlay";
 const ticketform = () => {
   return (
     <div class="container-wrapper">
       <Navbar />
       <main>
         <Sidebar />
-
         <div class="main-home">
-
-
           <div class="main-content" style={{ width: "80%" }}>
-
-
             <section class="section-gift-ticket">
               <div class="gift-ticket-header">
                 <p>Gift Ticket</p>
@@ -198,9 +193,7 @@ const ticketform = () => {
           </div>
           <Footer />
         </div>
-        <button class="btn-support">
-          <img src="images/icons/livesupport-icon.svg" alt="" />
-        </button>
+        <BoxOverlay />
       </main>
     </div>
   );
