@@ -9,6 +9,7 @@ import Sidebar from '../component/Sidebar/sidebar'
 import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { Link } from 'react-router-dom';
 
 const eventdetail = () => {
     return (
@@ -16,9 +17,11 @@ const eventdetail = () => {
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div class="main-home" style={{ width: "100%" }}>
                     <div class="main-content main-event">
-                        <button class="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><a href="">Details</a></strong></button>
+                        <Link to="/eventlastest">
+                            <button class="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><a href="">Details</a></strong></button>
+                        </Link>
                         <div class="banner-event">
                             <img src="./images/nft-upgrade.png" alt="banner-nft" />
                         </div>

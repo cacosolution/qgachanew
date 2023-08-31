@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/flickity.css";
 import "../css/base.css";
@@ -9,101 +9,151 @@ import Sidebar from '../component/Sidebar/sidebar'
 import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { Link } from 'react-router-dom';
 
-const eventlastest = () => {
+const Eventlastest = () => {
+    const [isEven, setEven] = useState(false);
+    const [isEvenlastest, setEvenlastest] = useState(true);
+    const handlerEvent = () => {
+        setEven(true);
+        setEvenlastest(false);
+    }
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div class="main-home" style={{ width: "100%" }}>
                     <div class="main-content main-event">
                         <button class="btn-event">Event</button>
                         <div class="banner-event">
                             <img src="./images/event1.png" alt="banner-home" />
                         </div>
                         <div class="group__btn-event mt-2 mt-sm-5 d-flex align-items-center">
-                            <button class="btn-event btn-last">Latest Event</button>
-                            <button class="btn-event btn-archived">Archived</button>
+                            <Link to="/eventdetail">
+                                <button class="btn-event btn-last" >Latest Event</button>
+                            </Link>
+                            <button class="btn-event btn-archived" onClick={handlerEvent}>Archived</button>
                         </div>
 
-                        <div class="list-event">
-                            <div class="row gx-3 gx-sm-0 gy-3 gy-sm-5">
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="event-item">
-                                        <img src="./images/nft-upgrade.png" alt="" />
-                                        <div class="event-info d-flex justify-content-between align-items-center">
-                                            <div class="time my-3">
-                                                Ends at 23:59:59 28/8/2023
-                                                <p>Join Cash X Share</p>
-                                            </div>
-                                            <button>In progress</button>
-                                        </div>
-                                    </div>
+
+
+                        {isEven ? (
+
+                            <div class="list-event">
+                                <div className='class="row gx-3 gx-sm-0 gy-3 gy-sm-5"'>
+                                    <table style={{ width: "100%" }}>
+                                        <tr>
+                                            <th>Ordinal</th>
+                                            <th>Date</th>
+                                            <th>Event</th>
+                                            <th>archive</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>10/8/2023</td>
+                                            <td>Name Event</td>
+                                            <td>Reward event</td>
+                                            <td class="status confirm">Confirmed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>10/8/2023</td>
+                                            <td>Name Event</td>
+                                            <td>Reward event</td>
+                                            <td class="status unconfirm">Unconfirmed</td>
+                                        </tr>
+                                    </table>
                                 </div>
 
+
+
+
+                                <div class="spacer mb-5 pb-5"></div>
                             </div>
-                        </div>
+
+                        ) : isEvenlastest ? (
+                            <div class="list-event">
+                                <div class="row gx-3 gx-sm-0 gy-3 gy-sm-5">
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <div class="event-item">
+                                            <img src="./images/nft-upgrade.png" alt="" />
+                                            <div class="event-info d-flex justify-content-between align-items-center">
+                                                <div class="time my-3">
+                                                    Ends at 23:59:59 28/8/2023
+                                                    <p>Join Cash X Share</p>
+                                                </div>
+                                                <button>In progress</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
 
                         <div class="spacer mb-5 pb-5"></div>
                     </div>
@@ -120,4 +170,4 @@ const eventlastest = () => {
     )
 }
 
-export default eventlastest
+export default Eventlastest

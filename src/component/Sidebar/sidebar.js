@@ -5,7 +5,8 @@ import BoxOverlay from "../Box/BoxOverlay";
 
 
 const Sidebar = () => {
-    const [isActiveShow, setIsActiveShow] = useState(true)
+    const [isActiveShow, setIsActiveShow] = useState(true);
+   
     const {
         isOpenSideBar,
         setIsOpenSideBar,
@@ -52,9 +53,12 @@ const Sidebar = () => {
 
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
-                    <div class="wrap-box d-flex align-items-center justify-content-center">
+
+                    <Link class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/eventlastest" >
                         EVENT
-                    </div>
+                    </Link>
+
+
                     <div class="d-flex feature-event">
                         <img src="./images/icons/quest.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="quest" />
                         <img src="./images/icons/spin.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="spin" />
