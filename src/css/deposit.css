@@ -507,10 +507,9 @@
 }
 
 .main-deposit {
-  max-width: 1360px;
-  width: 100%;
-  margin-left: 22%;
-  height: 2000px;
+  margin: auto;
+  width: 80%;
+
 }
 
 .main-deposit p {
@@ -841,7 +840,6 @@
 
 @media (max-width: 576px) {
   .main-deposit {
-    margin-left: 0;
     height: -moz-max-content;
     height: max-content;
     margin-bottom: 300px;

@@ -18,7 +18,7 @@ const Footer = () => {
           <h5>BAKA</h5>
         </div>
         <div class="line-white mt-3"></div>
-        <div class="footer-contact d-flex pl-100">
+        <div class="footer-contact d-flex ">
           <div class="contact-para">
             <p>The online gacha platform has become a widespread and captivating cultural phenomenon
               nowadays. With the advancement
@@ -148,18 +148,26 @@ const Footer = () => {
                 <li><a href="">Affiliate</a></li>
               </ul>
             </div>
-            <div class="get-help">
-              <h4>GET HELP</h4>
-              <div class="link-faq"><a>FAQ</a></div>
+          </div>
+          <div class="line-yblue pc"></div>
+          <div class="box box-link d-flex pc">
+            <div class="list-link">
+              <h4>DOCS</h4>
+              <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+              </ul>
             </div>
           </div>
           <div class="line-yblue pc"></div>
-          <div class="box box-docs pc">
-            <h4>DOCS</h4>
-            <ul>
-              <li><a href="">Privacy Policy</a></li>
-              <li><a href="">Terms & Conditions</a></li>
-            </ul>
+          <div class="box box-link d-flex pc">
+            <div class="list-link">
+              <h4>GET HELP</h4>
+              <ul>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>

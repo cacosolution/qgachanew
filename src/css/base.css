@@ -35,7 +35,6 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
 h1,
@@ -592,7 +591,7 @@ footer h5 {
 }
 
 footer p {
-  max-width: 370px;
+
   font-size: 13px;
   font-style: italic;
   font-weight: 500;
@@ -646,6 +645,8 @@ footer .footer-content .img-box h5 {
 
 footer .footer-content .footer-contact {
   padding-top: 29px;
+  width: 80%;
+  margin: auto;
 }
 
 footer .footer-content .footer-contact .line-y {
@@ -750,6 +751,8 @@ footer .footer-content .footer-contact .get-intouch button {
 footer .footer-content .footer-info {
   padding-top: 40px;
   padding-bottom: 20px;
+  width: 90%;
+  margin: auto;
 }
 
 footer .footer-content .footer-info h4 {
@@ -817,7 +820,7 @@ footer .footer-content .footer-info .box-logo .list-social .social-item:not(:fir
 }
 
 footer .footer-content .footer-info .box-link {
-  margin: 0 50px;
+  margin: 40px;
 }
 
 footer .footer-content .footer-info .box-link .list-link {
@@ -1004,9 +1007,11 @@ footer .footer-content .footer-info .box-docs {
 .box-auth.sign-up form .risk-level .process-item.success {
   background: #25c22a;
 }
+
 .box-auth.sign-up form .risk-level .process-item.average {
   background: #cfe228;
 }
+
 .box-auth.sign-up form .risk-level span {
   color: #ff004f;
   text-align: right;
@@ -1222,7 +1227,7 @@ input {
 
 .container-wrapper main .main-fournumber {
   height: 100%;
-  width: calc(100% - 340px);
+
 }
 
 .container-wrapper main .main-fournumber .main-content {
@@ -1232,7 +1237,6 @@ input {
 
 @media (max-width: 1800px) {
   .container-wrapper main .main-fournumber .main-content {
-    width: 90%;
     margin: 0 auto;
   }
 }
@@ -1279,8 +1283,8 @@ input {
 }
 
 .container-wrapper main .main-fournumber section.instruction {
-  margin: 40px 0;
-  padding: 40px 0 40px 75px;
+  margin: auto;
+  width: 80%;
 }
 
 .container-wrapper main .main-fournumber section.instruction h4,
@@ -1298,6 +1302,7 @@ input {
   position: fixed;
   right: 10px;
   bottom: 20px;
+  z-index: 99999;
 }
 
 @media (max-width: 576px) {

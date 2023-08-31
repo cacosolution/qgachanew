@@ -40,11 +40,11 @@ const boxgacha = () => {
                                     <img src="./images/box-gacha2.png" alt="" />
                                     <img src="./images/box-comming-soon.png" alt="" />
                                     <img src="./images/box-com2.png" alt="" />
-                                    <img src="./images/box-comming-soon2.png" alt="" />
+
                                 </div>
                             </div>
                         </section>
-                        <div class="spacer my-5 py-5"></div>
+
 
                     </div>
                     <Footer />
