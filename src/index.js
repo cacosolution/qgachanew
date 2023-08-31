@@ -21,7 +21,6 @@ import Bakacomming from './pages/bakacomming'
 import Boxgacha from './pages/boxgacha'
 import Completedgacha from "./pages/completedgacha";
 import Eventdetail from './pages/eventdetail'
-import Eventlastest from './pages/eventlastest'
 import EventNodata from './pages/event-nodata'
 import Mystery from './pages/mystery'
 import Pvpcomming from './pages/pvpcomming'
@@ -80,10 +79,6 @@ const router = createBrowserRouter([
   {
     path: "/eventdetail",
     element: <Eventdetail />,
-  },
-  {
-    path: "/eventlastest",
-    element: <Eventlastest />,
   },
   {
     path: "/eventnodata",

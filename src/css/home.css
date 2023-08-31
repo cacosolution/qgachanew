@@ -849,6 +849,11 @@ s .main-home .main-content section.feature {
   background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
 }
 
+.event-info {
+  padding: 10px;
+}
+
+
 @media (max-width: 576px) {
   .main-home .main-content.main-event .list-event .event-item .event-info {
     padding: 0 12px;
