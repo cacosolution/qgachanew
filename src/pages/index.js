@@ -64,7 +64,7 @@ const Home = () => {
                 <div className="main-home">
                     <div className="main-content">
                         {isOpenResgiter && (
-                            <div className="box-auth sign-up mt-4">
+                            <div className="box-auth sign-up mt-4 signAuthen">
                                 <div className="box-header d-flex justify-content-between align-items-center">
                                     Sign Up
                                     <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
@@ -180,7 +180,7 @@ const Home = () => {
                             </div>
                         )}
                         {isOpenConfirmResgiter && (
-                            <div class="box-auth noti-success mt-4">
+                            <div class="box-auth noti-success mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     <div></div>
                                     <button class="btn__exit-chat">
@@ -195,12 +195,8 @@ const Home = () => {
                                 </div>
                             </div>
                         )}
-
-
-
-
                         {isOpenLogin && (
-                            <div class="box-auth signin mt-4">
+                            <div class="box-auth signin mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     Sign In
                                     <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
@@ -238,7 +234,7 @@ const Home = () => {
                             </div>
                         )}
                         {isOpenVerification && (
-                            <div class="box-auth two-factor mt-4">
+                            <div class="box-auth two-factor mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     Two-factor authentication
                                     <button class="btn__exit-chat" onClick={handlerLoginVerification}>
@@ -261,7 +257,7 @@ const Home = () => {
                             </div>
                         )}
                         {isOpenResetPassword && (
-                            <div class="box-auth enter-email mt-4">
+                            <div class="box-auth enter-email mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     Reset Password
                                     <button class="btn__exit-chat" onClick={handlerResetPassword}>
@@ -284,7 +280,7 @@ const Home = () => {
                         )}
                         {isOpenResetAccount && (
 
-                            <div class="box-auth reset-password mt-4">
+                            <div class="box-auth reset-password mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     Reset Account Password
                                     <button class="btn__exit-chat">
@@ -323,7 +319,7 @@ const Home = () => {
                         )}
 
                         {isOpenConfirmResetAccount && (
-                            <div class="box-auth noti-success mt-4">
+                            <div class="box-auth noti-success mt-4 signAuthen">
                                 <div class="box-header d-flex justify-content-between align-items-center">
                                     Reset Password
                                     <button class="btn__exit-chat">
@@ -362,7 +358,7 @@ const Home = () => {
                                 <h1>up to <span>100.000$</span></h1>
                                 <button >SIGN UP NOW</button>
                             </div>
-                            <img src="./images/img-main1.png" alt="banner-home"  />
+                            <img src="./images/img-main1.png" alt="banner-home" />
                             <div class="mobile">
                                 <div class="list-social d-flex">
                                     <div class="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>

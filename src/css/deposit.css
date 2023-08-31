@@ -507,7 +507,7 @@
 }
 
 .main-deposit {
-  margin: auto;
+  margin: auto auto 95px auto;
   width: 80%;
 
 }

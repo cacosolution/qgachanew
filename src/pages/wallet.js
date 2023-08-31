@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/flickity.css"
 import "../css/base.css"
@@ -14,15 +14,22 @@ import ListFeature from "../component/SectionList/listFeature";
 import BoxOverlay from "../component/Box/BoxOverlay";
 import { Link } from "react-router-dom";
 import Transaction from "../component/Transaction/Transaction";
+import { SidebarContext } from "../context/sideBarContext";
 
 
 
 
 const Wallet = () => {
-    const [isOpenBalance, SetIsOpenBalance] = useState(true)
-    const [isOpenDeposit, SetIsOpenDeposit] = useState(false)
-    const [isOpenWithdraw, SetIsOpenWithdraw] = useState(false)
-    const [isOpenTransaction, SetIsOpenTransaction] = useState(false)
+    const {
+        isOpenBalance,
+        SetIsOpenBalance,
+        isOpenDeposit,
+        SetIsOpenDeposit,
+        isOpenWithdraw,
+        SetIsOpenWithdraw,
+        isOpenTransaction,
+        SetIsOpenTransaction
+    } = useContext(SidebarContext)
 
     const handlerChangeBalance = () => {
         SetIsOpenBalance(true)
@@ -53,6 +60,12 @@ const Wallet = () => {
 
         SetIsOpenDeposit(false)
     }
+
+    useEffect(() => {
+        if (isOpenBalance === false || isOpenDeposit === false || isOpenTransaction === false || isOpenWithdraw === false)
+            SetIsOpenBalance(true)
+    }, [])
+
     return (
         <div class="container-wrapper">
             <Navbar />

@@ -376,7 +376,7 @@ const Affiliate = () => {
           <Footer />
         </div>
       </main>
-      <BoxOverlay />
+
 
     </div>
   );

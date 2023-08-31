@@ -77,8 +77,10 @@ const NavAuthen = () => {
     return (
         <header class="d-flex align-items-center">
             <div class="header-content d-flex align-items-center justify-content-center">
-                <img class="mobile" width="30px" src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
-                <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
+                <Link to={"/"}>
+                    <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
+                    <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
+                </Link>
                 <div class="header-action d-flex align-items-center">
                     <button class="btn-auth btn-signup" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
                         Sign Up
@@ -353,7 +355,7 @@ const NavAuthen = () => {
                 </div>
             </div>
             {isOpenResgiter && (
-                <div className="box-auth sign-up mt-4 signAuthen" >
+                <div className="box-auth sign-up mt-4 signAuthen">
                     <div className="box-header d-flex justify-content-between align-items-center">
                         Sign Up
                         <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
@@ -468,6 +470,22 @@ const NavAuthen = () => {
                     </form>
                 </div>
             )}
+            {isOpenConfirmResgiter && (
+                <div class="box-auth noti-success mt-4 signAuthen">
+                    <div class="box-header d-flex justify-content-between align-items-center">
+                        <div></div>
+                        <button class="btn__exit-chat">
+                            <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)} alt="" />
+                        </button>
+                    </div>
+                    <div class="box-content">
+                        <h3>Sign Up successfully</h3>
+                        <div class="submit d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            )}
             {isOpenLogin && (
                 <div class="box-auth signin mt-4 signAuthen">
                     <div class="box-header d-flex justify-content-between align-items-center">
@@ -504,6 +522,107 @@ const NavAuthen = () => {
                                 account</a>
                         </p>
                     </form>
+                </div>
+            )}
+            {isOpenVerification && (
+                <div class="box-auth two-factor mt-4 signAuthen">
+                    <div class="box-header d-flex justify-content-between align-items-center">
+                        Two-factor authentication
+                        <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                        </button>
+                    </div>
+
+                    <form>
+                        <p class="text-center">Please enter the 6-digit authentication Code.</p>
+                        <div class="list-input-number d-flex">
+                            <div class="num-item"><input type="text" /></div>
+                            <div class="num-item"><input type="text" /></div>
+                            <div class="num-item"><input type="text" /></div>
+                            <div class="num-item"><input type="text" /></div>
+                            <div class="num-item"><input type="text" /></div>
+                            <div class="num-item"><input type="text" /></div>
+                        </div>
+
+                    </form>
+                </div>
+            )}
+            {isOpenResetPassword && (
+                <div class="box-auth enter-email mt-4 signAuthen">
+                    <div class="box-header d-flex justify-content-between align-items-center">
+                        Reset Password
+                        <button class="btn__exit-chat" onClick={handlerResetPassword}>
+                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                        </button>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputRePassword4">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" />
+                        </div>
+                        <div class="submit d-flex justify-content-center">
+                            <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
+                        </div>
+                        <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                            <a class="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
+                        </p>
+                    </form>
+                </div>
+            )}
+            {isOpenResetAccount && (
+
+                <div class="box-auth reset-password mt-4 signAuthen">
+                    <div class="box-header d-flex justify-content-between align-items-center">
+                        Reset Account Password
+                        <button class="btn__exit-chat">
+                            <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerResetAccountPassword} alt="" />
+                        </button>
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="inputRePassword4">New password</label>
+                            <input type="password" class="form-control" placeholder="New password" />
+                            <img src="./images/icons/eye.svg" alt="show-pass" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRePassword4">New password again</label>
+                            <input type="password" class="form-control" placeholder="New password again" />
+                            <img src="./images/icons/eye.svg" alt="show-pass" />
+                        </div>
+                        <div className='form-group'>
+                            <label for="inputRePassword4">Verification Code</label>
+
+                        </div>
+                        <div className="form-group resend">
+                            <input type="text" className="form-control" placeholder="Verification Code" />
+                            <span className="resend">Resend(60s)</span>
+                        </div>
+                        <p class="notice">Please enter the 6-digit verification code sent to your email. The code is
+                            valid for 10
+                            minutes.</p>
+                        <div class="submit d-flex justify-content-center">
+                            <button class="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
+                        </div>
+                    </form>
+                </div>
+
+            )}
+
+            {isOpenConfirmResetAccount && (
+                <div class="box-auth noti-success mt-4 signAuthen">
+                    <div class="box-header d-flex justify-content-between align-items-center">
+                        Reset Password
+                        <button class="btn__exit-chat">
+                            <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)} alt="" />
+                        </button>
+                    </div>
+                    <div class="box-content">
+                        <h3>Password changed successfully</h3>
+                        <div class="submit d-flex justify-content-center">
+                            <button class="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
+                        </div>
+                    </div>
                 </div>
             )}
 
