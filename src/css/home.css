@@ -773,6 +773,8 @@ s .main-home .main-content section.feature {
   background: #291a3a;
   font-size: 15px;
   font-weight: 400;
+  margin: auto;
+  width: 90%;
   text-transform: capitalize;
 }
 

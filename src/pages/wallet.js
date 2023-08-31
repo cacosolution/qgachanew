@@ -73,7 +73,8 @@ const Wallet = () => {
                 <Sidebar />
                 <div class="main-deposit">
                     <div class="deposit-content">
-                        <button class="btn-wallet text-15">Wallet <img class="mobile"
+                        <button class="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")} 
+                        <img class="mobile"
                             src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
                         <div class="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
                             <div>
