@@ -38,6 +38,7 @@ import Tournament from './pages/tournament'
 import Upgrade from './pages/upgrade'
 import Upgradesoon from './pages/upgradesoon'
 import BoxOverlay from "./component/Box/BoxOverlay";
+import Wallet from "./pages/wallet";
 
 const router = createBrowserRouter([
   {
@@ -175,6 +176,10 @@ const router = createBrowserRouter([
   {
     path: "/boxoverlay",
     element: <BoxOverlay />
+  },
+  {
+    path: "/wallet",
+    element: <Wallet />
   }
 ]);
 
