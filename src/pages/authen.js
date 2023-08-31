@@ -11,6 +11,7 @@ import BoxOverlay from '../component/Box/BoxOverlay';
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import CarouselIndex from '../component/Carousel/carouselIndex';
 
 const Authen = () => {
   const [isOpenResgiter, setIsOpenResgiter] = useState(false)
@@ -422,6 +423,11 @@ const Authen = () => {
                 </div>
               </div>
             </section>
+            
+            <div className='caurousel-index '>
+              <CarouselIndex />
+            </div>
+
             <section className="section-list-news pc">
               <div className="news-item">
                 <h2>Top Rated Games</h2>

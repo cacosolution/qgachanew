@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../css/Carousel.css";
+import { Link } from "react-router-dom";
 
 const CarouselIndex = () => {
     const settings = {
@@ -45,30 +46,33 @@ const CarouselIndex = () => {
         <div>
             <div className="carou">
                 <Slider {...settings} autoplay autoplaySpeed={2000}>
-                    <div>
+                    <Link to="/upgrade">
                         <img src="./images/img-main2.png" alt="" />
-                    </div>
-                    <div>
+                    </Link>
+                    <Link to="/tournament">
                         <img src="./images/img-main3.png" alt="" />
-                    </div>
-                    <div>
+                    </Link>
+                    <Link to="/upgradesoon">
                         <img src="./images/img-main4.png" alt="" />
-                    </div>
-                    <div>
-                        <img src="./images/img-main5.png" alt="" style={{ height: "110px", objectFit: "cover" }} />
-                    </div>
-                    <div>
+
+                    </Link>
+                    <Link to="/boxgacha">
+                        <div>
+                            <img src="./images/img-main5.png" alt="" style={{ height: "110px", objectFit: "cover" }} />
+                        </div>
+                    </Link>
+                    <Link to="/mystery">
                         <img src="./images/img-main6.png" alt="" />
-                    </div>
-                    <div>
+                    </Link>
+                    <Link to="/completedgacha">
                         <img src="./images/img-main7.png" alt="" />
-                    </div>
-                    <div>
+                    </Link>
+                    <Link to="/reroll">
                         <img src="./images/img-main8.png" alt="" />
-                    </div>
-                    <div>
+                    </Link>
+                    <Link to="/sugoroku">
                         <img src="./images/img-main9.png" alt="" />
-                    </div>
+                    </Link>
                 </Slider>
             </div>
 
