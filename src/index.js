@@ -8,17 +8,13 @@ import Home from "./pages";
 import Jackpot from "./pages/jackpot";
 import Affiliate from "./pages/affiliate";
 import Authen from "./pages/authen";
-import Balance from "./pages/balance";
 import Event from "./pages/event";
 import Faq from "./pages/faq";
 import FourNumber from "./pages/fournumber";
 import LuckyNumber from "./pages/luckynumber";
 import Setting from "./pages/setting";
 import TicketForm from "./pages/ticket-form";
-import Transaction from "./pages/transaction";
 import UserAction from "./pages/user-action";
-import WithDraw from "./pages/withdraw";
-import Deposit from "./pages/deposit";
 import BuyTicket from "./pages/buy-ticket";
 import Buy5ticket from "./pages/buy5ticket";
 import Bakacomming from './pages/bakacomming'
@@ -62,10 +58,6 @@ const router = createBrowserRouter([
     element: <Bakacomming />,
   },
   {
-    path: "/balance",
-    element: <Balance />,
-  },
-  {
     path: "/boxgacha",
     element: <Boxgacha />,
   },
@@ -80,10 +72,6 @@ const router = createBrowserRouter([
   {
     path: "/completedgacha",
     element: <Completedgacha />,
-  },
-  {
-    path: "/deposit",
-    element: <Deposit />,
   },
   {
     path: "/event",
@@ -154,10 +142,6 @@ const router = createBrowserRouter([
     element: <Tournament />,
   },
   {
-    path: "/transaction",
-    element: <Transaction />,
-  },
-  {
     path: "/upgrade",
     element: <Upgrade />,
   },
@@ -168,10 +152,6 @@ const router = createBrowserRouter([
   {
     path: "/user-action",
     element: <UserAction />,
-  },
-  {
-    path: "/withdraw",
-    element: <WithDraw />,
   },
   {
     path: "/boxoverlay",
