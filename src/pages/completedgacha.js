@@ -11,7 +11,7 @@ import Footer from '../component/Footer/footer'
 import { BiChevronRight } from 'react-icons/bi';
 import BoxOverlay from '../component/Box/BoxOverlay';
 
-const completedgacha = () => {
+const Completedgacha = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -37,4 +37,4 @@ const completedgacha = () => {
     )
 }
 
-export default completedgacha
+export default Completedgacha

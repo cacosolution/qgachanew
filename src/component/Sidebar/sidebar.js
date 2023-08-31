@@ -53,7 +53,7 @@ const Sidebar = () => {
 
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
-                    <Link class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/eventlastest" >
+                    <Link class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
                         EVENT
                     </Link>
                     <div class="d-flex feature-event">

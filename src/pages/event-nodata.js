@@ -10,7 +10,7 @@ import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
 
-const eventNodata = () => {
+const EventNodata = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -48,4 +48,4 @@ const eventNodata = () => {
     )
 }
 
-export default eventNodata
+export default EventNodata

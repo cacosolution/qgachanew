@@ -14,7 +14,7 @@ import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
 import BoxOverlay from "../component/Box/BoxOverlay";
 
-const buy5ticket = () => {
+const Buy5ticket = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -287,4 +287,4 @@ const buy5ticket = () => {
     );
 };
 
-export default buy5ticket;
+export default Buy5ticket;

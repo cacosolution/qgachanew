@@ -11,7 +11,7 @@ import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
 import { Link } from 'react-router-dom';
 
-const eventdetail = () => {
+const EventDetail = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -70,4 +70,4 @@ const eventdetail = () => {
     )
 }
 
-export default eventdetail
+export default EventDetail

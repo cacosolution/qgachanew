@@ -5,14 +5,17 @@
 .main-deposit .deposit-content .feature-content .feature-detail {
   padding: 0;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .feature-header {
   border-radius: 3px;
   background: #1b172f;
   padding: 18px 34px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .feature-body {
   padding: 33px 35px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-wrapper input {
   border-radius: 3px;
   border: 1px solid var(--xm, #9e9e9e);
@@ -25,6 +28,7 @@
   text-transform: capitalize;
   margin-top: 20px;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .feature-body .btn-resend {
   color: var(--text, #e275f9);
   font-size: 15px;
@@ -33,6 +37,7 @@
   height: 46px;
   text-transform: capitalize;
 }
+
 .main-deposit .deposit-content .feature-content .feature-detail .feature-body .btn-resend button {
   border-radius: 5px;
   border: 1px solid #575757;
@@ -52,10 +57,11 @@
 
 .box-change {
   width: 1107px;
-  height: 448px;
+  height: 700px;
   border-radius: 6px;
   background: #291a3a;
 }
+
 .box-change h4 {
   color: #fff;
   font-size: 15px;
@@ -64,12 +70,14 @@
   text-align: start;
   width: 100%;
   padding-left: 100px;
-  padding-top: 50px;
+  padding-top: 15px;
 }
+
 .box-change h4.desc {
   padding-top: 10px;
   font-weight: 400;
 }
+
 .box-change .qr {
   width: 168px;
   height: 168px;
@@ -78,21 +86,25 @@
   margin-right: 26px;
   color: #000;
 }
+
 .box-change form {
   padding-left: 100px;
   width: 476px;
 }
+
 .box-change form .form-group label {
   color: var(--xm, #9e9e9e);
   font-weight: 300;
   line-height: 40px;
   text-transform: capitalize;
 }
+
 .box-change form .form-group input {
   height: 44px;
   border: none;
   background: #1b172f;
 }
+
 .box-change form button.btn-primary {
   border-radius: 5px;
   border: 1px solid #575757;
@@ -101,21 +113,25 @@
   font-size: 14px;
   font-weight: 600;
 }
+
 .box-change form .form-group {
   position: relative;
 }
+
 .box-change form .form-group img[alt=show-pass] {
   position: absolute;
   width: 34px;
   right: 10px;
   top: 45px;
 }
+
 .box-change form .form-group img[alt=icon-copy] {
   position: absolute;
   width: 18px;
   right: 21px;
   bottom: 13px;
 }
+
 .box-change form .btn-redirect {
   color: #e275f9;
   font-family: "Montserrat", sans-serif;
@@ -125,17 +141,20 @@
   line-height: 14.065px;
   text-transform: capitalize;
 }
+
 .box-change .line-x {
   margin-top: 17px;
   width: 100%;
   height: 0.5px;
   background: var(--xm, #9e9e9e);
 }
+
 .box-change .btn-save {
   padding: 0 66px;
   margin-top: 12px;
   text-align: end;
 }
+
 .box-change .btn-save button {
   width: 184px;
   height: 43px;
@@ -161,14 +180,17 @@
 .box-change.reference-box {
   height: 337px;
 }
+
 .box-change.reference-box .box-header {
   border-radius: 3px;
   background: #1b172f;
   height: 49px;
 }
+
 .box-change.reference-box .box-header h4 {
   padding: 16px 32px;
 }
+
 .box-change.reference-box h5 {
   padding: 27px 34px;
   color: var(--xm, #9e9e9e);
@@ -178,31 +200,40 @@
   line-height: 15px;
   text-transform: capitalize;
 }
+
 .box-change.reference-box .line-x {
   margin-top: 0;
 }
+
 .box-change.reference-box .content-sw {
   padding: 20px 0 30px 60px;
 }
+
 .box-change.reference-box .content-sw .switch-item img {
   width: 38px;
   height: 20px;
 }
+
 .box-change.reference-box .content-sw .switch-item h4 {
   padding: 0;
 }
+
 .box-change.reference-box .content-sw .switch-item h5 {
   padding: 0;
 }
+
 .box-change.reference-box .content-sw .switch-item:not(:last-child) {
   padding-bottom: 16px;
 }
+
 .box-change.reference-box .btn-save {
   padding: 0 42px 0 34px;
 }
+
 .box-change.reference-box .btn-save h5 {
   padding-left: 0;
 }
+
 .box-change.reference-box .btn-save button {
   width: 125px;
   height: 29px;
@@ -216,6 +247,7 @@
   .line-x {
     background: var(--xm, #3b3b3b);
   }
+
   .main-deposit .deposit-content .btn-wallet.btn-setting {
     border: none;
     width: 82px;
@@ -227,9 +259,11 @@
     margin-left: 16px;
     margin-top: 16px;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail {
     padding: 12px;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-header {
     position: relative;
     width: 145px;
@@ -241,26 +275,32 @@
     margin-bottom: 16px;
     padding: 0 12px;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-header svg {
     position: absolute;
     right: 12px;
     top: 10px;
     transform: rotate(-90deg);
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body {
     padding: 0;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action {
     flex-direction: column;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper {
     width: 100%;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper input {
     margin-top: 8px;
     width: 100%;
     font-size: 13px;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend {
     font-size: 11px;
     width: 100%;
@@ -269,29 +309,36 @@
     height: unset;
     flex-direction: column;
   }
+
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend button {
     font-size: 11px;
   }
+
   .main-deposit .deposit-content .box-change {
     padding: 0;
     width: 100%;
   }
+
   .main-deposit .deposit-content .box-change h4 {
     padding: 20px 0;
     padding-left: 16px;
     font-size: 11px;
   }
+
   .main-deposit .deposit-content .box-change form {
     padding: 0 16px;
     width: 100%;
   }
+
   .main-deposit .deposit-content .box-change form label {
     font-size: 11px;
   }
+
   .main-deposit .deposit-content .box-change .btn-save {
     padding: 20px 0;
     text-align: center;
   }
+
   .main-deposit .deposit-content .box-change .btn-save button {
     width: -moz-max-content;
     width: max-content;
@@ -300,39 +347,50 @@
     padding: 0 20px;
     height: 30px;
   }
+
   .main-deposit .deposit-content .box-change.two-factor,
   .main-deposit .deposit-content .box-change {
     height: unset;
   }
+
   .main-deposit .deposit-content .box-change:not(:last-child) {
     margin-bottom: 22px;
   }
+
   .main-deposit .deposit-content .box-change.reference-box {
     border-radius: 3px;
     background: #291a3a;
   }
+
   .main-deposit .deposit-content .box-change.reference-box .box-header {
     background: #291a3a;
   }
+
   .main-deposit .deposit-content .box-change.reference-box:first-child {
     margin-bottom: 22px;
   }
+
   .main-deposit .deposit-content .box-change.reference-box:first-child h5 {
     padding: 10px;
     font-size: 11px;
   }
+
   .main-deposit .deposit-content .box-change.reference-box:last-child .box-header {
     border-bottom: 1px solid #807f7f;
   }
+
   .main-deposit .deposit-content .box-change.reference-box {
     height: unset;
   }
+
   .main-deposit .deposit-content .box-change.reference-box .content-sw {
     padding: 15px 18px;
   }
+
   .main-deposit .deposit-content .box-change.reference-box .btn-save {
     padding: 16px 12px;
   }
+
   .main-deposit .deposit-content .box-change.reference-box .btn-save h5 {
     max-width: 156px;
   }

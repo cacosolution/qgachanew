@@ -9,7 +9,7 @@ import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
 import BoxOverlay from "../component/Box/BoxOverlay";
 
-const buyTicket = () => {
+const BuyTicket = () => {
   return (
     <div class="container-wrapper">
       <main>
@@ -1077,4 +1077,4 @@ const buyTicket = () => {
   );
 };
 
-export default buyTicket;
+export default BuyTicket;

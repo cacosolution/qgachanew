@@ -116,29 +116,7 @@ const Setting = () => {
                                             <button onClick={handlerLoginVerification}>Save changes</button>
                                         </div>
                                     </div>
-
-                                    <div class="box-change notqr">
-                                        <h4>Two-factor authentication</h4>
-                                        <h4 class="desc">To disable Two-Factor authentication, enter your one-time Password
-                                            (OTP)</h4>
-                                        <div class="line-x"></div>
-                                        <form class="mb-3">
-                                            <div class="form-group">
-                                                <label for="">Password</label>
-                                                <input type="text" class="form-control" />
-                                                <img src="./images/icons/eye.svg" alt="show-pass" />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Two-factor authentication</label>
-                                                <input type="text" class="form-control" />
-                                            </div>
-                                        </form>
-                                        <div class="line-x"></div>
-                                        <div class="btn-save">
-                                            <button>Submit</button>
-                                        </div>
-                                    </div>
-                                    <div class="box-change two-factor">
+                                    <div class="box-change two-factor" style={{ marginBottom: "250px" }}>
                                         <h4>Two-factor authentication</h4>
                                         <h4 class="desc">To keep your account extra secure leave a two factor authentication
                                             enabled.</h4>

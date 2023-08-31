@@ -13,7 +13,7 @@ import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
 import BoxOverlay from '../component/Box/BoxOverlay';
 
-const boxgacha = () => {
+const Boxgacha = () => {
     return (
         <div class="container-wrapper">
             <Navbar />
@@ -56,4 +56,4 @@ const boxgacha = () => {
     )
 }
 
-export default boxgacha
+export default Boxgacha
