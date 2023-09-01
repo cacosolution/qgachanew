@@ -63,7 +63,7 @@ const Authen = () => {
       <NavAuthen />
       <main>
         <Sidebar />
-        <div className="main-home">
+        <div className="main-home" style={{ width: "80%" }}>
           <div className="main-content">
             {isOpenResgiter && (
               <div className="box-auth sign-up mt-4 signAuthen">
@@ -423,7 +423,7 @@ const Authen = () => {
                 </div>
               </div>
             </section>
-            
+
             <div className='caurousel-index '>
               <CarouselIndex />
             </div>
