@@ -63,7 +63,7 @@ const Authen = () => {
       <NavAuthen />
       <main>
         <Sidebar />
-        <div className="main-home" style={{ width: "80%" }}>
+        <div className="main-home" style={{ width: "100%" }}>
           <div className="main-content">
             {isOpenResgiter && (
               <div className="box-auth sign-up mt-4 signAuthen">
@@ -354,13 +354,13 @@ const Authen = () => {
                 </div>
               </div>
             </div>
-            <div className="banner-main" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
+            <div className="banner-main"  onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
               <div className="banner-content">
                 <h3>Join and enjoy rewards</h3>
                 <h1>up to <span>100.000$</span></h1>
                 <button >SIGN UP NOW</button>
               </div>
-              <img src="./images/img-main1.png" alt="banner-home" />
+              <img src="./images/img-main1.png" alt="banner-home" style={{marginTop: "50px"}} />
               <div class="mobile">
                 <div class="list-social d-flex">
                   <div class="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>
