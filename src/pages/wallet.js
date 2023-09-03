@@ -73,9 +73,9 @@ const Wallet = () => {
                 <Sidebar />
                 <div class="main-deposit">
                     <div class="deposit-content">
-                        <button class="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")} 
-                        <img class="mobile"
-                            src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
+                        <button class="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
+                            <img class="mobile"
+                                src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
                         <div class="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
                             <div>
                                 <div class="list-feature hide-pc">
@@ -192,7 +192,7 @@ const Wallet = () => {
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                 type="button" role="tab" aria-controls="fiat"
-                                                aria-selected="false">Fiat</button>
+                                                aria-selected="false">Fiat (coming soon)</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
@@ -266,7 +266,7 @@ const Wallet = () => {
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                 type="button" role="tab" aria-controls="fiat"
-                                                aria-selected="false">Fiat</button>
+                                                aria-selected="false">Fiat (coming soon)</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">

@@ -62,7 +62,7 @@ const Home = () => {
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home" style={{ width: "100%" }}>
+                <div className="main-home" >
                     <div className="main-content">
                         {isOpenResgiter && (
                             <div className='transaction-detail2'>
@@ -491,11 +491,12 @@ const Home = () => {
                         </section>
                     </div>
 
-                    <Footer />
                 </div>
 
                 <BoxOverlay />
             </main>
+            <Footer />
+
 
         </div>
     );

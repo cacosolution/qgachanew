@@ -63,7 +63,7 @@ const Authen = () => {
       <NavAuthen />
       <main>
         <Sidebar />
-        <div className="main-home" style={{ width: "100%" }}>
+        <div className="main-home" >
           <div className="main-content">
             {isOpenResgiter && (
               <div className='transaction-detail2'>
