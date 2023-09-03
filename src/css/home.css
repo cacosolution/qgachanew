@@ -668,18 +668,19 @@
   width: 214px;
 }
 
+
 @media (min-width: 800px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 19px;
+    right: -100px;
     width: 866px;
   }
 
 }
 
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
     top: 0;
@@ -687,13 +688,14 @@
     width: 600px;
   }
 
-}
+} */
 
 @media (max-width: 576px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: 0;
+    top: 50px;
     right: 0;
+
 
   }
 

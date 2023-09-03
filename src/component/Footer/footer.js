@@ -39,9 +39,15 @@ const Footer = () => {
           <div class="follow-contact pc">
             <h4 class="text-blue">Follow us</h4>
             <div class="list-social d-flex">
-              <div class="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>
-              <div class="social-item"><img src="./images/icons/twitter.svg" alt="" /></div>
-              <div class="social-item"><img src="./images/icons/tele.svg" alt="" /></div>
+              <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "15px" }} src="./images/icons/youtube.svg" alt="YouTube" />
+              </a>
+              <a className="social-item" href="https://twitter.com/@qgachagame" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "15px" }} src="./images/icons/twitter.svg" alt="Twitter" />
+              </a>
+              <a className="social-item" href="http://t.me/qgacha" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "15px" }} src="./images/icons/tele.svg" alt="Telegram" />
+              </a>
             </div>
             <h4 class="text-blue hd-email">Email</h4>
             <span>support@qgacha.com</span>
@@ -63,12 +69,15 @@ const Footer = () => {
                 <div class="follow-contact">
                   <h4 class="text-blue">Follow us</h4>
                   <div class="list-social d-flex">
-                    <div class="social-item"><img src="./images/icons/youtube.svg" alt="" />
-                    </div>
-                    <div class="social-item"><img src="./images/icons/twitter.svg" alt="" />
-                    </div>
-                    <div class="social-item"><img src="./images/icons/tele.svg" alt="" />
-                    </div>
+                    {/* <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
+                      <img style={{ width: "14px" }} src="./images/icons/youtube.svg" alt="YouTube" />
+                    </a>
+                    <a className="social-item" href="https://twitter.com/@qgachagame" target="_blank" rel="noopener noreferrer">
+                      <img style={{ width: "14px" }} src="./images/icons/twitter.svg" alt="Twitter" />
+                    </a>
+                    <a className="social-item" href="http://t.me/qgacha" target="_blank" rel="noopener noreferrer">
+                      <img style={{ width: "14px" }} src="./images/icons/tele.svg" alt="Telegram" />
+                    </a> */}
                   </div>
                   <h4 class="text-blue hd-email">Email</h4>
                   <div class="email-info">support@qgacha.com</div>
@@ -98,12 +107,15 @@ const Footer = () => {
               imagination.
             </p>
             <div class="list-social d-flex">
-              <a class="social-item"><img style={{ width: "14px" }} src="./images/icons/youtube.svg"
-                alt="" /></a>
-              <a class="social-item"><img style={{ width: "14px" }} src="./images/icons/twitter.svg"
-                alt="" /></a>
-              <a class="social-item"><img style={{ width: "14px" }} src="./images/icons/tele.svg"
-                alt="" /></a>
+              <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "14px" }} src="./images/icons/youtube.svg" alt="YouTube" />
+              </a>
+              <a className="social-item" href="https://twitter.com/@qgachagame" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "14px" }} src="./images/icons/twitter.svg" alt="Twitter" />
+              </a>
+              <a className="social-item" href="http://t.me/qgacha" target="_blank" rel="noopener noreferrer">
+                <img style={{ width: "14px" }} src="./images/icons/tele.svg" alt="Telegram" />
+              </a>
             </div>
           </div>
           <div class="mobile wrapp-link">

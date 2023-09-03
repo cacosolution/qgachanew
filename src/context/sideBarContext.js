@@ -17,6 +17,9 @@ export const SidebarProvider = ({ children }) => {
     const [isOpenDeposit, SetIsOpenDeposit] = useState(false)
     const [isOpenWithdraw, SetIsOpenWithdraw] = useState(false)
     const [isOpenTransaction, SetIsOpenTransaction] = useState(false)
+
+
+
     const value = {
         isOpenSideBar,
         setIsOpenSideBar,

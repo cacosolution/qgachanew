@@ -209,14 +209,14 @@ const Sidebar = () => {
                     </div>
                     <Link to="/bakacomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/baka.png" alt="" class="item-icon" />
-                        <div class="item-content">BAKA <span>(Upcoming)</span></div>
+                        <div class="item-content">BAKAC <span>(Upcoming)</span></div>
                     </Link>
                     <Link to="/pvpcomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" class="item-icon" />
                         <div class="item-content">PVP <span>(Upcoming)</span></div>
                     </Link>
                     <Link to="/upgrade" class="sidebar-item d-flex align-items-center">
-                        <img style={{ width: "24px" }} src="./images/icons/upgrade-gacha.png" alt="" class="item-icon" />
+                        <img style={{ width: "24px", }} src="./images/icons/rectangle.png" alt="" class="item-icon" />
                         <div class="item-content">Upgrade <span>(Upcoming)</span></div>
                     </Link>
 

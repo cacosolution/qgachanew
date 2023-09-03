@@ -27,6 +27,23 @@ const BoxOverlay = () => {
         setIsOpenProfileEdit(false)
     };
 
+    const handleProfileEit = () => {
+        setIsOpenProfileAll(false)
+        setIsOpenProfileDetail(false)
+        setIsOpenProfileEdit(true)
+    }
+    const handleProfileDetail = () => {
+        setIsOpenProfileAll(false)
+        setIsOpenProfileDetail(true)
+        setIsOpenProfileEdit(false)
+    }
+    const handlerProfileAll = () => {
+        setIsOpenProfileAll(true)
+        setIsOpenProfileDetail(false)
+        setIsOpenProfileEdit(false)
+    }
+
+
     return (
         <>
             <button class="btn-support" onClick={() => setIsOpenSupport(!isOpenSupport)} >
@@ -397,126 +414,130 @@ const BoxOverlay = () => {
                     </div>
                 </div>
             </div>
-            {isOpenProfileAll && (
-                <div class="box__info-overlay">
-                    {isOpenProfileAll && (
-                        <div id="box__user-info" >
-                            <div class="box-header d-flex justify-content-between">
-                                User Information
-                                <button class="btn__exit-noti">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerChangeProfile} alt="" />
-                                </button>
-                            </div>
-                            <div class="user-info justify-content-center d-flex">
-                                <div class="info-main d-flex flex-column align-items-center">
-                                    <img src="./images/icons/avatar-default.svg" alt="" />
-                                    <h5>Name 1</h5>
-                                    <span>User ID: 9999999999</span>
-                                </div>
-                                <button class="btn__edit-info">
-                                    <img src="./images/icons/pencil.svg" onClick={() => setIsOpenProfileEdit(!isOpenProfileEdit)} alt="" />
-                                </button>
-                            </div>
-                            <div class="user-statis">
-                                <div class="statis-head d-flex justify-content-between align-items-center">
-                                    Statistics
-                                    <button class="d-flex align-items-center" onClick={() => setIsOpenProfileDetail(!isOpenProfileDetail)}>Detail
 
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                fill="white" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="d-flex summary-total">
-                                    <div class="total-win d-flex flex-column align-items-center justify-content-center">
-                                        <h5>Total Wins</h5>
-                                        <span>0</span>
-                                    </div>
-                                    <div class="total-play d-flex flex-column align-items-center justify-content-center">
-                                        <h5>Total Plays</h5>
-                                        <span>$0.00</span>
-                                    </div>
-                                </div>
-                            </div>
+
+            {isOpenProfileAll ? (
+                <div className="transaction-detail2">
+                    <div id="box__user-info" >
+                        <div class="box-header d-flex justify-content-between">
+                            User Information
+                            <button class="btn__exit-noti">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerChangeProfile} alt="" />
+                            </button>
                         </div>
-                    )}
-                    {isOpenProfileEdit && (
-                        <div id="box__edit-username">
-                            <div class="box-header d-flex justify-content-between">
-                                <div class="header-action d-flex align-items-center">
-                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                            fill="white" />
-                                    </svg>
-                                    My Profile
-                                </div>
-                                <button class="btn__exit-edit">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenProfileEdit(!isOpenProfileEdit)} alt="" />
-                                </button>
-                            </div>
-                            <div class="edit-ava d-flex flex-column align-items-center">
+                        <div class="user-info justify-content-center d-flex">
+                            <div class="info-main d-flex flex-column align-items-center">
                                 <img src="./images/icons/avatar-default.svg" alt="" />
-                                <button>Edit Your Avatar</button>
+                                <h5>Name 1</h5>
+                                <span>User ID: 9999999999</span>
                             </div>
-                            <form action="" class="d-flex align-items-center flex-column">
-                                <div class="form-group">
-                                    <label for="inputRePassword4">Username</label>
-                                    <input type="text" class="form-control" id="inputEmail4" placeholder="name edit...." />
-                                    <div class="notice">Do not use special symbols, otherwise your account may not be supported.
-                                    </div>
-                                </div>
-                                <button type="submit">Modify </button>
-                            </form>
+                            <button class="btn__edit-info">
+                                <img src="./images/icons/pencil.svg" onClick={handleProfileEit} alt="" />
+                            </button>
                         </div>
-                    )}
+                        <div class="user-statis">
+                            <div class="statis-head d-flex justify-content-between align-items-center">
+                                Statistics
+                                <button class="d-flex align-items-center" onClick={handleProfileDetail}>Detail
 
-                    {isOpenProfileDetail && (
-                        <div id="box__user-detail">
-                            <div class="box-header d-flex justify-content-between">
-                                <div class="header-action d-flex align-items-center">
-                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
                                             fill="white" />
                                     </svg>
-                                    Detail
-                                </div>
-                                <button class="btn__exit-detail">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenProfileDetail(!isOpenProfileDetail)} alt="" />
                                 </button>
                             </div>
-                            <div class="select-network d-flex align-items-center mt-3">
-                                Statistics
-                                <input type="text" value="BEP20" />
-                                <div class="user-select d-flex">
-                                    <img src="./images/icons/avatar-default.svg" alt="" />
+                            <div class="d-flex summary-total">
+                                <div class="total-win d-flex flex-column align-items-center justify-content-center">
+                                    <h5>Total Wins</h5>
+                                    <span>0</span>
                                 </div>
-                            </div>
-                            <div class="user-statis">
-                                <div class="d-flex summary-total">
-                                    <div class="total-win d-flex flex-column align-items-center justify-content-center">
-                                        <h5>Total Wins</h5>
-                                        <span>0</span>
-                                    </div>
-                                    <div class="total-play d-flex flex-column align-items-center justify-content-center">
-                                        <h5>Total Plays</h5>
-                                        <span>$0.00</span>
-                                    </div>
+                                <div class="total-play d-flex flex-column align-items-center justify-content-center">
+                                    <h5>Total Plays</h5>
+                                    <span>$0.00</span>
                                 </div>
                             </div>
                         </div>
-
-
-                    )}
-
-
+                    </div>
                 </div>
-            )}
 
+            ) : isOpenProfileEdit ? (
+                <div className="transaction-detail2">
+                    <div id="box__edit-username">
+                        <div class="box-header d-flex justify-content-between">
+                            <div class="header-action d-flex align-items-center">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                        fill="white" />
+                                </svg>
+                                My Profile
+                            </div>
+                            <button class="btn__exit-edit">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerProfileAll} alt="" />
+                            </button>
+                        </div>
+                        <div class="edit-ava d-flex flex-column align-items-center">
+                            <img src="./images/icons/avatar-default.svg" alt="" />
+                            <button>Edit Your Avatar</button>
+                        </div>
+                        <form action="" class="d-flex align-items-center flex-column">
+                            <div class="form-group">
+                                <label for="inputRePassword4">Username</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="name edit...." />
+                                <div class="notice">Do not use special symbols, otherwise your account may not be supported.
+                                </div>
+                            </div>
+                            <button type="submit">Modify </button>
+                        </form>
+                    </div>
+                </div>
+
+            ) : isOpenProfileDetail ? (
+                <div className="transaction-detail2">
+                    <div id="box__user-detail">
+                        <div class="box-header d-flex justify-content-between">
+                            <div class="header-action d-flex align-items-center">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                        fill="white" />
+                                </svg>
+                                Detail
+                            </div>
+                            <button class="btn__exit-detail">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerProfileAll} alt="" />
+                            </button>
+                        </div>
+                        <div class="select-network d-flex align-items-center mt-3">
+                            Statistics
+                            <input type="text" value="BEP20" />
+                            <div class="user-select d-flex">
+                                <img src="./images/icons/avatar-default.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="user-statis">
+                            <div class="d-flex summary-total">
+                                <div class="total-win d-flex flex-column align-items-center justify-content-center">
+                                    <h5>Total Wins</h5>
+                                    <span>0</span>
+                                </div>
+                                <div class="total-play d-flex flex-column align-items-center justify-content-center">
+                                    <h5>Total Plays</h5>
+                                    <span>$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            ) : (
+                <>
+                </>
+            )}
         </>
     );
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { SidebarContext } from '../../context/sideBarContext'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,62 @@ const NavAuthen = () => {
     const [isProfile, setIsProfile] = useState(false)
     const [isLang, setIsLang] = useState(false)
 
+    const chatRef = useRef(null);
+    const notiRef = useRef(null);
+    const profileRef = useRef(null);
+    const langRef = useRef(null);
 
+    const ModalChat = () => {
+        setIsChat(true);
+        setIsNofi(false);
+        setIsProfile(false);
+        setIsLang(false);
+    }
+
+    const ModalNofi = () => {
+        setIsChat(false);
+        setIsNofi(true);
+        setIsProfile(false);
+        setIsLang(false);
+    }
+    const ModalProfile = () => {
+        setIsChat(false);
+        setIsNofi(false);
+        setIsProfile(true);
+        setIsLang(false);
+    }
+    const ModalLang = () => {
+        setIsChat(false);
+        setIsNofi(false);
+        setIsProfile(false);
+        setIsLang(true);
+    }
+
+    const handleOutsideClick = (event) => {
+        if (
+            chatRef.current &&
+            !chatRef.current.contains(event.target) &&
+            notiRef.current &&
+            !notiRef.current.contains(event.target) &&
+            profileRef.current &&
+            !profileRef.current.contains(event.target) &&
+            langRef.current &&
+            !langRef.current.contains(event.target)
+        ) {
+            setIsChat(false);
+            setIsNofi(false);
+            setIsProfile(false);
+            setIsLang(false);
+        }
+    };
+
+    // Add an event listener to handle outside clicks
+    useEffect(() => {
+        document.addEventListener("mousedown", handleOutsideClick);
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, []);
     // SIGNIN SIGNUP
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
@@ -33,6 +88,14 @@ const NavAuthen = () => {
         setIsOpenProfileAll,
         setIsOpenProfileDetail,
         setIsOpenProfileEdit,
+        isOpenBalance,
+        SetIsOpenBalance,
+        isOpenDeposit,
+        SetIsOpenDeposit,
+        isOpenWithdraw,
+        SetIsOpenWithdraw,
+        isOpenTransaction,
+        SetIsOpenTransaction
     } = useContext(SidebarContext)
     const handlerChangeProfile = () => {
         if (isOpenProfileAll === true) {
@@ -74,6 +137,26 @@ const NavAuthen = () => {
         setIsOpenResetAccount(!isOpenResetAccount)
         setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)
     }
+    const handlerChangeTransaction = () => {
+        SetIsOpenTransaction(true)
+        SetIsOpenBalance(false)
+        SetIsOpenWithdraw(false)
+
+        SetIsOpenDeposit(false)
+    }
+    const handlerChangeBalance = () => {
+        SetIsOpenBalance(true)
+        SetIsOpenDeposit(false)
+        SetIsOpenWithdraw(false)
+        SetIsOpenTransaction(false)
+    }
+    const handlerChangeWithdraw = () => {
+        SetIsOpenWithdraw(true)
+        SetIsOpenBalance(false)
+        SetIsOpenTransaction(false)
+        SetIsOpenDeposit(false)
+
+    }
     return (
         <header class="d-flex align-items-center">
             <div class="header-content d-flex align-items-center justify-content-center">
@@ -90,28 +173,22 @@ const NavAuthen = () => {
                     </button>
 
                     <div class="chat-container">
-                        <img class="chat-icon" onClick={() => setIsChat(!isChat)} src="./images/icons/chat.svg" alt="" />
+                        <img class="chat-icon" onClick={ModalChat} src="./images/icons/chat.svg" alt="" />
                     </div>
-
-                    <div class="language-container">
-                        <img class="language-icon" onClick={() => setIsLang(!isLang)} src="./images/icons/language.svg" alt="" />
+                    {/* <!-- BOX LANGUAGE --> */}
+                    <div class="language-container" ref={langRef}>
+                        <img class="language-icon" onClick={ModalLang} src="./images/icons/language.svg" alt="" />
                         <div id="box-language" class={isLang == true ? ` active` : ``}>
                             <div class="language-item">
                                 English
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-                    <div class="ava-container" style={{ zIndex: 999 }}>
-                        <img class="ava-icon ms-3" onClick={() => setIsProfile(!isProfile)} src="./images/icons/avatar-default.svg" alt="" />
+                    {/* <!-- BOX AVATAR --> */}
+                    <div class="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
+                        <img class="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
-                            <Link to="/wallet">
+                            <Link onClick={handlerChangeBalance} to="/wallet" >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/credit-card.svg" alt="" />
                                     <h5 class="feature-content">
@@ -119,7 +196,7 @@ const NavAuthen = () => {
                                     </h5>
                                 </div>
                             </Link>
-                            <Link to={"/wallet"}>
+                            <Link onClick={handlerChangeWithdraw} to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/withdrawdollar.svg" alt="" />
                                     <h5 class="feature-content">
@@ -128,7 +205,7 @@ const NavAuthen = () => {
                                 </div>
                             </Link>
 
-                            <Link to={"/wallet"}>
+                            <Link onClick={handlerChangeTransaction} to={"/wallet"}>
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/transaction-ava.svg" alt="" />
                                     <h5 class="feature-content">
@@ -355,272 +432,291 @@ const NavAuthen = () => {
                 </div>
             </div>
             {isOpenResgiter && (
-                <div className="box-auth sign-up mt-4 signAuthen">
-                    <div className="box-header d-flex justify-content-between align-items-center">
-                        Sign Up
-                        <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
-                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
+                <div className='transaction-detail2'>
+                    <div className="box-auth sign-up mt-4 signAuthen">
+                        <div className="box-header d-flex justify-content-between align-items-center">
+                            Sign Up
+                            <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
+                                <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                            </button>
+                        </div>
+                        <form id="form-signup">
+                            <div className="form-group">
+                                {/* <label for="inputRePassword4">Email</label> */}
+                                <input type="email" className="form-control" placeholder="Email" />
+                            </div>
+                            <div className="form-group" style={{ marginTop: "20px" }} >
+                                {/* <label for="inputRePassword4">Login Password</label> */}
+                                <input type={showPassword ? 'text' : 'password'} className="form-control" onChange={(e) => setPassword(e.target.value)} placeholder="Login Password" />
+                                <img src="./images/icons/eye.svg" alt="show-pass" onClick={() => setShowPassword(!showPassword)} />
+                            </div>
+                            <div className="risk-level d-flex align-items-center">
+                                {password.length === 0 ? (
+                                    <>
+                                        <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+                                            <div className="process-item "></div>
+                                            <div className="process-item "></div>
+                                            <div className="process-item "></div>
+                                        </div>
+
+                                    </>
+                                ) : onlyNumbersRegex.test(password) || onlyLettersRegex.test(password) ? (
+                                    <>
+                                        <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+
+                                            <div className="process-item error"></div>
+                                            <div className="process-item "></div>
+                                            <div className="process-item "></div>
+                                        </div>
+                                        <span style={{ width: "40%" }}>High Risk</span>
+                                    </>
+                                ) : alphanumericRegex.test(password) ? (
+                                    <>
+                                        <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+                                            <div className="process-item average"></div>
+                                            <div className="process-item average"></div>
+                                            <div className="process-item "></div>
+                                        </div>
+                                        <span style={{ width: "40%", color: "yellow" }}>Average</span>
+                                    </>
+                                ) : vietnameseCharactersRegex.test(password) ? (
+                                    <>
+                                        <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+                                            <div className="process-item error"></div>
+                                            <div className="process-item error"></div>
+                                            <div className="process-item error"></div>
+                                        </div>
+                                        <span style={{ width: "40%" }}>Error VietNamese Characters</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
+                                            <div className="process-item success"></div>
+                                            <div className="process-item success"></div>
+                                            <div className="process-item success"></div>
+                                        </div>
+                                        <span style={{ width: "40%", color: "green" }}>Secure</span>
+                                    </>
+                                )}
+
+
+
+                            </div>
+                            <div className="form-group enter-pass " style={{ marginTop: "20px" }}>
+                                {/* <label for="inputRePassword4">Re-Enter Password</label> */}
+                                <input type={showPassword ? 'text' : 'password'} className="form-control" placeholder="Re-Enter Password" />
+                                <img src="./images/icons/eye.svg" alt="show-pass" onClick={() => setShowPassword(!showPassword)} />
+
+                            </div>
+                            <div className='form-group' style={{ marginTop: "20px" }}>
+                                {/* <label for="inputRePassword4">Verification Code</label> */}
+
+                            </div>
+                            <div className="form-group resend" style={{ marginTop: "20px" }}>
+                                <input type="text" className="form-control" placeholder="Verification Code" />
+                                <span className="resend">Resend(60s)</span>
+                            </div>
+                            <div className="form-group" style={{ marginTop: "20px" }}>
+                                <label for="inputRePassword4">Enter Referral/Promo Code</label>
+                                <input type="password" className="form-control"
+                                    placeholder="Enter Referral/Promo Code(Optional)" />
+                            </div>
+
+                            <div className="form-group check">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" />
+                                    <label className="form-check-label" for="gridCheck">
+                                        I agree to the User Agreement & confirm I am at least 18 years old
+                                    </label>
+                                </div>
+                            </div>
+                            <div className="form-group check">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" />
+                                    <label className="form-check-label" for="gridCheck">
+                                        I agree to receive marketing promotions from QGACHA.
+                                    </label>
+                                </div>
+                            </div>
+                            <div className="submit d-flex justify-content-center">
+                                <button type="submit" className="btn btn-primary" onClick={handlerResgiterConfirm}>Sign Up</button>
+                            </div>
+                            <p className="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                                <a className="btn-redirect" onClick={handlerLogin}>Sign In</a>
+                            </p>
+
+                        </form>
                     </div>
-                    <form id="form-signup">
-                        <div className="form-group">
-                            <label for="inputRePassword4">Email</label>
-                            <input type="email" className="form-control" placeholder="Email" />
-                        </div>
-                        <div className="form-group" >
-                            <label for="inputRePassword4">Login Password</label>
-                            <input type={showPassword ? 'text' : 'password'} className="form-control" onChange={(e) => setPassword(e.target.value)} placeholder="Login Password" />
-                            <img src="./images/icons/eye.svg" alt="show-pass" onClick={() => setShowPassword(!showPassword)} />
-                        </div>
-                        <div className="risk-level d-flex align-items-center">
-                            {password.length === 0 ? (
-                                <>
-                                    <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
-                                        <div className="process-item "></div>
-                                        <div className="process-item "></div>
-                                        <div className="process-item "></div>
-                                    </div>
-
-                                </>
-                            ) : onlyNumbersRegex.test(password) || onlyLettersRegex.test(password) ? (
-                                <>
-                                    <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
-
-                                        <div className="process-item error"></div>
-                                        <div className="process-item "></div>
-                                        <div className="process-item "></div>
-                                    </div>
-                                    <span style={{ width: "40%" }}>High Risk</span>
-                                </>
-                            ) : alphanumericRegex.test(password) ? (
-                                <>
-                                    <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
-                                        <div className="process-item average"></div>
-                                        <div className="process-item average"></div>
-                                        <div className="process-item "></div>
-                                    </div>
-                                    <span style={{ width: "40%", color: "yellow" }}>Average</span>
-                                </>
-                            ) : vietnameseCharactersRegex.test(password) ? (
-                                <>
-                                    <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
-                                        <div className="process-item error"></div>
-                                        <div className="process-item error"></div>
-                                        <div className="process-item error"></div>
-                                    </div>
-                                    <span style={{ width: "40%" }}>Error VietNamese Characters</span>
-                                </>
-                            ) : (
-                                <>
-                                    <div className="process-password  d-flex align-items-center" style={{ width: "60%" }}>
-                                        <div className="process-item success"></div>
-                                        <div className="process-item success"></div>
-                                        <div className="process-item success"></div>
-                                    </div>
-                                    <span style={{ width: "40%", color: "green" }}>Secure</span>
-                                </>
-                            )}
-
-
-
-                        </div>
-                        <div className="form-group enter-pass">
-                            <label for="inputRePassword4">Re-Enter Password</label>
-                            <input type={showPassword ? 'text' : 'password'} className="form-control" placeholder="Re-Enter Password" />
-                            <img src="./images/icons/eye.svg" alt="show-pass" onClick={() => setShowPassword(!showPassword)} />
-
-                        </div>
-                        <div className='form-group'>
-                            <label for="inputRePassword4">Verification Code</label>
-
-                        </div>
-                        <div className="form-group resend">
-                            <input type="text" className="form-control" placeholder="Verification Code" />
-                            <span className="resend">Resend(60s)</span>
-                        </div>
-                        <div className="form-group">
-                            <label for="inputRePassword4">Enter Referral/Promo Code</label>
-                            <input type="password" className="form-control"
-                                placeholder="Enter Referral/Promo Code(Optional)" />
-                        </div>
-
-                        <div className="form-group check">
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" />
-                                <label className="form-check-label" for="gridCheck">
-                                    I agree to the User Agreement & confirm I am at least 18 years old
-                                </label>
-                            </div>
-                        </div>
-                        <div className="form-group check">
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" />
-                                <label className="form-check-label" for="gridCheck">
-                                    I agree to receive marketing promotions from QGACHA.
-                                </label>
-                            </div>
-                        </div>
-                        <div className="submit d-flex justify-content-center">
-                            <button type="submit" className="btn btn-primary" onClick={handlerResgiterConfirm}>Sign Up</button>
-                        </div>
-                        <p className="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                            <a className="btn-redirect" onClick={handlerLogin}>Sign In</a>
-                        </p>
-
-                    </form>
                 </div>
             )}
             {isOpenConfirmResgiter && (
-                <div class="box-auth noti-success mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        <div></div>
-                        <button class="btn__exit-chat">
-                            <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)} alt="" />
-                        </button>
-                    </div>
-                    <div class="box-content">
-                        <h3>Sign Up successfully</h3>
-                        <div class="submit d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
+                <div className='transaction-detail2'>
+                    <div class="box-auth noti-success mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            <div></div>
+                            <button class="btn__exit-chat">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)} alt="" />
+                            </button>
+                        </div>
+                        <div class="box-content">
+                            <h3>Sign Up successfully</h3>
+                            <div class="submit d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             )}
             {isOpenLogin && (
-                <div class="box-auth signin mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        Sign In
-                        <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
-                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
+                <div className='transaction-detail2'>
+                    <div class="box-auth signin mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            Sign In
+                            <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
+                                <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                            </button>
+                        </div>
+
+                        <form>
+                            <div class="form-group">
+                                {/* <label for="inputRePassword4">Email</label> */}
+                                <input type="email" class="form-control" placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                {/* <label for="inputRePassword4">password</label> */}
+                                <input type="password" class="form-control" placeholder="Login Password" />
+                                <img src="./images/icons/eye.svg" alt="show-pass" />
+                                <label class="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
+                            </div>
+                            <div className='form-group'>
+                                {/* <label for="inputRePassword4">Verification Code</label> */}
+
+                            </div>
+                            <div className="form-group resend">
+                                <input type="text" className="form-control" placeholder="Verification Code" />
+                                <span className="resend">Resend(60s)</span>
+                            </div>
+                            <div class="submit d-flex justify-content-center">
+                                <button class="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
+                            </div>
+                            <p class="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
+                                <a class="btn-redirect" onClick={handlerLogin}>Create
+                                    account</a>
+                            </p>
+                        </form>
                     </div>
-
-                    <form>
-                        <div class="form-group">
-                            <label for="inputRePassword4">Email</label>
-                            <input type="email" class="form-control" placeholder="Email" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputRePassword4">password</label>
-                            <input type="password" class="form-control" placeholder="Login Password" />
-                            <img src="./images/icons/eye.svg" alt="show-pass" />
-                            <label class="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
-                        </div>
-                        <div className='form-group'>
-                            <label for="inputRePassword4">Verification Code</label>
-
-                        </div>
-                        <div className="form-group resend">
-                            <input type="text" className="form-control" placeholder="Verification Code" />
-                            <span className="resend">Resend(60s)</span>
-                        </div>
-                        <div class="submit d-flex justify-content-center">
-                            <button class="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
-                        </div>
-                        <p class="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
-                            <a class="btn-redirect" onClick={handlerLogin}>Create
-                                account</a>
-                        </p>
-                    </form>
                 </div>
+
             )}
             {isOpenVerification && (
-                <div class="box-auth two-factor mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        Two-factor authentication
-                        <button class="btn__exit-chat" onClick={handlerLoginVerification}>
-                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
-                    </div>
-
-                    <form>
-                        <p class="text-center">Please enter the 6-digit authentication Code.</p>
-                        <div class="list-input-number d-flex">
-                            <div class="num-item"><input type="text" /></div>
-                            <div class="num-item"><input type="text" /></div>
-                            <div class="num-item"><input type="text" /></div>
-                            <div class="num-item"><input type="text" /></div>
-                            <div class="num-item"><input type="text" /></div>
-                            <div class="num-item"><input type="text" /></div>
+                <div className='transaction-detail2'>
+                    <div class="box-auth two-factor mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            Two-factor authentication
+                            <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                                <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                            </button>
                         </div>
 
-                    </form>
+                        <form>
+                            <p class="text-center">Please enter the 6-digit authentication Code.</p>
+                            <div class="list-input-number d-flex">
+                                <div class="num-item"><input type="text" /></div>
+                                <div class="num-item"><input type="text" /></div>
+                                <div class="num-item"><input type="text" /></div>
+                                <div class="num-item"><input type="text" /></div>
+                                <div class="num-item"><input type="text" /></div>
+                                <div class="num-item"><input type="text" /></div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
+
             )}
             {isOpenResetPassword && (
-                <div class="box-auth enter-email mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        Reset Password
-                        <button class="btn__exit-chat" onClick={handlerResetPassword}>
-                            <img src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
+                <div className='transaction-detail2'>
+                    <div class="box-auth enter-email mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            Reset Password
+                            <button class="btn__exit-chat" onClick={handlerResetPassword}>
+                                <img src="./images/icons/deposit/icon-exit.svg" alt="" />
+                            </button>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputRePassword4">Email</label>
+                                <input type="email" class="form-control" placeholder="Email" />
+                            </div>
+                            <div class="submit d-flex justify-content-center">
+                                <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
+                            </div>
+                            <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                                <a class="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
+                            </p>
+                        </form>
                     </div>
-                    <form>
-                        <div class="form-group">
-                            <label for="inputRePassword4">Email</label>
-                            <input type="email" class="form-control" placeholder="Email" />
-                        </div>
-                        <div class="submit d-flex justify-content-center">
-                            <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
-                        </div>
-                        <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                            <a class="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
-                        </p>
-                    </form>
                 </div>
+
             )}
             {isOpenResetAccount && (
+                <div className='transaction-detail2'>
 
-                <div class="box-auth reset-password mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        Reset Account Password
-                        <button class="btn__exit-chat">
-                            <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerResetAccountPassword} alt="" />
-                        </button>
+                    <div class="box-auth reset-password mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            Reset Account Password
+                            <button class="btn__exit-chat">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerResetAccountPassword} alt="" />
+                            </button>
+                        </div>
+
+                        <form>
+                            <div class="form-group">
+                                <label for="inputRePassword4">New password</label>
+                                <input type="password" class="form-control" placeholder="New password" />
+                                <img src="./images/icons/eye.svg" alt="show-pass" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputRePassword4">New password again</label>
+                                <input type="password" class="form-control" placeholder="New password again" />
+                                <img src="./images/icons/eye.svg" alt="show-pass" />
+                            </div>
+                            <div className='form-group'>
+                                <label for="inputRePassword4">Verification Code</label>
+
+                            </div>
+                            <div className="form-group resend">
+                                <input type="text" className="form-control" placeholder="Verification Code" />
+                                <span className="resend">Resend(60s)</span>
+                            </div>
+                            <p class="notice">Please enter the 6-digit verification code sent to your email. The code is
+                                valid for 10
+                                minutes.</p>
+                            <div class="submit d-flex justify-content-center">
+                                <button class="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
+                            </div>
+                        </form>
                     </div>
-
-                    <form>
-                        <div class="form-group">
-                            <label for="inputRePassword4">New password</label>
-                            <input type="password" class="form-control" placeholder="New password" />
-                            <img src="./images/icons/eye.svg" alt="show-pass" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputRePassword4">New password again</label>
-                            <input type="password" class="form-control" placeholder="New password again" />
-                            <img src="./images/icons/eye.svg" alt="show-pass" />
-                        </div>
-                        <div className='form-group'>
-                            <label for="inputRePassword4">Verification Code</label>
-
-                        </div>
-                        <div className="form-group resend">
-                            <input type="text" className="form-control" placeholder="Verification Code" />
-                            <span className="resend">Resend(60s)</span>
-                        </div>
-                        <p class="notice">Please enter the 6-digit verification code sent to your email. The code is
-                            valid for 10
-                            minutes.</p>
-                        <div class="submit d-flex justify-content-center">
-                            <button class="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
-                        </div>
-                    </form>
                 </div>
-
             )}
 
             {isOpenConfirmResetAccount && (
-                <div class="box-auth noti-success mt-4 signAuthen">
-                    <div class="box-header d-flex justify-content-between align-items-center">
-                        Reset Password
-                        <button class="btn__exit-chat">
-                            <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)} alt="" />
-                        </button>
-                    </div>
-                    <div class="box-content">
-                        <h3>Password changed successfully</h3>
-                        <div class="submit d-flex justify-content-center">
-                            <button class="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
+                <div className='transaction-detail2'>
+
+                    <div class="box-auth noti-success mt-4 signAuthen">
+                        <div class="box-header d-flex justify-content-between align-items-center">
+                            Reset Password
+                            <button class="btn__exit-chat">
+                                <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)} alt="" />
+                            </button>
+                        </div>
+                        <div class="box-content">
+                            <h3>Password changed successfully</h3>
+                            <div class="submit d-flex justify-content-center">
+                                <button class="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
+                            </div>
                         </div>
                     </div>
                 </div>
