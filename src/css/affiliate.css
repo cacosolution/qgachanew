@@ -1,7 +1,8 @@
 /* montserrat-regular - vietnamese_latin-ext */
 
+
 .affiliate-content {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -75,13 +76,20 @@
   transition: 0.3s;
 }
 
-.header-affi .header-content button.active {
+.header-affi .header-content .btn-network.active {
   color: #fff;
+}
+
+.header-affi .header-content .btn-general.active {
+  color: #fff;
+
 }
 
 .header-affi .header-content button.btn-general {
   margin-right: 20px;
 }
+
+
 
 .header-affi .header-content button:hover::after {
   content: "";
@@ -275,8 +283,12 @@
   padding: 0 12px;
 }
 
+#chart {
+  width: 600px !important;
+}
+
 .body-affi .box-main .nav-chart .chart-wrapper {
-  max-width: 650px;
+  max-width: 700px;
   max-height: 300px;
   border-radius: 6px;
   background: #1b172f;
@@ -563,10 +575,14 @@
   text-transform: capitalize;
 }
 
+.input_aff {
+  color: #000;
+}
+
 .manage-wrapper .box-manage .box-body button.btn-purple {
   position: relative;
   color: white;
-  width: 331px;
+  width: 285px;
   line-height: 35px;
   border-radius: 5px;
   border: 1px solid #575757;
@@ -590,7 +606,7 @@
   content: "";
   width: 0.5px;
   height: 38px;
-  background: var(--xm, #9e9e9e);
+  /* background: var(--xm, #9e9e9e); */
   position: absolute;
   right: -39px;
   bottom: -2px;
