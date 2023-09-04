@@ -80,7 +80,7 @@ const Navbar = () => {
         isOpenTransaction,
         SetIsOpenTransaction
     } = useContext(SidebarContext)
-    
+
     const handlerChangeProfile = () => {
         if (isOpenProfileAll === true) {
             setIsOpenProfileAll(false)
@@ -123,8 +123,8 @@ const Navbar = () => {
     }
     return (
         <header class="d-flex align-items-center">
-            <div class="header-content d-flex align-items-center justify-content-center">
-                <Link to={"/"}>
+            <div class="header-content d-flex align-items-center ">
+                <Link to={"/"} className="img-index">
                     <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
                     <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
                 </Link>

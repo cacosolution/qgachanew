@@ -33,7 +33,7 @@ const Sidebar = () => {
     }, [window.innerWidth])
 
     return (
-        <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
+        <div className={isOpenSideBar === false ? "side-bar active-show" : "side-bar"}>
             <div class="header-menu pc fixed-active">
                 <div class=" d-flex align-items-center justify-content-center">
                     <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => setIsOpenSideBar(!isOpenSideBar)} src="./images/icons/menu-icon.svg"

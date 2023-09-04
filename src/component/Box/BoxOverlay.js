@@ -190,198 +190,145 @@ const BoxOverlay = () => {
             </div>
             <div class={`box__quest-overlay ${isOpenQuest === true ? "active" : ""}`}>
                 <div id="box-quest">
-                    <div class="row gx-0">
-                        <div class="col-6">
-                            <div class="box-item">
-                                <div class="box-header d-flex align-items-center justify-content-between">
-                                    Quest Hub
-                                    <div class="icon__exit-quest">
-                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="icon__exit-quest" />
+                    <div class="col-6">
+                        <div class="box-item">
+                            <div class="box-header d-flex align-items-center justify-content-between">
+                                Quest Hub
+                                <div class="icon__exit-quest">
+                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="icon__exit-quest" />
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="main-content">
+                                    <div class="info">
+                                        <h3>MONDAY</h3>
+                                        <p>Accumulated rewards:</p>
+                                        <div class="money d-flex align-items-center">
+                                            <img src="./images/icons/deposit/usdt.svg" alt="" />
+                                            <span>0.00 USDT</span>
+                                        </div>
+                                        <button class="btn-previous">Previous Quests</button>
                                     </div>
                                 </div>
-                                <div class="box-body">
-                                    <div class="main-content">
-                                        <div class="info">
-                                            <h3>MONDAY</h3>
-                                            <p>Accumulated rewards:</p>
-                                            <div class="money d-flex align-items-center">
-                                                <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                <span>0.00 USDT</span>
-                                            </div>
-                                            <button class="btn-previous">Previous Quests</button>
-                                        </div>
-                                    </div>
-                                    <div class="detail-quest">
-                                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="daily-quest-tab" data-toggle="pill"
-                                                    data-target="#daily-quest" type="button" role="tab"
-                                                    aria-controls="daily-quest" aria-selected="true">Daily
-                                                    Quests</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="weekly-report-tab" data-toggle="pill"
-                                                    data-target="#weekly-report" type="button" role="tab"
-                                                    aria-controls="weekly-report" aria-selected="false">Weekly
-                                                    Quests</button>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content" id="pills-tabContent">
-                                            <div class="tab-pane fade show active" id="daily-quest" role="tabpanel"
-                                                aria-labelledby="daily-quest-tab">
-                                                <h5>Expires in: <strong>23 : 59 : 59</strong></h5>
-                                                <div class="list-task">
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
+                                <div class="detail-quest">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="daily-quest-tab" data-toggle="pill"
+                                                data-target="#daily-quest" type="button" role="tab"
+                                                aria-controls="daily-quest" aria-selected="true">Daily
+                                                Quests</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="weekly-report-tab" data-toggle="pill"
+                                                data-target="#weekly-report" type="button" role="tab"
+                                                aria-controls="weekly-report" aria-selected="false">Weekly
+                                                Quests</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="daily-quest" role="tabpanel"
+                                            aria-labelledby="daily-quest-tab">
+                                            <h5>Expires in: <strong>23 : 59 : 59</strong></h5>
+                                            <div class="list-task">
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
                                                         </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
                                                     </div>
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
-                                                    </div>
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
-                                                    </div>
-                                                    <div class="spacer pb-5 mb-4"></div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
                                                 </div>
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
+                                                </div>
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
+                                                </div>
+                                                <div class="spacer pb-5 mb-4"></div>
                                             </div>
-                                            <div class="tab-pane fade" id="weekly-report" role="tabpanel"
-                                                aria-labelledby="weekly-report-tab">
-
+                                        </div>
+                                        <div class="tab-pane fade" id="weekly-report" role="tabpanel"
+                                            aria-labelledby="weekly-report-tab">
+                                            <h5>Expires in: <strong>23 : 59 : 59</strong></h5>
+                                            <div class="list-task">
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
+                                                </div>
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
+                                                </div>
+                                                <div class="task-item d-flex justify-content-between">
+                                                    <div class="task-info d-flex align-items-center">
+                                                        <img style={{ width: "42px" }} src="./images/icons/treasure.png"
+                                                            alt="" />
+                                                        <div class="task-info-detail">
+                                                            <h6>Tên nhiệm vụ</h6>
+                                                            <p>Chi tiết nhiệm vụ</p>
+                                                            <p class="earn">Earn ....</p>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-go">
+                                                        Go
+                                                    </button>
+                                                </div>
+                                                <div class="spacer pb-5 mb-4"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-6">
-                            <div class="box-item">
-                                <div class="box-header d-flex align-items-center justify-content-between">
-                                    Quest Hub
-                                    <div class="icon__exit-quest">
-                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="icon__exit-quest" />
 
-                                    </div>
-                                </div>
-                                <div class="box-body">
-                                    <div class="main-content">
-                                        <div class="info">
-                                            <h3>MONDAY</h3>
-                                            <p>Accumulated rewards:</p>
-                                            <div class="money d-flex align-items-center">
-                                                <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                <span>0.00 USDT</span>
-                                            </div>
-                                            <button class="btn-previous">Previous Quests</button>
-                                        </div>
-                                    </div>
-                                    <div class="detail-quest">
-                                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="daily-quest2-tab" data-toggle="pill"
-                                                    data-target="#daily-quest2" type="button" role="tab"
-                                                    aria-controls="daily-quest2" aria-selected="true">Daily
-                                                    Quests</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="weekly-report2-tab" data-toggle="pill"
-                                                    data-target="#weekly-report2" type="button" role="tab"
-                                                    aria-controls="weekly-report2" aria-selected="false">Weekly
-                                                    Quests</button>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content" id="pills-tabContent">
-                                            <div class="tab-pane fade show active" id="daily-quest2" role="tabpanel"
-                                                aria-labelledby="daily-quest2-tab">
-                                                <h5>Expires in: <strong>23 : 59 : 59</strong></h5>
-                                                <div class="list-task">
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
-                                                    </div>
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
-                                                    </div>
-                                                    <div class="task-item d-flex justify-content-between">
-                                                        <div class="task-info d-flex align-items-center">
-                                                            <img style={{ width: "42px" }} src="./images/icons/treasure.png"
-                                                                alt="" />
-                                                            <div class="task-info-detail">
-                                                                <h6>Tên nhiệm vụ</h6>
-                                                                <p>Chi tiết nhiệm vụ</p>
-                                                                <p class="earn">Earn ....</p>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn-go">
-                                                            Go
-                                                        </button>
-                                                    </div>
-                                                    <div class="spacer pb-5 mb-4"></div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="weekly-report2" role="tabpanel"
-                                                aria-labelledby="weekly-report2-tab">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>

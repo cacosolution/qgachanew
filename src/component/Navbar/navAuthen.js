@@ -159,8 +159,8 @@ const NavAuthen = () => {
     }
     return (
         <header class="d-flex align-items-center">
-            <div class="header-content d-flex align-items-center justify-content-center">
-                <Link to={"/"}>
+            <div class="header-content d-flex align-items-center ">
+                <Link to={"/"} className="img-index">
                     <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
                     <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
                 </Link>
@@ -551,7 +551,7 @@ const NavAuthen = () => {
             )}
             {isOpenConfirmResgiter && (
                 <div className='transaction-detail2'>
-                    <div class="box-auth noti-success mt-4 signAuthen">
+                    <div class="box-auth noti-success mt-4 loginAuthen">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             <div></div>
                             <button class="btn__exit-chat">
@@ -571,7 +571,7 @@ const NavAuthen = () => {
             )}
             {isOpenLogin && (
                 <div className='transaction-detail2'>
-                    <div class="box-auth signin mt-4 signAuthen">
+                    <div class="box-auth signin mt-4 loginAuthen">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             Sign In
                             <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
@@ -612,7 +612,7 @@ const NavAuthen = () => {
             )}
             {isOpenVerification && (
                 <div className='transaction-detail2'>
-                    <div class="box-auth two-factor mt-4 signAuthen">
+                    <div class="box-auth two-factor mt-4 loginAuthen">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             Two-factor authentication
                             <button class="btn__exit-chat" onClick={handlerLoginVerification}>
@@ -638,7 +638,7 @@ const NavAuthen = () => {
             )}
             {isOpenResetPassword && (
                 <div className='transaction-detail2'>
-                    <div class="box-auth enter-email mt-4 signAuthen">
+                    <div class="box-auth enter-email mt-4 loginAuthen">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             Reset Password
                             <button class="btn__exit-chat" onClick={handlerResetPassword}>
@@ -664,7 +664,7 @@ const NavAuthen = () => {
             {isOpenResetAccount && (
                 <div className='transaction-detail2'>
 
-                    <div class="box-auth reset-password mt-4 signAuthen">
+                    <div class="box-auth reset-password mt-4 loginAuthen">
                         <div class="box-header d-flex justify-content-between align-items-center">
                             Reset Account Password
                             <button class="btn__exit-chat">
@@ -721,7 +721,6 @@ const NavAuthen = () => {
                     </div>
                 </div>
             )}
-
         </header>
 
     )

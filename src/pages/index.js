@@ -61,9 +61,11 @@ const Home = () => {
         <div className="container-wrapper">
             <Navbar />
             <main>
-                <Sidebar />
                 <div className="main-home" >
+
                     <div className="main-content">
+                        <Sidebar />
+
                         {isOpenResgiter && (
                             <div className='transaction-detail2'>
                                 <div className="box-auth sign-up mt-4 signAuthen">
@@ -184,7 +186,7 @@ const Home = () => {
                         )}
                         {isOpenConfirmResgiter && (
                             <div className='transaction-detail2'>
-                                <div class="box-auth noti-success mt-4 signAuthen">
+                                <div class="box-auth noti-success mt-4 loginAuthen">
                                     <div class="box-header d-flex justify-content-between align-items-center">
                                         <div></div>
                                         <button class="btn__exit-chat">
@@ -204,7 +206,7 @@ const Home = () => {
                         )}
                         {isOpenLogin && (
                             <div className='transaction-detail2'>
-                                <div class="box-auth signin mt-4 signAuthen">
+                                <div class="box-auth signin mt-4 loginAuthen">
                                     <div class="box-header d-flex justify-content-between align-items-center">
                                         Sign In
                                         <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
@@ -245,7 +247,7 @@ const Home = () => {
                         )}
                         {isOpenVerification && (
                             <div className='transaction-detail2'>
-                                <div class="box-auth two-factor mt-4 signAuthen">
+                                <div class="box-auth two-factor mt-4 loginAuthen">
                                     <div class="box-header d-flex justify-content-between align-items-center">
                                         Two-factor authentication
                                         <button class="btn__exit-chat" onClick={handlerLoginVerification}>
@@ -271,7 +273,7 @@ const Home = () => {
                         )}
                         {isOpenResetPassword && (
                             <div className='transaction-detail2'>
-                                <div class="box-auth enter-email mt-4 signAuthen">
+                                <div class="box-auth enter-email mt-4 loginAuthen">
                                     <div class="box-header d-flex justify-content-between align-items-center">
                                         Reset Password
                                         <button class="btn__exit-chat" onClick={handlerResetPassword}>
@@ -297,7 +299,7 @@ const Home = () => {
                         {isOpenResetAccount && (
                             <div className='transaction-detail2'>
 
-                                <div class="box-auth reset-password mt-4 signAuthen">
+                                <div class="box-auth reset-password mt-4 loginAuthen">
                                     <div class="box-header d-flex justify-content-between align-items-center">
                                         Reset Account Password
                                         <button class="btn__exit-chat">
@@ -381,9 +383,15 @@ const Home = () => {
                             <img src="./images/img-main1.png" alt="banner-home" />
                             <div class="mobile">
                                 <div class="list-social d-flex">
-                                    <div class="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>
-                                    <div class="social-item"><img src="./images/icons/twitter.svg" alt="" /></div>
-                                    <div class="social-item"><img src="./images/icons/tele.svg" alt="" /></div>
+                                    <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
+                                        <img style={{ width: "15px" }} src="./images/icons/youtube.svg" alt="YouTube" />
+                                    </a>
+                                    <a className="social-item" href="https://twitter.com/@qgachagame" target="_blank" rel="noopener noreferrer">
+                                        <img style={{ width: "15px" }} src="./images/icons/twitter.svg" alt="Twitter" />
+                                    </a>
+                                    <a className="social-item" href="http://t.me/qgacha" target="_blank" rel="noopener noreferrer">
+                                        <img style={{ width: "15px" }} src="./images/icons/tele.svg" alt="Telegram" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

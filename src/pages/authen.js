@@ -185,7 +185,7 @@ const Authen = () => {
             )}
             {isOpenConfirmResgiter && (
               <div className='transaction-detail2'>
-                <div class="box-auth noti-success mt-4 signAuthen">
+                <div class="box-auth noti-success mt-4 loginAuthen">
                   <div class="box-header d-flex justify-content-between align-items-center">
                     <div></div>
                     <button class="btn__exit-chat">
@@ -205,7 +205,7 @@ const Authen = () => {
             )}
             {isOpenLogin && (
               <div className='transaction-detail2'>
-                <div class="box-auth signin mt-4 signAuthen">
+                <div class="box-auth signin mt-4 loginAuthen">
                   <div class="box-header d-flex justify-content-between align-items-center">
                     Sign In
                     <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
@@ -246,7 +246,7 @@ const Authen = () => {
             )}
             {isOpenVerification && (
               <div className='transaction-detail2'>
-                <div class="box-auth two-factor mt-4 signAuthen">
+                <div class="box-auth two-factor mt-4 loginAuthen">
                   <div class="box-header d-flex justify-content-between align-items-center">
                     Two-factor authentication
                     <button class="btn__exit-chat" onClick={handlerLoginVerification}>
@@ -272,7 +272,7 @@ const Authen = () => {
             )}
             {isOpenResetPassword && (
               <div className='transaction-detail2'>
-                <div class="box-auth enter-email mt-4 signAuthen">
+                <div class="box-auth enter-email mt-4 loginAuthen">
                   <div class="box-header d-flex justify-content-between align-items-center">
                     Reset Password
                     <button class="btn__exit-chat" onClick={handlerResetPassword}>
@@ -298,7 +298,7 @@ const Authen = () => {
             {isOpenResetAccount && (
               <div className='transaction-detail2'>
 
-                <div class="box-auth reset-password mt-4 signAuthen">
+                <div class="box-auth reset-password mt-4 loginAuthen">
                   <div class="box-header d-flex justify-content-between align-items-center">
                     Reset Account Password
                     <button class="btn__exit-chat">
@@ -355,7 +355,6 @@ const Authen = () => {
                 </div>
               </div>
             )}
-
 
             <div className="big-prize">
               <div className="fire d-flex align-items-center">
@@ -492,11 +491,12 @@ const Authen = () => {
             </section>
           </div>
 
-          <Footer />
         </div>
 
         <BoxOverlay />
       </main>
+      <Footer />
+
 
     </div>
   );

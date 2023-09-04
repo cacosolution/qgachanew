@@ -82,6 +82,7 @@
   header .header-content {
     position: unset;
     width: 100%;
+    max-width: 100%;
     justify-content: space-between !important;
     padding: 0 20px;
   }
@@ -133,7 +134,7 @@
 
   main .main-home .main-content .banner-main .list-social {
     position: absolute;
-    bottom: -10px;
+    bottom: -115px;
     left: calc(50% - 57.5px);
   }
 

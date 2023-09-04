@@ -532,7 +532,7 @@
 
 .main-home {
   height: 100%;
-  width: 80%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -565,6 +565,8 @@
     margin: 0 auto;
 
   }
+
+
 }
 
 .main-home .main-content .big-prize {
@@ -675,37 +677,40 @@
 @media (min-width: 800px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: 19px;
-    right: -100px;
-    width: 866px;
+    top: 20px;
+    right: -80px;
+    width: 700px;
   }
+
+  /* .main-home {
+    width: 100%;
+  } */
 
 }
 
 
-/* @media (max-width: 800px) {
-  .main-home .main-content .banner-main img[alt=banner-home] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 600px;
+@media (max-width: 950px) {
+  .main-home {
+    width: 100%;
   }
 
-} */
+}
 
 @media (max-width: 576px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
     top: 50px;
     right: 0;
+  }
 
-
+  .main-home {
+    width: 100%;
   }
 
 }
 
-s .main-home .main-content section.feature {
-  margin-top: 64px;
+.main-home .main-content section.feature {
+  /* margin-top: 64px; */
 }
 
 .main-home .main-content section.feature img {
