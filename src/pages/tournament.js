@@ -27,10 +27,12 @@ const tournament = () => {
                         </section>
                         <div class="spacer my-5 py-5"></div>
                     </div>
-               
+
                 </div>
                 <BoxOverlay />
             </main>
+            <Footer />
+
         </div>
     )
 }

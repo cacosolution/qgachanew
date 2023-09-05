@@ -540,7 +540,7 @@ header #box-ava.active {
 @media (max-width: 1068px) {
 
   header .header-right {
-    display: none;
+    display: block;
   }
 
   header .header-content {
@@ -570,6 +570,10 @@ header #box-ava.active {
     width: 27px;
     height: 27px;
     margin-left: 6px !important;
+  }
+
+  header .header-right {
+    display: none;
   }
 
   header .header-content .header-action button.btn-deposit {
@@ -602,7 +606,42 @@ header #box-ava.active {
   }
 
   .img-index {
-    margin-left: 0px;
+    margin-left: 22px;
+  }
+}
+
+@media (max-width: 414px) {
+  header .ava-container img.ava-icon {
+    width: 27px;
+    height: 27px;
+    margin-left: 6px !important;
+  }
+
+  header .header-right {
+    display: none;
+  }
+
+  header .header-content .header-action button.btn-deposit {
+    margin-left: 10px;
+    margin-right: 9px;
+  }
+
+  .img-index {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  header .mobile {
+    display: block !important;
+  }
+
+  header .pc {
+    display: none !important;
+  }
+
+  .img-index {
+    margin-left: 10px;
   }
 }
 
@@ -1066,14 +1105,66 @@ input.form-control::placeholder {
 
 @media (max-width: 576px) {
   .signAuthen {
-    left: 15px;
-    top: 50px;
+    left: -3px;
+    top: -20px;
+  }
+
+  .loginAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .box-auth.loginAuthen {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.loginAuthen input,
+  .box-auth.loginAuthen button {
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .box-auth.sign-up {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.sign-up input,
+  .box-auth.sign-up button {
+    max-height: 100%;
+    overflow: auto;
   }
 }
 
 @media (max-width: 400px) {
+  .signAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .loginAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .box-auth.loginAuthen {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.loginAuthen input,
+  .box-auth.loginAuthen button {
+    max-height: 100%;
+    overflow: auto;
+  }
+
   .box-auth.sign-up {
-    max-height: 400px;
+    max-height: 800px;
+    width: 100%;
     overflow-y: auto;
   }
 
@@ -1083,20 +1174,7 @@ input.form-control::placeholder {
     overflow: auto;
   }
 
-  .loginAuthen {
-    top: 80px;
-  }
 
-  .box-auth.loginAuthen {
-    max-height: 400px;
-    overflow-y: auto;
-  }
-
-  .box-auth.loginAuthen input,
-  .box-auth.loginAuthen button {
-    max-height: 100%;
-    overflow: auto;
-  }
 }
 
 
@@ -1345,7 +1423,7 @@ input {
 }
 
 .container-wrapper main button.btn-support img {
-  width: 66px;
+  width: 44px;
 }
 
 .container-wrapper main .main-fournumber {
@@ -1356,6 +1434,14 @@ input {
 .container-wrapper main .main-fournumber .main-content {
   margin-top: 30px;
   margin-left: 107px;
+}
+
+.box__support-chat.active {
+  display: block;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 99999;
 }
 
 @media (max-width: 1800px) {
@@ -1420,25 +1506,9 @@ input {
   padding-bottom: 200px;
 }
 
-.box__support-chat.active {
-  display: block;
-  position: fixed;
-  /* right: 10px; */
-  bottom: 20px;
-  z-index: 99999;
-}
 
-@media (max-width: 576px) {
-  .box__support-chat.active {
-    display: block;
-    position: fixed;
-    /* right: 10px; */
-    width: 100%;
-    height: 100%;
 
-  }
 
-}
 
 
 .box__support-chat {
@@ -1456,7 +1526,25 @@ input {
 
 .box__support-chat .box__support-header .header-top {
   padding: 16px 20px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+}
+
+@media (max-width: 576px) {
+  .box__support-chat.active {
+    display: block;
+    position: fixed;
+    /* right: 10px; */
+    width: 100%;
+    height: 100%;
+    left: 0px;
+
+  }
+
+  .box__support-chat .box__support-header .header-top {
+    padding: 16px 20px;
+    margin-top: 10px;
+  }
+
 }
 
 .box__support-chat .box__support-header .header-top img[alt=qgc-coin] {

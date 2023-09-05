@@ -400,9 +400,9 @@ const Affiliate = () => {
             </div>
           </div>
 
-          <Footer />
         </div>
       </main>
+      <Footer />
 
 
     </div>

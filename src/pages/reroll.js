@@ -29,10 +29,11 @@ const reroll = () => {
                         <div class="spacer my-5 py-5"></div>
                     </div>
                 </div>
-                <Footer />
 
                 <BoxOverlay />
             </main>
+            <Footer />
+
         </div>
     )
 }

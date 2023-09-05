@@ -526,8 +526,8 @@
   }
 
   .container-wrapper main button.btn-support {
-    right: 40px;
-    bottom: 100px;
+    right: 40px !important;
+    bottom: 100px !important;
   }
 
   .mobile {

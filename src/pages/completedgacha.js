@@ -32,7 +32,9 @@ const Completedgacha = () => {
                 </div>
                 <BoxOverlay />
             </main>
-     
+            <Footer />
+
+
 
         </div>
     )

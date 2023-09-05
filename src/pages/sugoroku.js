@@ -24,14 +24,16 @@ const sugoroku = () => {
                             <a href="">Gacha</a> <BiChevronRight size={20} /> <a href="">Sugoroku Gacha</a>
                         </div>
                         <section class="my-3">
-                            <img src="./images/comming-sugo.png" alt=""/>
+                            <img src="./images/comming-sugo.png" alt="" />
                         </section>
                         <div class="spacer my-5 py-5"></div>
                     </div>
-              
+
                 </div>
                 <BoxOverlay />
             </main>
+            <Footer />
+
         </div>
     )
 }
