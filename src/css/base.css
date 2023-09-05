@@ -540,7 +540,7 @@ header #box-ava.active {
 @media (max-width: 1068px) {
 
   header .header-right {
-    display: none;
+    display: block;
   }
 
   header .header-content {
@@ -570,6 +570,10 @@ header #box-ava.active {
     width: 27px;
     height: 27px;
     margin-left: 6px !important;
+  }
+
+  header .header-right {
+    display: none;
   }
 
   header .header-content .header-action button.btn-deposit {
@@ -602,7 +606,42 @@ header #box-ava.active {
   }
 
   .img-index {
-    margin-left: 0px;
+    margin-left: 22px;
+  }
+}
+
+@media (max-width: 414px) {
+  header .ava-container img.ava-icon {
+    width: 27px;
+    height: 27px;
+    margin-left: 6px !important;
+  }
+
+  header .header-right {
+    display: none;
+  }
+
+  header .header-content .header-action button.btn-deposit {
+    margin-left: 10px;
+    margin-right: 9px;
+  }
+
+  .img-index {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  header .mobile {
+    display: block !important;
+  }
+
+  header .pc {
+    display: none !important;
+  }
+
+  .img-index {
+    margin-left: 10px;
   }
 }
 
