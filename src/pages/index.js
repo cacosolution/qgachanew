@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/flickity.css"
-import "../css/base.css"
 import "../css/home.css"
 import "../css/responsive.css"
 import Navbar from '../component/Navbar/navbar';
