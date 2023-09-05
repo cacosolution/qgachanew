@@ -48,7 +48,7 @@ const Boxgacha = () => {
 
 
                     </div>
-                    <Footer />
+                  
                 </div>
                 <BoxOverlay />
             </main>

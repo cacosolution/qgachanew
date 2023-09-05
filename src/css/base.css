@@ -614,7 +614,7 @@ header.fixed-active {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   border-radius: 6px;
   border-top: 1px solid var(--xm, #9e9e9e);
   background: #291a3a;

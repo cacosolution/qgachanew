@@ -26,7 +26,7 @@ const Bakacomming = () => {
                         </section>
                         <div class="spacer my-5 py-5"></div>
                     </div>
-                    <Footer />
+                   
                 </div>
                 <BoxOverlay />
             </main>

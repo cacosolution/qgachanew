@@ -1,5 +1,6 @@
 const initialState = {
-    isOpenSideBar: true
+    isOpenSideBar: true,
+    sideBarPosition: ""
 };
 
 const siderReducer = (state = initialState, action) => {
@@ -7,7 +8,8 @@ const siderReducer = (state = initialState, action) => {
         case "SET_IS_OPEN_SIDEBAR":
             return {
                 ...state,
-                isOpenSideBar: action.payload
+                isOpenSideBar: action.payload,
+                sideBarPosition: action.position
             }
         default:
             return state;

@@ -130,8 +130,25 @@
 .side-bar.active-show .sidebar-content .sidebar__list-item .card {
   background: inherit;
   width: 100%;
-  border: none;
+  border-radius: 10px;
+
 }
+
+.side-bar.active-show .sidebar-content .sidebar__list-item .card .card-shadow-ouset.active {
+  background: inherit;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 5px #00c68b;
+
+}
+
+.side-bar.active-show .sidebar-content .sidebar__list-item .card .card-shadow-ouset {
+  background: inherit;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
 
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header.active__sidebar-item {
   border-radius: 3px;
@@ -139,6 +156,7 @@
   background: linear-gradient(180deg, rgba(46, 46, 47, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
   box-shadow: 0px 0px 9px 1px #05e8ff inset, 0px 0px 7px 5px #198470;
+
 }
 
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header {
@@ -158,6 +176,8 @@
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #05cdff inset;
 }
+
+
 
 .side-bar.active-show .sidebar-content .sidebar__list-item .card .card-header button {
   padding: 0;
@@ -360,6 +380,11 @@
   cursor: pointer;
 }
 
+.side-bar .sidebar-content .sidebar__list-item .card-shadow-ousetTwo {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item {
   padding: 16px;
   border-radius: 10px;
@@ -367,6 +392,15 @@
   background: linear-gradient(180deg, rgba(46, 46, 47, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
+}
+
+.side-bar .sidebar-content .sidebar__list-item .sidebar-item.active {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #393636;
+  background: linear-gradient(180deg, rgba(46, 46, 47, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hue;
+  box-shadow: 0px 0px 7px 0px #05cdff inset;
 }
 
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item img {
@@ -399,6 +433,15 @@
   background: linear-gradient(180deg, rgba(46, 46, 47, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
+}
+
+.side-bar .sidebar-content .sidebar__list-item .card .card-header.active {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #393636;
+  background: linear-gradient(180deg, rgba(46, 46, 47, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  background-blend-mode: hue;
+  box-shadow: 0px 0px 7px 0px #05cdff inset;
 }
 
 .side-bar .sidebar-content .sidebar__list-item .card .card-header button {
