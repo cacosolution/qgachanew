@@ -729,9 +729,17 @@ footer .footer-content .footer-contact .line-y {
   height: 260px;
 }
 
-footer .footer-content .footer-contact .follow-contact {
-  padding-left: 80px;
-  padding-right: 16px;
+@media (min-width: 801px) {
+  footer .footer-content .footer-contact .follow-contact {
+    padding-left: 80px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer .footer-content .footer-contact .follow-contact {
+    padding-right: 16px;
+  }
 }
 
 footer .footer-content .footer-contact .follow-contact h4 {
