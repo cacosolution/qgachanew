@@ -5,9 +5,13 @@ import "../../css/base.css";
 import "../../css/home.css";
 import { SidebarContext } from "../../context/sideBarContext";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 const Footer = () => {
-  const { isOpenSideBar, setIsOpenSideBar } = useContext(SidebarContext)
+  const {
+    isOpenSideBar
+  } = useSelector((state) => state.siderBar);
+  const dispatch = useDispatch();
 
   return (
 
@@ -208,7 +212,7 @@ const Footer = () => {
             <div class="name-feature">Chat</div>
           </div>
           <div
-            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar })}>
             <img src="./images/icons/menu-icon.svg" alt="" />
             <div class="name-feature">Menu</div>
           </div>

@@ -1,15 +1,18 @@
 import { useContext, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 import BoxOverlay from "../Box/BoxOverlay";
 
 
 const Sidebar = () => {
-    const [isActiveShow, setIsActiveShow] = useState(true);
+    const {
+        isOpenSideBar
+    } = useSelector((state) => state.siderBar);
+    const dispatch = useDispatch();
+
 
     const {
-        isOpenSideBar,
-        setIsOpenSideBar,
         isOpenSpin,
         setIsOpenSpin,
         isOpenQuest,
@@ -23,9 +26,7 @@ const Sidebar = () => {
     useEffect(() => {
         const updateWindowState = () => {
             if (window.innerWidth < 576) {
-                setIsOpenSideBar(false);
-            } else {
-                setIsOpenSideBar(true);
+                dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false });
             }
         };
 
@@ -33,10 +34,10 @@ const Sidebar = () => {
     }, [window.innerWidth])
 
     return (
-        <div className={isOpenSideBar === false ? "side-bar active-show" : "side-bar"}>
+        <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
             <div class="header-menu pc fixed-active">
                 <div class=" d-flex align-items-center justify-content-center">
-                    <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => setIsOpenSideBar(!isOpenSideBar)} src="./images/icons/menu-icon.svg"
+                    <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar })} src="./images/icons/menu-icon.svg"
                         alt="header-logo" />
                     <span>Menu</span>
                     <div class="line-yblue"></div>
@@ -47,13 +48,13 @@ const Sidebar = () => {
             <div class="mobile">
                 <div class="header-menu-mobile d-flex align-items-center justify-content-between ">
                     <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
-                    <img id="exit__sidebar-mobile" onClick={() => setIsOpenSideBar(!isOpenSideBar)} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
+                    <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
                 </div>
             </div>
 
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
-                    <Link class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
                         EVENT
                     </Link>
                     <div class="d-flex feature-event">
@@ -76,7 +77,7 @@ const Sidebar = () => {
                         <div class="item-content">REFER</div>
                     </div>
                     <div class="card">
-                        <div class="card-header sidebar-item " id="gacha-sidebar">
+                        <div class="card-header sidebar-item active" id="gacha-sidebar">
                             <h5 class="mb-0">
                                 <button
                                     class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
@@ -96,38 +97,38 @@ const Sidebar = () => {
                                 </button>
                             </h5>
                         </div>
-                        <div id="gacha" class="collapse" aria-labelledby="gacha-sidebar">
+                        <div id="gacha" class="collapse active" aria-labelledby="gacha-sidebar">
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/completedgacha">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/completedgacha">
                                             <img src="./images/icons/com-gaga.png" alt="" />Complete Gacha
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/boxgacha">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/boxgacha">
                                             <img src="./images/icons/box-gacha.png" alt="" />Box Gacha
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/reroll">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/reroll">
                                             <img src="./images/icons/reroll.png" alt="" />Re-roll Gacha
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/upgradesoon">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/upgradesoon">
                                             <img src="./images/icons/upgrade-gacha.png" alt="" />Upgrade Gacha
                                         </Link>
                                     </li>
 
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/mystery">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/mystery">
                                             <img src="./images/icons/icon-mystery.png" alt="" />Mystery Gacha
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/sugoroku">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/sugoroku">
                                             <img src="./images/icons/sugoroku.png" alt="" />Sugoroku Gacha
                                         </Link>
                                     </li>
@@ -160,12 +161,12 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/fournumber">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/fournumber">
                                             <img src="./images/icons/com-gaga.png" alt="" />4 Số
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/luckynumber">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/luckynumber">
                                             <img src="./images/icons/box-gacha.png" alt="" />Jackpot
                                         </Link>
                                     </li>
@@ -198,7 +199,7 @@ const Sidebar = () => {
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" to="/qgccomming">
+                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/qgccomming">
                                             <img src="./images/icons/qgc-coin.png" alt="" style={{ width: "30px" }} />QCC Game
                                         </Link>
                                     </li>
@@ -207,20 +208,20 @@ const Sidebar = () => {
                             </div>
                         </div>
                     </div>
-                    <Link to="/bakacomming" class="sidebar-item d-flex align-items-center">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/bakacomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/baka.png" alt="" class="item-icon" />
                         <div class="item-content">BAKAC <span>(Upcoming)</span></div>
                     </Link>
-                    <Link to="/pvpcomming" class="sidebar-item d-flex align-items-center">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/pvpcomming" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" class="item-icon" />
                         <div class="item-content">PVP <span>(Upcoming)</span></div>
                     </Link>
-                    <Link to="/upgrade" class="sidebar-item d-flex align-items-center">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/upgrade" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px", }} src="./images/icons/rectangle.png" alt="" class="item-icon" />
                         <div class="item-content">Upgrade <span>(Upcoming)</span></div>
                     </Link>
 
-                    <Link to="/tournament" class="sidebar-item d-flex align-items-center">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to="/tournament" class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" class="item-icon" />
                         <div class="item-content">Tournament</div>
                     </Link>
@@ -243,7 +244,7 @@ const Sidebar = () => {
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
 
-                    <Link to={"/affiliate"} class="sidebar-item d-flex align-items-center">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} to={"/affiliate"} class="sidebar-item d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
                         <div class="item-content">Affiliate</div>
                     </Link>
