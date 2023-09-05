@@ -575,6 +575,15 @@
   background-color: #291a3a;
 }
 
+@media (max-width: 768px) {
+  .listmobile {
+    display: none;
+  }
+
+
+
+}
+
 .main-deposit .deposit-content .feature-content .list-feature {
   width: 300px;
   margin-right: 11px;
@@ -839,6 +848,19 @@
   z-index: 9;
   top: 110%;
   left: 0;
+  border-radius: 10px;
+  background-color: #291a3a;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 165px;
+}
+
+.dropsetting {
+  position: relative;
+  z-index: 9;
+  top: 50%;
+  left: -20px;
   border-radius: 10px;
   background-color: #291a3a;
   border: 1px solid #ccc;

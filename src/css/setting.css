@@ -2,6 +2,9 @@
   max-height: unset;
 }
 
+.feature-header-mobile{
+  display: none;
+}
 .main-deposit .deposit-content .feature-content .feature-detail {
   padding: 0;
 }
@@ -262,6 +265,28 @@
 
   .main-deposit .deposit-content .feature-content .feature-detail {
     padding: 12px;
+  }
+
+  .feature-header-mobile {
+    
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+
+  .feature-header-mobile svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
   }
 
   .main-deposit .deposit-content .feature-content .feature-detail .feature-header {
