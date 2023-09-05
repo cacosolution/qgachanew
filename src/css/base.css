@@ -118,7 +118,7 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .img-index {
