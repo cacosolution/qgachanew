@@ -622,20 +622,20 @@
   main .main-home .main-content .banner-main .banner-content h3 {
     font-size: 22px;
     position: absolute;
-    bottom: 55px;
+    bottom: -5px;
     z-index: 1;
   }
 
   main .main-home .main-content .banner-main .banner-content h1 {
     font-size: 40px;
     position: absolute;
-    bottom: 0;
+    bottom: -60px;
     z-index: 99;
   }
 
   main .main-home .main-content .banner-main .list-social {
     position: absolute;
-    bottom: -42px;
+    bottom: -70px;
     left: calc(50% - 57.5px);
   }
 
@@ -1013,5 +1013,50 @@
     width: 20px;
     height: 20px;
     margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  main .main-home .main-content .banner-main .banner-content h3 {
+    font-size: 21px;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+  }
+
+  main .main-home .main-content .banner-main .banner-content h1 {
+    font-size: 38px;
+    position: absolute;
+    bottom: -57px;
+    z-index: 99;
+  }
+
+  main .main-home .main-content .banner-main .list-social {
+    position: absolute;
+    bottom: -69px;
+    left: calc(50% - 57.5px);
+  }
+
+}
+
+@media (max-width: 280px) {
+  main .main-home .main-content .banner-main .banner-content h3 {
+    font-size: 17px;
+    position: absolute;
+    bottom: 25px;
+    z-index: 1;
+  }
+
+  main .main-home .main-content .banner-main .banner-content h1 {
+    font-size: 30px;
+    position: absolute;
+    bottom: -23px;
+    z-index: 99;
+  }
+
+  main .main-home .main-content .banner-main .list-social {
+    position: absolute;
+    bottom: -36px;
+    left: calc(50% - 57.5px);
   }
 }

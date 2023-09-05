@@ -6,6 +6,7 @@ import "../../css/home.css";
 import { SidebarContext } from "../../context/sideBarContext";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import BoxOverlay from "../Box/BoxOverlay";
 
 const Footer = () => {
   const {
@@ -13,6 +14,17 @@ const Footer = () => {
   } = useSelector((state) => state.siderBar);
   const dispatch = useDispatch();
 
+  const {
+    setIsOpenSideBar,
+    isOpenSpin,
+    setIsOpenSpin,
+    isOpenQuest,
+    setIsOpenQuest,
+    isOpenRefer,
+    setIsOpenRefer,
+    isOpenSupport,
+    setIsOpenSupport
+  } = useContext(SidebarContext)
   return (
 
     <footer>
@@ -128,18 +140,19 @@ const Footer = () => {
                 <div class="list-link">
                   <h4>QGACHA</h4>
                   <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About QGacha</a></li>
-                    <li><a href="">VIP club</a></li>
-                    <li><a href="">Event</a></li>
-                    <li><a href="">Affiliate</a></li>
+
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="">About QGacha</Link></li>
+                    <li><Link to="">VIP club</Link></li>
+                    <li><Link to="/event">Event</Link></li>
+                    <li><Link to="/affiliate">Affiliate</Link></li>
                   </ul>
                 </div>
               </div>
               <div class="col-2">
                 <div class="get-help">
                   <h4>GET HELP</h4>
-                  <div class="link-faq"><a>FAQ</a></div>
+                  <div class="link-faq"><Link to="/faq">FAQ</Link></div>
                 </div>
               </div>
               <div class="col-5">
@@ -158,11 +171,11 @@ const Footer = () => {
             <div class="list-link">
               <h4>QGACHA</h4>
               <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About QGacha</a></li>
-                <li><a href="">VIP club</a></li>
-                <li><a href="">Event</a></li>
-                <li><a href="">Affiliate</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="">About QGacha</Link></li>
+                <li><Link to="">VIP club</Link></li>
+                <li><Link to="/event">Event</Link></li>
+                <li><Link to="/affiliate">Affiliate</Link></li>
               </ul>
             </div>
           </div>
@@ -192,22 +205,28 @@ const Footer = () => {
       <div class="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
       <div class="mobile menu-bottom" style={{ zIndex: 999999 }}>
         <div class="list-feature">
-          <div class="menu-feature d-flex flex-column justify-content-center align-items-center w-49">
-            <img src="./images/icons/gacha.png" alt="" />
-            <div class="name-feature">Gacha</div>
-          </div>
+          <Link>
+            <div class="menu-feature d-flex flex-column justify-content-center align-items-center w-49" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
+              <img src="./images/icons/gacha.png" alt="" />
+              <div class="name-feature">Gacha</div>
+            </div>
+          </Link>
+
           <div
             class="menu-feature upgrade d-flex flex-column justify-content-center align-items-center">
             <img src="./images/icons/upgrademobile.svg" alt="" />
             <div class="name-feature">Upgrade</div>
           </div>
+          <Link to="/wallet">
+            <div
+              class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
+              <img src="./images/icons/icon-cardmobile.svg" alt="" />
+              <div class="name-feature">Wallet</div>
+            </div>
+          </Link>
+
           <div
-            class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
-            <img src="./images/icons/icon-cardmobile.svg" alt="" />
-            <div class="name-feature">Wallet</div>
-          </div>
-          <div
-            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49">
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => setIsOpenSupport(!isOpenSupport)}>
             <img src="./images/icons/chat.svg" alt="" />
             <div class="name-feature">Chat</div>
           </div>
@@ -218,6 +237,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <BoxOverlay />
+
     </footer>
   );
 };

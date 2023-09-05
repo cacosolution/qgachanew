@@ -16,6 +16,11 @@ const Setting = () => {
     const [isSecurity, setIsSecurity] = useState(false);
     const [isReferences, setIsReferences] = useState(false);
     const [isOpenVerification, setIsOpenVerification] = useState(false)
+    const [isOpenSelect, setIsOpenSelect] = useState(false)
+
+    const handelModal = (dropdownNumber) => {
+        setIsOpenSelect(!isOpenSelect)
+    }
 
     const handlerChangeSetting = () => {
         setIsSetting(true);
@@ -47,7 +52,7 @@ const Setting = () => {
                     <div class="deposit-content">
                         <button class="btn-wallet btn-setting text-15">Setting</button>
                         <div class="feature-content d-flex">
-                            <div class="list-feature">
+                            <div class="list-feature listmobile">
                                 <ul>
                                     <li class="feature-item d-flex align-items-center ">
                                         <button style={{ background: "none", border: "none" }} class="feature-title text-15" onClick={handlerChangeSetting}>General</button>
@@ -64,12 +69,13 @@ const Setting = () => {
                                 </ul>
 
                             </div>
+
                             {isSetting ? (
                                 <div class="feature-detail">
                                     <div class="feature-header pc">
                                         Email
                                     </div>
-                                    <div class="feature-header mobile">
+                                    <div class="feature-header mobile" onClick={handelModal}>
                                         General
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +83,18 @@ const Setting = () => {
                                                 d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
                                                 fill="white" />
                                         </svg>
+                                        {isOpenSelect && (
+                                            <div className="dropsetting">
+                                                <div className="option" onClick={handlerChangeSetting}>General</div>
+                                                <div className="option" onClick={handlerChangeSecurity}>Security</div>
+                                                <div className="option" onClick={handlerChangeReferences} >Preferences</div>
+                                                <div className="option">Verify</div>
+
+                                            </div>
+                                        )}
                                     </div>
+
+
                                     <div class="feature-body">
                                         <div class="email-action d-flex justify-content-between align-items-end">
                                             <div class="email-wrapper">
@@ -89,11 +106,25 @@ const Setting = () => {
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
+
                             ) : isSecurity ? (
                                 <div class="d-flex flex-column">
+
                                     <div class="box-change">
+                                        <div class="feature-header-mobile">
+                                            General
+                                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
                                         <h4>Change password</h4>
+
+
                                         <form>
                                             <div class="form-group">
                                                 <label for="">Old password</label>
@@ -152,6 +183,15 @@ const Setting = () => {
                             ) : isReferences ? (
                                 <div class="d-flex flex-column">
                                     <div class="reference-box box-change">
+                                        <div class="feature-header-mobile">
+                                            General
+                                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
                                         <div class="box-header">
                                             <h4>Preferences</h4>
                                         </div>
