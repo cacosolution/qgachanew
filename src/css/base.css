@@ -945,6 +945,7 @@ footer .footer-content .footer-info .box-docs {
     position: absolute;
     z-index: 999;
     margin-left: 1%;
+    height: 100% !important;
 
   }
 }
@@ -1110,6 +1111,8 @@ input.form-control::placeholder {
 
 
 }
+
+
 
 @media (max-width: 576px) {
   .signAuthen {

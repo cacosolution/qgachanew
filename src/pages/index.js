@@ -66,7 +66,7 @@ const Home = () => {
                         <Sidebar />
 
                         {isOpenResgiter && (
-                            <div className='transaction-detail2'>
+                            <div className='transaction-detail2 '>
                                 <div className="box-auth sign-up mt-4 signAuthen">
                                     <div className="box-header d-flex justify-content-between align-items-center">
                                         Sign Up

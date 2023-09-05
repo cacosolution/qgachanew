@@ -44,7 +44,7 @@ const Wallet = () => {
 
     return (
         <div class="container-wrapper">
-            <Navbar />
+            {/* <Navbar /> */}
             <main>
                 <Sidebar />
                 <div class="main-deposit">
@@ -354,6 +354,7 @@ const Wallet = () => {
             </main>
             <div style={{}}>
                 <Footer />
+                <div>alo</div>
             </div>
 
         </div>
