@@ -2,7 +2,7 @@
 
 
 .affiliate-content {
-  width: 100%;
+  width: 95%;
   margin: auto;
 }
 
@@ -284,7 +284,7 @@
 }
 
 #chart {
-  width: 600px !important;
+  width: 100% !important;
 }
 
 .body-affi .box-main .nav-chart .chart-wrapper {

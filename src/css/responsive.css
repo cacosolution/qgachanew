@@ -584,7 +584,6 @@
     position: unset;
     width: 100%;
     justify-content: space-between !important;
-    padding: 0 20px;
   }
 
   header .header-content img[alt=logo-mobile] {

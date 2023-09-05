@@ -118,7 +118,6 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  max-width: 80%;
   justify-content: space-between;
 }
 
@@ -545,6 +544,7 @@ header #box-ava.active {
 
   header .header-content {
     border-right: none;
+    margin: auto;
   }
 
   header .pc {
