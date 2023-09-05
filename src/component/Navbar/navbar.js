@@ -4,10 +4,29 @@ import { Link, useNavigate } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 
 const Navbar = () => {
-    const [isChat, setIsChat] = useState(false)
-    const [isNofi, setIsNofi] = useState(false)
-    const [isProfile, setIsProfile] = useState(false)
-    const [isLang, setIsLang] = useState(false)
+    const {
+
+        isOpenProfileAll,
+        setIsOpenProfileAll,
+        setIsOpenProfileDetail,
+        setIsOpenProfileEdit,
+        isOpenBalance,
+        SetIsOpenBalance,
+        isOpenDeposit,
+        SetIsOpenDeposit,
+        isOpenWithdraw,
+        SetIsOpenWithdraw,
+        isOpenTransaction,
+        SetIsOpenTransaction,
+        setIsChat,
+        isChat,
+        isNofi,
+        setIsNofi,
+        isProfile,
+        setIsProfile,
+        isLang,
+        setIsLang,
+    } = useContext(SidebarContext)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
@@ -72,20 +91,7 @@ const Navbar = () => {
     }, []);
 
 
-    const {
-        isOpenProfileAll,
-        setIsOpenProfileAll,
-        setIsOpenProfileDetail,
-        setIsOpenProfileEdit,
-        isOpenBalance,
-        SetIsOpenBalance,
-        isOpenDeposit,
-        SetIsOpenDeposit,
-        isOpenWithdraw,
-        SetIsOpenWithdraw,
-        isOpenTransaction,
-        SetIsOpenTransaction
-    } = useContext(SidebarContext)
+
 
     const handlerChangeProfile = () => {
         if (isOpenProfileAll === true) {

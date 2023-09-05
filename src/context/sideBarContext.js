@@ -17,10 +17,21 @@ export const SidebarProvider = ({ children }) => {
     const [isOpenDeposit, SetIsOpenDeposit] = useState(false)
     const [isOpenWithdraw, SetIsOpenWithdraw] = useState(false)
     const [isOpenTransaction, SetIsOpenTransaction] = useState(false)
-
+    const [isChat, setIsChat] = useState(false)
+    const [isNofi, setIsNofi] = useState(false)
+    const [isProfile, setIsProfile] = useState(false)
+    const [isLang, setIsLang] = useState(false)
 
 
     const value = {
+        setIsChat,
+        isChat,
+        isNofi,
+        setIsNofi,
+        isProfile,
+        setIsProfile,
+        isLang,
+        setIsLang,
         isOpenSideBar,
         setIsOpenSideBar,
         isOpenSpin,

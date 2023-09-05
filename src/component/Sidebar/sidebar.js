@@ -24,7 +24,7 @@ const Sidebar = () => {
         isOpenSupport,
         setIsOpenSupport
     } = useContext(SidebarContext)
-    
+
     useEffect(() => {
         const updateWindowState = () => {
             if (window.innerWidth < 576) {
@@ -39,8 +39,6 @@ const Sidebar = () => {
             dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: true, position: "" });
     }, [])
 
-
-    console.log('location', location)
     return (
         <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
             <div class="header-menu pc fixed-active">
@@ -71,6 +69,7 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div class="sidebar__list-item">
+
                     <div class="sidebar-item tag-icon d-flex align-items-center">
                         <img style={{ width: "24px" }} src="./images/icons/tagicon.svg" alt="" class="item-icon" />
                     </div>
@@ -81,37 +80,37 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" class="item-icon" />
                     </div>
                     <div class="sidebar-item refer-feature d-flex align-items-center" onClick={() => setIsOpenRefer(!isOpenRefer)}>
-                        <img style={{ width: "46px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
+                        <img style={{ width: "24px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
                         <div class="item-content">REFER</div>
                     </div>
                     <div class="card ">
-                        <div className={`card-shadow-ouset ${sideBarPosition === "gacha" && "active"}`}>
-                            <div class={`card-header sidebar-item ${sideBarPosition === "gacha" && "active"}`} id="gacha-sidebar">
-                                <h5 class="mb-0">
-                                    <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
-                                        data-toggle="collapse" data-target="#gacha" aria-expanded="false"
-                                        aria-controls="gacha">
-                                        <div class="card-btn d-flex align-items-center">
-                                            <img style={{ width: "24px" }} src="./images/icons/gacha.png" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">Gacha</div>
-                                        </div>
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                fill="white" />
-                                        </svg>
-                                    </button>
-                                </h5>
-                            </div>
+
+                        <div class={`card-header sidebar-item ${sideBarPosition === "gacha" && "active__sidebar-item"}`} id="gacha-sidebar">
+                            <h5 class="mb-0">
+                                <button
+                                    class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                    data-toggle="collapse" data-target="#gacha" aria-expanded="false"
+                                    aria-controls="gacha">
+                                    <div class="card-btn d-flex align-items-center">
+                                        <img style={{ width: "24px" }} src="./images/icons/gacha.png" alt=""
+                                            class="item-icon" />
+                                        <div class="item-content">Gacha</div>
+                                    </div>
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </h5>
+
                         </div>
                         <div id="gacha" class="collapse active" aria-labelledby="gacha-sidebar">
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/completedgacha">
+                                        <Link class="d-flex align-items-center " onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/completedgacha">
                                             <img src="./images/icons/com-gaga.png" alt="" />Complete Gacha
                                         </Link>
                                     </li>
@@ -147,28 +146,28 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div class="card">
-                        <div className={`card-shadow-ouset ${sideBarPosition === "lucky" && "active"}`}>
-                            <div class={`card-header sidebar-item ${sideBarPosition === "lucky" && "active"}`} id="lucky-number-sidebar">
-                                <h5 class="mb-0">
-                                    <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
-                                        data-toggle="collapse" data-target="#lucky-number" aria-expanded="false"
-                                        aria-controls="lucky-number">
-                                        <div class="card-btn d-flex align-items-center">
-                                            <img style={{ width: "24px" }} src="./images/icons/lucky-number.png" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">Lucky Number</div>
-                                        </div>
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                fill="white" />
-                                        </svg>
-                                    </button>
-                                </h5>
-                            </div>
+
+                        <div class={`card-header sidebar-item ${sideBarPosition === "lucky" && "active__sidebar-item"}`} id="lucky-number-sidebar">
+                            <h5 class="mb-0">
+                                <button
+                                    class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                    data-toggle="collapse" data-target="#lucky-number" aria-expanded="false"
+                                    aria-controls="lucky-number">
+                                    <div class="card-btn d-flex align-items-center">
+                                        <img style={{ width: "24px" }} src="./images/icons/lucky-number.png" alt=""
+                                            class="item-icon" />
+                                        <div class="item-content">Lucky Number</div>
+                                    </div>
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </h5>
                         </div>
+
                         <div id="lucky-number" class="collapse" aria-labelledby="lucky-number-sidebar">
                             <div class="card-body">
                                 <ul>
@@ -187,28 +186,28 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div class="card">
-                        <div className={`card-shadow-ouset ${sideBarPosition === "qgc" && "active"}`}>
-                            <div class={`card-header sidebar-item ${sideBarPosition === "qgc" && "active"}`} id="qgc-sidebar">
-                                <h5 class="mb-0">
-                                    <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
-                                        data-toggle="collapse" data-target="#qgc" aria-expanded="false"
-                                        aria-controls="qgc">
-                                        <div class="card-btn d-flex align-items-center">
-                                            <img style={{ width: "24px" }} src="./images/icons/coin-gold.svg" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">QGC <span>(Upcoming)</span></div>
-                                        </div>
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                fill="white" />
-                                        </svg>
-                                    </button>
-                                </h5>
-                            </div>
+
+                        <div class={`card-header sidebar-item ${sideBarPosition === "qgc" && "active__sidebar-item"}`} id="qgc-sidebar">
+                            <h5 class="mb-0">
+                                <button
+                                    class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                    data-toggle="collapse" data-target="#qgc" aria-expanded="false"
+                                    aria-controls="qgc">
+                                    <div class="card-btn d-flex align-items-center">
+                                        <img style={{ width: "24px" }} src="./images/icons/coin-gold.svg" alt=""
+                                            class="item-icon" />
+                                        <div class="item-content">QGC <span>(Upcoming)</span></div>
+                                    </div>
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </h5>
                         </div>
+
                         <div id="qgc" class="collapse" aria-labelledby="qgc-sidebar">
                             <div class="card-body">
                                 <ul>
@@ -222,25 +221,25 @@ const Sidebar = () => {
                             </div>
                         </div>
                     </div>
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "baka" })} to="/bakacomming" class={`sidebar-item ${sideBarPosition === "baka" && "active"} d-flex align-items-center`}>
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "baka" })} to="/bakacomming" class={`sidebar-item ${sideBarPosition === "baka" && "active__sidebar-item"} d-flex align-items-center`}>
                         <img style={{ width: "24px" }} src="./images/baka.png" alt="" class="item-icon" />
                         <div class="item-content">BAKAC <span>(Upcoming)</span></div>
                     </Link>
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "pvp" })} to="/pvpcomming" class={`sidebar-item ${sideBarPosition === "pvp" && "active"} d-flex align-items-center`}>
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "pvp" })} to="/pvpcomming" class={`sidebar-item ${sideBarPosition === "pvp" && "active__sidebar-item"} d-flex align-items-center`}>
                         <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" class="item-icon" />
                         <div class="item-content">PVP <span>(Upcoming)</span></div>
                     </Link>
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "upgrade" })} to="/upgrade" class={`sidebar-item ${sideBarPosition === "upgrade" && "active"} d-flex align-items-center`}>
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "upgrade" })} to="/upgrade" class={`sidebar-item ${sideBarPosition === "upgrade" && "active__sidebar-item"} d-flex align-items-center`}>
                         <img style={{ width: "24px", }} src="./images/icons/rectangle.png" alt="" class="item-icon" />
                         <div class="item-content">Upgrade <span>(Upcoming)</span></div>
                     </Link>
 
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "tournament" })} to="/tournament" class={`sidebar-item ${sideBarPosition === "tournament" && "active"} d-flex align-items-center`}>
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "tournament" })} to="/tournament" class={`sidebar-item ${sideBarPosition === "tournament" && "active__sidebar-item"} d-flex align-items-center`}>
                         <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" class="item-icon" />
                         <div class="item-content">Tournament</div>
                     </Link>
                     <div class="sidebar-item vip-small d-flex align-items-center">
-                        <img style={{ width: "40px" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
+                        <img style={{ width: "100%" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
                     </div>
                     <div class="sidebar-vipclub">
                         <img src="./images/vipclub-wrap.svg" alt="" class="item-icon" />
@@ -258,7 +257,7 @@ const Sidebar = () => {
                         <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                     </div>
 
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "affiliate" })} to={"/affiliate"} class={`sidebar-item ${sideBarPosition === "affiliate" && "active"} d-flex align-items-center`}>
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "affiliate" })} to={"/affiliate"} class={`sidebar-item ${sideBarPosition === "affiliate" && "active__sidebar-item"} d-flex align-items-center`}>
                         <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
                         <div class="item-content">Affiliate</div>
                     </Link>

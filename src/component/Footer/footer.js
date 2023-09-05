@@ -10,20 +10,16 @@ import BoxOverlay from "../Box/BoxOverlay";
 
 const Footer = () => {
   const {
-    isOpenSideBar
+    isOpenSideBar,
+    sideBarPosition
   } = useSelector((state) => state.siderBar);
   const dispatch = useDispatch();
 
   const {
-    setIsOpenSideBar,
-    isOpenSpin,
-    setIsOpenSpin,
-    isOpenQuest,
-    setIsOpenQuest,
-    isOpenRefer,
-    setIsOpenRefer,
     isOpenSupport,
-    setIsOpenSupport
+    setIsOpenSupport,
+    setIsChat,
+    isChat,
   } = useContext(SidebarContext)
   return (
 
@@ -205,18 +201,20 @@ const Footer = () => {
       <div class="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
       <div class="mobile menu-bottom" style={{ zIndex: 999999 }}>
         <div class="list-feature">
-          <Link>
-            <div class="menu-feature d-flex flex-column justify-content-center align-items-center w-49" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
+
+          <Link to="/completedgacha">
+            <div class="menu-feature d-flex flex-column justify-content-center align-items-center w-49">
               <img src="./images/icons/gacha.png" alt="" />
               <div class="name-feature">Gacha</div>
             </div>
           </Link>
-
-          <div
-            class="menu-feature upgrade d-flex flex-column justify-content-center align-items-center">
-            <img src="./images/icons/upgrademobile.svg" alt="" />
-            <div class="name-feature">Upgrade</div>
-          </div>
+          <Link to="/upgrade">
+            <div
+              class="menu-feature upgrade d-flex flex-column justify-content-center align-items-center">
+              <img src="./images/icons/upgrademobile.svg" alt="" />
+              <div class="name-feature">Upgrade</div>
+            </div>
+          </Link>
           <Link to="/wallet">
             <div
               class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
@@ -226,17 +224,19 @@ const Footer = () => {
           </Link>
 
           <div
-            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => setIsOpenSupport(!isOpenSupport)}>
+            onClick={() => setIsChat(!isChat)}
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" >
             <img src="./images/icons/chat.svg" alt="" />
             <div class="name-feature">Chat</div>
           </div>
           <div
-            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar })}>
+            class="menu-feature d-flex flex-column justify-content-center align-items-center  w-49" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar, position: sideBarPosition })}>
             <img src="./images/icons/menu-icon.svg" alt="" />
             <div class="name-feature">Menu</div>
           </div>
         </div>
       </div>
+
 
     </footer>
   );
