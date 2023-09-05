@@ -561,7 +561,7 @@
 
 @media (max-width: 1800px) {
   .main-home .main-content {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
 
   }
@@ -963,13 +963,13 @@
   gap: 25px;
   flex-shrink: 0;
   border-radius: 3px;
-  background: #1b172f;
+  background: black;
 }
 
 .main-home .main-content.main-event .info-guide .total-max span {
   color: #fff;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 14px;

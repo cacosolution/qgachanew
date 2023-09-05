@@ -4,7 +4,7 @@
 }
 
 .container-wrapper main button.btn-support img {
-  width: 70px;
+  width: 45px;
 }
 
 @media (max-width: 1368px) {
@@ -540,12 +540,12 @@
   }
 
   .main-home .main-content.main-event .info-guide .total-max {
-    width: 100%;
+    width: 81%;
   }
 
   .main-home .main-content.main-event .info-guide .total-max span.total {
     font-size: 15px;
-    max-width: 50%;
+    max-width: 22%;
   }
 
   .main-home .main-content.main-event .info-guide .total-max span.max {

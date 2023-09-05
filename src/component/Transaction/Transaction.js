@@ -131,7 +131,7 @@ const Transaction = () => {
 
             {isModalOpen && (
                 <div className='transaction-detail2' >
-                    <section class="transaction-modal">
+                    <section class="transaction-modal-Trans">
                         <div class="gift-ticket-header">
                             <p>transaction detail</p>
                             <button style={{ background: "none", border: "none" }}>

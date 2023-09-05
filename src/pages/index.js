@@ -74,6 +74,7 @@ const Home = () => {
                                         <button className="btn__exit-chat" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
                                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                         </button>
+
                                     </div>
                                     <form id="form-signup">
                                         <div className="form-group">

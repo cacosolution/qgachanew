@@ -1022,6 +1022,17 @@ input.form-control::placeholder {
   padding-bottom: 31px;
 }
 
+.box-auth.sign-up {
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.box-auth.sign-up input,
+.box-auth.sign-up button {
+  max-height: 100%;
+  overflow: auto;
+}
+
 @media (min-width: 1100px) {
   .signAuthen {
     top: 5px;
@@ -1057,6 +1068,34 @@ input.form-control::placeholder {
   .signAuthen {
     left: 15px;
     top: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .box-auth.sign-up {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .box-auth.sign-up input,
+  .box-auth.sign-up button {
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .loginAuthen {
+    top: 80px;
+  }
+
+  .box-auth.loginAuthen {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .box-auth.loginAuthen input,
+  .box-auth.loginAuthen button {
+    max-height: 100%;
+    overflow: auto;
   }
 }
 
@@ -1300,7 +1339,7 @@ input {
   position: fixed;
   z-index: 99999;
   right: 96px;
-  bottom: 20px;
+  bottom: 145px;
   border: none;
   background-color: inherit;
 }
@@ -2182,8 +2221,8 @@ input {
 }
 
 #box__edit-username {
-  top: 80px;
-  left: 550px;
+  top: 40px;
+  left: 500px;
 }
 
 @media (max-width: 950px) {
@@ -2203,27 +2242,120 @@ input {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #box__user-info {
-    left: 10px;
-    top: 100px;
-    width: 371px;
+    left: 180px;
+    top: 150px;
+    width: 400px;
   }
 
   #box__edit-username {
-    top: 4px;
-    left: 10px;
-    width: 371px;
-    height: 86%;
+    top: 150px;
+    left: 180px;
+    width: 400px;
+    height: 60%;
 
   }
 
   #box__user-detail {
-    width: 384px;
-    top: 220px;
-    left: 16px;
+    width: 370px;
+    top: 180px;
+    left: 180px;
   }
 }
+
+@media (max-width: 428px) {
+  #box__user-info {
+    left: 30px;
+    top: 70px;
+    width: 371px;
+  }
+
+  #box__edit-username {
+    top: 50px;
+    left: 30px;
+    width: 371px;
+    height: 80%;
+
+  }
+
+  #box__user-detail {
+    width: 370px;
+    top: 150px;
+    left: 30px;
+  }
+}
+
+
+
+
+@media (max-width: 400px) {
+  #box__user-info {
+    left: 20px;
+    top: 70px;
+    width: 350px;
+  }
+
+  #box__edit-username {
+    top: 50px;
+    left: 40px;
+    width: 321px;
+    height: 80%;
+
+  }
+
+  #box__user-detail {
+    width: 330px;
+    top: 150px;
+    left: 30px;
+  }
+}
+
+@media (max-width:360px) {
+  #box__user-info {
+    left: 10px;
+    top: 70px;
+    width: 350px;
+  }
+
+  #box__edit-username {
+    top: 50px;
+    left: 20px;
+    width: 321px;
+    height: 80%;
+
+  }
+
+  #box__user-detail {
+    width: 330px;
+    top: 150px;
+    left: 15px;
+  }
+}
+
+
+
+/* @media (max-width: 400px) {
+  #box__user-info {
+    left: 25px;
+    top: 70px;
+    width: 340px;
+  }
+
+  #box__edit-username {
+    top: 50px;
+    left: 40px;
+    width: 321px;
+    height: 80%;
+  }
+
+  #box__user-detail {
+    width: 340px;
+    top: 150px;
+    left: 30px;
+  }
+
+} */
 
 #box__edit-username .box-header {
   padding: 18px 25px;
@@ -2247,7 +2379,7 @@ input {
 }
 
 #box__edit-username .edit-ava {
-  margin-top: 45px;
+  margin-top: 10px;
 }
 
 #box__edit-username .edit-ava img {
@@ -2271,7 +2403,7 @@ input {
 }
 
 #box__edit-username form {
-  padding: 82px 85px 104px 99px;
+  padding: 25px 81px 70px 72px;
 }
 
 #box__edit-username form label {
@@ -2299,7 +2431,7 @@ input {
 #box__edit-username form button {
   border: none;
   outline: none;
-  margin-top: 70px;
+  margin-top: 20px;
   border-radius: 5px;
   border: 1px solid #575757;
   background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
