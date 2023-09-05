@@ -1108,11 +1108,62 @@ input.form-control::placeholder {
     left: -3px;
     top: -20px;
   }
+
+  .loginAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .box-auth.loginAuthen {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.loginAuthen input,
+  .box-auth.loginAuthen button {
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .box-auth.sign-up {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.sign-up input,
+  .box-auth.sign-up button {
+    max-height: 100%;
+    overflow: auto;
+  }
 }
 
 @media (max-width: 400px) {
+  .signAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .loginAuthen {
+    left: -3px;
+    top: -20px;
+  }
+
+  .box-auth.loginAuthen {
+    max-height: 800px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .box-auth.loginAuthen input,
+  .box-auth.loginAuthen button {
+    max-height: 100%;
+    overflow: auto;
+  }
+
   .box-auth.sign-up {
-    max-height: 400px;
+    max-height: 800px;
     width: 100%;
     overflow-y: auto;
   }
@@ -1123,20 +1174,7 @@ input.form-control::placeholder {
     overflow: auto;
   }
 
-  .loginAuthen {
-    top: 80px;
-  }
 
-  .box-auth.loginAuthen {
-    max-height: 400px;
-    overflow-y: auto;
-  }
-
-  .box-auth.loginAuthen input,
-  .box-auth.loginAuthen button {
-    max-height: 100%;
-    overflow: auto;
-  }
 }
 
 
@@ -1385,7 +1423,7 @@ input {
 }
 
 .container-wrapper main button.btn-support img {
-  width: 66px;
+  width: 44px;
 }
 
 .container-wrapper main .main-fournumber {
@@ -1396,6 +1434,14 @@ input {
 .container-wrapper main .main-fournumber .main-content {
   margin-top: 30px;
   margin-left: 107px;
+}
+
+.box__support-chat.active {
+  display: block;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 99999;
 }
 
 @media (max-width: 1800px) {
@@ -1460,25 +1506,9 @@ input {
   padding-bottom: 200px;
 }
 
-.box__support-chat.active {
-  display: block;
-  position: fixed;
-  /* right: 10px; */
-  bottom: 20px;
-  z-index: 99999;
-}
 
-@media (max-width: 576px) {
-  .box__support-chat.active {
-    display: block;
-    position: fixed;
-    /* right: 10px; */
-    width: 100%;
-    height: 100%;
 
-  }
 
-}
 
 
 .box__support-chat {
@@ -1496,7 +1526,25 @@ input {
 
 .box__support-chat .box__support-header .header-top {
   padding: 16px 20px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+}
+
+@media (max-width: 576px) {
+  .box__support-chat.active {
+    display: block;
+    position: fixed;
+    /* right: 10px; */
+    width: 100%;
+    height: 100%;
+    left: 0px;
+
+  }
+
+  .box__support-chat .box__support-header .header-top {
+    padding: 16px 20px;
+    margin-top: 10px;
+  }
+
 }
 
 .box__support-chat .box__support-header .header-top img[alt=qgc-coin] {
