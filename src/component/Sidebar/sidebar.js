@@ -35,8 +35,8 @@ const Sidebar = () => {
         updateWindowState();
     }, [window.innerWidth])
     useEffect(() => {
-        if (location.pathname == "/")
-            dispatch({ type: "SET_IS_OPEN_SIDEBAR", position: "" });
+        if (location.pathname === "/")
+            dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: true, position: "" });
     }, [])
 
 
