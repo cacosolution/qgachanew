@@ -354,6 +354,7 @@ const Wallet = () => {
             </main>
             <div style={{}}>
                 <Footer />
+                {/* <div>alo</div> */}
             </div>
 
         </div>

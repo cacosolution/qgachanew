@@ -587,13 +587,25 @@
 
 }
 
+
+
 @media (max-width: 950px) {
   .hide-mobi {
     display: none;
   }
 
   .hide-pc {
-    display: block;
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .hide-mobi {
+    display: none;
+  }
+
+  .hide-pc {
+    display: none;
   }
 }
 
@@ -618,7 +630,7 @@
 
 .main-deposit .deposit-content .feature-content {
   padding-top: 33px;
-  max-height: 720px;
+  max-height: 860px;
   height: 100%;
 }
 
@@ -1089,6 +1101,11 @@
     height: -moz-max-content;
     height: max-content;
     margin-bottom: 300px;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail {
+    padding: 20px 0px 0px 0px !important;
   }
 
   .main-deposit .deposit-content {
