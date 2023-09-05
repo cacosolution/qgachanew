@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/flickity.css"
 import "../css/base.css"
@@ -10,11 +10,9 @@ import "../css/responsive.css"
 import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
-import ListFeature from "../component/SectionList/listFeature";
 import BoxOverlay from "../component/Box/BoxOverlay";
-import { Link } from "react-router-dom";
 import Transaction from "../component/Transaction/Transaction";
-import { SidebarContext } from "../context/sideBarContext";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
@@ -22,49 +20,27 @@ import { SidebarContext } from "../context/sideBarContext";
 const Wallet = () => {
     const {
         isOpenBalance,
-        SetIsOpenBalance,
         isOpenDeposit,
-        SetIsOpenDeposit,
         isOpenWithdraw,
-        SetIsOpenWithdraw,
         isOpenTransaction,
-        SetIsOpenTransaction
-    } = useContext(SidebarContext)
+    } = useSelector((state) => state.wallet);
+    const dispatch = useDispatch();
 
     const handlerChangeBalance = () => {
-        SetIsOpenBalance(true)
-        SetIsOpenDeposit(false)
-        SetIsOpenWithdraw(false)
-        SetIsOpenTransaction(false)
+        dispatch({ type: "SET_IS_OPEN_BALANCE" });
     }
 
     const handlerChangeDeposit = () => {
-        SetIsOpenDeposit(true)
-        SetIsOpenBalance(false)
-        SetIsOpenWithdraw(false)
-        SetIsOpenTransaction(false)
-
+        dispatch({ type: "SET_IS_OPEN_DEPOSIT" });
     }
 
     const handlerChangeWithdraw = () => {
-        SetIsOpenWithdraw(true)
-        SetIsOpenBalance(false)
-        SetIsOpenTransaction(false)
-        SetIsOpenDeposit(false)
-
+        dispatch({ type: "SET_IS_OPEN_WITHDRAW" });
     }
     const handlerChangeTransaction = () => {
-        SetIsOpenTransaction(true)
-        SetIsOpenBalance(false)
-        SetIsOpenWithdraw(false)
-
-        SetIsOpenDeposit(false)
+        dispatch({ type: "SET_IS_OPEN_TRANSACTION" });
     }
 
-    useEffect(() => {
-        if (isOpenBalance === false || isOpenDeposit === false || isOpenTransaction === false || isOpenWithdraw === false)
-            SetIsOpenBalance(true)
-    }, [])
 
     return (
         <div class="container-wrapper">

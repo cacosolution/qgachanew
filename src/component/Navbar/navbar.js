@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 
 const Navbar = () => {
@@ -7,6 +8,11 @@ const Navbar = () => {
     const [isNofi, setIsNofi] = useState(false)
     const [isProfile, setIsProfile] = useState(false)
     const [isLang, setIsLang] = useState(false)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const {
+        isOpenSideBar
+    } = useSelector((state) => state.siderBar);
 
     const chatRef = useRef(null);
     const notiRef = useRef(null);
@@ -97,13 +103,14 @@ const Navbar = () => {
         SetIsOpenDeposit(false)
         SetIsOpenWithdraw(false)
         SetIsOpenTransaction(false)
+
+        navigate("/wallet");
     }
 
-    const handlerChangeDeposit = () => {
-        SetIsOpenDeposit(true)
-        SetIsOpenBalance(false)
-        SetIsOpenWithdraw(false)
-        SetIsOpenTransaction(false)
+    const handlerChangeDeposit = async () => {
+        await dispatch({ type: "SET_IS_OPEN_DEPOSIT" });
+
+        navigate("/wallet");
 
     }
 
@@ -113,13 +120,16 @@ const Navbar = () => {
         SetIsOpenTransaction(false)
         SetIsOpenDeposit(false)
 
+        navigate("/wallet");
+
     }
     const handlerChangeTransaction = () => {
         SetIsOpenTransaction(true)
         SetIsOpenBalance(false)
         SetIsOpenWithdraw(false)
-
         SetIsOpenDeposit(false)
+
+        navigate("/wallet");
     }
     return (
         <header class="d-flex align-items-center">
@@ -143,7 +153,7 @@ const Navbar = () => {
                                 fill="white" />
                         </svg>
                     </div>
-                    <Link onClick={handlerChangeDeposit} to="/wallet">
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_DEPOSIT" })} to={"/wallet"}>
 
                         <button class="btn-auth btn-deposit d-flex align-items-center ms-3" >
 
@@ -175,7 +185,7 @@ const Navbar = () => {
                     <div class="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
                         <img class="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
-                            <Link onClick={handlerChangeBalance} to="/wallet" >
+                            <Link onClick={() => dispatch({ type: "SET_IS_OPEN_BALANCE" })} to={"/wallet"} >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/credit-card.svg" alt="" />
                                     <h5 class="feature-content">
@@ -183,7 +193,7 @@ const Navbar = () => {
                                     </h5>
                                 </div>
                             </Link>
-                            <Link onClick={handlerChangeWithdraw} to={"/wallet"}>
+                            <Link onClick={() => dispatch({ type: "SET_IS_OPEN_WITHDRAW" })} to={"/wallet"} >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/withdrawdollar.svg" alt="" />
                                     <h5 class="feature-content">
@@ -192,7 +202,7 @@ const Navbar = () => {
                                 </div>
                             </Link>
 
-                            <Link onClick={handlerChangeTransaction} to={"/wallet"}>
+                            <Link onClick={() => dispatch({ type: "SET_IS_OPEN_TRANSACTION" })} to={"/wallet"} >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/transaction-ava.svg" alt="" />
                                     <h5 class="feature-content">
