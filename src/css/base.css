@@ -1066,14 +1066,15 @@ input.form-control::placeholder {
 
 @media (max-width: 576px) {
   .signAuthen {
-    left: 15px;
-    top: 50px;
+    left: -3px;
+    top: -20px;
   }
 }
 
 @media (max-width: 400px) {
   .box-auth.sign-up {
     max-height: 400px;
+    width: 100%;
     overflow-y: auto;
   }
 
