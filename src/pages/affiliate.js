@@ -115,15 +115,19 @@ const Affiliate = () => {
         <Sidebar />
 
         <div class="affiliate-content">
-          <button class="mobile btn-affi">affiliate</button>
+          <button class="mobile btn-affi">Affiliate</button>
           <div class="header-affi">
             <div class="header-content">
-              <button className={`btn-general ${activeButton === "general" ? "active" : ""}`} onClick={handelGeneral}>
-                General
-              </button>
-              <button className={`btn-network ${activeButton === "network" ? "active" : ""}`} onClick={handelNetwork}>
-                Network Management
-              </button>
+             
+                <button className={`btn-general ${activeButton === "general" ? "active" : ""}`} onClick={handelGeneral}>
+                  General
+                </button>
+             
+
+                <button className={`btn-network ${activeButton === "network" ? "active" : ""}`} onClick={handelNetwork}>
+                  Network Management
+                </button>
+           
             </div>
           </div>
 

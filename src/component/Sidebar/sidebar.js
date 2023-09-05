@@ -24,11 +24,11 @@ const Sidebar = () => {
         isOpenSupport,
         setIsOpenSupport
     } = useContext(SidebarContext)
-
+    
     useEffect(() => {
         const updateWindowState = () => {
             if (window.innerWidth < 576) {
-                dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false });
+                dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition });
             }
         };
 
@@ -56,13 +56,13 @@ const Sidebar = () => {
             <div class="mobile">
                 <div class="header-menu-mobile d-flex align-items-center justify-content-between ">
                     <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
-                    <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar, position: sideBarPosition })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
+                    <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
                 </div>
             </div>
 
             <div class="sidebar-content">
                 <div class="event d-flex flex-column align-items-center">
-                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false })} class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
+                    <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "" })} class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
                         EVENT
                     </Link>
                     <div class="d-flex feature-event">
