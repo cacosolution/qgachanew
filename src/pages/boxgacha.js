@@ -12,14 +12,18 @@ import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 const Boxgacha = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
                     <div class="main-content">
 
                         <div class="bread-crumb">
