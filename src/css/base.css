@@ -96,12 +96,36 @@ ul {
   /* Legacy iOS */
 }
 
-header {
+@media(max-width: 576px) {
+  header {
+
+    height: 65px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media(max-width: 950px) {
+  header {
+
+    height: 65px;
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media(min-width: 951px) {
+  header {
+
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.bg-header {
+  background: linear-gradient(90deg, rgb(40, 37, 70) 17%, rgb(45, 42, 87) 22%, rgb(53, 49, 111) 30%, rgb(71, 48, 100) 50%, rgb(54, 50, 100) 72%, rgb(70, 64, 136) 86%);
   border-top: 1px solid #787878;
   border-bottom: 1px solid #787878;
-  background: linear-gradient(90deg, rgb(40, 37, 70) 17%, rgb(45, 42, 87) 22%, rgb(53, 49, 111) 30%, rgb(71, 48, 100) 50%, rgb(54, 50, 100) 72%, rgb(70, 64, 136) 86%);
-  height: 65px;
-  width: 100%;
 }
 
 header select {
@@ -118,11 +142,61 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.img-index {
-  margin-left: 250px;
+@media (max-width: 1068px) {
+  .img-index.active {
+    margin-left: 50px;
+    animation: AfterLogoActive 0.25s linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@media (min-width: 1070px) {
+  .img-index.active {
+    margin-left: 277px;
+    animation: AfterLogoActive 0.25s linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@media (max-width: 1068px) {
+  .img-index {
+    margin-left: 49px;
+    animation: AfterLogo 0.25s linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@media (min-width: 1070px) {
+  .img-index {
+    margin-left: 194px;
+    animation: AfterLogo 0.25s linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes AfterLogoActive {
+  0% {
+    margin-left: 107px;
+  }
+
+  100% {
+    margin-left: 358px;
+  }
+}
+
+@keyframes AfterLogo {
+  0% {
+
+    margin-left: 358px;
+
+  }
+
+  100% {
+    margin-left: 107px;
+  }
 }
 
 header .header-content .header-action {
@@ -257,9 +331,7 @@ header #box-noti,
 header #box-language,
 header #box-ava {
   border-radius: 3px 0px 11px 11px;
-  border: 1px solid #787878;
   background: #282546;
-  box-shadow: -5px 2px 8px 0px rgba(0, 0, 0, 0.43);
   z-index: 100;
 }
 
@@ -328,9 +400,8 @@ header #box-ava .list-noti::-webkit-scrollbar-thumb {
 }
 
 header #box-chat {
-  width: 340px;
+  width: 328px;
   position: absolute;
-  top: 63px;
   right: 0;
   height: 822px;
 }
@@ -536,7 +607,7 @@ header #box-ava.active {
   }
 }
 
-@media (max-width: 1068px) {
+@media (max-width: 900px) {
 
   header .header-right {
     display: block;
@@ -557,7 +628,7 @@ header #box-ava.active {
   }
 
   .img-index {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   header .header-menu {
@@ -591,9 +662,6 @@ header #box-ava.active {
     display: none !important;
   }
 
-  header .pc {
-    display: block !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -660,24 +728,23 @@ header.fixed-active {
 footer {
   width: 100%;
 
+}
+
+.footer-border {
   border-top: 1px solid var(--xm, #9e9e9e);
 }
 
 @media (min-width: 1201px) {
   footer.active {
-    width: 75%;
-
-    border-top: 1px solid var(--xm, #9e9e9e);
-    margin-left: auto;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 1200px) {
   footer.active {
     width: 70%;
-
-    border-top: 1px solid var(--xm, #9e9e9e);
-    margin-left: auto;
+    margin: auto;
   }
 }
 
@@ -708,13 +775,13 @@ footer .footer-content {
 
 @media (max-width: 1800px) {
   footer .footer-content {
-    width: 100%;
+    width: 95%;
     margin: auto;
   }
 
   footer .footer-content.active {
-    width: 80%;
-    margin-left: auto;
+    width: 70%;
+    margin: auto;
   }
 }
 
@@ -747,7 +814,6 @@ footer .footer-content .img-box h5 {
 }
 
 footer .footer-content .footer-contact {
-  padding-top: 29px;
   width: 80%;
   margin: auto;
 }
@@ -796,7 +862,7 @@ footer .footer-content .footer-contact .follow-contact .list-social .social-item
 }
 
 footer .footer-content .footer-contact .follow-contact .list-social .social-item:not(:first-child) {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 footer .footer-content .footer-contact .get-intouch {
@@ -885,7 +951,7 @@ footer .footer-content .footer-info a {
   line-height: 24px;
 }
 
-.copy-right{
+.copy-right {
   color: var(--xm, #9e9e9e);
 }
 

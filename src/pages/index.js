@@ -10,11 +10,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CarouselIndex from '../component/Carousel/carouselIndex';
 import { useSelector } from 'react-redux';
+import SidebarChat from '../component/Sidebar/sidebarChat';
 
 
 const Home = () => {
     const {
         isOpenSideBar,
+        isSidebarChat
     } = useSelector((state) => state.siderBar);
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
@@ -64,11 +66,11 @@ const Home = () => {
         <div className="container-wrapper">
             <Navbar />
             <main>
-                <div className={`main-home ${isOpenSideBar && "active"}`} >
+                <div className={`main-home ${isOpenSideBar  && "active"}`} >
 
                     <div className="main-content">
                         <Sidebar />
-
+                        <SidebarChat />
                         {isOpenResgiter && (
                             <div className='transaction-detail2 '>
                                 <div className="box-auth sign-up mt-4 signAuthen">
