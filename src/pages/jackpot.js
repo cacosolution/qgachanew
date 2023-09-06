@@ -8,15 +8,21 @@ import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 
 const Jackpot = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
+
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
 
                     <div id="jackpot" class="jackpot">
                         <div class="navbar-wrapper">

@@ -94,7 +94,7 @@ const Footer = () => {
                     </a> */}
                     </div>
                     <h4 class="text-blue hd-email">Email</h4>
-                    <div class="email-info">support@qgacha.com</div>
+                    <div class="email-info" style={{ textDecoration: "underline" }}>support@qgacha.com</div>
                   </div>
                 </div>
                 <div class="col-6">
@@ -201,7 +201,7 @@ const Footer = () => {
           </div>
         </div>
         <div class="line-white top-copy"></div>
-        <div class="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
+        <div class="text-center copy-right copy-right" >Copyright QGacha ©2023 All Rights Reserved.</div>
         <div class="mobile menu-bottom" style={{ zIndex: 999999 }}>
           <div class="list-feature">
 

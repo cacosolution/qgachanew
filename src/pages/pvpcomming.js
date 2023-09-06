@@ -9,16 +9,21 @@ import "../css/responsive.css";
 import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
-import { BiChevronRight } from 'react-icons/bi'
-import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
-const pvpcomming = () => {
+
+
+const Pvpcomming = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
                     <div class="main-content">
                         <div class="bread-crumb pvp">
                             <a href="">PVP</a>
@@ -30,7 +35,7 @@ const pvpcomming = () => {
                     </div>
 
                 </div>
-                <BoxOverlay />
+                
             </main>
             <Footer />
 
@@ -38,4 +43,4 @@ const pvpcomming = () => {
     )
 }
 
-export default pvpcomming
+export default Pvpcomming

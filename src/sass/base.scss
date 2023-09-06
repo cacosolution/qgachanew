@@ -45,6 +45,7 @@ img {
 .mt-39 {
     margin-top: 39px;
 }
+
 .pl-100 {
     padding-left: 100px;
 }
@@ -73,9 +74,11 @@ img {
     line-height: 25px;
     text-transform: capitalize;
 }
+
 input {
     color: #fff;
 }
+
 .container-wrapper {
     main {
         display: flex;
@@ -89,6 +92,7 @@ input {
             bottom: 20px;
             border: none;
             background-color: inherit;
+
             img {
                 width: 66px;
             }
@@ -97,9 +101,11 @@ input {
         .main-fournumber {
             height: 100%;
             width: calc(100% - 340px);
+
             .main-content {
                 margin-top: 30px;
                 margin-left: 107px;
+
                 @media (max-width: 1800px) {
                     width: 90%;
                     margin: 0 auto;
@@ -110,17 +116,20 @@ input {
             section.four-number {
                 margin-top: 50px;
                 margin-bottom: 28px;
+
                 .ticket-item:first-child,
                 .ticket-item:last-child {
                     img {
                         max-width: 282px;
                     }
                 }
+
                 .ticket-item:nth-child(2) {
                     img {
                         max-width: 400px;
                     }
                 }
+
                 .ticket-info {
                     .ticket-title {
                         color: #fff;
@@ -130,6 +139,7 @@ input {
                         font-weight: 500;
                         line-height: 37px;
                     }
+
                     button.btn__prize-buy {
                         border-radius: 5px;
                         border: 1px solid #575757;
@@ -153,6 +163,7 @@ input {
             section.instruction {
                 margin: 40px 0;
                 padding: 40px 0 40px 75px;
+
                 h4,
                 ul {
                     padding-left: 16px;
@@ -169,6 +180,9 @@ input {
                 padding-bottom: 200px;
             }
         }
+
+
+       
     }
 }
 
@@ -178,6 +192,7 @@ input {
     right: 10px;
     bottom: 20px;
 }
+
 .box__support-chat {
     display: none;
     width: 340px;
@@ -185,10 +200,13 @@ input {
     border: 1px solid #787878;
     background: #fff;
     box-shadow: 8px 6px 8px 0px rgba(0, 0, 0, 0.43);
+
     .box__support-header {
         background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
+
         .header-top {
             padding: 16px 20px;
+
             img[alt="qgc-coin"] {
                 width: 24px;
                 height: 24px;
@@ -199,10 +217,12 @@ input {
                 border-radius: 4px;
                 transition: 0.3s;
                 cursor: pointer;
+
                 img[alt="icon__exit-chat"] {
                     width: 10px;
                     height: 10px;
                 }
+
                 &:hover {
                     background-color: inherit;
                     opacity: 0.6;
@@ -216,13 +236,16 @@ input {
                 font-weight: 500;
             }
         }
+
         p:fisrt-child {
             margin-top: 5px;
             margin-bottom: 0;
         }
     }
+
     .box__support-body {
         padding: 10px 20px 33px;
+
         textarea {
             padding: 5px 7px;
             border-radius: 6px;
@@ -236,6 +259,7 @@ input {
             resize: none;
             overflow-y: hidden;
         }
+
         textarea::placeholder {
             color: var(--xm, #9e9e9e);
             font-size: 13px;
@@ -243,6 +267,7 @@ input {
             font-weight: 400;
             line-height: 17px;
         }
+
         .select-language {
             h5 {
                 color: var(--xm, #9e9e9e);
@@ -257,6 +282,7 @@ input {
                 margin-top: 8px;
                 row-gap: 12px;
                 column-gap: 14px;
+
                 .language-item {
                     color: #4baf87;
                     background-color: #e5ffee;
@@ -296,52 +322,63 @@ input {
     top: 100px;
     z-index: 1200;
     left: calc(50% - 600px);
+
     .box-item {
         border-right: 1px solid #807f7f;
     }
+
     .box-item {
         padding: 8px 11px 13px;
         background: #291a3a;
+
         .icon__exit-spinbox {
             width: fit-content;
             padding: 6px;
             border-radius: 4px;
             transition: 0.3s;
             cursor: pointer;
+
             img[alt="icon__exit-spinbox"] {
                 width: 10px;
                 height: 10px;
             }
+
             &:hover {
                 background-color: inherit;
                 opacity: 0.6;
             }
         }
+
         .box-content {
             .list-prize {
                 border-radius: 3px;
                 padding: 5px 8px;
                 width: 230px;
                 background-color: #1b172f;
+
                 img {
                     width: 64px;
                 }
             }
+
             .spin-main {
                 background: url("../images/spin-large.png") no-repeat;
                 max-width: 266px;
                 width: 266px;
                 height: 266px;
+
                 .spin-center {
                     img {
                         width: 60px;
                     }
                 }
             }
+
             .btn__group-actions {
                 width: 100%;
                 margin-top: 15px;
                 padding: 0 18px;
+
                 button {
                     width: 147px;
                     padding: 4px 11px 7px;
@@ -356,15 +393,18 @@ input {
                     line-height: 24px;
                     text-transform: capitalize;
                 }
+
                 button.btn__spin-lucky {
                     color: #fff;
                     background: var(--button, linear-gradient(180deg, #b43cca 0%, #520061 100%));
                 }
+
                 button.btn__spin-auto {
                     color: #1b172f;
                     background: linear-gradient(180deg, #ffa800 0%, rgba(255, 199, 0, 0.96) 100%);
                 }
             }
+
             .box-user {
                 margin-top: 10px;
                 border-radius: 3px;
@@ -374,6 +414,7 @@ input {
                 .user-ava {
                     margin-left: 20px;
                     margin-right: 18px;
+
                     img {
                         width: 100%;
                         max-width: 36px;
@@ -394,20 +435,24 @@ input {
                         color: #f5f5f5;
                         font-size: 15px;
                     }
+
                     p {
                         margin-bottom: 0;
                         color: var(--xm, #9e9e9e);
                         font-weight: 400;
                         text-transform: capitalize;
+
                         strong {
                             margin-left: 6px;
                         }
                     }
+
                     p.win {
                         strong {
                             color: #05e8ff;
                         }
                     }
+
                     p.lucky {
                         strong {
                             color: #e275f9;
@@ -433,8 +478,10 @@ input {
 
         .box-header {
             padding: 13px 23px;
+
             img {
                 transition: 0.3s;
+
                 &:hover {
                     background-color: inherit;
                     opacity: 0.6;
@@ -506,6 +553,7 @@ input {
                 ul {
                     li.nav-item {
                         width: 50%;
+
                         button {
                             width: 100%;
                             color: #fff;
@@ -523,8 +571,10 @@ input {
 
                 .tab-content {
                     border-top: 1px solid #9e9e9e;
+
                     .tab-pane {
                         padding: 8px 42px 8px 26px;
+
                         h5 {
                             color: var(--xm, #9e9e9e);
                             font-size: 13px;
@@ -532,6 +582,7 @@ input {
                             font-weight: 500;
                             line-height: 15px;
                             text-transform: capitalize;
+
                             strong {
                                 color: #fff;
                                 font-weight: 500;
@@ -540,14 +591,17 @@ input {
 
                         .list-task {
                             margin-top: 19px;
+
                             .task-item:not(:last-child) {
                                 margin-bottom: 15px;
                             }
+
                             .task-item {
                                 .task-info {
                                     img {
                                         margin-right: 19px;
                                     }
+
                                     p {
                                         margin-bottom: 0;
                                         margin-top: 5px;
@@ -557,6 +611,7 @@ input {
                                         font-weight: 500;
                                         line-height: 16px;
                                     }
+
                                     p.earn {
                                         margin-top: 3px;
                                         color: var(--ch-tin, #ffc700);
@@ -610,6 +665,7 @@ input {
             img {
                 cursor: pointer;
                 transition: 0.3s;
+
                 &:hover {
                     background-color: inherit;
                     opacity: 0.6;
@@ -621,6 +677,7 @@ input {
             .main-img {
                 width: 100%;
                 position: relative;
+
                 h4 {
                     position: absolute;
                     top: 40px;
@@ -642,6 +699,7 @@ input {
 
             .main-content {
                 padding: 11px 18px;
+
                 a {
                     color: var(--xm, #9e9e9e);
                     text-align: center;
@@ -655,6 +713,7 @@ input {
 
                 .link-share {
                     margin-top: 33px;
+
                     p {
                         color: var(--xm, #9e9e9e);
                         font-size: 13px;
@@ -664,17 +723,21 @@ input {
                         text-transform: capitalize;
                         margin-bottom: 5px;
                     }
+
                     .share-value {
                         border-radius: 3px;
                         background: #1b172f;
                         padding: 12px 12px 12px 9px;
+
                         input,
                         img {
                             cursor: pointer;
                         }
+
                         img {
                             width: 18px;
                         }
+
                         input {
                             border: none;
                             outline: none;
@@ -704,6 +767,7 @@ input {
         padding: 18px 25px;
         background-color: inherit;
         font-size: 15px;
+
         .header-action {
             svg {
                 margin-right: 10px;
@@ -712,6 +776,7 @@ input {
                 height: 10px;
             }
         }
+
         button {
             border: none;
             background-color: inherit;
@@ -721,15 +786,18 @@ input {
             }
         }
     }
+
     .user-statis {
         border-radius: 3px;
         background: #1b172f;
         margin: 19px 18px 36px;
         padding: 16px;
+
         button {
             border: none;
             background-color: inherit;
             color: #e275f9;
+
             svg {
                 margin-left: 10px;
                 transform: rotate(-90deg);
@@ -745,6 +813,7 @@ input {
                 border-radius: 3px;
                 background: #000;
                 padding: 12px 45px 45px;
+
                 h5 {
                     color: var(--xm, #9e9e9e);
                     text-align: center;
@@ -766,9 +835,11 @@ input {
                     text-transform: capitalize;
                 }
             }
+
             .total-win {
                 margin-right: 5px;
             }
+
             .total-play {
                 margin-left: 5px;
             }
@@ -779,8 +850,10 @@ input {
 #box__user-info {
     left: 200px;
     top: 100px;
+
     .user-info {
         position: relative;
+
         button.btn__edit-info {
             width: 24px;
             right: 21px;
@@ -807,6 +880,7 @@ input {
                 line-height: 15px;
                 text-transform: capitalize;
             }
+
             span {
                 color: #f5f5f5;
                 font-size: 13px;
@@ -823,9 +897,11 @@ input {
 #box__user-detail {
     top: 100px;
     left: 800px;
+
     .box-header {
         padding: 18px 25px;
         background-color: inherit;
+
         .header-action {
             svg {
                 margin-right: 10px;
@@ -834,6 +910,7 @@ input {
                 height: 10px;
             }
         }
+
         button {
             border: none;
             background-color: inherit;
@@ -843,6 +920,7 @@ input {
             }
         }
     }
+
     .select-network {
         padding-left: 35px;
         padding-right: 50px;
@@ -862,9 +940,11 @@ input {
 #box__edit-username {
     top: 450px;
     left: 800px;
+
     .box-header {
         padding: 18px 25px;
         background-color: #1b172f;
+
         .header-action {
             svg {
                 margin-right: 10px;
@@ -873,6 +953,7 @@ input {
                 height: 10px;
             }
         }
+
         button {
             border: none;
             background-color: inherit;
@@ -885,11 +966,13 @@ input {
 
     .edit-ava {
         margin-top: 45px;
+
         img {
             width: 148px;
             border-radius: 147.304px;
             border: 4.209px solid var(--text, #e275f9);
         }
+
         button {
             border: none;
             color: #fff;
@@ -907,6 +990,7 @@ input {
 
     form {
         padding: 82px 85px 104px 99px;
+
         label {
             color: var(--xm, #9e9e9e);
             font-family: Montserrat;
@@ -928,6 +1012,7 @@ input {
         .notice {
             margin-top: 8px;
         }
+
         button {
             border: none;
             outline: none;

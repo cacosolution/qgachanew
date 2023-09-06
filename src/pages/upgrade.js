@@ -9,16 +9,19 @@ import "../css/responsive.css";
 import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
-import { BiChevronRight } from 'react-icons/bi'
-import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
-const upgrade = () => {
+const Upgrade = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
                     <div class="main-content">
                         <div class="bread-crumb long">
                             <a href="">Upgrade</a>
@@ -30,7 +33,7 @@ const upgrade = () => {
                     </div>
 
                 </div>
-                <BoxOverlay />
+            
             </main>
             <Footer />
 
@@ -38,4 +41,4 @@ const upgrade = () => {
     )
 }
 
-export default upgrade
+export default Upgrade

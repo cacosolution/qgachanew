@@ -8,15 +8,19 @@ import "../css/responsive.css";
 import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
-import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 const Bakacomming = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
                     <div class="main-content">
                         <div class="bread-crumb long">
                             <a href="">BAKAC (Upcoming)</a>
@@ -28,7 +32,7 @@ const Bakacomming = () => {
                     </div>
 
                 </div>
-                <BoxOverlay />
+                
             </main>
             <Footer />
 
