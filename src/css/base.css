@@ -1857,10 +1857,37 @@ input {
   width: 40%;
 }
 
+.overlayspin {
+  margin: 0px auto;
+  width: 30%;
+}
+
+.spin1 {
+  display: block;
+}
+
+.spin2 {
+  display: none;
+}
+
 @media (max-width: 850px) {
   .overlayrp {
     width: 80%;
     margin-top: 140px;
+  }
+
+  .overlayspin {
+
+    width: 30%;
+    margin-top: 140px;
+  }
+
+  .spin1 {
+    display: none;
+  }
+
+  .spin2 {
+    display: block;
   }
 
 }
@@ -1869,6 +1896,20 @@ input {
   .overlayrp {
     width: 80%;
     margin-top: 65px;
+  }
+
+  .overlayspin {
+
+    width: 30%;
+    margin-top: 65px;
+  }
+
+  .spin1 {
+    display: none;
+  }
+
+  .spin2 {
+    display: block;
   }
 
 }
@@ -1884,12 +1925,40 @@ input {
     width: 250%;
     margin-top: -25px;
   }
+
+  .overlayspin {
+
+    width: 35%;
+    margin-top: -25px;
+  }
+
+  .spin1 {
+    display: none;
+  }
+
+  .spin2 {
+    display: block;
+  }
 }
 
 @media (max-width:360px) {
   .overlayrp {
     width: 247%;
     margin-top: -25px;
+  }
+
+  .overlayspin {
+
+    width: 30%;
+    margin-top: -25px;
+  }
+
+  .spin1 {
+    display: none;
+  }
+
+  .spin2 {
+    display: block;
   }
 }
 
