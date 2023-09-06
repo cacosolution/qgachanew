@@ -5,31 +5,38 @@
   font-weight: 400;
   line-height: 22.5px;
 }
+
 .feature-detail .tab-content .currency-show.balance span strong {
   margin-left: 2px;
   color: #fff;
 }
+
 @media (max-width: 576px) {
   .feature-detail .tab-content .currency-show.balance span strong {
     font-weight: 400;
   }
 }
+
 @media (max-width: 576px) {
   .feature-detail .tab-content .currency-show {
     padding: 8px 10px !important;
   }
 }
+
 @media (max-width: 576px) {
   .feature-detail .tab-content .currency-show p {
     font-size: 11px;
   }
 }
+
 .feature-detail .tab-content .currency-show.value-withdraw {
   padding: 16px 24px;
 }
+
 .feature-detail .tab-content .currency-show.value-withdraw .value-item {
   padding: 0 6px;
 }
+
 .feature-detail .tab-content .currency-show.value-withdraw .value-item h5 {
   color: #fff;
   font-size: 13px;
@@ -37,15 +44,19 @@
   font-weight: 500;
   line-height: 0px;
 }
+
 .feature-detail .tab-content .currency-show.value-withdraw .value-item span {
   font-weight: 500;
 }
+
 .feature-detail .tab-content .currency-show.value-withdraw .value-item:last-child span {
   color: #e275f9;
 }
+
 .feature-detail .tab-content .currency-show.show-list {
   font-size: 11px;
 }
+
 .feature-detail .tab-content .currency-show.show-list .list-amount .amount-item {
   margin-left: 2px;
   width: 60px;
@@ -54,15 +65,20 @@
   border-radius: 3px;
   background: #000;
 }
+
+
+
 @media (max-width: 576px) {
   .feature-detail .tab-content .currency-show.show-list .list-amount .amount-item {
     width: 40px;
     font-size: 11px;
   }
 }
+
 .feature-detail .tab-content .confirm-wrap {
   margin-top: 30px;
 }
+
 .feature-detail .tab-content .confirm-wrap button {
   padding: 0 40px;
 }
@@ -70,9 +86,11 @@
 #box-security {
   display: none;
 }
+
 #box-security form {
   padding-bottom: 40px;
 }
+
 #box-security form p {
   color: #f5f5f5;
   font-size: 15px;
@@ -81,11 +99,13 @@
   line-height: 18px;
   text-transform: capitalize;
 }
+
 #box-security form .form-group span {
   color: #f5f5f5;
   font-weight: 400;
   line-height: 43px;
 }
+
 #box-security form button {
   padding: 8px 40px;
   margin-top: 34px;

@@ -453,14 +453,19 @@ const BoxOverlay = () => {
                 <div className="transaction-detail2">
                     <div id="box__edit-username">
                         <div class="box-header d-flex justify-content-between">
-                            <div class="header-action d-flex align-items-center">
-                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                        fill="white" />
-                                </svg>
-                                My Profile
-                            </div>
+                            <button onClick={handlerProfileAll}>
+                                <div class="header-action d-flex align-items-center" >
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span style={{ color: "white" }}>
+                                        My Profile
+                                    </span>
+                                </div>
+                            </button>
+
                             <button class="btn__exit-edit">
                                 <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerProfileAll} alt="" />
                             </button>
@@ -485,14 +490,18 @@ const BoxOverlay = () => {
                 <div className="transaction-detail2">
                     <div id="box__user-detail">
                         <div class="box-header d-flex justify-content-between">
-                            <div class="header-action d-flex align-items-center">
-                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                        fill="white" />
-                                </svg>
-                                Detail
-                            </div>
+                            <button onClick={handlerProfileAll}>
+                                <div class="header-action d-flex align-items-center" >
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                            fill="white" />
+                                    </svg>
+                                    <span style={{ color: "white" }}>
+                                        Detail
+                                    </span>
+                                </div>
+                            </button>
                             <button class="btn__exit-detail">
                                 <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerProfileAll} alt="" />
                             </button>
