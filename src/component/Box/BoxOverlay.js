@@ -88,109 +88,149 @@ const BoxOverlay = () => {
 
             <div class={`box__spin-overlay ${isOpenSpin === true ? "active" : ""}`} >
                 <div id="box-spin">
-                    <div class="row gx-0">
-                        <div class="col-4">
-                            <div class="box-item d-flex flex-column">
-                                <div class="icon__exit-spinbox align-self-end">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
-                                </div>
-                                <div class="box-content d-flex justify-content-center flex-column align-items-center">
-                                    <div class="list-prize d-flex justify-content-between">
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
+                    <div className="spin1">
+                        <div class="row gx-0 ">
+                            <div class="col-4">
+                                <div class="box-item d-flex flex-column">
+                                    <div class="icon__exit-spinbox align-self-end">
+                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
                                     </div>
-                                    <div class="spin-main d-flex justify-content-center align-items-center">
-                                        <div class="spin-center">
-                                            <img src="./images/icons/spin_center.png" alt="" />
+                                    <div class="box-content d-flex justify-content-center flex-column align-items-center">
+                                        <div class="list-prize d-flex justify-content-between">
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                        </div>
+                                        <div class="spin-main d-flex justify-content-center align-items-center">
+                                            <div class="spin-center">
+                                                <img src="./images/icons/spin_center.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="btn__group-actions d-flex justify-content-between">
+                                            <button class="btn__spin-lucky">Lucky Spin: N</button>
+                                            <button class="btn__spin-auto">Auto Spin: N</button>
+                                        </div>
+                                        <div class="box-user d-flex align-items-center">
+                                            <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
+                                            <div class="user-info">
+                                                <h5 class="name">Name 1</h5>
+                                                <p class="win">Win:<strong>50 USDT</strong></p>
+                                                <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="btn__group-actions d-flex justify-content-between">
-                                        <button class="btn__spin-lucky">Lucky Spin: N</button>
-                                        <button class="btn__spin-auto">Auto Spin: N</button>
-                                    </div>
-                                    <div class="box-user d-flex align-items-center">
-                                        <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
-                                        <div class="user-info">
-                                            <h5 class="name">Name 1</h5>
-                                            <p class="win">Win:<strong>50 USDT</strong></p>
-                                            <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="box-item d-flex flex-column">
-                                <div class="icon__exit-spinbox align-self-end">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
-
-                                </div>
-                                <div class="box-content d-flex justify-content-center flex-column align-items-center">
-                                    <div class="list-prize d-flex justify-content-between">
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                    </div>
-                                    <div class="spin-main d-flex justify-content-center align-items-center">
-                                        <div class="spin-center">
-                                            <img src="./images/icons/spin_center.png" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="btn__group-actions d-flex justify-content-between">
-                                        <button class="btn__spin-lucky">Lucky Spin: N</button>
-                                        <button class="btn__spin-auto">Auto Spin: N</button>
-                                    </div>
-                                    <div class="box-user d-flex align-items-center">
-                                        <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
-                                        <div class="user-info">
-                                            <h5 class="name">Name 1</h5>
-                                            <p class="win">Win:<strong>50 USDT</strong></p>
-                                            <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="box-item d-flex flex-column">
-                                <div class="icon__exit-spinbox align-self-end">
-                                    <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
+                            <div class="col-4">
+                                <div class="box-item d-flex flex-column">
+                                    <div class="icon__exit-spinbox align-self-end">
+                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
 
-                                </div>
-                                <div class="box-content d-flex justify-content-center flex-column align-items-center">
-                                    <div class="list-prize d-flex justify-content-between">
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
-                                        <img src="./images/icons/prize-active.svg" alt="" />
                                     </div>
-                                    <div class="spin-main d-flex justify-content-center align-items-center">
-                                        <div class="spin-center">
-                                            <img src="./images/icons/spin_center.png" alt="" />
+                                    <div class="box-content d-flex justify-content-center flex-column align-items-center">
+                                        <div class="list-prize d-flex justify-content-between">
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                        </div>
+                                        <div class="spin-main d-flex justify-content-center align-items-center">
+                                            <div class="spin-center">
+                                                <img src="./images/icons/spin_center.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="btn__group-actions d-flex justify-content-between">
+                                            <button class="btn__spin-lucky">Lucky Spin: N</button>
+                                            <button class="btn__spin-auto">Auto Spin: N</button>
+                                        </div>
+                                        <div class="box-user d-flex align-items-center">
+                                            <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
+                                            <div class="user-info">
+                                                <h5 class="name">Name 1</h5>
+                                                <p class="win">Win:<strong>50 USDT</strong></p>
+                                                <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="btn__group-actions d-flex justify-content-between">
-                                        <button class="btn__spin-lucky">Lucky Spin: N</button>
-                                        <button class="btn__spin-auto">Auto Spin: N</button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="box-item d-flex flex-column">
+                                    <div class="icon__exit-spinbox align-self-end">
+                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
+
                                     </div>
-                                    <div class="box-user d-flex align-items-center">
-                                        <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
-                                        <div class="user-info">
-                                            <h5 class="name">Name 1</h5>
-                                            <p class="win">Win:<strong>50 USDT</strong></p>
-                                            <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
+                                    <div class="box-content d-flex justify-content-center flex-column align-items-center">
+                                        <div class="list-prize d-flex justify-content-between">
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                        </div>
+                                        <div class="spin-main d-flex justify-content-center align-items-center">
+                                            <div class="spin-center">
+                                                <img src="./images/icons/spin_center.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="btn__group-actions d-flex justify-content-between">
+                                            <button class="btn__spin-lucky">Lucky Spin: N</button>
+                                            <button class="btn__spin-auto">Auto Spin: N</button>
+                                        </div>
+                                        <div class="box-user d-flex align-items-center">
+                                            <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
+                                            <div class="user-info">
+                                                <h5 class="name">Name 1</h5>
+                                                <p class="win">Win:<strong>50 USDT</strong></p>
+                                                <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div className="spin2">
+                        <div class="row gx-0 " >
+                            <div class="overlayspin">
+                                <div class="box-item d-flex flex-column">
+                                    <div class="icon__exit-spinbox align-self-end">
+                                        <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="icon__exit-spinbox" />
+                                    </div>
+                                    <div class="box-content d-flex justify-content-center flex-column align-items-center">
+                                        <div class="list-prize d-flex justify-content-between">
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                            <img src="./images/icons/prize-active.svg" alt="" />
+                                        </div>
+                                        <div class="spin-main d-flex justify-content-center align-items-center">
+                                            <div class="spin-center">
+                                                <img src="./images/icons/spin_center.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="btn__group-actions d-flex justify-content-between">
+                                            <button class="btn__spin-lucky">Lucky Spin: N</button>
+                                            <button class="btn__spin-auto">Auto Spin: N</button>
+                                        </div>
+                                        <div class="box-user d-flex align-items-center">
+                                            <div class="user-ava"><img src="./images/icons/avatar-default.svg" alt="" /></div>
+                                            <div class="user-info">
+                                                <h5 class="name">Name 1</h5>
+                                                <p class="win">Win:<strong>50 USDT</strong></p>
+                                                <p class="lucky">In:<strong>LUCKY SPIN</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class={`box__quest-overlay ${isOpenQuest === true ? "active" : ""}`}>
                 <div id="box-quest">
-                    <div class="col-6">
+                    <div class="col-6 overlayrp ">
                         <div class="box-item">
                             <div class="box-header d-flex align-items-center justify-content-between">
                                 Quest Hub
