@@ -9,14 +9,18 @@ import Sidebar from '../component/Sidebar/sidebar'
 import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 const EventNodata = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
                     <div class="main-content main-event">
                         <button class="btn-event">Event</button>
                         <div class="banner-event">
@@ -35,11 +39,10 @@ const EventNodata = () => {
 
                         <div class="spacer mb-5 pb-5"></div>
                     </div>
-                    <Footer />
+
                 </div>
 
 
-                <BoxOverlay />
             </main>
             <div>
                 <Footer />

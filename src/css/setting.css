@@ -299,6 +299,7 @@
     padding: 0;
     margin-bottom: 16px;
     padding: 0 12px;
+    margin-left: 10px;
   }
 
   .main-deposit .deposit-content .feature-content .feature-detail .feature-header svg {
@@ -318,6 +319,7 @@
 
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper {
     width: 100%;
+    padding: 10px;
   }
 
   .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper input {

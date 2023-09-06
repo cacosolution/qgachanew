@@ -9,9 +9,14 @@ import BoxOverlay from '../component/Box/BoxOverlay';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CarouselIndex from '../component/Carousel/carouselIndex';
+import { useSelector } from 'react-redux';
 
 
 const Home = () => {
+    const {
+        isOpenSideBar,
+        sideBarPosition
+    } = useSelector((state) => state.siderBar);
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
     const [isOpenResetPassword, setIsOpenResetPassword] = useState(false)
@@ -60,7 +65,7 @@ const Home = () => {
         <div className="container-wrapper">
             <Navbar />
             <main>
-                <div className="main-home" >
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
 
                     <div className="main-content">
                         <Sidebar />

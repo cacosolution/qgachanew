@@ -10,8 +10,12 @@ import Navbar from '../component/Navbar/navbar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Event = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     const [isEven, setEven] = useState(false);
     const [isEvenlastest, setEvenlastest] = useState(true);
     const handlerEventLatest = () => {
@@ -27,7 +31,7 @@ const Event = () => {
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home" style={{ width: "100%" }}>
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
                     <div class="main-content main-event">
                         <button class="btn-event">Event</button>
                         <div class="banner-event">
