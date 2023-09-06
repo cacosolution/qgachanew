@@ -1,7 +1,9 @@
 .side-bar.active-show {
   width: 340px;
 }
-
+.side-chat.active-chat {
+  width: 340px;
+}
 .caurousel-index {
   display: none;
 }
@@ -21,7 +23,9 @@
   .side-bar.active-show {
     width: 100%;
   }
-
+  .side-chat.active-chat {
+    width: 100%;
+  }
   .feature {
     display: none;
   }
@@ -302,9 +306,21 @@
   top: 0;
   left: 0;
   width: 84px;
-  z-index: 2000;
+  z-index: 10000000;
   overflow-x: hidden;
-  height: auto;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(44, 39, 93) 17%, rgb(71, 48, 100) 30%, rgb(53, 49, 111) 50%, rgb(41, 38, 72) 72%);
+}
+
+.side-chat {
+  position: fixed;
+  transition: 0.5s;
+  top: 0;
+  right: 0;
+  width: 0;
+  z-index: 10000000;
+  overflow-x: hidden;
+  height: 100%;
   background: linear-gradient(180deg, rgb(44, 39, 93) 17%, rgb(71, 48, 100) 30%, rgb(53, 49, 111) 50%, rgb(41, 38, 72) 72%);
 }
 
@@ -532,16 +548,42 @@
 
 .main-home {
   height: 100%;
-  width: 75%;
   margin-left: auto;
+  width: 90%;
   margin-right: auto;
+  animation: expandAfterNotActive 0.25s linear;
+  animation-iteration-count: 1;
 }
 
 .main-home.active {
   height: 100%;
   width: 75%;
+  animation: expandAfterActive 0.25s linear;
+  animation-iteration-count: 1;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: auto;
+}
+
+@keyframes expandAfterActive {
+  0% {
+    width: 90%;
+    /* Từ 0% đến 100% */
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes expandAfterNotActive {
+  0% {
+    width: 75%;
+    /* Từ 0% đến 100% */
+  }
+
+  100% {
+    width: 90%;
+  }
 }
 
 .main-home .carousel-cell .item-buy {
@@ -634,10 +676,12 @@
   margin-top: 30px;
   position: relative;
   background: url("../images/wrapper-banner.png") no-repeat;
+  background-size: 100%;
 }
 
 .main-home .main-content .banner-main .banner-content {
-  padding: 21px 0 100px 53px;
+  padding: 17px 95px 31px 30px;
+  margin-bottom: 40px;
 }
 
 .main-home .main-content .banner-main .banner-content h3 {
@@ -681,12 +725,12 @@
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 950px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: 20px;
+    top: -29px;
     right: -80px;
-    width: 700px;
+    width: 877px;
   }
 
   /* .main-home {
@@ -706,7 +750,7 @@
 @media (max-width: 576px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: 50px;
+    top: 39px;
     right: 0;
   }
 

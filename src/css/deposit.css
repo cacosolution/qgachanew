@@ -1,7 +1,9 @@
 .side-bar.active-show {
   width: 340px;
 }
-
+.side-chat.active-chat {
+  width: 340px;
+}
 @media (max-width: 576px) {
   .side-bar.active-show {
     width: 100%;
@@ -301,17 +303,7 @@
   display: none;
 }
 
-.side-bar {
-  position: fixed;
-  transition: 0.5s;
-  top: 0;
-  left: 0;
-  width: 84px;
-  z-index: 2000;
-  overflow-x: hidden;
-  height: 100%;
-  background: linear-gradient(180deg, rgb(44, 39, 93) 17%, rgb(71, 48, 100) 30%, rgb(53, 49, 111) 50%, rgb(41, 38, 72) 72%);
-}
+
 
 .side-bar .line-yblue {
   height: 47px;

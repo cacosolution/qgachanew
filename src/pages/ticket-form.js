@@ -193,7 +193,7 @@ const ticketform = () => {
           </div>
           <Footer />
         </div>
-        <BoxOverlay />
+
       </main>
     </div>
   );

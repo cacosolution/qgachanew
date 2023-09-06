@@ -26,6 +26,8 @@ const Navbar = () => {
         setIsProfile,
         isLang,
         setIsLang,
+        setIsSidebarChat,
+        isSidebarChat,
     } = useContext(SidebarContext)
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -39,26 +41,26 @@ const Navbar = () => {
     const langRef = useRef(null);
 
     const ModalChat = () => {
-        setIsChat(true);
+        setIsSidebarChat(true);
         setIsNofi(false);
         setIsProfile(false);
         setIsLang(false);
     }
 
     const ModalNofi = () => {
-        setIsChat(false);
+        setIsSidebarChat(false);
         setIsNofi(true);
         setIsProfile(false);
         setIsLang(false);
     }
     const ModalProfile = () => {
-        setIsChat(false);
+        setIsSidebarChat(false);
         setIsNofi(false);
         setIsProfile(true);
         setIsLang(false);
     }
     const ModalLang = () => {
-        setIsChat(false);
+        setIsSidebarChat(false);
         setIsNofi(false);
         setIsProfile(false);
         setIsLang(true);
@@ -75,7 +77,7 @@ const Navbar = () => {
             langRef.current &&
             !langRef.current.contains(event.target)
         ) {
-            setIsChat(false);
+            setIsSidebarChat(false);
             setIsNofi(false);
             setIsProfile(false);
             setIsLang(false);
@@ -140,7 +142,7 @@ const Navbar = () => {
     return (
         <header class="d-flex align-items-center">
             <div class="header-content d-flex align-items-center ">
-                <Link to={"/"} className="img-index">
+                <Link to={"/"} className={`img-index ${isOpenSideBar && "active"}`} >
                     <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
                     <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
                 </Link>
@@ -434,7 +436,7 @@ const Navbar = () => {
                     <button><img src="./images/icons/deposit/send.svg" alt="" /></button>
                 </div>
             </div>
-        </header>
+        </header >
 
     )
 

@@ -19,8 +19,8 @@ const CarouselIndex = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                     infinite: true,
                     dots: true,
                 },
@@ -28,9 +28,9 @@ const CarouselIndex = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
                 },
             },
             {
@@ -47,31 +47,29 @@ const CarouselIndex = () => {
             <div className="carou">
                 <Slider {...settings} autoplay autoplaySpeed={2000}>
                     <Link to="/upgrade">
-                        <img src="./images/img-main2.png" alt="" />
+                        <img src="./images/img-main2.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                     <Link to="/tournament">
-                        <img src="./images/img-main3.png" alt="" />
+                        <img src="./images/img-main3.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                     <Link to="/upgradesoon">
-                        <img src="./images/img-main4.png" alt="" />
+                        <img src="./images/img-main4.png" alt="" width={"100%"} height={"100%"} />
 
                     </Link>
-                    <Link to="/boxgacha">
-                        <div>
-                            <img src="./images/img-main5.png" alt="" style={{ height: "110px", objectFit: "cover" }} />
-                        </div>
-                    </Link>
+                    {/* <Link to="/boxgacha">
+                        <img src="./images/img-main5.png" alt="" width={"100%"} height={"100%"} style={{ objectFit: "cover" }} />
+                    </Link> */}
                     <Link to="/mystery">
-                        <img src="./images/img-main6.png" alt="" />
+                        <img src="./images/img-main6.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                     <Link to="/completedgacha">
-                        <img src="./images/img-main7.png" alt="" />
+                        <img src="./images/img-main7.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                     <Link to="/reroll">
-                        <img src="./images/img-main8.png" alt="" />
+                        <img src="./images/img-main8.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                     <Link to="/sugoroku">
-                        <img src="./images/img-main9.png" alt="" />
+                        <img src="./images/img-main9.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                 </Slider>
             </div>
