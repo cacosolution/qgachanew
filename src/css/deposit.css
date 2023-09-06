@@ -1021,6 +1021,8 @@
     margin-bottom: 20px;
   }
 
+
+
   .main-deposit .deposit-content button.btn-wallet {
     height: 58px;
     display: flex;
@@ -1031,6 +1033,7 @@
     box-shadow: 0px 4.2773723602px 4.2773723602px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
   }
+
 
   .main-deposit .deposit-content button.btn-wallet img {
     width: 14px;
@@ -1095,7 +1098,7 @@
   }
 
   .main-deposit .deposit-content .feature-content .feature-detail {
-    padding: 20px 0px 0px 0px !important;
+    padding: 20px 10px 10px 10px !important;
   }
 
   .main-deposit .deposit-content {

@@ -193,7 +193,7 @@ const Navbar = () => {
                     <div class="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
                         <img class="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
                         <div id="box-ava" class={isProfile == true ? `active` : ``}>
-                            <Link onClick={() => dispatch({ type: "SET_IS_OPEN_BALANCE" })} to={"/wallet"} >
+                            <Link onClick={() => dispatch({ type: "SET_IS_OPEN_BALANCE" })} to={"/walletMobi"} >
                                 <div class="feature-item d-flex align-items-center">
                                     <img src="./images/icons/credit-card.svg" alt="" />
                                     <h5 class="feature-content">

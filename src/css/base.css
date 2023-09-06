@@ -1041,9 +1041,6 @@ input.form-control::placeholder {
   color: #9e9e9e !important;
 }
 
-
-
-
 .box-auth .box-header {
   background-color: #1b172f;
   height: 49px;
@@ -2398,7 +2395,7 @@ input {
 }
 
 #box__user-info {
-  left: 500px;
+  margin: 0px auto;
   top: 150px;
 }
 
@@ -2406,11 +2403,9 @@ input {
 
 @media (max-width: 576px) {
   #box__user-info {
-    left: 20px;
-    top: 50px;
+    width: 100%;
+    top: 120px;
   }
-
-
 }
 
 #box__user-info .user-info {
@@ -2455,8 +2450,8 @@ input {
 }
 
 #box__user-detail {
-  top: 200px;
-  left: 500px;
+  margin: 0px auto;
+  /* margin-top: 30px; */
 }
 
 #box__user-detail .box-header {
@@ -2496,11 +2491,48 @@ input {
 }
 
 #box__edit-username {
-  top: 40px;
-  left: 500px;
+  top: 100px;
+  margin: 0px auto;
 }
 
-@media (max-width: 950px) {
+
+@media (max-width: 576px) {
+  #box__user-info {
+    width: 100%;
+    top: 120px;
+  }
+
+  #box__edit-username {
+    width: 100%;
+  }
+
+  #box__user-detail {
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  #box__user-detail {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width:840px) {
+  #box__user-info {
+
+    top: 250px;
+  }
+
+  #box__edit-username {
+    top: 250px;
+  }
+
+  #box__user-detail {
+    top: 300px;
+  }
+}
+
+/* @media (max-width: 950px) {
   #box__user-info {
     left: 150px;
     top: 300px;
@@ -2561,9 +2593,6 @@ input {
   }
 }
 
-
-
-
 @media (max-width: 400px) {
   #box__user-info {
     left: 20px;
@@ -2606,7 +2635,7 @@ input {
     top: 150px;
     left: 15px;
   }
-}
+} */
 
 
 

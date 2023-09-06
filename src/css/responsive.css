@@ -503,6 +503,28 @@
     width: 45px;
   }
 
+  .menu-featurefooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    cursor: pointer;
+  }
+
+  .menu-featurefooter img,
+  .menu-featurefooter .name-feature {
+    transition: color 0.3s;
+    /* Thêm hiệu ứng chuyển đổi màu cho hình ảnh và văn bản */
+  }
+
+  /* CSS cho hình ảnh và văn bản trong các phần tử menu-feature khi active */
+  .menu-featurefooter.active img,
+  .menu-featurefooter.active .name-feature {
+    color: #E275F9;
+    /* Màu của hình ảnh và văn bản khi active */
+  }
+
   footer .menu-bottom .list-feature .menu-feature .name-feature {
     color: #d9d9d9;
     text-align: center;

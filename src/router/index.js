@@ -28,7 +28,7 @@ import Upgrade from '../pages/upgrade'
 import Upgradesoon from '../pages/upgradesoon'
 import Wallet from "../pages/wallet";
 import EventDetail from "../pages/eventdetail";
-
+import WalletMobi from "../component/WalletMobi/walletMobi";
 
 
 export const router = createBrowserRouter([
@@ -147,6 +147,9 @@ export const router = createBrowserRouter([
     {
         path: "/wallet",
         element: <Wallet />
+    }, {
+        path: "/walletMobi",
+        element: <WalletMobi />
     }
 ]);
 
