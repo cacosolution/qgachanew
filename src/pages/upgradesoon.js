@@ -10,15 +10,19 @@ import Footer from '../component/Footer/footer'
 import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
 import { BiChevronRight } from 'react-icons/bi'
-import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
-const upgradesoon = () => {
+const Upgradesoon = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
                     <div class="main-content">
                         <div class="bread-crumb">
                             <a href="">Gacha</a> <BiChevronRight size={20} /> <a href="">Upgrade Gacha</a>
@@ -30,7 +34,7 @@ const upgradesoon = () => {
                     </div>
 
                 </div>
-                <BoxOverlay />
+
             </main>
             <Footer />
 
@@ -38,4 +42,4 @@ const upgradesoon = () => {
     )
 }
 
-export default upgradesoon
+export default Upgradesoon

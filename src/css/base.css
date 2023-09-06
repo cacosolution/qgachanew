@@ -659,14 +659,14 @@ header.fixed-active {
 
 footer {
   width: 100%;
-  border-radius: 6px;
+
   border-top: 1px solid var(--xm, #9e9e9e);
 }
 
 @media (min-width: 1201px) {
   footer.active {
     width: 75%;
-    border-radius: 6px;
+
     border-top: 1px solid var(--xm, #9e9e9e);
     margin-left: auto;
   }
@@ -675,7 +675,7 @@ footer {
 @media (max-width: 1200px) {
   footer.active {
     width: 70%;
-    border-radius: 6px;
+
     border-top: 1px solid var(--xm, #9e9e9e);
     margin-left: auto;
   }
@@ -884,6 +884,11 @@ footer .footer-content .footer-info a {
   font-weight: 500;
   line-height: 24px;
 }
+
+.copy-right{
+  color: var(--xm, #9e9e9e);
+}
+
 
 footer .footer-content .footer-info ul li {
   padding-top: 22px;
@@ -1465,7 +1470,16 @@ input {
 
 .container-wrapper main .main-fournumber {
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
+}
+
+.container-wrapper main .main-fournumber.active {
+  height: 100%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .container-wrapper main .main-fournumber .main-content {

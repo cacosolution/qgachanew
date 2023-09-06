@@ -1,5 +1,5 @@
 .contact-para {
-
+  padding-right: 10px;
   margin: auto;
 }
 
@@ -300,7 +300,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 11.675px;
-    text-decoration-line: underline;
+    text-decoration: underline;
   }
 
   footer .footer-content .footer-contact .wrapper-contact .get-intouch {

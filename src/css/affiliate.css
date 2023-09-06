@@ -2,7 +2,12 @@
 
 
 .affiliate-content {
-  width: 95%;
+  width: 100%;
+  margin: auto;
+}
+
+.container-affiliate {
+  width: 80%;
   margin: auto;
 }
 

@@ -6,18 +6,23 @@ import "../css/setting.css"
 import "../css/responsive.css"
 import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
-import BoxOverlay from '../component/Box/BoxOverlay';
 import Footer from '../component/Footer/footer';
+import { useSelector } from 'react-redux';
 
 
 const FourNumber = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
 
             <main>
                 <Sidebar />
-                <div class="main-fournumber">
+
+                <div className={`main-fournumber ${isOpenSideBar && "active"}`} >
+
                     <div class="main-content">
                         <div class="banner-main">
                             <img src="./images/4number/main-four1.png" />
@@ -80,11 +85,11 @@ const FourNumber = () => {
                         </section>
                         <div class="spacer-instruction"></div>
                     </div>
-                    <Footer />
                 </div>
 
-                <BoxOverlay />
+
             </main>
+            <Footer />
 
         </div>
 

@@ -5,19 +5,26 @@ import "../css/base.css"
 import "../css/deposit.css"
 import "../css/luckynumber.css"
 import "../css/responsive.css"
+import "../css/home.css"
+
 import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 
 const LuckyNumber = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-deposit">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
+
                     <div class="rules">
                         <div class="top">
                             <div class="lucky-container">

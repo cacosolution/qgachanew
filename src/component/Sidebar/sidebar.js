@@ -76,7 +76,7 @@ const Sidebar = () => {
                         <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" class="item-icon" />
                     </div>
                     <div class="sidebar-item refer-feature d-flex align-items-center" onClick={() => setIsOpenRefer(!isOpenRefer)}>
-                        <img style={{ width: "24px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
+                        <img style={{ width: "40px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
                         <div class="item-content">REFER</div>
                     </div>
                     <div class="card ">

@@ -11,14 +11,18 @@ import Navbar from '../component/Navbar/navbar'
 import Sidebar from '../component/Sidebar/sidebar'
 import { BiChevronRight } from 'react-icons/bi'
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
-const reroll = () => {
+const Reroll = () => {
+    const {
+        isOpenSideBar,
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div class="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`} >
                     <div class="main-content">
                         <div class="bread-crumb">
                             <a href="">Gacha</a> <BiChevronRight size={20} /> <a href="">Re-roll Gacha</a>
@@ -30,7 +34,7 @@ const reroll = () => {
                     </div>
                 </div>
 
-                <BoxOverlay />
+
             </main>
             <Footer />
 
@@ -38,4 +42,4 @@ const reroll = () => {
     )
 }
 
-export default reroll
+export default Reroll
