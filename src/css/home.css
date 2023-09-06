@@ -537,6 +537,13 @@
   margin-right: auto;
 }
 
+.main-home.active {
+  height: 100%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .main-home .carousel-cell .item-buy {
   min-width: 248px;
   width: 100%;
@@ -825,7 +832,7 @@
 .main-home .main-content.main-event table tr th,
 .main-home .main-content.main-event table tr td {
   text-align: center;
-  padding: 16px 60px;
+  padding: 16px 0px 16px 0px;
 }
 
 .main-home .main-content.main-event table tr td.status.confirm {

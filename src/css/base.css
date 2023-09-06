@@ -118,7 +118,7 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .img-index {
@@ -645,6 +645,11 @@ header #box-ava.active {
   }
 }
 
+.bg-footer {
+  background: #291a3a;
+}
+
+
 header.fixed-active {
   position: fixed;
   top: 0;
@@ -656,7 +661,24 @@ footer {
   width: 100%;
   border-radius: 6px;
   border-top: 1px solid var(--xm, #9e9e9e);
-  background: #291a3a;
+}
+
+@media (min-width: 1201px) {
+  footer.active {
+    width: 75%;
+    border-radius: 6px;
+    border-top: 1px solid var(--xm, #9e9e9e);
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer.active {
+    width: 70%;
+    border-radius: 6px;
+    border-top: 1px solid var(--xm, #9e9e9e);
+    margin-left: auto;
+  }
 }
 
 footer h2,
@@ -680,14 +702,19 @@ footer .copy-right {
 }
 
 footer .footer-content {
-  width: 1274px;
-  margin-left: 340px;
+  width: 90%;
+  margin: auto;
 }
 
 @media (max-width: 1800px) {
   footer .footer-content {
     width: 100%;
     margin: auto;
+  }
+
+  footer .footer-content.active {
+    width: 80%;
+    margin-left: auto;
   }
 }
 
@@ -731,7 +758,7 @@ footer .footer-content .footer-contact .line-y {
 
 @media (min-width: 801px) {
   footer .footer-content .footer-contact .follow-contact {
-    padding-left: 80px;
+
     padding-right: 16px;
   }
 }
@@ -835,9 +862,11 @@ footer .footer-content .footer-contact .get-intouch button {
 footer .footer-content .footer-info {
   padding-top: 40px;
   padding-bottom: 20px;
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
+
+
 
 footer .footer-content .footer-info h4 {
   color: #05e8ff;

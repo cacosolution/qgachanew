@@ -22,7 +22,7 @@
 @media (max-width: 1068px) {
   header .header-content {
     position: absolute;
-    right: 20px;
+    margin-left: 300px;
   }
 
   .footer .footer-content .footer-contact {
