@@ -190,7 +190,7 @@ const BoxOverlay = () => {
             </div>
             <div class={`box__quest-overlay ${isOpenQuest === true ? "active" : ""}`}>
                 <div id="box-quest">
-                    <div class="col-6">
+                    <div class="col-6 overlayrp ">
                         <div class="box-item">
                             <div class="box-header d-flex align-items-center justify-content-between">
                                 Quest Hub
