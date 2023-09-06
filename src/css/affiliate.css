@@ -7,7 +7,7 @@
 }
 
 .container-affiliate {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -298,6 +298,40 @@
   font-weight: 500;
   text-transform: uppercase;
   line-height: 28px;
+  position: relative;
+}
+
+.datetime {
+  position: absolute;
+  z-index: 150;
+  margin: 0px auto;
+  top: 520px;
+  left: 650px;
+}
+
+.rdrCalendarWrapper {
+  margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+  .datetime {
+    /* width: 50%; */
+    margin: 0px auto;
+    left: 0px;
+  }
+
+  .rdrDefinedRangesWrapper {
+    display: none;
+  }
+
+  .rdrDateRangePickerWrapper {
+    margin: 0px auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+  }
+
 }
 
 .body-affi .box-main .nav-chart .list-info-chart .total {
@@ -569,7 +603,7 @@
 }
 
 .manage-wrapper .box-manage {
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
 }
 
@@ -604,7 +638,7 @@
 .manage-wrapper .box-manage .box-body button.btn-purple {
   position: relative;
   color: white;
-  width: 285px;
+  width: 260px;
   line-height: 35px;
   border-radius: 5px;
   border: 1px solid #575757;
@@ -635,7 +669,7 @@
 }
 
 .manage-wrapper .box-result {
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
 }
 

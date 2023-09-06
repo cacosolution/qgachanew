@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/flickity.css";
 import "../css/base.css";
@@ -9,6 +9,9 @@ import Navbar from "../component/Navbar/navbar";
 import Sidebar from "../component/Sidebar/sidebar";
 import Footer from "../component/Footer/footer";
 import BoxOverlay from "../component/Box/BoxOverlay";
+import { DateRangePicker } from "react-date-range";
+import "react-date-range/dist/styles.css"; // Import CSS
+import "react-date-range/dist/theme/default.css"; // Import theme CSS
 
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
@@ -18,6 +21,84 @@ const Affiliate = () => {
   const [General, setGeneral] = useState(true);
   const [Network, setNetwork] = useState(false);
   const [activeButton, setActiveButton] = useState("general");
+  const [isTable1, setIsTable1] = useState(true);
+  const [isTable2, setIsTable2] = useState(false);
+  const [isTable3, setIsTable3] = useState(false);
+  const [isTable4, setIsTable4] = useState(false);
+  const [activeButtonTable, setActiveButtonTable] = useState("Yesterday");
+
+
+  const handelTable1 = () => {
+    setIsTable1(true);
+    setIsTable2(false);
+    setIsTable3(false);
+    setIsTable4(false);
+    setActiveButtonTable("Yesterday")
+
+  }
+  const handelTable2 = () => {
+    setIsTable1(false);
+    setIsTable2(true);
+    setIsTable3(false);
+    setIsTable4(false);
+    setActiveButtonTable("Last7day")
+  }
+
+  const handelTable3 = () => {
+    setIsTable1(false);
+    setIsTable2(false);
+    setIsTable3(true);
+    setIsTable4(false);
+    setActiveButtonTable("Last30day")
+
+  }
+  const handelTable4 = () => {
+    setIsTable1(false);
+    setIsTable2(false);
+    setIsTable3(false);
+    setIsTable4(true);
+    setActiveButtonTable("Alltime")
+  }
+
+
+
+  const [dateRange, setDateRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection"
+    }
+  ]);
+  const [showDateRangePicker, setShowDateRangePicker] = useState(false);
+
+  const dateRangePickerRef = useRef(null);
+
+  // Sử dụng useEffect để bắt sự kiện click ngoài cùng và ẩn picker khi click ra ngoài
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dateRangePickerRef.current &&
+        !dateRangePickerRef.current.contains(event.target)
+      ) {
+        setShowDateRangePicker(false);
+      }
+    };
+
+    // Đăng ký sự kiện khi mount và hủy đăng ký khi unmount
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleDateRangeChange = (ranges) => {
+    setDateRange([ranges.selection]);
+  };
+
+
+
+
+
   const {
     isOpenSideBar,
   } = useSelector((state) => state.siderBar);
@@ -207,9 +288,26 @@ const Affiliate = () => {
                                 </div>
                                 <div class="total">
                                   <h6>By time</h6>
-                                  <span class="value-total">
-                                    01/07/23 - 31/07/23
-                                  </span>
+                                  <button
+                                    className="value-total" style={{ background: "none", color: "white", boxShadow: "none", border: "none", fontSize: "15px" }}
+                                    onClick={() => setShowDateRangePicker(!showDateRangePicker)}
+                                  >
+                                    <span>
+                                      {dateRange[0].startDate.toLocaleDateString()} -{" "}
+                                      {dateRange[0].endDate.toLocaleDateString()}
+                                    </span>
+
+                                  </button>
+                                  {showDateRangePicker && (
+                                    <div ref={dateRangePickerRef}>
+                                      <DateRangePicker
+                                        ranges={dateRange}
+                                        className='datetime'
+                                        onChange={handleDateRangeChange}
+                                      />
+                                    </div>
+
+                                  )}
                                 </div>
                               </div>
                               <div class="chart-wrapper d-flex justify-content-center">
@@ -347,54 +445,90 @@ const Affiliate = () => {
                       <h2>Search Results</h2>
                       <div class="list-btn">
                         <span class="pc">Time Range:</span>
-                        <button class="active" style={{ marginTop: "10px" }}>
+                        <button class={` ${activeButtonTable === "Yesterday" ? "active" : ""}`} style={{ marginTop: "10px" }} onClick={handelTable1}>
                           Yesterday
                         </button>
-                        <button>
+                        <button className={` ${activeButtonTable === "Last7day" ? "active" : ""}`} onClick={handelTable2}>
                           Last 7 days
                         </button>
-                        <button>
+                        <button className={` ${activeButtonTable === "Last30day" ? "active" : ""}`} onClick={handelTable3}>
                           Last 30 days
                         </button>
-                        <button>
+                        <button className={` ${activeButtonTable === "Alltime" ? "active" : ""}`} onClick={handelTable4}>
                           All Time
                         </button>
                       </div>
                     </div>
 
-                    <table class="table table-bordered">
-                      <tr>
-                        <th>Username</th>
-                        <th>Total Vol</th>
-                        <th>Com. Earned</th>
+                    {isTable1 ? (
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Username</th>
+                          <th>Total Vol</th>
+                          <th>Com. Earned</th>
 
-                      </tr>
-                      <tr>
-                        <td>JapanTeam</td>
-                        <td>3.000.000</td>
-                        <td>240.000</td>
-                      </tr>
-                      <tr>
-                        <td>koreanTeam</td>
-                        <td>400.000</td>
-                        <td>32.000</td>
-                      </tr>
-                      <tr>
-                        <td>CanadaTeam</td>
-                        <td>800.000</td>
-                        <td>48.000</td>
-                      </tr>
-                      <tr>
-                        <td>USATeam</td>
-                        <td>1.800.000</td>
-                        <td>72.000</td>
-                      </tr>
-                      <tr>
-                        <td>philippines</td>
-                        <td>2.800.000</td>
-                        <td>140.000</td>
-                      </tr>
-                    </table>
+                        </tr>
+                        <tr>
+                          <td>JapanTeam</td>
+                          <td>3.000.000</td>
+                          <td>240.000</td>
+                        </tr>
+                        <tr>
+                          <td>koreanTeam</td>
+                          <td>400.000</td>
+                          <td>32.000</td>
+                        </tr>
+                        <tr>
+                          <td>CanadaTeam</td>
+                          <td>800.000</td>
+                          <td>48.000</td>
+                        </tr>
+                        <tr>
+                          <td>USATeam</td>
+                          <td>1.800.000</td>
+                          <td>72.000</td>
+                        </tr>
+                        <tr>
+                          <td>philippines</td>
+                          <td>2.800.000</td>
+                          <td>140.000</td>
+                        </tr>
+                      </table>
+                    ) : isTable2 ? (
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Username</th>
+                          <th>Total Vol</th>
+                          <th>Com. Earned</th>
+
+                        </tr>
+
+                      </table>
+                    ) : isTable3 ? (
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Username</th>
+                          <th>Total Vol</th>
+                          <th>Com. Earned</th>
+
+                        </tr>
+
+                      </table>
+                    ) : isTable4 ? (
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Username</th>
+                          <th>Total Vol</th>
+                          <th>Com. Earned</th>
+
+                        </tr>
+
+                      </table>
+                    ) : (<></>)}
+
+
+
+
                   </div>
                 </div>
 
