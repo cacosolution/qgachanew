@@ -22,7 +22,7 @@
 @media (max-width: 1068px) {
   header .header-content {
     position: absolute;
-    margin-left: 300px;
+
   }
 
   .footer .footer-content .footer-contact {
@@ -91,8 +91,7 @@
     position: unset;
     width: 100%;
     max-width: 100%;
-    justify-content: space-between !important;
-    padding: 0 20px;
+
   }
 
   header .header-content img[alt=logo-mobile] {
@@ -594,7 +593,7 @@
   }
 
   .pc {
-    display: none !important;
+    display: block !important;
   }
 
   main .side-bar {
@@ -618,7 +617,6 @@
   header .header-content {
     position: unset;
     width: 100%;
-    justify-content: space-between !important;
   }
 
   header .header-content img[alt=logo-mobile] {

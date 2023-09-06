@@ -13,6 +13,8 @@ const SidebarChat = () => {
         isSidebarChat,
     } = useContext(SidebarContext)
 
+
+    
     return (
         <>
             <div className={isSidebarChat === true ? "side-chat active-chat" : "side-chat"}>
@@ -24,6 +26,7 @@ const SidebarChat = () => {
                                 <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                             </button>
                         </div>
+
                         <div class="box-body p-3">
                             <div class="list-user-online">
                                 <div class="info-user d-flex align-items-center">

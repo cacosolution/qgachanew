@@ -96,12 +96,36 @@ ul {
   /* Legacy iOS */
 }
 
-header {
+@media(max-width: 576px) {
+  header {
+
+    height: 65px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media(max-width: 950px) {
+  header {
+
+    height: 65px;
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media(min-width: 951px) {
+  header {
+
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.bg-header {
+  background: linear-gradient(90deg, rgb(40, 37, 70) 17%, rgb(45, 42, 87) 22%, rgb(53, 49, 111) 30%, rgb(71, 48, 100) 50%, rgb(54, 50, 100) 72%, rgb(70, 64, 136) 86%);
   border-top: 1px solid #787878;
   border-bottom: 1px solid #787878;
-  background: linear-gradient(90deg, rgb(40, 37, 70) 17%, rgb(45, 42, 87) 22%, rgb(53, 49, 111) 30%, rgb(71, 48, 100) 50%, rgb(54, 50, 100) 72%, rgb(70, 64, 136) 86%);
-  height: 65px;
-  width: 100%;
 }
 
 header select {
@@ -118,7 +142,7 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 @media (max-width: 1068px) {
@@ -131,7 +155,7 @@ header .header-content {
 
 @media (min-width: 1070px) {
   .img-index.active {
-    margin-left: 358px;
+    margin-left: 277px;
     animation: AfterLogoActive 0.25s linear;
     animation-iteration-count: 1;
   }
@@ -139,7 +163,7 @@ header .header-content {
 
 @media (max-width: 1068px) {
   .img-index {
-    margin-left: 0;
+    margin-left: 49px;
     animation: AfterLogo 0.25s linear;
     animation-iteration-count: 1;
   }
@@ -147,7 +171,7 @@ header .header-content {
 
 @media (min-width: 1070px) {
   .img-index {
-    margin-left: 107px;
+    margin-left: 194px;
     animation: AfterLogo 0.25s linear;
     animation-iteration-count: 1;
   }
@@ -376,9 +400,8 @@ header #box-ava .list-noti::-webkit-scrollbar-thumb {
 }
 
 header #box-chat {
-  width: 340px;
+  width: 328px;
   position: absolute;
-
   right: 0;
   height: 822px;
 }

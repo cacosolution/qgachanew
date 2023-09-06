@@ -16,6 +16,7 @@ import SidebarChat from '../component/Sidebar/sidebarChat';
 const Home = () => {
     const {
         isOpenSideBar,
+        isSidebarChat
     } = useSelector((state) => state.siderBar);
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
@@ -65,7 +66,7 @@ const Home = () => {
         <div className="container-wrapper">
             <Navbar />
             <main>
-                <div className={`main-home ${isOpenSideBar && "active"}`} >
+                <div className={`main-home ${isOpenSideBar  && "active"}`} >
 
                     <div className="main-content">
                         <Sidebar />
