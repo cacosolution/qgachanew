@@ -15,7 +15,6 @@ import { useSelector } from 'react-redux';
 const Home = () => {
     const {
         isOpenSideBar,
-        sideBarPosition
     } = useSelector((state) => state.siderBar);
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)

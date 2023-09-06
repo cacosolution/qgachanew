@@ -10,14 +10,19 @@ import Sidebar from '../component/Sidebar/sidebar'
 import Footer from '../component/Footer/footer'
 import { BiChevronRight } from 'react-icons/bi';
 import BoxOverlay from '../component/Box/BoxOverlay';
+import { useSelector } from 'react-redux';
 
 const Completedgacha = () => {
+    const {
+        isOpenSideBar,
+
+    } = useSelector((state) => state.siderBar);
     return (
         <div class="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
-                <div className="main-home">
+                <div className={`main-home ${isOpenSideBar && "active"}`}>
                     <div class="main-content">
 
                         <div class="bread-crumb">
@@ -30,7 +35,7 @@ const Completedgacha = () => {
 
                     </div>
                 </div>
-                <BoxOverlay />
+             
             </main>
             <Footer />
 
