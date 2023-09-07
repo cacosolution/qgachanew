@@ -402,6 +402,30 @@
 
 }
 
+@media (max-width: 576px) {
+  .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature .item-content {
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature .item-content {
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature .item-content {
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .side-bar .sidebar-content .sidebar__list-item .sidebar-item.refer-feature {
   cursor: pointer;
 }

@@ -390,9 +390,15 @@ const Authen = () => {
               <img src="./images/img-main1.png" alt="banner-home" />
               <div className="mobile">
                 <div className="list-social d-flex">
-                  <div className="social-item"><img src="./images/icons/youtube.svg" alt="" /></div>
-                  <div className="social-item"><img src="./images/icons/twitter.svg" alt="" /></div>
-                  <div className="social-item"><img src="./images/icons/tele.svg" alt="" /></div>
+                  <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
+                    <img style={{ width: "15px" }} src="./images/icons/youtube.svg" alt="YouTube" />
+                  </a>
+                  <a className="social-item" href="https://twitter.com/@qgachagame" target="_blank" rel="noopener noreferrer">
+                    <img style={{ width: "15px" }} src="./images/icons/twitter.svg" alt="Twitter" />
+                  </a>
+                  <a className="social-item" href="http://t.me/qgacha" target="_blank" rel="noopener noreferrer">
+                    <img style={{ width: "15px" }} src="./images/icons/tele.svg" alt="Telegram" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -452,6 +458,21 @@ const Authen = () => {
               </div>
             </section>
 
+
+            <section class="feature-mobi mb-5" >
+              <div class="row gy-4 gy-sm-0 gx-3" style={{ marginTop: "20px" }}>
+                <div class="col-12 col-sm-6">
+                  <img src="./images/img-main2.png" alt="" />
+                </div>
+                <div class="col-12 col-sm-6">
+                  <img src="./images/img-main3.png" alt="" />
+                </div>
+              </div>
+            </section>
+
+
+
+
             <div className='caurousel-index '>
               <CarouselIndex />
             </div>
@@ -475,12 +496,7 @@ const Authen = () => {
                   <div className="col-4">
                     <img src="./images/treasure-box.png" alt="" />
                   </div>
-                  <div className="col-4">
-                    <img src="./images/treasure-box.png" alt="" />
-                  </div>
-                  <div className="col-4">
-                    <img src="./images/treasure-box.png" alt="" />
-                  </div>
+
                 </div>
               </div>
               <div className="news-item">
@@ -489,12 +505,7 @@ const Authen = () => {
                   <div className="col-4">
                     <img src="./images/treasure-box.png" alt="" />
                   </div>
-                  <div className="col-4">
-                    <img src="./images/treasure-box.png" alt="" />
-                  </div>
-                  <div className="col-4">
-                    <img src="./images/treasure-box.png" alt="" />
-                  </div>
+
                 </div>
               </div>
             </section>
