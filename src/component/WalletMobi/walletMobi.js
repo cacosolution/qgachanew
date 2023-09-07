@@ -44,7 +44,7 @@ const WalletMobi = () => {
 
 
     return (
-        <div class="container-wrapper">
+        <div class="container-wrapper openmobi">
             <Navbar />
             <main>
                 <Sidebar />

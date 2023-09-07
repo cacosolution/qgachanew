@@ -1,12 +1,16 @@
 .side-bar.active-show {
   width: 340px;
 }
+
 .side-chat.active-chat {
   width: 340px;
 }
+
 .caurousel-index {
   display: none;
 }
+
+
 
 @media (max-width: 950px) {
   .feature {
@@ -23,9 +27,11 @@
   .side-bar.active-show {
     width: 100%;
   }
+
   .side-chat.active-chat {
     width: 100%;
   }
+
   .feature {
     display: none;
   }

@@ -219,7 +219,7 @@ const Footer = () => {
                 <div class="name-feature">Upgrade</div>
               </div>
             </Link>
-            <Link to="/walletMobi">
+            <Link to="/wallet">
               <div
                 class="menu-feature wallet d-flex flex-column justify-content-center align-items-center">
                 <img src="./images/icons/icon-cardmobile.svg" alt="" />

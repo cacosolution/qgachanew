@@ -1454,6 +1454,41 @@ body {
   overflow: hidden;
 }
 
+.openmobi {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .open {
+    display: none;
+  }
+
+  .openmobi {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .open {
+    display: none;
+  }
+
+  .openmobi {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .open {
+    display: none;
+  }
+
+  .openmobi {
+    display: block;
+  }
+}
+
+
 img {
   width: 100%;
   -o-object-fit: cover;
