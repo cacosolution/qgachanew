@@ -142,7 +142,7 @@ header .line-yblue {
 header .header-content {
   position: relative;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media (max-width: 1068px) {
@@ -155,7 +155,7 @@ header .header-content {
 
 @media (min-width: 1070px) {
   .img-index.active {
-    margin-left: 277px;
+
     animation: AfterLogoActive 0.25s linear;
     animation-iteration-count: 1;
   }
@@ -169,13 +169,7 @@ header .header-content {
   }
 }
 
-@media (min-width: 1070px) {
-  .img-index {
-    margin-left: 194px;
-    animation: AfterLogo 0.25s linear;
-    animation-iteration-count: 1;
-  }
-}
+
 
 @keyframes AfterLogoActive {
   0% {
@@ -400,7 +394,7 @@ header #box-ava .list-noti::-webkit-scrollbar-thumb {
 }
 
 header #box-chat {
-  width: 328px;
+  width: 100%;
   position: absolute;
   right: 0;
   height: 822px;
@@ -437,7 +431,7 @@ header #box-chat .list-user-online .info-user .message .cur-mess {
 }
 
 header #box-chat .box-body {
-  height: 700px;
+  height: 600px;
 }
 
 header .box-action {
@@ -736,7 +730,7 @@ footer {
 
 @media (min-width: 1201px) {
   footer.active {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -813,9 +807,18 @@ footer .footer-content .img-box h5 {
   text-transform: uppercase;
 }
 
-footer .footer-content .footer-contact {
-  width: 80%;
-  margin: auto;
+@media (max-width: 576px) {
+  footer .footer-content .footer-contact {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 577px) {
+  footer .footer-content .footer-contact {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 footer .footer-content .footer-contact .line-y {
@@ -836,23 +839,21 @@ footer .footer-content .footer-contact .line-y {
 }
 
 footer .footer-content .footer-contact .follow-contact h4 {
-  font-size: 24px;
-  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 36px;
 }
 
-footer .footer-content .footer-contact .follow-contact h4.hd-email {
-  margin-top: 58px;
-  margin-bottom: 24px;
-}
+footer .footer-content .footer-contact .follow-contact h4.hd-email {}
 
 footer .footer-content .footer-contact .follow-contact .list-social {
-  margin-top: 42px;
+  margin: auto;
+  padding: 10px
 }
 
 footer .footer-content .footer-contact .follow-contact .list-social .social-item {
   border-radius: 50%;
-  padding: 15px;
+  padding: 12px;
   background-color: #e24dff;
 }
 
@@ -925,11 +926,23 @@ footer .footer-content .footer-contact .get-intouch button {
   color: #fff;
 }
 
-footer .footer-content .footer-info {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  width: 80%;
-  margin: auto;
+@media (max-width: 576px) {
+  footer .footer-content .footer-info {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 577px) {
+  footer .footer-content .footer-info {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+  }
 }
 
 
@@ -965,12 +978,11 @@ footer .footer-content .footer-info .line-yblue {
   opacity: 0.1;
 }
 
-footer .footer-content .footer-info .box {
-  padding-top: 40px;
-}
+footer .footer-content .footer-info .box {}
 
 footer .footer-content .footer-info .box-logo {
-  padding-right: 27px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 footer .footer-content .footer-info .box-logo img {
@@ -1022,7 +1034,7 @@ footer .footer-content .footer-info .box-link .get-help .link-faq {
 }
 
 footer .footer-content .footer-info .box-docs {
-  padding-left: 83px;
+  padding-left: 36px
 }
 
 @media (min-width: 576px) {
@@ -2820,4 +2832,21 @@ input {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.swtich-btn {
+  padding: 10px;
+}
+
+.form-check-input:checked {
+  background-color: green;
+  /* Đổi màu nền thành xanh lá */
+  border-color: green;
+  /* Đổi màu viền thành xanh lá */
+}
+
+.email-msg {
+  padding-left: 20px;
+  padding-top: 12px;
+  border-left: 1px solid #727070;
 }

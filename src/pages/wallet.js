@@ -26,10 +26,12 @@ const Wallet = () => {
         isOpenWithdraw,
         isOpenTransaction,
     } = useSelector((state) => state.wallet);
+
     const dispatch = useDispatch();
     const {
         isOpenSideBar,
     } = useSelector((state) => state.siderBar);
+
     const handlerChangeBalance = () => {
         dispatch({ type: "SET_IS_OPEN_BALANCE" });
     }
