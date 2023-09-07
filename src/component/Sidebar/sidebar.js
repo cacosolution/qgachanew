@@ -29,13 +29,13 @@ const Sidebar = () => {
 
 
     useEffect(() => {
-        console.log('window.innerWidth', window.innerWidth)
+
         if (window.innerWidth <= 576) {
             dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition });
         }
         if (location.pathname === "/" && window.innerWidth > 576)
             dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: true, position: "" });
-    }, [dispatch,location.pathname,sideBarPosition])
+    }, [dispatch, location.pathname, sideBarPosition])
 
     return (
         <>

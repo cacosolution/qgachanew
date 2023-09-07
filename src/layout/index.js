@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         isSidebarNoti,
     } = useContext(SidebarContext)
     return (
-        <div class="container-wrapper">
+        <div className="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
