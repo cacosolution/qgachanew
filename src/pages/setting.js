@@ -110,7 +110,7 @@ const Setting = () => {
                                 </div>
 
                             ) : isSecurity ? (
-                                <div class="d-flex flex-column">
+                                <div class="d-flex flex-column SecurityiPad">
 
                                     <div class="box-change">
                                         <div class="Settingmobile" onClick={handelModal}>

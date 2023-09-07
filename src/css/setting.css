@@ -247,6 +247,422 @@
   height: 219px;
 }
 
+.Settingmobile {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .line-x {
+    background: var(--xm, #3b3b3b);
+  }
+
+  .SecurityiPad {
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .btn-wallet.btn-setting {
+    border: none;
+    width: 82px;
+    height: 29px;
+    line-height: 29px;
+    box-shadow: unset;
+    border-radius: 3px;
+    background: #291a3a;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail {
+    padding: 12px;
+  }
+
+  .feature-header-mobile {
+
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+
+  .Settingmobile {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    display: none;
+  }
+
+  .feature-header-mobile svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+  .Settingmobile svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-header {
+    position: relative;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    margin-left: 10px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-header svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body {
+    padding: 0;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action {
+    flex-direction: column;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper input {
+    margin-top: 8px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend {
+    font-size: 11px;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-top: 35px;
+    height: unset;
+    flex-direction: column;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend button {
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change {
+    padding: 0;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .box-change h4 {
+    padding: 20px 0;
+    padding-left: 16px;
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change form {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .box-change form label {
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change .btn-save {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .main-deposit .deposit-content .box-change .btn-save button {
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 20px;
+    height: 30px;
+  }
+
+  .main-deposit .deposit-content .box-change.two-factor,
+  .main-deposit .deposit-content .box-change {
+    height: unset;
+  }
+
+  .main-deposit .deposit-content .box-change:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box {
+    border-radius: 3px;
+    background: #291a3a;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .box-header {
+    background: #291a3a;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:first-child {
+    margin-bottom: 22px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:first-child h5 {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:last-child .box-header {
+    border-bottom: 1px solid #807f7f;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box {
+    height: unset;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .content-sw {
+    padding: 15px 18px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .btn-save {
+    padding: 16px 12px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .btn-save h5 {
+    max-width: 156px;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .line-x {
+    background: var(--xm, #3b3b3b);
+  }
+
+  .SecurityiPad {
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .btn-wallet.btn-setting {
+    border: none;
+    width: 82px;
+    height: 29px;
+    line-height: 29px;
+    box-shadow: unset;
+    border-radius: 3px;
+    background: #291a3a;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail {
+    padding: 12px;
+  }
+
+  .feature-header-mobile {
+
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+
+  .Settingmobile {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    display: block;
+  }
+
+  .feature-header-mobile svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+  .Settingmobile svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-header {
+    position: relative;
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0.483px solid #393636;
+    background: #1b172f;
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    margin-left: 10px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-header svg {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    transform: rotate(-90deg);
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body {
+    padding: 0;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action {
+    flex-direction: column;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .email-wrapper input {
+    margin-top: 8px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend {
+    font-size: 11px;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-top: 35px;
+    height: unset;
+    flex-direction: column;
+  }
+
+  .main-deposit .deposit-content .feature-content .feature-detail .feature-body .email-action .btn-resend button {
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change {
+    padding: 0;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .box-change h4 {
+    padding: 20px 0;
+    padding-left: 16px;
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change form {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .main-deposit .deposit-content .box-change form label {
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change .btn-save {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .main-deposit .deposit-content .box-change .btn-save button {
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 20px;
+    height: 30px;
+  }
+
+  .main-deposit .deposit-content .box-change.two-factor,
+  .main-deposit .deposit-content .box-change {
+    height: unset;
+  }
+
+  .main-deposit .deposit-content .box-change:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box {
+    border-radius: 3px;
+    background: #291a3a;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .box-header {
+    background: #291a3a;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:first-child {
+    margin-bottom: 22px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:first-child h5 {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box:last-child .box-header {
+    border-bottom: 1px solid #807f7f;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box {
+    height: unset;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .content-sw {
+    padding: 15px 18px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .btn-save {
+    padding: 16px 12px;
+  }
+
+  .main-deposit .deposit-content .box-change.reference-box .btn-save h5 {
+    max-width: 156px;
+  }
+}
+
 @media (max-width: 576px) {
   .line-x {
     background: var(--xm, #3b3b3b);
@@ -295,6 +711,7 @@
     padding: 0;
     margin-bottom: 16px;
     padding: 0 12px;
+    display: block;
   }
 
   .feature-header-mobile svg {
