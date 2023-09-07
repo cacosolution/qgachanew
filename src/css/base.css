@@ -499,11 +499,11 @@ header #box-noti .box-body .list-noti .noti-item:not(:first-child) {
 }
 
 header #box-language {
-  width: 156px;
+  width: 140px;
   border-radius: 0px 0px 6px 6px;
   background: #282546;
-  top: 40px;
-  left: 30%;
+  top: 50px;
+  left: 70%;
 }
 
 header #box-language .language-item {
