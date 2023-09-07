@@ -10,7 +10,7 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CarouselIndex from '../component/Carousel/carouselIndex';
 import { useSelector } from 'react-redux';
-import SidebarChat from '../component/Sidebar/sidebarChat';
+
 import { SidebarContext } from '../context/sideBarContext';
 
 
@@ -77,7 +77,7 @@ const Home = () => {
 
                     <div className="main-content">
                         <Sidebar />
-                        <SidebarChat />
+                    
                         {isOpenResgiter && (
                             <div className='transaction-detail2 '>
                                 <div className="box-auth sign-up mt-4 signAuthen">

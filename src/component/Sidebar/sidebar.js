@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 import BoxOverlay from "../Box/BoxOverlay";
+import SidebarChat from "./sidebarChat";
 
 
 const Sidebar = () => {
@@ -40,7 +41,7 @@ const Sidebar = () => {
             <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
                 <div class="header-menu pc fixed-active">
                     <div class=" d-flex align-items-center justify-content-center" style={{ gap: "20    px" }}>
-                        <img id="menu-sidebar" style={{ width: "20px" }} onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar, position: sideBarPosition })} src="./images/icons/menu-icon.svg"
+                        <img id="menu-sidebar" style={{ width: "24px" }} onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar, position: sideBarPosition })} src="./images/icons/menu-icon.svg"
                             alt="header-logo" />
                         <span>MENU</span>
                         <div class="line-yblue"></div>
@@ -276,6 +277,7 @@ const Sidebar = () => {
 
             </div >
             <BoxOverlay />
+            <SidebarChat />
         </>
 
 
