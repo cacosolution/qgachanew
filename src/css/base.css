@@ -425,7 +425,7 @@ header #box-chat .list-user-online .info-user .message .cur-mess {
 }
 
 header #box-chat .box-body {
-  height: 680px;
+  height: 590px;
 }
 
 header .box-action {
@@ -456,10 +456,10 @@ header .box-action button img {
 }
 
 header #box-noti {
-  width: 340px;
+  width: 100%;
   position: absolute;
-  top: 63px;
-  right: 30px;
+  top: 0;
+  right: 0;
   height: 822px;
 }
 
@@ -879,9 +879,9 @@ footer .footer-content .footer-contact .follow-contact .list-social .social-item
 }
 
 footer .footer-content .footer-contact .get-intouch {
-  max-width: 367px;
+  max-width: 453px;
   width: 100%;
-  padding-left: 55px;
+  padding-left: 97px;
 }
 
 footer .footer-content .footer-contact .get-intouch h3 {
@@ -1024,9 +1024,18 @@ footer .footer-content .footer-info .line-yblue {
 
 footer .footer-content .footer-info .box {}
 
-footer .footer-content .footer-info .box-logo {
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width:950px) {
+  footer .footer-content .footer-info .box-logo {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@media (max-width:949px) {
+  footer .footer-content .footer-info .box-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 footer .footer-content .footer-info .box-logo img {
@@ -1038,7 +1047,7 @@ footer .footer-content .footer-info .box-logo img {
 footer .footer-content .footer-info .box-logo p {
   padding: 60px 0 0px;
   margin: 0;
-  max-width: 368px;
+  max-width: 403px;
   width: 100%;
 }
 
@@ -1065,6 +1074,7 @@ footer .footer-content .footer-info .box-logo p {
 
 footer .footer-content .footer-info .box-logo .list-social {
   margin-left: 50px;
+  margin-top: 10px;
 }
 
 footer .footer-content .footer-info .box-logo .list-social .social-item {
@@ -1666,7 +1676,7 @@ input {
 
 .container-wrapper main .main-fournumber .main-content {
   margin-top: 30px;
-  margin-left: 107px;
+
 }
 
 .box__support-chat.active {

@@ -1,26 +1,14 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 
 const Navbar = () => {
     const {
-
         isOpenProfileAll,
         setIsOpenProfileAll,
         setIsOpenProfileDetail,
         setIsOpenProfileEdit,
-        isOpenBalance,
-        SetIsOpenBalance,
-        isOpenDeposit,
-        SetIsOpenDeposit,
-        isOpenWithdraw,
-        SetIsOpenWithdraw,
-        isOpenTransaction,
-        SetIsOpenTransaction,
-        setIsChat,
-        isChat,
-        isNofi,
         setIsNofi,
         isProfile,
         setIsProfile,
@@ -28,42 +16,42 @@ const Navbar = () => {
         setIsLang,
         setIsSidebarChat,
         isSidebarChat,
+        isSidebarNoti,
+        setIsSidebarNoti,
     } = useContext(SidebarContext)
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const {
         isOpenSideBar,
     } = useSelector((state) => state.siderBar);
 
-    const chatRef = useRef(null);
     const notiRef = useRef(null);
     const profileRef = useRef(null);
     const langRef = useRef(null);
 
     const ModalChat = () => {
         setIsSidebarChat(!isSidebarChat);
-        setIsNofi(false);
+        setIsSidebarNoti(false);
         setIsProfile(false);
         setIsLang(false);
     }
 
     const ModalNofi = () => {
         setIsSidebarChat(false);
-        setIsNofi(true);
+        setIsSidebarNoti(!isSidebarNoti)
         setIsProfile(false);
         setIsLang(false);
     }
     const ModalProfile = () => {
         setIsSidebarChat(false);
-        setIsNofi(false);
-        setIsProfile(true);
+        setIsSidebarNoti(false);
+        setIsProfile(!isProfile);
         setIsLang(false);
     }
     const ModalLang = () => {
         setIsSidebarChat(false);
-        setIsNofi(false);
+        setIsSidebarNoti(false);
         setIsProfile(false);
-        setIsLang(true);
+        setIsLang(!isLang);
     }
 
     const handleOutsideClick = (event) => {
@@ -147,7 +135,7 @@ const Navbar = () => {
                         {/* <!-- BOX LANGUAGE --> */}
                         <div class="language-container" ref={langRef}>
                             <img class="language-icon" onClick={ModalLang} src="./images/icons/language.svg" alt="" />
-                            <div id="box-language" class={isLang == true ? ` active` : ``}>
+                            <div id="box-language" class={isLang === true ? ` active` : ``}>
                                 <div class="language-item">
                                     English
                                 </div>
@@ -156,7 +144,7 @@ const Navbar = () => {
                         {/* <!-- BOX AVATAR --> */}
                         <div class="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
                             <img class="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
-                            <div id="box-ava" class={isProfile == true ? `active` : ``}>
+                            <div id="box-ava" class={isProfile === true ? `active` : ``}>
                                 <Link onClick={() => dispatch({ type: "SET_IS_OPEN_BALANCE" })} to={"/wallet"} >
                                     <div class="feature-item d-flex align-items-center">
                                         <img src="./images/icons/credit-card.svg" alt="" />
@@ -226,180 +214,7 @@ const Navbar = () => {
                         </svg>
                     </div>
                 </div>
-                <div class={isNofi == true ? `box-noti active` : `box-noti`} id="box-noti" ref={notiRef}>
-                    <div class="box-header d-flex justify-content-between">
-                        Notification
-                        <button class="btn__exit-noti">
-                            <img onClick={() => setIsNofi(!isNofi)} src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
-                    </div>
-                    <div class="box-body">
-                        <div class="wrapper-title">
-                            <h4>System Notice</h4>
-                        </div>
-                        <div class="list-noti">
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                            <div class="noti-item d-flex align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class={isChat == true ? `box-chat active` : `box-chat`} id="box-chat" ref={chatRef}>
-                    <div class="box-header d-flex justify-content-between">
-                        Online Chat
-                        <button class="btn__exit-chat">
-                            <img onClick={() => setIsChat(!isChat)} src="./images/icons/deposit/icon-exit.svg" alt="" />
-                        </button>
-                    </div>
-                    <div class="box-body p-3">
-                        <div class="list-user-online">
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-action d-flex align-items-center">
-                        <input type="text" placeholder="Your message" />
-                        <button><img src="./images/icons/deposit/send.svg" alt="" /></button>
-                    </div>
-                </div>
+
             </header >
         </div>
     )

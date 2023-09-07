@@ -1,9 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { SidebarContext } from "../../context/sideBarContext";
 import BoxOverlay from "../Box/BoxOverlay";
 import SidebarChat from "./sidebarChat";
+import SidebarNoti from "./sidebarNoti";
 
 
 const Sidebar = () => {
@@ -34,7 +35,7 @@ const Sidebar = () => {
         }
         if (location.pathname === "/" && window.innerWidth > 576)
             dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: true, position: "" });
-    }, [])
+    }, [dispatch,location.pathname,sideBarPosition])
 
     return (
         <>
@@ -175,7 +176,7 @@ const Sidebar = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/luckynumber">
+                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/jackpot">
                                                 <img src="./images/icons/box-gacha.png" alt="" />Jackpot
                                             </Link>
                                         </li>
@@ -278,6 +279,7 @@ const Sidebar = () => {
             </div >
             <BoxOverlay />
             <SidebarChat />
+            <SidebarNoti />
         </>
 
 

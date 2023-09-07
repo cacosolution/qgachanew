@@ -9,7 +9,6 @@ import FourNumber from "../pages/fournumber";
 import LuckyNumber from "../pages/luckynumber";
 import Setting from "../pages/setting";
 import TicketForm from "../pages/ticket-form";
-import UserAction from "../pages/user-action";
 import BuyTicket from "../pages/buy-ticket";
 import Buy5ticket from "../pages/buy5ticket";
 import Bakacomming from '../pages/bakacomming'
@@ -19,16 +18,14 @@ import EventNodata from '../pages/event-nodata'
 import Mystery from '../pages/mystery'
 import Pvpcomming from '../pages/pvpcomming'
 import Qgccomming from '../pages/qgccomming'
-import Reference from '../pages/reference'
 import Reroll from '../pages/reroll'
-import Security from '../pages/security'
 import Sugoroku from '../pages/sugoroku'
 import Tournament from '../pages/tournament'
 import Upgrade from '../pages/upgrade'
 import Upgradesoon from '../pages/upgradesoon'
 import Wallet from "../pages/wallet";
 import EventDetail from "../pages/eventdetail";
-import WalletMobi from "../component/WalletMobi/walletMobi";
+
 
 
 export const router = createBrowserRouter([
@@ -105,17 +102,10 @@ export const router = createBrowserRouter([
         element: <Qgccomming />,
     },
     {
-        path: "/reference",
-        element: <Reference />,
-    },
-    {
         path: "/reroll",
         element: <Reroll />,
     },
-    {
-        path: "/security",
-        element: <Security />,
-    },
+  
     {
         path: "/setting",
         element: <Setting />,
@@ -140,16 +130,10 @@ export const router = createBrowserRouter([
         path: "/upgradesoon",
         element: <Upgradesoon />,
     },
-    {
-        path: "/user-action",
-        element: <UserAction />,
-    },
+  
     {
         path: "/wallet",
         element: <Wallet />
-    }, {
-        path: "/walletMobi",
-        element: <WalletMobi />
     }
 ]);
 

@@ -3,9 +3,17 @@
 }
 
 .side-chat.active-chat {
-  width: 320px;
+  width: 340px;
   box-shadow: -2px 0px 17px black;
 }
+
+@media (max-width: 576px) {
+  .side-chat.active-chat {
+    width: 100%;
+    box-shadow: -2px 0px 17px black;
+  }
+}
+
 
 @media (max-width: 576px) {
   .side-bar.active-show {
@@ -23,6 +31,9 @@
 
 .side-bar.active-show .header-menu span {
   display: block;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .side-bar.active-show .sidebar-content {

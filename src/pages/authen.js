@@ -3,15 +3,16 @@ import "../css/flickity.css"
 import "../css/base.css"
 import "../css/home.css"
 import "../css/responsive.css"
-import Navbar from '../component/Navbar/navbar';
 import NavAuthen from '../component/Navbar/navAuthen';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
 
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import CarouselIndex from '../component/Carousel/carouselIndex';
+import { SidebarContext } from '../context/sideBarContext';
+import { useSelector } from 'react-redux';
 
 const Authen = () => {
   const [isOpenResgiter, setIsOpenResgiter] = useState(false)
@@ -28,7 +29,7 @@ const Authen = () => {
   const onlyNumbersRegex = /^[0-9]+$/;
   const onlyLettersRegex = /^[a-zA-Z]+$/;
   const alphanumericRegex = /^[0-9a-zA-Z]+$/;
-  const vietnameseCharactersRegex = /[^\x00-\x7F]+/;
+  const vietnameseCharactersRegex = "/[^\x00-\x7F]+/";
 
 
   const handlerLogin = () => {
@@ -58,12 +59,20 @@ const Authen = () => {
     setIsOpenResetAccount(!isOpenResetAccount)
     setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)
   }
+  const {
+    isOpenSideBar,
+  } = useSelector((state) => state.siderBar);
+  const {
+    isSidebarChat,
+    isSidebarNoti,
+  } = useContext(SidebarContext)
   return (
     <div className="container-wrapper">
       <NavAuthen />
       <main>
         <Sidebar />
-        <div className="main-home" >
+        <div className={`main-home ${isOpenSideBar ? "active" : isSidebarChat ? "active" : isSidebarNoti && "active"}`} >
+
           <div className="main-content">
             {isOpenResgiter && (
               <div className='transaction-detail2'>
@@ -176,7 +185,7 @@ const Authen = () => {
                       <button type="submit" className="btn btn-primary" onClick={handlerResgiterConfirm}>Sign Up</button>
                     </div>
                     <p className="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                      <a className="btn-redirect" onClick={handlerLogin}>Sign In</a>
+                      <p className="btn-redirect" onClick={handlerLogin}>Sign In</p>
                     </p>
 
                   </form>
@@ -236,8 +245,8 @@ const Authen = () => {
                       <button class="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
                     </div>
                     <p class="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
-                      <a class="btn-redirect" onClick={handlerLogin}>Create
-                        account</a>
+                      <p class="btn-redirect" onClick={handlerLogin}>Create
+                        account</p>
                     </p>
                   </form>
                 </div>
@@ -288,7 +297,7 @@ const Authen = () => {
                       <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
                     </div>
                     <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                      <a class="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
+                      <p class="btn-redirect" onClick={handlerResetPassword}>Sign In</p>
                     </p>
                   </form>
                 </div>
