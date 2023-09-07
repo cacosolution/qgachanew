@@ -68,8 +68,8 @@ const Transaction = () => {
     };
     return (
 
-        <div class="customtran">
-            <div class="list-button">
+        <div className="customtran">
+            <div className="list-button">
                 <button className="items" onClick={toggleDropdown}>
                     {selectedOption}
                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,17 +131,17 @@ const Transaction = () => {
 
             {isModalOpen && (
                 <div className='transaction-detail2' >
-                    <section class="transaction-modal-Trans">
-                        <div class="gift-ticket-header">
+                    <section className="transaction-modal-Trans">
+                        <div className="gift-ticket-header">
                             <p>transaction detail</p>
                             <button style={{ background: "none", border: "none" }}>
                                 <img src="./images/icons/deposit/icon-exit.svg" alt="close" onClick={() => setIsModalOpen(!isModalOpen)} />
                             </button>
                         </div>
 
-                        <div class="transaction-detail-content">
+                        <div className="transaction-detail-content">
 
-                            <div class="transaction-detail-currency">
+                            <div className="transaction-detail-currency">
                                 <img src="./images/Rectangle.png" alt="Rectangle" />
                                 <div>
                                     <p>+ 0.000000</p>
@@ -149,20 +149,20 @@ const Transaction = () => {
                                 </div>
                             </div>
 
-                            <div class="transaction-detail-info">
+                            <div className="transaction-detail-info">
                                 <div>
                                     <p>Status</p>
                                     <span id="status">Success</span>
                                 </div>
                                 <div>
                                     <p>Txid</p>
-                                    <span class="d-flex">abc123456789 <img class="ms-1"
+                                    <span className="d-flex">abc123456789 <img className="ms-1"
                                         src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
 
                                 </div>
                                 <div>
                                     <p>Order ID</p>
-                                    <span class="d-flex">ABC7878y7990890 <img class="ms-1"
+                                    <span className="d-flex">ABC7878y7990890 <img className="ms-1"
                                         src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
 
                                 </div>
@@ -180,7 +180,7 @@ const Transaction = () => {
             }
 
 
-            <section class="transaction-table detail-trans">
+            <section className="transaction-table detail-trans">
                 <table>
                     <thead>
                         <tr>
@@ -196,7 +196,7 @@ const Transaction = () => {
                             <th>
                                 Time
                             </th>
-                            <th class="text-end">
+                            <th className="text-end">
                                 Status
                             </th>
                         </tr>
@@ -207,9 +207,9 @@ const Transaction = () => {
                         <tr>
                             <td>Deposit</td>
                             <td></td>
-                            <td class="amount">+₫ 0.0000000</td>
+                            <td className="amount">+₫ 0.0000000</td>
                             <td>03/07/2023</td>
-                            <td class="status text-end align-items-center" onClick={handlerModal}>
+                            <td className="status text-end align-items-center" onClick={handlerModal}>
 
                                 <button style={{ background: "none", border: "none", color: "white" }}>
                                     Success <svg width="8"
@@ -232,15 +232,15 @@ const Transaction = () => {
                             <td></td>
                             <td></td>
                             <td>
-                                <div class="pagination">
+                                <div className="pagination">
                                     <p>Total</p>
-                                    <p class="page">1</p>
+                                    <p className="page">1</p>
                                     <div>
                                         <button
-                                            class="d-flex align-items-center justify-content-center"><img
+                                            className="d-flex align-items-center justify-content-center"><img
                                                 src="./images/icons/pre.png" alt="previous" /></button>
                                         <button
-                                            class="d-flex align-items-center justify-content-center"><img
+                                            className="d-flex align-items-center justify-content-center"><img
                                                 src="./images/icons/next.png" alt="next" /></button>
                                     </div>
                                 </div>
@@ -252,26 +252,26 @@ const Transaction = () => {
 
 
                 {/* <div id="box__user-info">
-                    <div class="box-header d-flex justify-content-between">
+                    <div className="box-header d-flex justify-content-between">
                         User Information
-                        <button class="btn__exit-noti">
+                        <button className="btn__exit-noti">
                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                         </button>
                     </div>
-                    <div class="user-info justify-content-center d-flex">
-                        <div class="info-main d-flex flex-column align-items-center">
+                    <div className="user-info justify-content-center d-flex">
+                        <div className="info-main d-flex flex-column align-items-center">
                             <img src="./images/icons/avatar-default.svg" alt="" />
                             <h5>Name 1</h5>
                             <span>User ID: 9999999999</span>
                         </div>
-                        <button class="btn__edit-info">
+                        <button className="btn__edit-info">
                             <img src="./images/icons/pencil.svg" alt="" />
                         </button>
                     </div>
-                    <div class="user-statis">
-                        <div class="statis-head d-flex justify-content-between align-items-center">
+                    <div className="user-statis">
+                        <div className="statis-head d-flex justify-content-between align-items-center">
                             Statistics
-                            <button class="d-flex align-items-center">Detail
+                            <button className="d-flex align-items-center">Detail
                                 <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -280,12 +280,12 @@ const Transaction = () => {
                                 </svg>
                             </button>
                         </div>
-                        <div class="d-flex summary-total">
-                            <div class="total-win d-flex flex-column align-items-center justify-content-center">
+                        <div className="d-flex summary-total">
+                            <div className="total-win d-flex flex-column align-items-center justify-content-center">
                                 <h5>Total Wins</h5>
                                 <span>0</span>
                             </div>
-                            <div class="total-play d-flex flex-column align-items-center justify-content-center">
+                            <div className="total-play d-flex flex-column align-items-center justify-content-center">
                                 <h5>Total Plays</h5>
                                 <span>$0.00</span>
                             </div>
@@ -294,10 +294,10 @@ const Transaction = () => {
                 </div> */}
 
 
-                {/* <div class="footer-bg pc"></div> */}
+                {/* <div className="footer-bg pc"></div> */}
                 {/* <div id="box__user-detail">
-                    <div class="box-header d-flex justify-content-between">
-                        <div class="header-action d-flex align-items-center">
+                    <div className="box-header d-flex justify-content-between">
+                        <div className="header-action d-flex align-items-center">
                             <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
@@ -305,24 +305,24 @@ const Transaction = () => {
                             </svg>
                             Detail
                         </div>
-                        <button class="btn__exit-detail">
+                        <button className="btn__exit-detail">
                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                         </button>
                     </div>
-                    <div class="select-network d-flex align-items-center mt-3">
+                    <div className="select-network d-flex align-items-center mt-3">
                         Statistics
                         <input type="text" value="BEP20" />
-                        <div class="user-select d-flex">
+                        <div className="user-select d-flex">
                             <img src="./images/icons/avatar-default.svg" alt="" />
                         </div>
                     </div>
-                    <div class="user-statis">
-                        <div class="d-flex summary-total">
-                            <div class="total-win d-flex flex-column align-items-center justify-content-center">
+                    <div className="user-statis">
+                        <div className="d-flex summary-total">
+                            <div className="total-win d-flex flex-column align-items-center justify-content-center">
                                 <h5>Total Wins</h5>
                                 <span>0</span>
                             </div>
-                            <div class="total-play d-flex flex-column align-items-center justify-content-center">
+                            <div className="total-play d-flex flex-column align-items-center justify-content-center">
                                 <h5>Total Plays</h5>
                                 <span>$0.00</span>
                             </div>
@@ -332,8 +332,8 @@ const Transaction = () => {
 
 
                 {/* <div id="box__edit-username">
-                    <div class="box-header d-flex justify-content-between">
-                        <div class="header-action d-flex align-items-center">
+                    <div className="box-header d-flex justify-content-between">
+                        <div className="header-action d-flex align-items-center">
                             <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
@@ -341,19 +341,19 @@ const Transaction = () => {
                             </svg>
                             My Profile
                         </div>
-                        <button class="btn__exit-edit">
+                        <button className="btn__exit-edit">
                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                         </button>
                     </div>
-                    <div class="edit-ava d-flex flex-column align-items-center">
+                    <div className="edit-ava d-flex flex-column align-items-center">
                         <img src="./images/icons/avatar-default.svg" alt="" />
                         <button>Edit Your Avatar</button>
                     </div>
-                    <form action="" class="d-flex align-items-center flex-column">
-                        <div class="form-group">
+                    <form action="" className="d-flex align-items-center flex-column">
+                        <div className="form-group">
                             <label for="inputRePassword4">Username</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="name edit...." />
-                            <div class="notice">Do not use special symbols, otherwise your account may not be supported.
+                            <input type="text" className="form-control" id="inputEmail4" placeholder="name edit...." />
+                            <div className="notice">Do not use special symbols, otherwise your account may not be supported.
                             </div>
                         </div>
                         <button type="submit">Modify </button>

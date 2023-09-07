@@ -15,48 +15,48 @@ const EventDetail = () => {
         <Layout>
 
             <div>
-                <div class="main-content main-event">
+                <div className="main-content main-event">
                     <Link to="/eventlastest">
-                        <button class="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><Link>Details</Link></strong></button>
+                        <button className="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><Link>Details</Link></strong></button>
                     </Link>
-                    <div class="banner-event">
+                    <div className="banner-event">
                         <img src="./images/nft-upgrade.png" alt="banner-nft" />
                     </div>
-                    <div class="info-detail">
+                    <div className="info-detail">
                         <h4>tên sự kiện</h4>
                         <p>Phần thưởng sự kiện</p>
-                        <p class="time">📅 22th of Auguest 2023</p>
+                        <p className="time">📅 22th of Auguest 2023</p>
 
                     </div>
-                    <div class="info-guide">
-                        <div class="total-max d-flex">
-                            <span class="total">TOTAL PRIZE</span>
-                            <span class="max">
+                    <div className="info-guide">
+                        <div className="total-max d-flex">
+                            <span className="total">TOTAL PRIZE</span>
+                            <span className="max">
                                 MAx prize(usdt)
                             </span>
                         </div>
 
-                        <div class="rules distribute">
+                        <div className="rules distribute">
                             <Link>
                                 General Rules
                             </Link>
                         </div>
-                        <div class="guide text-game">NỘI DUNG HƯỚNG DẪN CHƠI</div>
-                        <div class="rules">
+                        <div className="guide text-game">NỘI DUNG HƯỚNG DẪN CHƠI</div>
+                        <div className="rules">
                             <Link>
                                 Prize Distribution
                             </Link>
                         </div>
-                        <div class="text-center text-game py-2">NỘI DUNG GIẢI THƯỞNG</div>
-                        <div class="rules terms">
+                        <div className="text-center text-game py-2">NỘI DUNG GIẢI THƯỞNG</div>
+                        <div className="rules terms">
                             <Link>
                                 Terms and Conditions
                             </Link>
                         </div>
-                        <div class="text-center text-game py-2">NỘI DUNG ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</div>
+                        <div className="text-center text-game py-2">NỘI DUNG ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</div>
                     </div>
 
-                    <div class="spacer mb-5 pb-5"></div>
+                    <div className="spacer mb-5 pb-5"></div>
                 </div>
             </div>
         </Layout>

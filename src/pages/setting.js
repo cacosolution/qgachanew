@@ -41,34 +41,34 @@ const Setting = () => {
 
     return (
         <Layout>
-            <div class="main-deposit main-general">
-                <div class="deposit-content">
-                    <button class="btn-wallet btn-setting text-15">Setting</button>
-                    <div class="feature-content d-flex">
-                        <div class="list-feature listmobile">
+            <div className="main-deposit main-general">
+                <div className="deposit-content">
+                    <button className="btn-wallet btn-setting text-15">Setting</button>
+                    <div className="feature-content d-flex">
+                        <div className="list-feature listmobile">
                             <ul>
-                                <li class="feature-item d-flex align-items-center ">
-                                    <button style={{ background: "none", border: "none" }} class="feature-title text-15" onClick={handlerChangeSetting}>General</button>
+                                <li className="feature-item d-flex align-items-center ">
+                                    <button style={{ background: "none", border: "none" }} className="feature-title text-15" onClick={handlerChangeSetting}>General</button>
                                 </li>
-                                <li class="feature-item d-flex align-items-center">
-                                    <h4 class="feature-title text-15" onClick={handlerChangeSecurity}>Security</h4>
+                                <li className="feature-item d-flex align-items-center">
+                                    <h4 className="feature-title text-15" onClick={handlerChangeSecurity}>Security</h4>
                                 </li>
-                                <li class="feature-item d-flex align-items-center border-bottom-0">
-                                    <h4 class="feature-title text-15" onClick={handlerChangeReferences}>Preferences</h4>
+                                <li className="feature-item d-flex align-items-center border-bottom-0">
+                                    <h4 className="feature-title text-15" onClick={handlerChangeReferences}>Preferences</h4>
                                 </li>
-                                <li class="feature-item d-flex align-items-center">
-                                    <h4 class="feature-title text-15">Verify</h4>
+                                <li className="feature-item d-flex align-items-center">
+                                    <h4 className="feature-title text-15">Verify</h4>
                                 </li>
                             </ul>
 
                         </div>
 
                         {isSetting ? (
-                            <div class="feature-detail">
-                                <div class="feature-header pc">
+                            <div className="feature-detail">
+                                <div className="feature-header pc">
                                     Email
                                 </div>
-                                <div class="feature-header mobile" onClick={handelModal}>
+                                <div className="feature-header mobile" onClick={handelModal}>
                                     General
                                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -88,13 +88,13 @@ const Setting = () => {
                                 </div>
 
 
-                                <div class="feature-body">
-                                    <div class="email-action d-flex justify-content-between align-items-end">
-                                        <div class="email-wrapper">
+                                <div className="feature-body">
+                                    <div className="email-action d-flex justify-content-between align-items-end">
+                                        <div className="email-wrapper">
                                             <label for="email">Email</label>
-                                            <input type="text" class="form-control" placeholder="Email" id="email" />
+                                            <input type="text" className="form-control" placeholder="Email" id="email" />
                                         </div>
-                                        <div class="btn-resend d-flex align-items-center">
+                                        <div className="btn-resend d-flex align-items-center">
                                             Resend Email <button>Verify</button>
                                         </div>
                                     </div>
@@ -103,10 +103,10 @@ const Setting = () => {
                             </div>
 
                         ) : isSecurity ? (
-                            <div class="d-flex flex-column SecurityiPad">
+                            <div className="d-flex flex-column SecurityiPad">
 
-                                <div class="box-change">
-                                    <div class="Settingmobile" onClick={handelModal}>
+                                <div className="box-change">
+                                    <div className="Settingmobile" onClick={handelModal}>
                                         General
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -129,64 +129,64 @@ const Setting = () => {
 
 
                                     <form>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label for="">Old password</label>
-                                            <input type="password" class="form-control" />
+                                            <input type="password" className="form-control" />
                                             <img src="./images/icons/eye.svg" alt="show-pass" />
                                         </div>
-                                        <div class="form-group enter-pass">
+                                        <div className="form-group enter-pass">
                                             <label for="">New password</label>
-                                            <input type="password" class="form-control" />
+                                            <input type="password" className="form-control" />
                                             <img src="./images/icons/eye.svg" alt="show-pass" />
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label for="">Confirm newpass word</label>
-                                            <input type="text" class="form-control" />
+                                            <input type="text" className="form-control" />
                                             <img src="./images/icons/eye.svg" alt="show-pass" />
                                         </div>
                                     </form>
-                                    <div class="line-x"></div>
-                                    <div class="btn-save">
+                                    <div className="line-x"></div>
+                                    <div className="btn-save">
                                         <button onClick={handlerLoginVerification}>Save changes</button>
                                     </div>
                                 </div>
-                                <div class="box-change two-factor" style={{ marginBottom: "250px" }}>
+                                <div className="box-change two-factor" style={{ marginBottom: "250px" }}>
                                     <h4>Two-factor authentication</h4>
-                                    <h4 class="desc">To keep your account extra secure leave a two factor authentication
+                                    <h4 className="desc">To keep your account extra secure leave a two factor authentication
                                         enabled.</h4>
-                                    <div class="line-x"></div>
+                                    <div className="line-x"></div>
                                     <form>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label for="">Copy this code to your authenticator app</label>
-                                            <input type="text" class="form-control" />
+                                            <input type="text" className="form-control" />
                                             <img src="./images/icons/deposit/icon-copy.svg" alt="icon-copy" />
                                         </div>
-                                        <div class="form-group enter-pass">
+                                        <div className="form-group enter-pass">
                                             <label for="">Don't let anyone see this!</label>
-                                            <div class="qr d-flex justify-content-center align-items-center">
+                                            <div className="qr d-flex justify-content-center align-items-center">
                                                 QR
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label for="">Password</label>
-                                            <input type="text" class="form-control" />
+                                            <input type="text" className="form-control" />
                                             <img src="./images/icons/eye.svg" alt="show-pass" />
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label for="">Two-factor authentication</label>
-                                            <input type="text" class="form-control" />
+                                            <input type="text" className="form-control" />
                                         </div>
                                     </form>
-                                    <div class="line-x"></div>
-                                    <div class="btn-save">
+                                    <div className="line-x"></div>
+                                    <div className="btn-save">
                                         <button>Submit</button>
                                     </div>
                                 </div>
                             </div>
                         ) : isReferences ? (
-                            <div class="d-flex flex-column">
-                                <div class="reference-box box-change">
-                                    <div class="Settingmobile" onClick={handelModal}>
+                            <div className="d-flex flex-column">
+                                <div className="reference-box box-change">
+                                    <div className="Settingmobile" onClick={handelModal}>
                                         General
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -204,56 +204,56 @@ const Setting = () => {
                                             </div>
                                         )}
                                     </div>
-                                    <div class="box-header">
+                                    <div className="box-header">
                                         <h4>Preferences</h4>
                                     </div>
                                     <h5>User privacy is one of the core values of Qgacha. These settings allow you to be
                                         completely anonymous from the rest of
                                         the players.</h5>
-                                    <div class="line-x"></div>
-                                    <div class="content-sw">
-                                        <div class="switch-item d-flex align-items-center">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                    <div className="line-x"></div>
+                                    <div className="content-sw">
+                                        <div className="switch-item d-flex align-items-center">
+                                            <div className="form-check form-switch">
+                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
                                             </div>
-                                            <div class="item-info">
+                                            <div className="item-info">
                                                 <h4>Enable Ghost Mode</h4>
                                                 <h5>Your Actions won't appear in Live Stats</h5>
                                             </div>
                                         </div>
-                                        <div class="switch-item d-flex align-items-center">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                        <div className="switch-item d-flex align-items-center">
+                                            <div className="form-check form-switch">
+                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                                             </div>
-                                            <div class="item-info">
+                                            <div className="item-info">
                                                 <h4>Hide all your statistics</h4>
                                                 <h5>Other users won't be able to view your statistics</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="line-x"></div>
-                                    <div class="btn-save d-flex align-items-center justify-content-between">
+                                    <div className="line-x"></div>
+                                    <div className="btn-save d-flex align-items-center justify-content-between">
                                         <h5>Please allow up to 30 seconds for update to take
                                             effect.</h5><button>Save</button>
                                     </div>
                                 </div>
-                                <div class="reference-box box-change marketing">
-                                    <div class="box-header">
+                                <div className="reference-box box-change marketing">
+                                    <div className="box-header">
                                         <h4>Marketing</h4>
                                     </div>
-                                    <div class="content-sw">
-                                        <div class="switch-item d-flex align-items-center">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                    <div className="content-sw">
+                                        <div className="switch-item d-flex align-items-center">
+                                            <div className="form-check form-switch">
+                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
                                             </div>
-                                            <div class="item-info">
+                                            <div className="item-info">
                                                 <h4>Hide all your statistics</h4>
                                                 <h5>Other users won't be able to view your statistics</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="line-x"></div>
-                                    <div class="btn-save">
+                                    <div className="line-x"></div>
+                                    <div className="btn-save">
                                         <button>Save</button>
                                     </div>
                                 </div>
@@ -262,25 +262,25 @@ const Setting = () => {
                             <></>
                         )}
                         {isOpenVerification && (
-                            <div class="box-auth two-factor mt-4 transaction-detail2">
+                            <div className="box-auth two-factor mt-4 transaction-detail2">
                                 <div>
-                                    <div class="box-header d-flex justify-content-between align-items-center">
+                                    <div className="box-header d-flex justify-content-between align-items-center">
                                         Two-factor authentication
-                                        <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                                        <button className="btn__exit-chat" onClick={handlerLoginVerification}>
                                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                         </button>
                                     </div>
 
                                     <div className="transaction-detail-content">
                                         <form>
-                                            <p class="text-center">Please enter the 6-digit authentication Code.</p>
-                                            <div class="list-input-number d-flex">
-                                                <div class="num-item"><input type="text" /></div>
-                                                <div class="num-item"><input type="text" /></div>
-                                                <div class="num-item"><input type="text" /></div>
-                                                <div class="num-item"><input type="text" /></div>
-                                                <div class="num-item"><input type="text" /></div>
-                                                <div class="num-item"><input type="text" /></div>
+                                            <p className="text-center">Please enter the 6-digit authentication Code.</p>
+                                            <div className="list-input-number d-flex">
+                                                <div className="num-item"><input type="text" /></div>
+                                                <div className="num-item"><input type="text" /></div>
+                                                <div className="num-item"><input type="text" /></div>
+                                                <div className="num-item"><input type="text" /></div>
+                                                <div className="num-item"><input type="text" /></div>
+                                                <div className="num-item"><input type="text" /></div>
                                             </div>
 
                                         </form>

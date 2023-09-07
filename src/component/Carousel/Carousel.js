@@ -45,62 +45,62 @@ const Carousel = () => {
     <div>
       <div className="carou">
         <Slider {...settings}>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>
           </div>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>
           </div>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>
           </div>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>
           </div>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>
           </div>
-          <div class="carousel-cell">
-            <div class="item-buy d-flex align-items-center justify-content-center">
+          <div className="carousel-cell">
+            <div className="item-buy d-flex align-items-center justify-content-center">
               <img
                 src="./images/icons/avatar-default.svg"
                 alt=""
-                class="avatar me-2"
+                className="avatar me-2"
               />
               <p>Name1: Đã mua (03:05)</p>
             </div>

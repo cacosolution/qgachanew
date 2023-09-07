@@ -14,14 +14,14 @@ const Reroll = () => {
 
     return (
         <Layout>
-            <div class="main-content">
-                <div class="bread-crumb">
+            <div className="main-content">
+                <div className="bread-crumb">
                     <Link>Gacha</Link> <BiChevronRight size={20} /> <Link>Re-roll Gacha</Link>
                 </div>
-                <section class="my-3">
+                <section className="my-3">
                     <img src="./images/comming-reroll.png" alt="" />
                 </section>
-                <div class="spacer my-5 py-5"></div>
+                <div className="spacer my-5 py-5"></div>
             </div>
         </Layout>
     )

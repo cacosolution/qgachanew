@@ -19,57 +19,57 @@ const LuckyNumber = () => {
         isOpenSideBar,
     } = useSelector((state) => state.siderBar);
     return (
-        <div class="container-wrapper">
+        <div className="container-wrapper">
             <Navbar />
             <main>
                 <Sidebar />
                 <div className={`main-home ${isOpenSideBar && "active"}`} >
 
-                    <div class="rules">
-                        <div class="top">
-                            <div class="lucky-container">
-                                <div class="d-flex justify-content-between">
+                    <div className="rules">
+                        <div className="top">
+                            <div className="lucky-container">
+                                <div className="d-flex justify-content-between">
                                     <span>Rules</span>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="this-is-icon" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="lucky-container">
-                            <h2 class="title-play">How to play?</h2>
+                        <div className="lucky-container">
+                            <h2 className="title-play">How to play?</h2>
                         </div>
 
-                        <div class="play">
-                            <div class="lucky-container d-flex justify-content-between gap-3">
-                                <div class="play-item w-100">
-                                    <div class="play-item__image w-100">
+                        <div className="play">
+                            <div className="lucky-container d-flex justify-content-between gap-3">
+                                <div className="play-item w-100">
+                                    <div className="play-item__image w-100">
                                         <img src="./images/lucky-number/buy-ticket.png" alt="this-is-image" />
                                     </div>
-                                    <div class="play-item__content text-center">
-                                        <h3 class="text-capitalize mb-1">Buy a ticket</h3>
-                                        <p class="text-capitalize">
+                                    <div className="play-item__content text-center">
+                                        <h3 className="text-capitalize mb-1">Buy a ticket</h3>
+                                        <p className="text-capitalize">
                                             for $0.1 and choose numbers for the ticket.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="play-item w-100">
-                                    <div class="play-item__image w-100">
+                                <div className="play-item w-100">
+                                    <div className="play-item__image w-100">
                                         <img src="./images/lucky-number/wait-withdraw.png" alt="this-is-image" />
                                     </div>
-                                    <div class="play-item__content text-center">
-                                        <h3 class="text-capitalize mb-1">Wait For The Draw</h3>
-                                        <p class="text-capitalize">
+                                    <div className="play-item__content text-center">
+                                        <h3 className="text-capitalize mb-1">Wait For The Draw</h3>
+                                        <p className="text-capitalize">
                                             Wait for the draw at 00:00, 08:00, 16:00 UTC+0 daily
                                         </p>
                                     </div>
                                 </div>
-                                <div class="play-item w-100">
-                                    <div class="play-item__image w-100">
+                                <div className="play-item w-100">
+                                    <div className="play-item__image w-100">
                                         <img src="./images/lucky-number/wait-for.png" alt="this-is-image" />
                                     </div>
-                                    <div class="play-item__content text-center">
-                                        <h3 class="text-capitalize mb-1">Wait For The Draw</h3>
-                                        <p class="text-capitalize">
+                                    <div className="play-item__content text-center">
+                                        <h3 className="text-capitalize mb-1">Wait For The Draw</h3>
+                                        <p className="text-capitalize">
                                             Once the draw is over, come back to this page and check your
                                             prize.
                                         </p>
@@ -78,114 +78,114 @@ const LuckyNumber = () => {
                             </div>
                         </div>
 
-                        <div class="lucky-container mt-5">
-                            <table class="w-100">
+                        <div className="lucky-container mt-5">
+                            <table className="w-100">
                                 <thead>
                                     <tr>
-                                        <th class="text-start">Winner Name</th>
-                                        <th class="text-center">Numbers</th>
-                                        <th class="text-end">Prize</th>
+                                        <th className="text-start">Winner Name</th>
+                                        <th className="text-center">Numbers</th>
+                                        <th className="text-end">Prize</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="name-jackpot">
+                                        <td className="name-jackpot">
                                             5 NUMBERS <br />
                                             JACKPOT BALL
                                         </td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$300.000 + stack</td>
+                                        <td className="text-end">$300.000 + stack</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">5 NUMBERS</td>
+                                        <td className="name-jackpot">5 NUMBERS</td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$100.000</td>
+                                        <td className="text-end">$100.000</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">
+                                        <td className="name-jackpot">
                                             4 NUMBERS <br />
                                             power ball
                                         </td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$10.000</td>
+                                        <td className="text-end">$10.000</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">4 NUMBERS</td>
+                                        <td className="name-jackpot">4 NUMBERS</td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$200</td>
+                                        <td className="text-end">$200</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">
+                                        <td className="name-jackpot">
                                             3 NUMBERS<br />
                                             power ball
                                         </td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$100</td>
+                                        <td className="text-end">$100</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">
+                                        <td className="name-jackpot">
                                             2 NUMBERS<br />
                                             power ball
                                         </td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$20</td>
+                                        <td className="text-end">$20</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">3 NUMBERS</td>
+                                        <td className="name-jackpot">3 NUMBERS</td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$5</td>
+                                        <td className="text-end">$5</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">
+                                        <td className="name-jackpot">
                                             1 NUMBERS<br />
                                             power ball
                                         </td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$3</td>
+                                        <td className="text-end">$3</td>
                                     </tr>
                                     <tr>
-                                        <td class="name-jackpot">power ball</td>
+                                        <td className="name-jackpot">power ball</td>
                                         <td>
-                                            <img class="table-image w-100" src="./images/4number/lucky-number1.png"
+                                            <img className="table-image w-100" src="./images/4number/lucky-number1.png"
                                                 alt="this-is-image" />
                                         </td>
-                                        <td class="text-end">$2</td>
+                                        <td className="text-end">$2</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <div class="content mt-1">
-                            <div class="lucky-container">
-                                <h2 class="content-title mb-2">Lottery Instructions</h2>
+                        <div className="content mt-1">
+                            <div className="lucky-container">
+                                <h2 className="content-title mb-2">Lottery Instructions</h2>
 
-                                <ul class="content-list">
+                                <ul className="content-list">
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>A
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>A
                                         provably
                                         fair algorithm
                                         is
@@ -193,14 +193,14 @@ const LuckyNumber = () => {
                                         to draw the lottery prizes.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>Prizes
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>Prizes
                                         are
                                         drawn every 8
                                         hours, at
                                         00:00, 08:00, 16:00 UTC+0.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>You can
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>You can
                                         buy a
                                         ticket for
                                         $0.1. The
@@ -208,7 +208,7 @@ const LuckyNumber = () => {
                                         UTC+0 every day.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>The
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>The
                                         player
                                         chooses six
                                         numbers for
@@ -216,24 +216,24 @@ const LuckyNumber = () => {
                                         from 1 to 36, and
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>the last
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>the last
                                         one
                                         is from 1 to
                                         10.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>You can
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>You can
                                         choose numbers
                                         manually or
                                         automatically.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>Each draw
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>Each draw
                                         produces six
                                         numbers.
                                     </li>
                                     <li>
-                                        <span class="content-list__dots d-inline-block rounded-circle me-3"></span>The more
+                                        <span className="content-list__dots d-inline-block rounded-circle me-3"></span>The more
                                         numbers you
                                         match in
                                         the

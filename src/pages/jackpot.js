@@ -14,9 +14,9 @@ const Jackpot = () => {
     return (
 
         <Layout>
-            <div id="jackpot" class="jackpot">
-                <div class="navbar-wrapper">
-                    <div class="nav-item">
+            <div id="jackpot" className="jackpot">
+                <div className="navbar-wrapper">
+                    <div className="nav-item">
                         <Link>
                             <span>My Ticket (</span>
                             <span id="ticket-number">
@@ -25,52 +25,52 @@ const Jackpot = () => {
                             <span>)</span>
                         </Link>
                     </div>
-                    <div class="nav-item nav-item--active">
+                    <div className="nav-item nav-item--active">
                         <Link>
                             Result
                         </Link>
                     </div>
-                    <div class="nav-item">
+                    <div className="nav-item">
                         <Link>
                             Jackpot winner
                         </Link>
                     </div>
                 </div>
-                <div class="content-wrapper">
-                    <div class="header">
-                        <span class="game-id">
+                <div className="content-wrapper">
+                    <div className="header">
+                        <span className="game-id">
                             Game ID
                         </span>
-                        <img class="header-btn header-btn--back header-ml" src="./images/icons/jackpot/back.png"
+                        <img className="header-btn header-btn--back header-ml" src="./images/icons/jackpot/back.png"
                             alt="back" />
-                        <span id="header-game-id" class=" header-ml">
+                        <span id="header-game-id" className=" header-ml">
                             20230703
                         </span>
-                        <img class="header-btn  header-ml" src="./images/icons/jackpot/next.png" alt="back" />
-                        <img class="header-btn  header-ml" src="./images/icons/jackpot/next-all.png" alt="back" />
+                        <img className="header-btn  header-ml" src="./images/icons/jackpot/next.png" alt="back" />
+                        <img className="header-btn  header-ml" src="./images/icons/jackpot/next-all.png" alt="back" />
                         <span id="header-game-date">
                             03/07/2023
                         </span>
                     </div>
-                    <div class="ticket-section">
-                        <div class="ticket">
-                            <div class="ticket-bg"></div>
-                            <div class="ticket-draw-time">
+                    <div className="ticket-section">
+                        <div className="ticket">
+                            <div className="ticket-bg"></div>
+                            <div className="ticket-draw-time">
                                 Draw time: <span id="draw-time">22:55:00 29/7/2023</span>
                             </div>
-                            <img class="ticket-img" src="./images/jackpot/lucky.png" alt="" />
-                            <div class="total-ticket-sold">
-                                <img src="./images/jackpot/ticket.png" alt="" class="total-ticket-sold-img" />
-                                <p class="total-ticket-sold-desc">
+                            <img className="ticket-img" src="./images/jackpot/lucky.png" alt="" />
+                            <div className="total-ticket-sold">
+                                <img src="./images/jackpot/ticket.png" alt="" className="total-ticket-sold-img" />
+                                <p className="total-ticket-sold-desc">
                                     Total tickets sold this round:
                                     <span id="total-ticket-sold">
                                         40992
                                     </span>
                                 </p>
                             </div>
-                            <div class="total-win-ticket">
-                                <img src="./images/jackpot/crown.png" alt="" class="total-ticket-sold-img" />
-                                <p class="total-ticket-sold-desc">
+                            <div className="total-win-ticket">
+                                <img src="./images/jackpot/crown.png" alt="" className="total-ticket-sold-img" />
+                                <p className="total-ticket-sold-desc">
                                     Total winning tickets this round:
                                     <span id="total-win-ticket">
                                         328
@@ -78,21 +78,21 @@ const Jackpot = () => {
                                 </p>
                             </div>
                         </div>
-                        <div class="winner-section">
-                            <div class="ticket-footer-winners-list">
+                        <div className="winner-section">
+                            <div className="ticket-footer-winners-list">
                                 Winners List
                             </div>
-                            <div class="winner-table-header-section">
-                                <div class="winner-table-header">
+                            <div className="winner-table-header-section">
+                                <div className="winner-table-header">
                                     winner name
                                 </div>
-                                <div class="winner-table-header winner-table-header--center">
+                                <div className="winner-table-header winner-table-header--center">
                                     Numbers
                                 </div>
-                                <div class="winner-table-header winner-table-header--center">
+                                <div className="winner-table-header winner-table-header--center">
                                     matches
                                 </div>
-                                <div class="winner-table-header">
+                                <div className="winner-table-header">
                                     prize
                                 </div>
                             </div>
@@ -100,187 +100,187 @@ const Jackpot = () => {
                         </div>
 
                     </div>
-                    <div class="winner-table">
-                        <div class="winner-table-rows">
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                    <div className="winner-table">
+                        <div className="winner-table-rows">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
                             </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
-                                    số tiền giải
-                                </div>
-
-                            </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
-                                    (AVT) name1
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center">
-                                    <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
-                                    id="matches">
-                                    N
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
-                                    số tiền giải
-                                </div>
-                            </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
-                                    (AVT) name1
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center">
-                                    <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
-                                    id="matches">
-                                    N
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
 
                             </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
                             </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
-                                    số tiền giải
-                                </div>
-
-                            </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
-                                    (AVT) name1
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center">
-                                    <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
-                                    id="matches">
-                                    N
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
-                                    số tiền giải
-                                </div>
-                            </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
-                                    (AVT) name1
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center">
-                                    <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
-                                    id="matches">
-                                    N
-                                </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
 
                             </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
                             </div>
-                            <div class="winner-rows">
-                                <div class="winner-rows-col" id="winner-name">
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
                                     (AVT) name1
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center">
+                                <div className="winner-rows-col winner-rows-col--center">
                                     <img src="./images/jackpot/ticket-record.png" alt=""
-                                        class="winner-rows-col-img" />
+                                        className="winner-rows-col-img" />
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
                                     id="matches">
                                     N
                                 </div>
-                                <div class="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                    số tiền giải
+                                </div>
+
+                            </div>
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
+                                    (AVT) name1
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center">
+                                    <img src="./images/jackpot/ticket-record.png" alt=""
+                                        className="winner-rows-col-img" />
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                    id="matches">
+                                    N
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                    số tiền giải
+                                </div>
+                            </div>
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
+                                    (AVT) name1
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center">
+                                    <img src="./images/jackpot/ticket-record.png" alt=""
+                                        className="winner-rows-col-img" />
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                    id="matches">
+                                    N
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                    số tiền giải
+                                </div>
+
+                            </div>
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
+                                    (AVT) name1
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center">
+                                    <img src="./images/jackpot/ticket-record.png" alt=""
+                                        className="winner-rows-col-img" />
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                    id="matches">
+                                    N
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
+                                    số tiền giải
+                                </div>
+                            </div>
+                            <div className="winner-rows">
+                                <div className="winner-rows-col" id="winner-name">
+                                    (AVT) name1
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center">
+                                    <img src="./images/jackpot/ticket-record.png" alt=""
+                                        className="winner-rows-col-img" />
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--center winner-rows-col--matches"
+                                    id="matches">
+                                    N
+                                </div>
+                                <div className="winner-rows-col winner-rows-col--prize" id="award-amount">
                                     số tiền giải
                                 </div>
 
                             </div>
                         </div>
-                        <div class="winner-table-paginate">
-                            <div class="pagination-numbers">
-                                <button class="pagination-number-btn">
+                        <div className="winner-table-paginate">
+                            <div className="pagination-numbers">
+                                <button className="pagination-number-btn">
                                     1
                                 </button>
-                                <button class="pagination-number-btn">
+                                <button className="pagination-number-btn">
                                     2
                                 </button>
-                                <button class="pagination-number-btn">
+                                <button className="pagination-number-btn">
                                     3
                                 </button>
-                                <img src="./images/jackpot/left.png" class="pagination-img-btn" alt="" />
-                                <img src="./images/jackpot/right.png" class="pagination-img-btn" alt="" />
+                                <img src="./images/jackpot/left.png" className="pagination-img-btn" alt="" />
+                                <img src="./images/jackpot/right.png" className="pagination-img-btn" alt="" />
                             </div>
                         </div>
                     </div>

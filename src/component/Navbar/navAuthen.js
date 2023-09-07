@@ -159,92 +159,92 @@ const NavAuthen = () => {
     }
     return (
         <div className="bg-header">
-            <header class="d-flex align-items-center">
-                <div class="header-content d-flex align-items-center ">
+            <header className="d-flex align-items-center">
+                <div className="header-content d-flex align-items-center ">
                     <Link to={"/"} className="img-index">
-                        <img class="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
-                        <img class="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
+                        <img className="mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
+                        <img className="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
                     </Link>
-                    <div class="header-action d-flex align-items-center">
-                        <button class="btn-auth btn-signup" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
+                    <div className="header-action d-flex align-items-center">
+                        <button className="btn-auth btn-signup" onClick={() => setIsOpenResgiter(!isOpenResgiter)}>
                             Sign Up
                         </button>
-                        <button class="btn-auth btn-signin" onClick={() => setIsOpenLogin(!isOpenLogin)}>
+                        <button className="btn-auth btn-signin" onClick={() => setIsOpenLogin(!isOpenLogin)}>
                             Sign In
                         </button>
 
-                        <div class="chat-container">
-                            <img class="chat-icon" onClick={ModalChat} src="./images/icons/chat.svg" alt="" />
+                        <div className="chat-container">
+                            <img className="chat-icon" onClick={ModalChat} src="./images/icons/chat.svg" alt="" />
                         </div>
                         {/* <!-- BOX LANGUAGE --> */}
-                        <div class="language-container" ref={langRef}>
-                            <img class="language-icon" onClick={ModalLang} src="./images/icons/language.svg" alt="" />
-                            <div id="box-language" class={isLang == true ? ` active` : ``}>
-                                <div class="language-item">
+                        <div className="language-container" ref={langRef}>
+                            <img className="language-icon" onClick={ModalLang} src="./images/icons/language.svg" alt="" />
+                            <div id="box-language" className={isLang == true ? ` active` : ``}>
+                                <div className="language-item">
                                     English
                                 </div>
                             </div>
                         </div>
                         {/* <!-- BOX AVATAR --> */}
-                        <div class="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
-                            <img class="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
-                            <div id="box-ava" class={isProfile == true ? `active` : ``}>
+                        <div className="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
+                            <img className="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
+                            <div id="box-ava" className={isProfile == true ? `active` : ``}>
                                 <Link onClick={handlerChangeBalance} to="/wallet" >
-                                    <div class="feature-item d-flex align-items-center">
+                                    <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/credit-card.svg" alt="" />
-                                        <h5 class="feature-content">
+                                        <h5 className="feature-content">
                                             Wallet
                                         </h5>
                                     </div>
                                 </Link>
                                 <Link onClick={handlerChangeWithdraw} to={"/wallet"}>
-                                    <div class="feature-item d-flex align-items-center">
+                                    <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/withdrawdollar.svg" alt="" />
-                                        <h5 class="feature-content">
+                                        <h5 className="feature-content">
                                             Withdraw
                                         </h5>
                                     </div>
                                 </Link>
 
                                 <Link onClick={handlerChangeTransaction} to={"/wallet"}>
-                                    <div class="feature-item d-flex align-items-center">
+                                    <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/transaction-ava.svg" alt="" />
-                                        <h5 class="feature-content">
+                                        <h5 className="feature-content">
                                             Transactions
                                         </h5>
                                     </div>
                                 </Link>
                                 <Link to={"/affiliate"}>
 
-                                    <div class="feature-item d-flex align-items-center">
+                                    <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/affiliate.png" alt="" />
-                                        <h5 class="feature-content">Affiliate</h5>
+                                        <h5 className="feature-content">Affiliate</h5>
                                     </div>
                                 </Link>
 
 
-                                <div class="feature-item d-flex align-items-center " onClick={handlerChangeProfile}>
+                                <div className="feature-item d-flex align-items-center " onClick={handlerChangeProfile}>
                                     <img src="./images/icons/profile.svg" alt="" />
-                                    <h5 class="feature-content">Profile</h5>
+                                    <h5 className="feature-content">Profile</h5>
                                 </div>
 
                                 <Link to={"/setting"}>
-                                    <div class="feature-item d-flex align-items-center">
+                                    <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/setting-icon.svg" alt="" />
-                                        <h5 class="feature-content">Setting</h5>
+                                        <h5 className="feature-content">Setting</h5>
                                     </div>
                                 </Link>
-                                <div class="feature-item d-flex align-items-center">
+                                <div className="feature-item d-flex align-items-center">
                                     <img src="./images/icons/logout.svg" alt="" />
-                                    <h5 class="feature-content">Log out</h5>
+                                    <h5 className="feature-content">Log out</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="line-yblue pc"></div>
-                <div class="header-right">
-                    <div class="select-right d-flex align-items-center">
+                <div className="line-yblue pc"></div>
+                <div className="header-right">
+                    <div className="select-right d-flex align-items-center">
                         <select name="currency" id="currentcy">
                             <option value="usdt" className='select-text'>$USDT</option>
                             <option value="Moon" className='select-text'>$BTC</option>
@@ -258,176 +258,176 @@ const NavAuthen = () => {
                         </svg>
                     </div>
                 </div>
-                <div class="box-noti" id="box-noti">
-                    <div class="box-header d-flex justify-content-between">
+                <div className="box-noti" id="box-noti">
+                    <div className="box-header d-flex justify-content-between">
                         Notification
-                        <button class="btn__exit-noti">
+                        <button className="btn__exit-noti">
                             <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                         </button>
                     </div>
-                    <div class="box-body">
-                        <div class="wrapper-title">
+                    <div className="box-body">
+                        <div className="wrapper-title">
                             <h4>System Notice</h4>
                         </div>
-                        <div class="list-noti">
-                            <div class="noti-item d-flex align-items-center">
+                        <div className="list-noti">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
-                            <div class="noti-item d-flex align-items-center">
+                            <div className="noti-item d-flex align-items-center">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class={isChat == true ? `box-chat active` : `box-chat`} id="box-chat">
-                    <div class="box-header d-flex justify-content-between">
+                <div className={isChat == true ? `box-chat active` : `box-chat`} id="box-chat">
+                    <div className="box-header d-flex justify-content-between">
                         Online Chat
-                        <button class="btn__exit-chat">
+                        <button className="btn__exit-chat">
                             <img onClick={() => setIsChat(!isChat)} src="./images/icons/deposit/icon-exit.svg" alt="" />
                         </button>
                     </div>
-                    <div class="box-body p-3">
-                        <div class="list-user-online">
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                    <div className="box-body p-3">
+                        <div className="list-user-online">
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
-                            <div class="info-user d-flex align-items-center">
-                                <div class="ava-user"></div>
-                                <div class="message">
-                                    <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                    <div class="cur-mess">Nội dung nhắn</div>
+                            <div className="info-user d-flex align-items-center">
+                                <div className="ava-user"></div>
+                                <div className="message">
+                                    <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                    <div className="cur-mess">Nội dung nhắn</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="box-action d-flex align-items-center">
+                    <div className="box-action d-flex align-items-center">
                         <input type="text" placeholder="Your message" />
                         <button><img src="./images/icons/deposit/send.svg" alt="" /></button>
                     </div>
@@ -552,17 +552,17 @@ const NavAuthen = () => {
                 )}
                 {isOpenConfirmResgiter && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth noti-success mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth noti-success mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 <div></div>
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)} alt="" />
                                 </button>
                             </div>
-                            <div class="box-content">
+                            <div className="box-content">
                                 <h3>Sign Up successfully</h3>
-                                <div class="submit d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button type="submit" className="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
                                 </div>
                             </div>
                         </div>
@@ -572,24 +572,24 @@ const NavAuthen = () => {
                 )}
                 {isOpenLogin && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth signin mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth signin mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Sign In
-                                <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
+                                <button className="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     {/* <label for="inputRePassword4">Email</label> */}
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                    <input type="email" className="form-control" placeholder="Email" />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     {/* <label for="inputRePassword4">password</label> */}
-                                    <input type="password" class="form-control" placeholder="Login Password" />
+                                    <input type="password" className="form-control" placeholder="Login Password" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
-                                    <label class="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
+                                    <label className="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
                                 </div>
                                 <div className='form-group'>
                                     {/* <label for="inputRePassword4">Verification Code</label> */}
@@ -599,11 +599,11 @@ const NavAuthen = () => {
                                     <input type="text" className="form-control" placeholder="Verification Code" />
                                     <span className="resend">Resend(60s)</span>
                                 </div>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
                                 </div>
-                                <p class="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
-                                    <a class="btn-redirect" onClick={handlerLogin}>Create
+                                <p className="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
+                                    <a className="btn-redirect" onClick={handlerLogin}>Create
                                         account</a>
                                 </p>
                             </form>
@@ -613,23 +613,23 @@ const NavAuthen = () => {
                 )}
                 {isOpenVerification && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth two-factor mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth two-factor mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Two-factor authentication
-                                <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                                <button className="btn__exit-chat" onClick={handlerLoginVerification}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <p class="text-center">Please enter the 6-digit authentication Code.</p>
-                                <div class="list-input-number d-flex">
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
+                                <p className="text-center">Please enter the 6-digit authentication Code.</p>
+                                <div className="list-input-number d-flex">
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
                                 </div>
 
                             </form>
@@ -639,23 +639,23 @@ const NavAuthen = () => {
                 )}
                 {isOpenResetPassword && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth enter-email mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth enter-email mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Password
-                                <button class="btn__exit-chat" onClick={handlerResetPassword}>
+                                <button className="btn__exit-chat" onClick={handlerResetPassword}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">Email</label>
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                    <input type="email" className="form-control" placeholder="Email" />
                                 </div>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
                                 </div>
-                                <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                                    <a class="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
+                                <p className="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                                    <a className="btn-redirect" onClick={handlerResetPassword}>Sign In</a>
                                 </p>
                             </form>
                         </div>
@@ -665,23 +665,23 @@ const NavAuthen = () => {
                 {isOpenResetAccount && (
                     <div className='transaction-detail2'>
 
-                        <div class="box-auth reset-password mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth reset-password mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Account Password
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerResetAccountPassword} alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">New password</label>
-                                    <input type="password" class="form-control" placeholder="New password" />
+                                    <input type="password" className="form-control" placeholder="New password" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">New password again</label>
-                                    <input type="password" class="form-control" placeholder="New password again" />
+                                    <input type="password" className="form-control" placeholder="New password again" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
                                 </div>
                                 <div className='form-group'>
@@ -692,11 +692,11 @@ const NavAuthen = () => {
                                     <input type="text" className="form-control" placeholder="Verification Code" />
                                     <span className="resend">Resend(60s)</span>
                                 </div>
-                                <p class="notice">Please enter the 6-digit verification code sent to your email. The code is
+                                <p className="notice">Please enter the 6-digit verification code sent to your email. The code is
                                     valid for 10
                                     minutes.</p>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
                                 </div>
                             </form>
                         </div>
@@ -706,17 +706,17 @@ const NavAuthen = () => {
                 {isOpenConfirmResetAccount && (
                     <div className='transaction-detail2'>
 
-                        <div class="box-auth noti-success mt-4 signAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth noti-success mt-4 signAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Password
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)} alt="" />
                                 </button>
                             </div>
-                            <div class="box-content">
+                            <div className="box-content">
                                 <h3>Password changed successfully</h3>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
                                 </div>
                             </div>
                         </div>

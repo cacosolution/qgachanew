@@ -14,67 +14,67 @@ const FourNumber = () => {
         <Layout>
 
             <div className='main-fournumber'>
-                <div class="main-content">
-                    <div class="banner-main">
+                <div className="main-content">
+                    <div className="banner-main">
                         <img src="./images/4number/main-four1.png" alt="" />
                     </div>
 
 
-                    <section class="four-number">
-                        <div class="row gx-3" style={{ width: "80%", margin: "auto" }}>
+                    <section className="four-number">
+                        <div className="row gx-3" style={{ width: "80%", margin: "auto" }}>
                             <div
-                                class="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-3">
+                                className="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-3">
                                 <img src="./images/4number/ticket1.png" alt="" />
-                                <div class="ticket-info d-flex justify-content-center flex-column align-items-center">
-                                    <h4 class="ticket-title">
+                                <div className="ticket-info d-flex justify-content-center flex-column align-items-center">
+                                    <h4 className="ticket-title">
                                         Only 67 tickets left
                                     </h4>
-                                    <button class="btn__prize-buy">2$</button>
+                                    <button className="btn__prize-buy">2$</button>
                                 </div>
                             </div>
                             <div
-                                class="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-6">
+                                className="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-6">
                                 <img src="./images/4number/ticket2.png" alt="" />
-                                <div class="ticket-info d-flex justify-content-center flex-column align-items-center">
-                                    <h4 class="ticket-title">
+                                <div className="ticket-info d-flex justify-content-center flex-column align-items-center">
+                                    <h4 className="ticket-title">
                                         Only 67 tickets left
                                     </h4>
-                                    <button class="btn__prize-buy">2$</button>
+                                    <button className="btn__prize-buy">2$</button>
                                 </div>
                             </div>
                             <div
-                                class="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-3">
+                                className="ticket-item d-flex flex-column align-items-center justify-content-end col-12 col-sm-3">
                                 <img src="./images/4number/ticket3.png" alt="" />
-                                <div class="ticket-info d-flex justify-content-center flex-column align-items-center">
-                                    <h4 class="ticket-title">
+                                <div className="ticket-info d-flex justify-content-center flex-column align-items-center">
+                                    <h4 className="ticket-title">
                                         Only 67 tickets left
                                     </h4>
-                                    <button class="btn__prize-buy">2$</button>
+                                    <button className="btn__prize-buy">2$</button>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section class="instruction">
+                    <section className="instruction">
                         <h4>Lottery Instructions</h4>
-                        <ul class="instruction-guide">
-                            <li class="item-guide">A provably fair algorithm is used to draw the lottery prizes.</li>
-                            <li class="item-guide">Prizes are drawn every 8 hours, at 00:00, 08:00, 16:00 UTC+0.</li>
-                            <li class="item-guide">You can buy a ticket for $0.1. The sale of tickets stops at 14:55
+                        <ul className="instruction-guide">
+                            <li className="item-guide">A provably fair algorithm is used to draw the lottery prizes.</li>
+                            <li className="item-guide">Prizes are drawn every 8 hours, at 00:00, 08:00, 16:00 UTC+0.</li>
+                            <li className="item-guide">You can buy a ticket for $0.1. The sale of tickets stops at 14:55
                                 UTC+0 every day.</li>
-                            <li class="item-guide">The player chooses six numbers for each ticket, the first five are
+                            <li className="item-guide">The player chooses six numbers for each ticket, the first five are
                                 from 1 to 36, And
                             </li>
-                            <li class="item-guide">the last one is from 1 to 10.</li>
-                            <li class="item-guide">You can choose numbers manually or automatically.
+                            <li className="item-guide">the last one is from 1 to 10.</li>
+                            <li className="item-guide">You can choose numbers manually or automatically.
                             </li>
-                            <li class="item-guide">Each draw produces six numbers.
+                            <li className="item-guide">Each draw produces six numbers.
                             </li>
-                            <li class="item-guide">The more numbers you match in the first five numbers, greater prize
+                            <li className="item-guide">The more numbers you match in the first five numbers, greater prize
                                 you will win.</li>
                         </ul>
                     </section>
-                    <div class="spacer-instruction"></div>
+                    <div className="spacer-instruction"></div>
                 </div>
             </div>
 

@@ -180,17 +180,17 @@ const Home = () => {
                 )}
                 {isOpenConfirmResgiter && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth noti-success mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth noti-success mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 <div></div>
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)} alt="" />
                                 </button>
                             </div>
-                            <div class="box-content">
+                            <div className="box-content">
                                 <h3>Sign Up successfully</h3>
-                                <div class="submit d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button type="submit" className="btn btn-primary" onClick={() => setIsOpenConfirmResgiter(!isOpenConfirmResgiter)}>Confirm</button>
                                 </div>
                             </div>
                         </div>
@@ -200,24 +200,24 @@ const Home = () => {
                 )}
                 {isOpenLogin && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth signin mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth signin mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Sign In
-                                <button class="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
+                                <button className="btn__exit-chat" onClick={() => setIsOpenLogin(false)}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     {/* <label for="inputRePassword4">Email</label> */}
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                    <input type="email" className="form-control" placeholder="Email" />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     {/* <label for="inputRePassword4">password</label> */}
-                                    <input type="password" class="form-control" placeholder="Login Password" />
+                                    <input type="password" className="form-control" placeholder="Login Password" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
-                                    <label class="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
+                                    <label className="forgot-pass" for="" onClick={handlerResetPassword}>Forgot Your Password?</label>
                                 </div>
                                 <div className='form-group'>
                                     {/* <label for="inputRePassword4">Verification Code</label> */}
@@ -227,11 +227,11 @@ const Home = () => {
                                     <input type="text" className="form-control" placeholder="Verification Code" />
                                     <span className="resend">Resend(60s)</span>
                                 </div>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerLoginVerification}>Sign In</button>
                                 </div>
-                                <p class="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
-                                    <p class="btn-redirect" onClick={handlerLogin}>Create
+                                <p className="text-start" style={{ color: "#9E9E9E" }}>New to Qgacha?
+                                    <p className="btn-redirect" onClick={handlerLogin}>Create
                                         account</p>
                                 </p>
                             </form>
@@ -241,23 +241,23 @@ const Home = () => {
                 )}
                 {isOpenVerification && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth two-factor mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth two-factor mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Two-factor authentication
-                                <button class="btn__exit-chat" onClick={handlerLoginVerification}>
+                                <button className="btn__exit-chat" onClick={handlerLoginVerification}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <p class="text-center">Please enter the 6-digit authentication Code.</p>
-                                <div class="list-input-number d-flex">
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
-                                    <div class="num-item"><input type="text" /></div>
+                                <p className="text-center">Please enter the 6-digit authentication Code.</p>
+                                <div className="list-input-number d-flex">
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
+                                    <div className="num-item"><input type="text" /></div>
                                 </div>
 
                             </form>
@@ -267,23 +267,23 @@ const Home = () => {
                 )}
                 {isOpenResetPassword && (
                     <div className='transaction-detail2'>
-                        <div class="box-auth enter-email mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth enter-email mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Password
-                                <button class="btn__exit-chat" onClick={handlerResetPassword}>
+                                <button className="btn__exit-chat" onClick={handlerResetPassword}>
                                     <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                                 </button>
                             </div>
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">Email</label>
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                    <input type="email" className="form-control" placeholder="Email" />
                                 </div>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerResetAccountPassword}>Submit</button>
                                 </div>
-                                <p class="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
-                                    <p class="btn-redirect" onClick={handlerResetPassword}>Sign In</p>
+                                <p className="text-start" style={{ color: "#9E9E9E" }}>Already have an account?
+                                    <p className="btn-redirect" onClick={handlerResetPassword}>Sign In</p>
                                 </p>
                             </form>
                         </div>
@@ -293,23 +293,23 @@ const Home = () => {
                 {isOpenResetAccount && (
                     <div className='transaction-detail2'>
 
-                        <div class="box-auth reset-password mt-4 loginAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth reset-password mt-4 loginAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Account Password
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={handlerResetAccountPassword} alt="" />
                                 </button>
                             </div>
 
                             <form>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">New password</label>
-                                    <input type="password" class="form-control" placeholder="New password" />
+                                    <input type="password" className="form-control" placeholder="New password" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="inputRePassword4">New password again</label>
-                                    <input type="password" class="form-control" placeholder="New password again" />
+                                    <input type="password" className="form-control" placeholder="New password again" />
                                     <img src="./images/icons/eye.svg" alt="show-pass" />
                                 </div>
                                 <div className='form-group'>
@@ -320,11 +320,11 @@ const Home = () => {
                                     <input type="text" className="form-control" placeholder="Verification Code" />
                                     <span className="resend">Resend(60s)</span>
                                 </div>
-                                <p class="notice">Please enter the 6-digit verification code sent to your email. The code is
+                                <p className="notice">Please enter the 6-digit verification code sent to your email. The code is
                                     valid for 10
                                     minutes.</p>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={handlerResetPassWordConfirm}>Confirm</button>
                                 </div>
                             </form>
                         </div>
@@ -334,17 +334,17 @@ const Home = () => {
                 {isOpenConfirmResetAccount && (
                     <div className='transaction-detail2'>
 
-                        <div class="box-auth noti-success mt-4 signAuthen">
-                            <div class="box-header d-flex justify-content-between align-items-center">
+                        <div className="box-auth noti-success mt-4 signAuthen">
+                            <div className="box-header d-flex justify-content-between align-items-center">
                                 Reset Password
-                                <button class="btn__exit-chat">
+                                <button className="btn__exit-chat">
                                     <img src="./images/icons/deposit/icon-exit.svg" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)} alt="" />
                                 </button>
                             </div>
-                            <div class="box-content">
+                            <div className="box-content">
                                 <h3>Password changed successfully</h3>
-                                <div class="submit d-flex justify-content-center">
-                                    <button class="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
+                                <div className="submit d-flex justify-content-center">
+                                    <button className="btn btn-primary" onClick={() => setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)}>Confirm</button>
                                 </div>
                             </div>
                         </div>
@@ -375,8 +375,8 @@ const Home = () => {
                         <button onClick={() => setIsOpenResgiter(!isOpenResgiter)} >SIGN UP NOW</button>
                     </div>
                     <img src="./images/img-main1.png" alt="banner-home" />
-                    <div class="mobile">
-                        <div class="list-social d-flex">
+                    <div className="mobile">
+                        <div className="list-social d-flex">
                             <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
                                 <img style={{ width: "15px" }} src="./images/icons/youtube.svg" alt="YouTube" />
                             </a>
@@ -391,53 +391,53 @@ const Home = () => {
                 </div>
 
 
-                <section class="feature mb-5">
-                    <div class="row gx-3">
+                <section className="feature mb-5">
+                    <div className="row gx-3">
 
-                        <div class="col-12 col-sm-6">
+                        <div className="col-12 col-sm-6">
                             <Link to="/upgrade">
                                 <img src="./images/img-main2.png" alt="" />
                             </Link>
                         </div>
 
 
-                        <div class="col-12 col-sm-6">
+                        <div className="col-12 col-sm-6">
                             <Link to="/tournament">
                                 <img src="./images/img-main3.png" alt="" />
                             </Link>
                         </div>
                     </div>
-                    <div class="row g-3 mt-3">
+                    <div className="row g-3 mt-3">
 
-                        <div class="col-12 col-sm-4 d-flex flex-column justify-content-end">
+                        <div className="col-12 col-sm-4 d-flex flex-column justify-content-end">
                             <Link to="/upgradesoon">
                                 <img src="./images/img-main4.png" alt="" />
 
                             </Link>
                         </div>
-                        <div class="col-12 col-sm-4">
+                        <div className="col-12 col-sm-4">
                             <Link to="/boxgacha">
                                 <img src="./images/img-main5.png" alt="" />
                             </Link>
                         </div>
-                        <div class="col-12 col-sm-4  d-flex flex-column justify-content-end">
+                        <div className="col-12 col-sm-4  d-flex flex-column justify-content-end">
                             <Link to="/mystery">
                                 <img src="./images/img-main6.png" alt="" />
                             </Link>
                         </div>
-                        <div class="col-12 col-sm-4">
+                        <div className="col-12 col-sm-4">
                             <Link to="/completedgacha">
                                 <img src="./images/img-main7.png" alt="" />
                             </Link>
                         </div>
 
-                        <div class="col-12 col-sm-4">
+                        <div className="col-12 col-sm-4">
                             <Link to="/reroll">
                                 <img src="./images/img-main8.png" alt="" />
                             </Link>
                         </div>
 
-                        <div class="col-12 col-sm-4">
+                        <div className="col-12 col-sm-4">
                             <Link to="/sugoroku">
                                 <img src="./images/img-main9.png" alt="" />
                             </Link>

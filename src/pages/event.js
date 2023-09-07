@@ -21,24 +21,24 @@ const Event = () => {
     }
     return (
         <Layout>
-            <div class="main-content main-event">
-                <button class="btn-event">Event</button>
-                <div class="banner-event">
+            <div className="main-content main-event">
+                <button className="btn-event">Event</button>
+                <div className="banner-event">
                     <img src="./images/event1.png" alt="banner-home" />
                 </div>
-                <div class="group__btn-event mt-2 mt-sm-5 d-flex align-items-center">
+                <div className="group__btn-event mt-2 mt-sm-5 d-flex align-items-center">
 
-                    <button class={`btn-event ${isEvenlastest ? "btn-archived" : "btn-last"} `} onClick={handlerEventLatest}>Latest Event</button>
+                    <button className={`btn-event ${isEvenlastest ? "btn-archived" : "btn-last"} `} onClick={handlerEventLatest}>Latest Event</button>
 
-                    <button class={`btn-event ${isEven ? "btn-archived" : "btn-last"} `} onClick={handlerEventArchived}>Archived</button>
+                    <button className={`btn-event ${isEven ? "btn-archived" : "btn-last"} `} onClick={handlerEventArchived}>Archived</button>
                 </div>
 
 
 
                 {isEven ? (
 
-                    <div class="list-event">
-                        <div className='class="row gx-3 gx-sm-0 gy-3 gy-sm-5"'>
+                    <div className="list-event">
+                        <div className='className="row gx-3 gx-sm-0 gy-3 gy-sm-5"'>
                             <table style={{ width: "100%" }}>
                                 <tr>
                                     <th>Ordinal</th>
@@ -52,14 +52,14 @@ const Event = () => {
                                     <td>10/8/2023</td>
                                     <td>Name Event</td>
                                     <td>Reward event</td>
-                                    <td class="status confirm">Confirmed</td>
+                                    <td className="status confirm">Confirmed</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>10/8/2023</td>
                                     <td>Name Event</td>
                                     <td>Reward event</td>
-                                    <td class="status unconfirm">Unconfirmed</td>
+                                    <td className="status unconfirm">Unconfirmed</td>
                                 </tr>
                             </table>
                         </div>
@@ -67,17 +67,17 @@ const Event = () => {
 
 
 
-                        <div class="spacer mb-5 pb-5"></div>
+                        <div className="spacer mb-5 pb-5"></div>
                     </div>
 
                 ) : isEvenlastest ? (
-                    <div class="list-event">
-                        <div class="row gx-3 gx-sm-0 gy-3 gy-sm-5">
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                    <div className="list-event">
+                        <div className="row gx-3 gx-sm-0 gy-3 gy-sm-5">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center" >
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center" >
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -85,11 +85,11 @@ const Event = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center">
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center">
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -97,11 +97,11 @@ const Event = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center">
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center">
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -109,11 +109,11 @@ const Event = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center">
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center">
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -121,11 +121,11 @@ const Event = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center">
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center">
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -133,11 +133,11 @@ const Event = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/eventdetail"} class="col-12 col-sm-4">
-                                <div class="event-item">
+                            <Link to={"/eventdetail"} className="col-12 col-sm-4">
+                                <div className="event-item">
                                     <img src="./images/nft-upgrade.png" alt="" />
-                                    <div class="event-info d-flex justify-content-between align-items-center">
-                                        <div class="time my-3">
+                                    <div className="event-info d-flex justify-content-between align-items-center">
+                                        <div className="time my-3">
                                             Ends at 23:59:59 28/8/2023
                                             <p>Join Cash X Share</p>
                                         </div>
@@ -152,7 +152,7 @@ const Event = () => {
                     <></>
                 )}
 
-                <div class="spacer mb-5 pb-5"></div>
+                <div className="spacer mb-5 pb-5"></div>
             </div>
         </Layout>
 

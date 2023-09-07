@@ -16,14 +16,14 @@ const Sugoroku = () => {
     return (
 
         <Layout>
-            <div class="main-content">
-                <div class="bread-crumb">
+            <div classNameName="main-content">
+                <div className="bread-crumb">
                     <Link>Gacha</Link> <BiChevronRight size={20} /> <Link>Sugoroku Gacha</Link>
                 </div>
-                <section class="my-3">
+                <section className="my-3">
                     <img src="./images/comming-sugo.png" alt="" />
                 </section>
-                <div class="spacer my-5 py-5"></div>
+                <div className="spacer my-5 py-5"></div>
             </div>
         </Layout>
 

@@ -13,14 +13,14 @@ const Qgccomming = () => {
     return (
 
         <Layout>
-            <div class="main-content">
-                <div class="bread-crumb pvp">
+            <div className="main-content">
+                <div className="bread-crumb pvp">
                     <Link>QGC</Link>
                 </div>
-                <section class="my-3">
+                <section className="my-3">
                     <img src="./images/comming-coin.png" alt="" />
                 </section>
-                <div class="spacer my-5 py-5"></div>
+                <div className="spacer my-5 py-5"></div>
             </div>
         </Layout>
     )

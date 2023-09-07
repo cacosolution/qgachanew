@@ -14,31 +14,31 @@ import Footer from "../component/Footer/footer";
 import BoxOverlay from "../component/Box/BoxOverlay";
 const ticketform = () => {
   return (
-    <div class="container-wrapper">
+    <div className="container-wrapper">
       <Navbar />
       <main>
         <Sidebar />
-        <div class="main-home">
-          <div class="main-content" style={{ width: "80%" }}>
-            <section class="section-gift-ticket">
-              <div class="gift-ticket-header">
+        <div className="main-home">
+          <div className="main-content" style={{ width: "80%" }}>
+            <section className="section-gift-ticket">
+              <div className="gift-ticket-header">
                 <p>Gift Ticket</p>
                 <img src="./images/icons/deposit/icon-exit.svg" alt="close" />
               </div>
 
-              <div class="gift-ticket-content">
-                <div class="gift-ticket-title">
+              <div className="gift-ticket-content">
+                <div className="gift-ticket-title">
                   <img src="./images/gift.png" alt="gift" />
                   <h6>Successfully bought [N] lottery tickets!</h6>
                   <p>Share to your friends and they can choose lottery numbers themselves</p>
                 </div>
 
-                <div class="gift-ticket-code">
-                  <div class="gift-ticket-code__title">
+                <div className="gift-ticket-code">
+                  <div className="gift-ticket-code__title">
                     <p>Gift Link</p>
                     <p>Referral Code</p>
                   </div>
-                  <div class="gift-ticket-code__content">
+                  <div className="gift-ticket-code__content">
                     <div>
                       <p>Try your luck, man!</p>
                       <img src="./images/icons/deposit/icon-copy.svg" alt="copy" />
@@ -54,26 +54,26 @@ const ticketform = () => {
                   </p>
                 </div>
 
-                <div class="gift-ticket-social">
+                <div className="gift-ticket-social">
                   <p>Or Share With</p>
-                  <div class="d-flex">
+                  <div className="d-flex">
                     <a href="#"><img src="./images/twitter--media-twitter-social.png"
                       alt="twitter" /></a>
-                    <a class="ms-4" href="#"><img src="./images/telegramgift.svg" alt="telegram" /></a>
+                    <a className="ms-4" href="#"><img src="./images/telegramgift.svg" alt="telegram" /></a>
                   </div>
                 </div>
               </div>
             </section>
 
 
-            <section class="section-gift-ticket">
-              <div class="gift-ticket-header">
+            <section className="section-gift-ticket">
+              <div className="gift-ticket-header">
                 <p>Gift Ticket</p>
                 <img src="./images/icons/deposit/icon-exit.svg" alt="close" />
               </div>
 
-              <div class="gift-ticket-content">
-                <div class="gift-ticket-received-title">
+              <div className="gift-ticket-content">
+                <div className="gift-ticket-received-title">
                   <img src="./images/gift.png" alt="gift" />
                   <h6>you’ve received</h6>
                   <p>free lottery tickets</p>
@@ -81,9 +81,9 @@ const ticketform = () => {
                   <span>x1</span>
                 </div>
 
-                <div class="gift-ticket-received-content">
-                  <div class="gift-ticket-received-user">
-                    <p class="d-flex align-items-center justify-content-center">
+                <div className="gift-ticket-received-content">
+                  <div className="gift-ticket-received-user">
+                    <p className="d-flex align-items-center justify-content-center">
                       <span>From: </span> <img src="./images/icons/avatar-default.svg" />
                       <span>Name 1</span>
                     </p>
@@ -91,8 +91,8 @@ const ticketform = () => {
                     <p>“Try your luck, bro!”</p>
                   </div>
 
-                  <p class="gift-ticket-received-expiryTime">tickets expire in: 00h:00m:00s</p>
-                  <button class="gift-ticket-received-button">
+                  <p className="gift-ticket-received-expiryTime">tickets expire in: 00h:00m:00s</p>
+                  <button className="gift-ticket-received-button">
                     claim tickets
                   </button>
                 </div>
@@ -100,14 +100,14 @@ const ticketform = () => {
             </section>
 
 
-            <section class="transaction-detail">
-              <div class="gift-ticket-header">
+            <section className="transaction-detail">
+              <div className="gift-ticket-header">
                 <p>transaction detail</p>
                 <img src="./images/icons/deposit/icon-exit.svg" alt="close" />
               </div>
 
-              <div class="transaction-detail-content">
-                <div class="transaction-detail-currency">
+              <div className="transaction-detail-content">
+                <div className="transaction-detail-currency">
                   <img src="./images/Rectangle.png" alt="Rectangle" />
                   <div>
                     <p>+ 0.000000</p>
@@ -115,20 +115,20 @@ const ticketform = () => {
                   </div>
                 </div>
 
-                <div class="transaction-detail-info">
+                <div className="transaction-detail-info">
                   <div>
                     <p>Status</p>
                     <span id="status">Success</span>
                   </div>
                   <div>
                     <p>Txid</p>
-                    <span class="d-flex">abc123456789 <img class="ms-1"
+                    <span className="d-flex">abc123456789 <img className="ms-1"
                       src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
 
                   </div>
                   <div>
                     <p>Order ID</p>
-                    <span class="d-flex">ABC7878y7990890 <img class="ms-1"
+                    <span className="d-flex">ABC7878y7990890 <img className="ms-1"
                       src="./images/icons/deposit/icon-copy.svg" alt="copy" /></span>
 
                   </div>
@@ -141,7 +141,7 @@ const ticketform = () => {
             </section>
 
 
-            <section class="transaction-table">
+            <section className="transaction-table">
               <table>
                 <thead>
 
@@ -173,9 +173,9 @@ const ticketform = () => {
 
                         <p>Total</p>
                         <p>1</p>
-                        <div> <button class="d-flex align-items-center justify-content-center"><img
+                        <div> <button className="d-flex align-items-center justify-content-center"><img
                           src="./images/icons/pre.png" alt="previous" /></button>
-                          <button class="d-flex align-items-center justify-content-center"><img
+                          <button className="d-flex align-items-center justify-content-center"><img
                             src="./images/icons/next.png" alt="next" /></button>
                         </div>
                       </div>

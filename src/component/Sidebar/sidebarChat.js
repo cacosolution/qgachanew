@@ -19,138 +19,138 @@ const SidebarChat = () => {
         <>
             <div className={isSidebarChat === true ? "side-chat active-chat" : "side-chat"}>
                 <header >
-                    <div class={isSidebarChat === true ? `box-chat active` : null} id="box-chat" >
-                        <div class="box-header d-flex justify-content-between">
+                    <div className={isSidebarChat === true ? `box-chat active` : null} id="box-chat" >
+                        <div className="box-header d-flex justify-content-between">
                             Online Chat
-                            <button class="btn__exit-chat" onClick={() => setIsSidebarChat(false)}>
+                            <button className="btn__exit-chat" onClick={() => setIsSidebarChat(false)}>
                                 <img src="./images/icons/deposit/icon-exit.svg" alt="" />
                             </button>
                         </div>
 
-                        <div class="box-body p-3">
-                            <div class="list-user-online">
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                        <div className="box-body p-3">
+                            <div className="list-user-online">
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
-                                <div class="info-user d-flex align-items-center">
-                                    <div class="ava-user"></div>
-                                    <div class="message">
-                                        <div class="user-name">Name1 <span class="time"> 00:00</span></div>
-                                        <div class="cur-mess">Nội dung nhắn</div>
+                                <div className="info-user d-flex align-items-center">
+                                    <div className="ava-user"></div>
+                                    <div className="message">
+                                        <div className="user-name">Name1 <span className="time"> 00:00</span></div>
+                                        <div className="cur-mess">Nội dung nhắn</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="box-action d-flex align-items-center">
+                        <div className="box-action d-flex align-items-center">
                             <input type="text" placeholder="Your message" />
                             <button><img src="./images/icons/deposit/send.svg" alt="" /></button>
                         </div>

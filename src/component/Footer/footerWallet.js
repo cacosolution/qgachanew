@@ -58,17 +58,17 @@ const FooterWallet = () => {
     return (
         <div className="bg-footer">
             <footer className={`${isOpenSideBar && "active"}`}>
-                <div class="footer-content ">
+                <div className="footer-content ">
                     <div className="footer-contact d-flex">
                         <h4 >PARTNER</h4>
                     </div>
-                    <div class="img-box">
+                    <div className="img-box">
                         <img src="./images/baka.png" alt="" />
                         <h5>BAKAC</h5>
                     </div>
-                    <div class="line-white mt-3"></div>
-                    <div class="footer-contact d-flex ">
-                        <div class="contact-para">
+                    <div className="line-white mt-3"></div>
+                    <div className="footer-contact d-flex ">
+                        <div className="contact-para">
                             <p>The online gacha platform has become a widespread and captivating cultural phenomenon
                                 nowadays. With the advancement
                                 of
@@ -76,7 +76,7 @@ const FooterWallet = () => {
                                 openings and participate in
                                 diverse
                                 gaming and entertainment applications that utilize gacha systems.</p>
-                            <p class="mt-12">
+                            <p className="mt-12">
                                 The prominent features of the online gacha platform lie in its commemorative,
                                 surprising, and diverse nature. Players
                                 often can collect unique items, attractive characters, or high-value goods. This
@@ -84,9 +84,9 @@ const FooterWallet = () => {
                                 curiosity not only for young gamers but also draws the attention of adult players.
                             </p>
                         </div>
-                        <div class="follow-contact pc">
-                            <h4 class="text-blue">Follow us</h4>
-                            <div class="list-social d-flex">
+                        <div className="follow-contact pc">
+                            <h4 className="text-blue">Follow us</h4>
+                            <div className="list-social d-flex">
                                 <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
                                     <img style={{ width: "15px" }} src="./images/icons/youtube.svg" alt="YouTube" />
                                 </a>
@@ -97,26 +97,26 @@ const FooterWallet = () => {
                                     <img style={{ width: "15px" }} src="./images/icons/tele.svg" alt="Telegram" />
                                 </a>
                             </div>
-                            <h4 class="text-blue hd-email">Email</h4>
+                            <h4 className="text-blue hd-email">Email</h4>
                             <span>support@qgacha.com</span>
                         </div>
-                        <div class="line-y mt-12"></div>
-                        <div class="get-intouch pc">
+                        <div className="line-y mt-12"></div>
+                        <div className="get-intouch pc">
                             <h3>GET IN TOUCH</h3>
-                            <h5 class="text-blue py-3">EMAIL</h5>
+                            <h5 className="text-blue py-3">EMAIL</h5>
                             <input placeholder="Your email" />
-                            <h5 class="text-blue py-3">MESSAGE</h5>
-                            <textarea class="mb-2" name="" id="" cols="30" rows="5"></textarea>
+                            <h5 className="text-blue py-3">MESSAGE</h5>
+                            <textarea className="mb-2" name="" id="" cols="30" rows="5"></textarea>
                             <button>Submit</button>
                         </div>
-                        <div class="line-white my-1 mobile"></div>
-                        <h3 class="mobile">GET IN TOUCH</h3>
-                        <div class="wrapper-contact mobile">
-                            <div class="row gx-0">
-                                <div class="col-6">
-                                    <div class="follow-contact">
-                                        <h4 class="text-blue">Follow us</h4>
-                                        <div class="list-social d-flex">
+                        <div className="line-white my-1 mobile"></div>
+                        <h3 className="mobile">GET IN TOUCH</h3>
+                        <div className="wrapper-contact mobile">
+                            <div className="row gx-0">
+                                <div className="col-6">
+                                    <div className="follow-contact">
+                                        <h4 className="text-blue">Follow us</h4>
+                                        <div className="list-social d-flex">
                                             {/* <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
                       <img style={{ width: "14px" }} src="./images/icons/youtube.svg" alt="YouTube" />
                     </a>
@@ -127,15 +127,15 @@ const FooterWallet = () => {
                       <img style={{ width: "14px" }} src="./images/icons/tele.svg" alt="Telegram" />
                     </a> */}
                                         </div>
-                                        <h4 class="text-blue hd-email">Email</h4>
-                                        <div class="email-info">support@qgacha.com</div>
+                                        <h4 className="text-blue hd-email">Email</h4>
+                                        <div className="email-info">support@qgacha.com</div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="get-intouch">
-                                        <h4 class="text-blue email-label">EMAIL</h4>
+                                <div className="col-6">
+                                    <div className="get-intouch">
+                                        <h4 className="text-blue email-label">EMAIL</h4>
                                         <input placeholder="Your email" />
-                                        <h4 class="text-blue message">MESSAGE</h4>
+                                        <h4 className="text-blue message">MESSAGE</h4>
                                         <textarea name="" id="" cols="30" rows="5"></textarea>
                                         <button>Submit</button>
                                     </div>
@@ -143,9 +143,9 @@ const FooterWallet = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="line-white mt-39"></div>
-                    <div class="footer-info d-flex">
-                        <div class="box box-logo">
+                    <div className="line-white mt-39"></div>
+                    <div className="footer-info d-flex">
+                        <div className="box box-logo">
                             <img src="./images/icons/logo.svg" alt="" />
                             <p>
                                 Qgacha is a community-based platform providing its players with the best online
@@ -154,7 +154,7 @@ const FooterWallet = () => {
                                 in experiences beyond your
                                 imagination.
                             </p>
-                            <div class="list-social d-flex">
+                            <div className="list-social d-flex">
                                 <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">
                                     <img style={{ width: "14px" }} src="./images/icons/youtube.svg" alt="YouTube" />
                                 </a>
@@ -166,10 +166,10 @@ const FooterWallet = () => {
                                 </a>
                             </div>
                         </div>
-                        <div class="mobile wrapp-link">
-                            <div class="row gx-0">
-                                <div class="col-5">
-                                    <div class="list-link">
+                        <div className="mobile wrapp-link">
+                            <div className="row gx-0">
+                                <div className="col-5">
+                                    <div className="list-link">
                                         <h4>QGACHA</h4>
                                         <ul>
 
@@ -181,14 +181,14 @@ const FooterWallet = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <div class="get-help">
+                                <div className="col-2">
+                                    <div className="get-help">
                                         <h4>GET HELP</h4>
-                                        <div class="link-faq"><Link to="/faq">FAQ</Link></div>
+                                        <div className="link-faq"><Link to="/faq">FAQ</Link></div>
                                     </div>
                                 </div>
-                                <div class="col-5">
-                                    <div class="box box-docs">
+                                <div className="col-5">
+                                    <div className="box box-docs">
                                         <h4>DOCS</h4>
                                         <ul>
                                             <li><a href="">Privacy Policy</a></li>
@@ -198,9 +198,9 @@ const FooterWallet = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="line-yblue pc"></div>
-                        <div class="box box-link d-flex pc">
-                            <div class="list-link">
+                        <div className="line-yblue pc"></div>
+                        <div className="box box-link d-flex pc">
+                            <div className="list-link">
                                 <h4>QGACHA</h4>
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
@@ -211,8 +211,8 @@ const FooterWallet = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="box box-link d-flex pc">
-                            <div class="list-link" style={{ textAlign: "right" }}>
+                        <div className="box box-link d-flex pc">
+                            <div className="list-link" style={{ textAlign: "right" }}>
                                 <h4>GET HELP</h4>
                                 <ul>
                                     <li><Link to="/faq">FAQ</Link></li>
@@ -220,9 +220,9 @@ const FooterWallet = () => {
                             </div>
 
                         </div>
-                        <div class="line-yblue pc"></div>
-                        <div class="box box-link d-flex pc">
-                            <div class="list-link">
+                        <div className="line-yblue pc"></div>
+                        <div className="box box-link d-flex pc">
+                            <div className="list-link">
                                 <h4>DOCS</h4>
                                 <ul>
                                     <li><a href="">Privacy Policy</a></li>
@@ -230,14 +230,14 @@ const FooterWallet = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="line-yblue pc"></div>
+                        <div className="line-yblue pc"></div>
 
                     </div>
                 </div>
-                <div class="line-white top-copy"></div>
-                <div class="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
-                <div class="mobile menu-bottom" style={{ zIndex: 999999 }}>
-                    <div class="list-feature">
+                <div className="line-white top-copy"></div>
+                <div className="text-center copy-right">Copyright QGacha ©2023 All Rights Reserved.</div>
+                <div className="mobile menu-bottom" style={{ zIndex: 999999 }}>
+                    <div className="list-feature">
                         <div
                             className={`menu-featurefooter ${activeFeature === 'Balance' ? 'active' : ''}`}
                             onClick={() => handlerChangeBalance('Balance')}

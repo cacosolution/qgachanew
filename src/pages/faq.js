@@ -11,24 +11,24 @@ import { Link } from "react-router-dom";
 const Faq = () => {
   return (
     <Layout>
-      <div class="main-faq">
-        <div class="main-content">
-          <button class="btn-faq">FAQ</button>
-          <section class="section-faq">
+      <div className="main-faq">
+        <div className="main-content">
+          <button className="btn-faq">FAQ</button>
+          <section className="section-faq">
             <h2>Frequently asked questions</h2>
-            <div class="faq-box">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
+            <div className="faq-box">
+              <div className="card">
+                <div className="card-header" id="headingOne">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link d-flex justify-content-between"
+                      className="btn btn-link d-flex justify-content-between"
                       data-toggle="collapse"
                       data-target="#meaning"
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
-                      <div class="btn-title">
-                        <span class="no-faq">01</span> What is Gacha game?
+                      <div className="btn-title">
+                        <span className="no-faq">01</span> What is Gacha game?
                       </div>
                       <svg
                         width="8"
@@ -47,29 +47,29 @@ const Faq = () => {
                 </div>
                 <div
                   id="meaning"
-                  class="collapse"
+                  className="collapse"
                   aria-labelledby="headingOne"
                   data-parent="#accordion"
                 >
-                  <div class="card-body">
+                  <div className="card-body">
                     A gacha game operates by spending money to open gift boxes
                     and collect valuable items. The rarity and value of these
                     items depend on the player’s luck.
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
+              <div className="card">
+                <div className="card-header" id="headingTwo">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link collapsed d-flex justify-content-between"
+                      className="btn btn-link collapsed d-flex justify-content-between"
                       data-toggle="collapse"
                       data-target="#competition"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      <div class="btn-title">
-                        <span class="no-faq">02</span> What are the different
+                      <div className="btn-title">
+                        <span className="no-faq">02</span> What are the different
                         genres of Gacha games?
                       </div>
                       <svg
@@ -89,28 +89,28 @@ const Faq = () => {
                 </div>
                 <div
                   id="competition"
-                  class="collapse"
+                  className="collapse"
                   aria-labelledby="headingTwo"
                 >
-                  <div class="card-body">
+                  <div className="card-body">
                     There are different genres of Gacha Games like: Complete
                     Gacha, Box Gacha, Re-roll Gacha, Upgrade Gacha, Volume
                     Gacha, Consecutive Gacha, Mystery Gacha, Sugoroku Gacha.
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" id="headingThree">
-                  <h5 class="mb-0">
+              <div className="card">
+                <div className="card-header" id="headingThree">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link collapsed d-flex justify-content-between"
+                      className="btn btn-link collapsed d-flex justify-content-between"
                       data-toggle="collapse"
                       data-target="#ecosystem"
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      <div class="btn-title">
-                        <span class="no-faq">03</span>What does the QGacha
+                      <div className="btn-title">
+                        <span className="no-faq">03</span>What does the QGacha
                         ecosystem offer?
                       </div>
                       <svg
@@ -130,10 +130,10 @@ const Faq = () => {
                 </div>
                 <div
                   id="ecosystem"
-                  class="collapse"
+                  className="collapse"
                   aria-labelledby="headingThree"
                 >
-                  <div class="card-body">
+                  <div className="card-body">
                     The QGacha ecosystem offers a community-based platform
                     revolutionizing Gacha gaming through blockchain. It
                     provides an enhanced Gacha experience with NFT ownership,
@@ -144,18 +144,18 @@ const Faq = () => {
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" id="headingFour">
-                  <h5 class="mb-0">
+              <div className="card">
+                <div className="card-header" id="headingFour">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link collapsed d-flex justify-content-between"
+                      className="btn btn-link collapsed d-flex justify-content-between"
                       data-toggle="collapse"
                       data-target="#howtoDeposit"
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      <div class="btn-title">
-                        <span class="no-faq">04</span>How to deposit?
+                      <div className="btn-title">
+                        <span className="no-faq">04</span>How to deposit?
                       </div>
                       <svg
                         width="8"
@@ -174,10 +174,10 @@ const Faq = () => {
                 </div>
                 <div
                   id="howtoDeposit"
-                  class="collapse"
+                  className="collapse"
                   aria-labelledby="headingFour"
                 >
-                  <div class="card-body">
+                  <div className="card-body">
                     Deposit Instructions: <br />
                     <Link>Log into Your Account</Link>: Access your
                     cryptocurrency exchange or wallet account using your
@@ -207,18 +207,18 @@ const Faq = () => {
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header" id="headingFive">
-                  <h5 class="mb-0">
+              <div className="card">
+                <div className="card-header" id="headingFive">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link collapsed d-flex justify-content-between"
+                      className="btn btn-link collapsed d-flex justify-content-between"
                       data-toggle="collapse"
                       data-target="#howtoWithdraw"
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      <div class="btn-title">
-                        <span class="no-faq">05</span>How to withdraw?
+                      <div className="btn-title">
+                        <span className="no-faq">05</span>How to withdraw?
                       </div>
                       <svg
                         width="8"
@@ -237,10 +237,10 @@ const Faq = () => {
                 </div>
                 <div
                   id="howtoWithdraw"
-                  class="collapse"
+                  className="collapse"
                   aria-labelledby="headingFive"
                 >
-                  <div class="card-body">
+                  <div className="card-body">
                     Withdrawal Instructions: <br />
                     <Link>Login to Your Account</Link>: Sign in to your
                     cryptocurrency exchange or wallet account. <br />

@@ -10,23 +10,23 @@ const EventNodata = () => {
 
     return (
         <Layout>
-            <div class="main-content main-event">
-                <button class="btn-event">Event</button>
-                <div class="banner-event">
+            <div className="main-content main-event">
+                <button className="btn-event">Event</button>
+                <div className="banner-event">
                     <img src="./images/event1.png" alt="banner-home" />
                 </div>
-                <div class="group__btn-event d-flex align-items-center">
-                    <button class="btn-event btn-last">Latest Event</button>
-                    <button class="btn-event btn-archived">Archived</button>
+                <div className="group__btn-event d-flex align-items-center">
+                    <button className="btn-event btn-last">Latest Event</button>
+                    <button className="btn-event btn-archived">Archived</button>
                 </div>
 
-                <div class="m-5">
-                    <div class="p-5 text-center">
+                <div className="m-5">
+                    <div className="p-5 text-center">
                         Oops! There is no data yet!
                     </div>
                 </div>
 
-                <div class="spacer mb-5 pb-5"></div>
+                <div className="spacer mb-5 pb-5"></div>
             </div>
         </Layout>
     )

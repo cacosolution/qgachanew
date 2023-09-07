@@ -40,60 +40,60 @@ const Sidebar = () => {
     return (
         <>
             <div className={isOpenSideBar === true ? "side-bar active-show" : "side-bar"}>
-                <div class="header-menu pc fixed-active">
-                    <div class=" d-flex align-items-center justify-content-center" style={{ gap: "20    px" }}>
+                <div className="header-menu pc fixed-active">
+                    <div className=" d-flex align-items-center justify-content-center" style={{ gap: "20    px" }}>
                         <img id="menu-sidebar" style={{ width: "24px" }} onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: !isOpenSideBar, position: sideBarPosition })} src="./images/icons/menu-icon.svg"
                             alt="header-logo" />
                         <span>MENU</span>
-                        <div class="line-yblue"></div>
+                        <div className="line-yblue"></div>
                     </div>
 
 
                 </div>
-                <div class="mobile">
-                    <div class="header-menu-mobile d-flex align-items-center justify-content-between ">
+                <div className="mobile">
+                    <div className="header-menu-mobile d-flex align-items-center justify-content-between ">
                         <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
                         <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
                     </div>
                 </div>
 
-                <div class="sidebar-content">
-                    <div class="event d-flex flex-column align-items-center">
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "" })} class="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
+                <div className="sidebar-content">
+                    <div className="event d-flex flex-column align-items-center">
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "" })} className="wrap-box d-flex align-items-center justify-content-center" style={{ color: "white" }} to="/event" >
                             EVENT
                         </Link>
-                        <div class="d-flex feature-event">
+                        <div className="d-flex feature-event">
                             <img src="./images/icons/quest.svg" onClick={() => setIsOpenQuest(!isOpenQuest)} alt="quest" />
                             <img src="./images/icons/spin.svg" onClick={() => setIsOpenSpin(!isOpenSpin)} alt="spin" />
                         </div>
                     </div>
-                    <div class="sidebar__list-item">
+                    <div className="sidebar__list-item">
 
-                        <div class="sidebar-item tag-icon d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/tagicon.svg" alt="" class="item-icon" />
+                        <div className="sidebar-item tag-icon d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/tagicon.svg" alt="" className="item-icon" />
                         </div>
-                        <div class="sidebar-item quest-icon d-flex align-items-center" >
-                            <img style={{ width: "24px" }} src="./images/icons/quest.png" alt="" class="item-icon" />
+                        <div className="sidebar-item quest-icon d-flex align-items-center" >
+                            <img style={{ width: "24px" }} src="./images/icons/quest.png" alt="" className="item-icon" />
                         </div>
-                        <div class="sidebar-item spin-icon d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" class="item-icon" />
+                        <div className="sidebar-item spin-icon d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/spin-small.svg" alt="" className="item-icon" />
                         </div>
-                        <div class="sidebar-item refer-feature d-flex align-items-center" onClick={() => setIsOpenRefer(!isOpenRefer)}>
-                            <img style={{ width: "40px" }} src="./images/icons/treasure.png" alt="" class="item-icon" />
-                            <div class="item-content">REFER</div>
+                        <div className="sidebar-item refer-feature d-flex align-items-center" onClick={() => setIsOpenRefer(!isOpenRefer)}>
+                            <img style={{ width: "40px" }} src="./images/icons/treasure.png" alt="" className="item-icon" />
+                            <div className="item-content">REFER</div>
                         </div>
-                        <div class="card ">
+                        <div className="card ">
 
-                            <div class={`card-header sidebar-item ${sideBarPosition === "gacha" && "active__sidebar-item"}`} id="gacha-sidebar">
-                                <h5 class="mb-0">
+                            <div className={`card-header sidebar-item ${sideBarPosition === "gacha" && "active__sidebar-item"}`} id="gacha-sidebar">
+                                <h5 className="mb-0">
                                     <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                        className="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
                                         data-toggle="collapse" data-target="#gacha" aria-expanded="false"
                                         aria-controls="gacha">
-                                        <div class="card-btn d-flex align-items-center">
+                                        <div className="card-btn d-flex align-items-center">
                                             <img style={{ width: "24px" }} src="./images/icons/gacha.png" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">Gacha</div>
+                                                className="item-icon" />
+                                            <div className="item-content">Gacha</div>
                                         </div>
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -105,38 +105,38 @@ const Sidebar = () => {
                                 </h5>
 
                             </div>
-                            <div id="gacha" class="collapse active" aria-labelledby="gacha-sidebar">
-                                <div class="card-body">
+                            <div id="gacha" className="collapse active" aria-labelledby="gacha-sidebar">
+                                <div className="card-body">
                                     <ul>
                                         <li>
-                                            <Link class="d-flex align-items-center " onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/completedgacha">
+                                            <Link className="d-flex align-items-center " onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/completedgacha">
                                                 <img src="./images/icons/com-gaga.png" alt="" />Complete Gacha
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/boxgacha">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/boxgacha">
                                                 <img src="./images/icons/box-gacha.png" alt="" />Box Gacha
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/reroll">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/reroll">
                                                 <img src="./images/icons/reroll.png" alt="" />Re-roll Gacha
                                             </Link>
                                         </li>
 
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/upgradesoon">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/upgradesoon">
                                                 <img src="./images/icons/upgrade-gacha.png" alt="" />Upgrade Gacha
                                             </Link>
                                         </li>
 
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/mystery">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/mystery">
                                                 <img src="./images/icons/icon-mystery.png" alt="" />Mystery Gacha
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/sugoroku">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "gacha" })} to="/sugoroku">
                                                 <img src="./images/icons/sugoroku.png" alt="" />Sugoroku Gacha
                                             </Link>
                                         </li>
@@ -144,18 +144,18 @@ const Sidebar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div className="card">
 
-                            <div class={`card-header sidebar-item ${sideBarPosition === "lucky" && "active__sidebar-item"}`} id="lucky-number-sidebar">
-                                <h5 class="mb-0">
+                            <div className={`card-header sidebar-item ${sideBarPosition === "lucky" && "active__sidebar-item"}`} id="lucky-number-sidebar">
+                                <h5 className="mb-0">
                                     <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                        className="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
                                         data-toggle="collapse" data-target="#lucky-number" aria-expanded="false"
                                         aria-controls="lucky-number">
-                                        <div class="card-btn d-flex align-items-center">
+                                        <div className="card-btn d-flex align-items-center">
                                             <img style={{ width: "24px" }} src="./images/icons/lucky-number.png" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">Lucky Number</div>
+                                                className="item-icon" />
+                                            <div className="item-content">Lucky Number</div>
                                         </div>
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -167,16 +167,16 @@ const Sidebar = () => {
                                 </h5>
                             </div>
 
-                            <div id="lucky-number" class="collapse" aria-labelledby="lucky-number-sidebar">
-                                <div class="card-body">
+                            <div id="lucky-number" className="collapse" aria-labelledby="lucky-number-sidebar">
+                                <div className="card-body">
                                     <ul>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/fournumber">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/fournumber">
                                                 <img src="./images/icons/com-gaga.png" alt="" />4 Số
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/jackpot">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "lucky" })} to="/jackpot">
                                                 <img src="./images/icons/box-gacha.png" alt="" />Jackpot
                                             </Link>
                                         </li>
@@ -184,18 +184,18 @@ const Sidebar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div className="card">
 
-                            <div class={`card-header sidebar-item ${sideBarPosition === "qgc" && "active__sidebar-item"}`} id="qgc-sidebar">
-                                <h5 class="mb-0">
+                            <div className={`card-header sidebar-item ${sideBarPosition === "qgc" && "active__sidebar-item"}`} id="qgc-sidebar">
+                                <h5 className="mb-0">
                                     <button
-                                        class="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
+                                        className="btn btn-link btn__sidebar-item d-flex justify-content-between align-items-center"
                                         data-toggle="collapse" data-target="#qgc" aria-expanded="false"
                                         aria-controls="qgc">
-                                        <div class="card-btn d-flex align-items-center">
+                                        <div className="card-btn d-flex align-items-center">
                                             <img style={{ width: "24px" }} src="./images/icons/coin-gold.svg" alt=""
-                                                class="item-icon" />
-                                            <div class="item-content">QGC <span>(Upcoming)</span></div>
+                                                className="item-icon" />
+                                            <div className="item-content">QGC <span>(Upcoming)</span></div>
                                         </div>
                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -207,11 +207,11 @@ const Sidebar = () => {
                                 </h5>
                             </div>
 
-                            <div id="qgc" class="collapse" aria-labelledby="qgc-sidebar">
-                                <div class="card-body">
+                            <div id="qgc" className="collapse" aria-labelledby="qgc-sidebar">
+                                <div className="card-body">
                                     <ul>
                                         <li>
-                                            <Link class="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "qgc" })} to="/qgccomming">
+                                            <Link className="d-flex align-items-center" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "qgc" })} to="/qgccomming">
                                                 <img src="./images/icons/qgc-coin.png" alt="" style={{ width: "30px" }} />QCC Game
                                             </Link>
                                         </li>
@@ -220,57 +220,57 @@ const Sidebar = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "baka" })} to="/bakacomming" class={`sidebar-item ${sideBarPosition === "baka" && "active__sidebar-item"} d-flex align-items-center`}>
-                            <img style={{ width: "24px" }} src="./images/baka.png" alt="" class="item-icon" />
-                            <div class="item-content">BAKAC <span>(Upcoming)</span></div>
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "baka" })} to="/bakacomming" className={`sidebar-item ${sideBarPosition === "baka" && "active__sidebar-item"} d-flex align-items-center`}>
+                            <img style={{ width: "24px" }} src="./images/baka.png" alt="" className="item-icon" />
+                            <div className="item-content">BAKAC <span>(Upcoming)</span></div>
                         </Link>
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "pvp" })} to="/pvpcomming" class={`sidebar-item ${sideBarPosition === "pvp" && "active__sidebar-item"} d-flex align-items-center`}>
-                            <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" class="item-icon" />
-                            <div class="item-content">PVP <span>(Upcoming)</span></div>
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "pvp" })} to="/pvpcomming" className={`sidebar-item ${sideBarPosition === "pvp" && "active__sidebar-item"} d-flex align-items-center`}>
+                            <img style={{ width: "24px" }} src="./images/icons/icon-pvp.png" alt="" className="item-icon" />
+                            <div className="item-content">PVP <span>(Upcoming)</span></div>
                         </Link>
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "upgrade" })} to="/upgrade" class={`sidebar-item ${sideBarPosition === "upgrade" && "active__sidebar-item"} d-flex align-items-center`}>
-                            <img style={{ width: "24px", }} src="./images/icons/rectangle.png" alt="" class="item-icon" />
-                            <div class="item-content">Upgrade <span>(Upcoming)</span></div>
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "upgrade" })} to="/upgrade" className={`sidebar-item ${sideBarPosition === "upgrade" && "active__sidebar-item"} d-flex align-items-center`}>
+                            <img style={{ width: "24px", }} src="./images/icons/rectangle.png" alt="" className="item-icon" />
+                            <div className="item-content">Upgrade <span>(Upcoming)</span></div>
                         </Link>
 
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "tournament" })} to="/tournament" class={`sidebar-item ${sideBarPosition === "tournament" && "active__sidebar-item"} d-flex align-items-center`}>
-                            <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" class="item-icon" />
-                            <div class="item-content">Tournament</div>
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "tournament" })} to="/tournament" className={`sidebar-item ${sideBarPosition === "tournament" && "active__sidebar-item"} d-flex align-items-center`}>
+                            <img style={{ width: "24px" }} src="./images/icons/tournament.png" alt="" className="item-icon" />
+                            <div className="item-content">Tournament</div>
                         </Link>
-                        <div class="sidebar-item vip-small d-flex align-items-center">
-                            <img style={{ width: "100%" }} src="./images/icons/vipsmallicon.png" alt="" class="item-icon" />
+                        <div className="sidebar-item vip-small d-flex align-items-center">
+                            <img style={{ width: "100%" }} src="./images/icons/vipsmallicon.png" alt="" className="item-icon" />
                         </div>
-                        <div class="sidebar-vipclub">
-                            <img src="./images/vipclub-wrap.svg" alt="" class="item-icon" />
-                            <div class="vipclub-content d-flex text-center align-items-center flex-column">
+                        <div className="sidebar-vipclub">
+                            <img src="./images/vipclub-wrap.svg" alt="" className="item-icon" />
+                            <div className="vipclub-content d-flex text-center align-items-center flex-column">
                                 <img style={{ width: "34px" }} src="./images/icons/vipclub.png" alt="" />
                                 <div><strong>VIP Club</strong> (Upcoming)</div>
                             </div>
                         </div>
-                        <div class="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/top-member.png" alt="" class="item-icon" />
-                            <div class="item-content">Top Member <span>(Upcoming)</span></div>
+                        <div className="sidebar-item d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/top-member.png" alt="" className="item-icon" />
+                            <div className="item-content">Top Member <span>(Upcoming)</span></div>
                         </div>
-                        <div class="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" class="item-icon" />
-                            <div class="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
+                        <div className="sidebar-item d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" className="item-icon" />
+                            <div className="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                         </div>
 
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "affiliate" })} to={"/affiliate"} class={`sidebar-item ${sideBarPosition === "affiliate" && "active__sidebar-item"} d-flex align-items-center`}>
-                            <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" class="item-icon" />
-                            <div class="item-content">Affiliate</div>
+                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: "affiliate" })} to={"/affiliate"} className={`sidebar-item ${sideBarPosition === "affiliate" && "active__sidebar-item"} d-flex align-items-center`}>
+                            <img style={{ width: "24px" }} src="./images/icons/affiliate.png" alt="" className="item-icon" />
+                            <div className="item-content">Affiliate</div>
                         </Link>
-                        <div class="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" class="item-icon" />
-                            <div class="item-content">Forum <span>(Upcoming)</span></div>
+                        <div className="sidebar-item d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/forum.png" alt="" className="item-icon" />
+                            <div className="item-content">Forum <span>(Upcoming)</span></div>
                         </div>
-                        <div class="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/blog.png" alt="" class="item-icon" />
-                            <div class="item-content">Blog <span>(Upcoming)</span></div>
+                        <div className="sidebar-item d-flex align-items-center">
+                            <img style={{ width: "24px" }} src="./images/icons/blog.png" alt="" className="item-icon" />
+                            <div className="item-content">Blog <span>(Upcoming)</span></div>
                         </div>
-                        <button style={{ width: "100%" }} class="sidebar-item live-support d-flex align-items-center" onClick={() => setIsOpenSupport(!isOpenSupport)}>
-                            <img style={{ width: "24px" }} src="./images/icons/livesupport.png" alt="" class="item-icon" />
-                            <div class="item-content">Live Support</div>
+                        <button style={{ width: "100%" }} className="sidebar-item live-support d-flex align-items-center" onClick={() => setIsOpenSupport(!isOpenSupport)}>
+                            <img style={{ width: "24px" }} src="./images/icons/livesupport.png" alt="" className="item-icon" />
+                            <div className="item-content">Live Support</div>
                         </button>
 
                     </div>

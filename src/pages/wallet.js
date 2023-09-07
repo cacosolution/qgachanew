@@ -47,41 +47,41 @@ const Wallet = () => {
         <>
             <div className="container-wrapper open">
                 < Layout >
-                    <div class="main-deposit">
-                        <div class="deposit-content">
-                            <button class="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
-                                <img class="mobile"
+                    <div className="main-deposit">
+                        <div className="deposit-content">
+                            <button className="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
+                                <img className="mobile"
                                     src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
-                            <div class="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
+                            <div className="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
                                 <div>
-                                    <div class="list-feature hide-pc">
+                                    <div className="list-feature hide-pc">
                                         <ul>
 
-                                            <li class="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
-                                                <img src="./images/icons/deposit/wallet.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Balance</h4>
+                                            <li className="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
+                                                <img src="./images/icons/deposit/wallet.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Balance</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
-                                                <img src="./images/icons/deposit/deposit.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Deposit</h4>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
+                                                <img src="./images/icons/deposit/deposit.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Deposit</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
 
-                                                <img src="./images/icons/deposit/withdraw.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Withdraw</h4>
+                                                <img src="./images/icons/deposit/withdraw.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Withdraw</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/buy.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Buy Crypto <span>(Coming Soon)</span></h4>
+                                            <li className="feature-item d-flex align-items-center">
+                                                <img src="./images/icons/deposit/buy.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Buy Crypto <span>(Coming Soon)</span></h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/nft.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">NFTs <span>(Coming Soon)</span></h4>
+                                            <li className="feature-item d-flex align-items-center">
+                                                <img src="./images/icons/deposit/nft.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">NFTs <span>(Coming Soon)</span></h4>
                                             </li>
 
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
-                                                <img src="./images/icons/deposit/transaction.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Transaction</h4>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
+                                                <img src="./images/icons/deposit/transaction.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Transaction</h4>
                                             </li>
 
 
@@ -91,36 +91,36 @@ const Wallet = () => {
                                 </div>
 
                             </div>
-                            <div class="feature-content  d-flex">
+                            <div className="feature-content  d-flex">
                                 <div>
-                                    <div class="list-feature hide-mobi">
+                                    <div className="list-feature hide-mobi">
                                         <ul>
 
-                                            <li class="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
-                                                <img src="./images/icons/deposit/wallet.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Balance</h4>
+                                            <li className="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
+                                                <img src="./images/icons/deposit/wallet.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Balance</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
-                                                <img src="./images/icons/deposit/deposit.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Deposit</h4>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
+                                                <img src="./images/icons/deposit/deposit.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Deposit</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
 
-                                                <img src="./images/icons/deposit/withdraw.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Withdraw</h4>
+                                                <img src="./images/icons/deposit/withdraw.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Withdraw</h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/buy.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Buy Crypto <span>(Coming Soon)</span></h4>
+                                            <li className="feature-item d-flex align-items-center">
+                                                <img src="./images/icons/deposit/buy.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Buy Crypto <span>(Coming Soon)</span></h4>
                                             </li>
-                                            <li class="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/nft.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">NFTs <span>(Coming Soon)</span></h4>
+                                            <li className="feature-item d-flex align-items-center">
+                                                <img src="./images/icons/deposit/nft.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">NFTs <span>(Coming Soon)</span></h4>
                                             </li>
 
-                                            <li class="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
-                                                <img src="./images/icons/deposit/transaction.svg" alt="" class="feature-icon" />
-                                                <h4 class="feature-title text-15">Transaction</h4>
+                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
+                                                <img src="./images/icons/deposit/transaction.svg" alt="" className="feature-icon" />
+                                                <h4 className="feature-title text-15">Transaction</h4>
                                             </li>
 
 
@@ -130,69 +130,69 @@ const Wallet = () => {
                                 </div>
 
                                 {isOpenBalance ? (
-                                    <div class="feature-detail">
-                                        <div class="header-balance d-flex justify-content-between align-items-center pb-4">
-                                            <div class="total d-flex align-items-center">
+                                    <div className="feature-detail">
+                                        <div className="header-balance d-flex justify-content-between align-items-center pb-4">
+                                            <div className="total d-flex align-items-center">
                                                 <img src="./images/icons/gold.svg" alt="" />
                                                 Total Balance
                                             </div>
-                                            <div class="total-value">$ 0.000000</div>
+                                            <div className="total-value">$ 0.000000</div>
                                         </div>
-                                        <h3 class="mt-4">Fiat Currency</h3>
-                                        <div class="currency-show d-flex align-items-center">
+                                        <h3 className="mt-4">Fiat Currency</h3>
+                                        <div className="currency-show d-flex align-items-center">
                                             <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                            <div class="text-cur">USDT</div>
+                                            <div className="text-cur">USDT</div>
                                         </div>
-                                        <h3 class="mt-4">Crypto Currency</h3>
-                                        <div class="currency-show d-flex align-items-center">
+                                        <h3 className="mt-4">Crypto Currency</h3>
+                                        <div className="currency-show d-flex align-items-center">
                                             <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                            <div class="text-cur">USDT</div>
+                                            <div className="text-cur">USDT</div>
                                         </div>
 
-                                        <div class="currency-show d-flex align-items-center">
+                                        <div className="currency-show d-flex align-items-center">
                                             <img src="./images/icons/qgc-coin.png" alt="" />
-                                            <div class="text-cur d-flex justify-content-between upcomming">QGC
+                                            <div className="text-cur d-flex justify-content-between upcomming">QGC
                                                 <span>(Upcoming)</span>
                                             </div>
                                         </div>
 
                                     </div>
                                 ) : isOpenDeposit ? (
-                                    <div class="feature-detail">
-                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="crypto-tab" data-toggle="tab"
+                                    <div className="feature-detail">
+                                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link active" id="crypto-tab" data-toggle="tab"
                                                     data-target="#crypto" type="button" role="tab" aria-controls="crypto"
                                                     aria-selected="true">Crypto</button>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                     type="button" role="tab" aria-controls="fiat"
                                                     aria-selected="false">Fiat (coming soon)</button>
                                             </li>
                                         </ul>
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="crypto" role="tabpanel"
+                                        <div className="tab-content" id="myTabContent">
+                                            <div className="tab-pane fade show active" id="crypto" role="tabpanel"
                                                 aria-labelledby="crypto-tab">
-                                                <h5 class="text-15 mt-3">Deposit Currency</h5>
-                                                <div class="list-currency mt-1 d-flex">
-                                                    <button class="currency d-flex align-items-center">
+                                                <h5 className="text-15 mt-3">Deposit Currency</h5>
+                                                <div className="list-currency mt-1 d-flex">
+                                                    <button className="currency d-flex align-items-center">
                                                         <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                        <div class="text-cur">USDT</div>
+                                                        <div className="text-cur">USDT</div>
                                                     </button>
-                                                    <button class="currency d-flex align-items-center">
+                                                    <button className="currency d-flex align-items-center">
                                                         <img src="./images/icons/qgc-coin.png" alt="" />
-                                                        <div class="text-cur">QGC</div>
+                                                        <div className="text-cur">QGC</div>
                                                     </button>
                                                 </div>
-                                                <div class="currency-show d-flex align-items-center">
+                                                <div className="currency-show d-flex align-items-center">
                                                     <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                    <div class="text-cur">USDT</div>
+                                                    <div className="text-cur">USDT</div>
                                                 </div>
 
-                                                <h4 class="text-15 mt-4">Choose Network</h4>
-                                                <div class="mt-3 d-flex justify-content-between select-network align-items-center">
-                                                    <select class="text-15">
+                                                <h4 className="text-15 mt-4">Choose Network</h4>
+                                                <div className="mt-3 d-flex justify-content-between select-network align-items-center">
+                                                    <select className="text-15">
                                                         <option selected>BEP20</option>
                                                         <option value="1">P2P</option>
                                                         <option value="2">BEP2N</option>
@@ -204,56 +204,56 @@ const Wallet = () => {
                                                             fill="white" />
                                                     </svg>
                                                 </div>
-                                                <h4 class="text-15 mt-4">Minimum of 10.00 USDT deposit</h4>
+                                                <h4 className="text-15 mt-4">Minimum of 10.00 USDT deposit</h4>
                                                 <div
-                                                    class="d-flex flex-column flex-sm-row align-items-center justify-content-between info-address mt-3">
-                                                    <div class="qr d-flex justify-content-center align-items-center">
+                                                    className="d-flex flex-column flex-sm-row align-items-center justify-content-between info-address mt-3">
+                                                    <div className="qr d-flex justify-content-center align-items-center">
                                                         Mã QR
                                                     </div>
-                                                    <div class="address-code">
-                                                        <h5 class="text-15">Deposit Address</h5>
+                                                    <div className="address-code">
+                                                        <h5 className="text-15">Deposit Address</h5>
                                                         <div
-                                                            class="d-flex align-items-center justify-content-between address-wrapper mt-1">
-                                                            <p class="m-0">mã ví...</p>
-                                                            <button class="text-15">Copy</button>
+                                                            className="d-flex align-items-center justify-content-between address-wrapper mt-1">
+                                                            <p className="m-0">mã ví...</p>
+                                                            <button className="text-15">Copy</button>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="notice mt-3">
-                                                    <p class="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
+                                                <div className="notice mt-3">
+                                                    <p className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
                                                         address. Coins will be
                                                         deposited automatically after 6 network confirmations.
                                                         Smart contract addresses are not supported(Contact us).</p>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
+                                            <div className="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
                                             </div>
                                         </div>
                                     </div>
                                 ) : isOpenWithdraw ? (
-                                    <div class="feature-detail">
-                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="crypto-tab" data-toggle="tab"
+                                    <div className="feature-detail">
+                                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link active" id="crypto-tab" data-toggle="tab"
                                                     data-target="#crypto" type="button" role="tab" aria-controls="crypto"
                                                     aria-selected="true">Crypto</button>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                     type="button" role="tab" aria-controls="fiat"
                                                     aria-selected="false">Fiat (coming soon)</button>
                                             </li>
                                         </ul>
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="crypto" role="tabpanel"
+                                        <div className="tab-content" id="myTabContent">
+                                            <div className="tab-pane fade show active" id="crypto" role="tabpanel"
                                                 aria-labelledby="crypto-tab">
-                                                <h5 class="text-15 mt-3">Withdraw Currency</h5>
-                                                <div class="currency-show d-flex align-items-center balance">
+                                                <h5 className="text-15 mt-3">Withdraw Currency</h5>
+                                                <div className="currency-show d-flex align-items-center balance">
                                                     <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                    <div class="text-cur">USDT</div>
-                                                    <div class="balance-detail flex-grow-1 text-end">
-                                                        <span>Blance <strong class="strong-withdraw">0,00</strong></span>
+                                                    <div className="text-cur">USDT</div>
+                                                    <div className="balance-detail flex-grow-1 text-end">
+                                                        <span>Blance <strong className="strong-withdraw">0,00</strong></span>
                                                         <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -262,9 +262,9 @@ const Wallet = () => {
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <h4 class="text-15 mt-4">Choose Network</h4>
-                                                <div class="mt-3 d-flex justify-content-between select-network align-items-center">
-                                                    <select class="text-15">
+                                                <h4 className="text-15 mt-4">Choose Network</h4>
+                                                <div className="mt-3 d-flex justify-content-between select-network align-items-center">
+                                                    <select className="text-15">
                                                         <option selected>BEP20</option>
                                                         <option value="1">P2P</option>
                                                         <option value="2">BEP2N</option>
@@ -276,61 +276,61 @@ const Wallet = () => {
                                                             fill="white" />
                                                     </svg>
                                                 </div>
-                                                <h4 class="text-15 mt-4">Withdrawal Address</h4>
-                                                <div class="currency-show">
+                                                <h4 className="text-15 mt-4">Withdrawal Address</h4>
+                                                <div className="currency-show">
                                                     <p>Fill in carefully according to the specific currency</p>
                                                 </div>
                                                 <div style={{ height: "20px" }}
-                                                    class="d-flex justify-content-between align-items-center mt-3">
-                                                    <h4 class="text-15">Withdraw amount</h4>
+                                                    className="d-flex justify-content-between align-items-center mt-3">
+                                                    <h4 className="text-15">Withdraw amount</h4>
                                                     <span>Min: 109.622844</span>
                                                 </div>
                                                 <div
-                                                    class="currency-show show-list d-flex align-items-center justify-content-between">
+                                                    className="currency-show show-list d-flex align-items-center justify-content-between">
                                                     <span>0.0000</span>
-                                                    <div class="list-amount d-flex align-items-center">
-                                                        <div class="amount-item text-center">
+                                                    <div className="list-amount d-flex align-items-center">
+                                                        <div className="amount-item text-center">
                                                             Min
                                                         </div>
-                                                        <div class="amount-item text-center">
+                                                        <div className="amount-item text-center">
                                                             25%
                                                         </div>
-                                                        <div class="amount-item text-center">
+                                                        <div className="amount-item text-center">
                                                             50%
                                                         </div>
-                                                        <div class="amount-item text-center">
+                                                        <div className="amount-item text-center">
                                                             Max
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="currency-show value-withdraw mt-3 px-3 pt-2">
-                                                    <div class="value-item py-2 d-flex justify-content-between align-items-center">
+                                                <div className="currency-show value-withdraw mt-3 px-3 pt-2">
+                                                    <div className="value-item py-2 d-flex justify-content-between align-items-center">
                                                         <h5>Withdraw amount:</h5>
-                                                        <span class="value">0.00000000 USDT</span>
+                                                        <span className="value">0.00000000 USDT</span>
                                                     </div>
-                                                    <div class="value-item py-2 d-flex justify-content-between align-items-center">
+                                                    <div className="value-item py-2 d-flex justify-content-between align-items-center">
                                                         <h5>Fee:</h5>
-                                                        <span class="value">0.00000 USDT</span>
+                                                        <span className="value">0.00000 USDT</span>
                                                     </div>
-                                                    <div class="value-item py-2 d-flex justify-content-between align-items-center">
+                                                    <div className="value-item py-2 d-flex justify-content-between align-items-center">
                                                         <h5>Total withdrawal amount:</h5>
-                                                        <span class="value">0.00000 USDT</span>
+                                                        <span className="value">0.00000 USDT</span>
                                                     </div>
                                                 </div>
 
-                                                <div class="notice mt-3">
-                                                    <p class="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
+                                                <div className="notice mt-3">
+                                                    <p className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
                                                         address. Coins will be
                                                         deposited automatically after 6 network confirmations.
                                                         Smart contract addresses are not supported(Contact us).</p>
                                                 </div>
 
-                                                <div class="text-center confirm-wrap">
-                                                    <button id="confirm-withdraw" class="btn__purple-confirm">Confirm</button>
+                                                <div className="text-center confirm-wrap">
+                                                    <button id="confirm-withdraw" className="btn__purple-confirm">Confirm</button>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
+                                            <div className="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
                                             </div>
                                         </div>
                                     </div>
