@@ -152,7 +152,9 @@ header .header-content {
 }
 
 @media (min-width: 1070px) {
-  .img-index.active {}
+  .img-index.active {
+    padding-left: 118px;
+  }
 }
 
 @media (max-width: 1068px) {

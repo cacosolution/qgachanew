@@ -6,18 +6,23 @@ import Navbar from '../component/Navbar/navbar';
 import Sidebar from '../component/Sidebar/sidebar';
 import Footer from '../component/Footer/footer';
 import BoxOverlay from '../component/Box/BoxOverlay';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CarouselIndex from '../component/Carousel/carouselIndex';
 import { useSelector } from 'react-redux';
 import SidebarChat from '../component/Sidebar/sidebarChat';
+import { SidebarContext } from '../context/sideBarContext';
 
 
 const Home = () => {
     const {
         isOpenSideBar,
-        isSidebarChat
     } = useSelector((state) => state.siderBar);
+
+    const {
+        isSidebarChat,
+    } = useContext(SidebarContext)
+
     const [isOpenResgiter, setIsOpenResgiter] = useState(false)
     const [isOpenLogin, setIsOpenLogin] = useState(false)
     const [isOpenResetPassword, setIsOpenResetPassword] = useState(false)
@@ -62,11 +67,13 @@ const Home = () => {
         setIsOpenResetAccount(!isOpenResetAccount)
         setIsOpenConfirmResetAccount(!isOpenConfirmResetAccount)
     }
+
+
     return (
         <div className="container-wrapper">
             <Navbar />
             <main>
-                <div className={`main-home ${isOpenSideBar  && "active"}`} >
+                <div className={`main-home ${isOpenSideBar ? "active" : isSidebarChat && "active"}`} >
 
                     <div className="main-content">
                         <Sidebar />

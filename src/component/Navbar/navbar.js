@@ -33,7 +33,6 @@ const Navbar = () => {
     const navigate = useNavigate();
     const {
         isOpenSideBar,
-        sideBarPosition
     } = useSelector((state) => state.siderBar);
 
     const chatRef = useRef(null);
@@ -42,7 +41,7 @@ const Navbar = () => {
     const langRef = useRef(null);
 
     const ModalChat = () => {
-        setIsSidebarChat(true);
+        setIsSidebarChat(!isSidebarChat);
         setIsNofi(false);
         setIsProfile(false);
         setIsLang(false);
