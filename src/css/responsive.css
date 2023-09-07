@@ -1,7 +1,9 @@
 .contact-para {
   padding-right: 10px;
-  margin: auto;
+  margin: 0 40px auto 0;
 }
+
+
 
 .container-wrapper main button.btn-support img {
   width: 45px;

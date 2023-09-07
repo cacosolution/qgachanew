@@ -152,9 +152,7 @@ header .header-content {
 }
 
 @media (min-width: 1070px) {
-  .img-index.active {
-    padding-left: 118px;
-  }
+  .img-index.active {}
 }
 
 @media (max-width: 1068px) {
@@ -712,20 +710,9 @@ header.fixed-active {
   transition: 0.3s;
 }
 
-@media (max-width: 576px) {
-  footer {
-    width: 100%;
-    margin: auto;
-
-  }
-}
-
-@media (min-width: 577px) {
-  footer {
-    width: 85%;
-    margin: auto;
-
-  }
+footer {
+  width: 90%;
+  margin: auto;
 }
 
 .footer-border {
@@ -736,6 +723,12 @@ header.fixed-active {
   footer.active {
     width: 75%;
     margin: 0 auto;
+  }
+
+  .contact-para {
+    padding-right: 10px;
+    margin: 0 40px auto 0;
+    width: 40%;
   }
 }
 
@@ -822,6 +815,7 @@ footer .footer-content .img-box h5 {
   footer .footer-content .footer-contact {
     width: 80%;
     margin: auto;
+    padding-top: 40px;
   }
 }
 
