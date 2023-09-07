@@ -1,9 +1,9 @@
 .side-bar.active-show {
-  width: 340px;
+  width: 320px;
 }
 
 .side-chat.active-chat {
-  width: 325px;
+  width: 320px;
   box-shadow: -2px 0px 17px black;
 }
 
@@ -316,7 +316,7 @@
 
 .side-bar .header-menu {
   padding-top: 21px;
-  padding-bottom: 19px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #787878;
 }
 
