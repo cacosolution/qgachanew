@@ -635,6 +635,12 @@
   background-color: #291a3a;
 }
 
+@media (max-width: 850px) {
+  .listmobile {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .listmobile {
     display: none;
@@ -1021,7 +1027,7 @@
 
   .main-deposit .deposit-content {
     padding-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
 
 
