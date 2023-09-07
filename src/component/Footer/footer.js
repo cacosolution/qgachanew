@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
             <div class="mobile wrapp-link">
               <div class="row gx-0">
-                <div class="col-5">
+                <div class="col-4">
                   <div class="list-link">
                     <h4>QGACHA</h4>
                     <ul>
@@ -148,18 +148,36 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div class="col-2">
-                  <div class="get-help">
+                <div class="col-4">
+                  <div class="list-link">
                     <h4>GET HELP</h4>
-                    <div class="link-faq"><Link to="/faq">FAQ</Link></div>
+                    <ul>
+
+                      <li><Link to="/faq">FAQ</Link></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+
+                    </ul>
+
                   </div>
                 </div>
-                <div class="col-5">
-                  <div class="box box-docs">
+                <div class="col-4">
+                  <div class="list-link">
                     <h4>DOCS</h4>
                     <ul>
                       <li><a href="">Privacy Policy</a></li>
                       <li><a href="">Terms & Conditions</a></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
                     </ul>
                   </div>
                 </div>
