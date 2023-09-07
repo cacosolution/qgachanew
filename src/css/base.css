@@ -941,6 +941,7 @@ footer .footer-content .footer-contact .get-intouch button {
     padding-bottom: 20px;
     width: 80%;
     margin: auto;
+    justify-content: center;
   }
 }
 
@@ -980,7 +981,8 @@ footer .footer-content .footer-info .line-yblue {
 footer .footer-content .footer-info .box {}
 
 footer .footer-content .footer-info .box-logo {
-  padding-right: 27px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 footer .footer-content .footer-info .box-logo img {
@@ -2841,4 +2843,10 @@ input {
   /* Đổi màu nền thành xanh lá */
   border-color: green;
   /* Đổi màu viền thành xanh lá */
+}
+
+.email-msg {
+  padding-left: 20px;
+  padding-top: 12px;
+  border-left: 1px solid #727070;
 }

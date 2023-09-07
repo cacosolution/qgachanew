@@ -98,7 +98,7 @@ const Footer = () => {
                     <div class="email-info" style={{ textDecoration: "underline" }}>support@qgacha.com</div>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 email-msg">
                   <div class="get-intouch">
                     <h4 class="text-blue email-label">EMAIL</h4>
                     <input placeholder="Your email" />
