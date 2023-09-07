@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <div class="img-box">
             <img src="./images/baka.png" alt="" />
-            <h5>BAKA</h5>
+            <h5>BAKAC</h5>
           </div>
           <div class="line-white mt-3"></div>
           <div class="footer-contact d-flex ">

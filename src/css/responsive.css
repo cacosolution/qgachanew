@@ -42,6 +42,9 @@
   .pc {
     display: block !important;
   }
+
+
+
 }
 
 @media (min-width: 577px) and (max-width: 949px) {
@@ -1049,6 +1052,8 @@
     margin-bottom: 3px;
   }
 }
+
+
 
 @media (max-width: 360px) {
   main .main-home .main-content .banner-main .banner-content h3 {
