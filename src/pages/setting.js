@@ -228,8 +228,7 @@ const Setting = () => {
                                             <div class="content-sw">
                                                 <div class="switch-item d-flex align-items-center">
                                                     <div class="form-check form-switch">
-                                                        <input class="form-check-input swtich-btn" style={{ width: "43px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
-
+                                                        <input class="form-check-input swtich-btn " style={{ width: "43px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
                                                     </div>
                                                     <div class="item-info">
                                                         <h4>Enable Ghost Mode</h4>
