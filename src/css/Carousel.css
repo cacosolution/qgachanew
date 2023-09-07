@@ -23,3 +23,7 @@
 .slick-next:before {
     display: none;
 }
+
+.slick-dots li button:before {
+    color: white;
+}

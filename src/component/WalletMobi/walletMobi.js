@@ -14,6 +14,7 @@ import FooterWallet from "../Footer/footerWallet";
 import BoxOverlay from "../../component/Box/BoxOverlay";
 import Transaction from "../../component/Transaction/Transaction";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 
@@ -45,14 +46,17 @@ const WalletMobi = () => {
 
     return (
         <div className="container-wrapper openmobi">
-            <Navbar />
+            {/* <Navbar /> */}
             <main>
                 <Sidebar />
                 <div className="main-deposit">
                     <div className="deposit-content">
                         <button className="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
-                            <img className="mobile"
-                                src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
+                            <Link to="/">
+                                <img className="mobile"
+                                    src="./images/icons/deposit/icon-exit.svg" alt="" />
+                            </Link>
+                        </button>
                         <div className="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
                             <div>
                                 <div className="list-feature hide-pc">

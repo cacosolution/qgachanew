@@ -10,11 +10,18 @@
   display: none;
 }
 
+.feature-mobi {
+  display: none;
+}
 
 
 @media (max-width: 950px) {
   .feature {
     display: none;
+  }
+
+  .feature-mobi {
+    display: block;
   }
 
   .caurousel-index {
@@ -36,8 +43,13 @@
     display: none;
   }
 
+  .feature-mobi {
+    display: block;
+  }
+
   .caurousel-index {
-    margin-top: 80px;
+    margin-top: 0px;
+    margin-bottom: 50px;
     display: block;
   }
 

@@ -445,6 +445,21 @@ const Home = () => {
                     </div>
                 </section>
 
+
+                <section class="feature-mobi mb-5" >
+                    <div class="row gy-4 gy-sm-0 gx-3" style={{ marginTop: "20px" }}>
+                        <div class="col-12 col-sm-6">
+                            <img src="./images/img-main2.png" alt="" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <img src="./images/img-main3.png" alt="" />
+                        </div>
+                    </div>
+                </section>
+
+
+
+
                 <div className='caurousel-index '>
                     <CarouselIndex />
                 </div>
@@ -468,12 +483,7 @@ const Home = () => {
                             <div className="col-4">
                                 <img src="./images/treasure-box.png" alt="" />
                             </div>
-                            <div className="col-4">
-                                <img src="./images/treasure-box.png" alt="" />
-                            </div>
-                            <div className="col-4">
-                                <img src="./images/treasure-box.png" alt="" />
-                            </div>
+
                         </div>
                     </div>
                     <div className="news-item">
@@ -482,12 +492,7 @@ const Home = () => {
                             <div className="col-4">
                                 <img src="./images/treasure-box.png" alt="" />
                             </div>
-                            <div className="col-4">
-                                <img src="./images/treasure-box.png" alt="" />
-                            </div>
-                            <div className="col-4">
-                                <img src="./images/treasure-box.png" alt="" />
-                            </div>
+
                         </div>
                     </div>
                 </section>

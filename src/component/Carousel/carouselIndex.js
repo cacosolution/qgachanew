@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const CarouselIndex = () => {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         // arrows: true, // Đã bỏ chọn
         fade: false,
@@ -46,12 +46,7 @@ const CarouselIndex = () => {
         <div>
             <div className="carou">
                 <Slider {...settings} autoplay autoplaySpeed={2000}>
-                    <Link to="/upgrade">
-                        <img src="./images/img-main2.png" alt="" width={"100%"} height={"100%"} />
-                    </Link>
-                    <Link to="/tournament">
-                        <img src="./images/img-main3.png" alt="" width={"100%"} height={"100%"} />
-                    </Link>
+
                     <Link to="/upgradesoon">
                         <img src="./images/img-main4.png" alt="" width={"100%"} height={"100%"} />
 

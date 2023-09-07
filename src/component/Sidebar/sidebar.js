@@ -50,7 +50,7 @@ const Sidebar = () => {
 
 
                 </div>
-                <div className="mobile">
+                <div className="mobile bg-header">
                     <div className="header-menu-mobile d-flex align-items-center justify-content-between ">
                         <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
                         <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />

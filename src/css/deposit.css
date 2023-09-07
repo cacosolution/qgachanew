@@ -90,6 +90,24 @@
   width: 108px;
 }
 
+@media (max-width: 840px) {
+  .side-bar.active-show .sidebar-content .event img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-bar.active-show .sidebar-content .event img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 567px) {
+  .side-bar.active-show .sidebar-content .event img {
+    width: 130px;
+  }
+}
+
 .side-bar.active-show .sidebar-content .event img[alt=spin] {
   margin-left: 10px;
 }
@@ -129,7 +147,7 @@
 .side-bar.active-show .sidebar-content .sidebar__list-item .sidebar-item .item-content {
   display: block;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 500;
   line-height: 19px;
