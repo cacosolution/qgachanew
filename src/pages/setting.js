@@ -220,14 +220,18 @@ const Setting = () => {
                                         <div class="line-x"></div>
                                         <div class="content-sw">
                                             <div class="switch-item d-flex align-items-center">
-                                                <img class="me-3" src="./images/icons/switch.svg" alt="" />
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                                </div>
                                                 <div class="item-info">
                                                     <h4>Enable Ghost Mode</h4>
                                                     <h5>Your Actions won't appear in Live Stats</h5>
                                                 </div>
                                             </div>
                                             <div class="switch-item d-flex align-items-center">
-                                                <img class="me-3" src="./images/icons/switch-notactive.svg" alt="" />
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                                </div>
                                                 <div class="item-info">
                                                     <h4>Hide all your statistics</h4>
                                                     <h5>Other users won't be able to view your statistics</h5>
@@ -246,7 +250,9 @@ const Setting = () => {
                                         </div>
                                         <div class="content-sw">
                                             <div class="switch-item d-flex align-items-center">
-                                                <img class="me-3" src="./images/icons/switch.svg" alt="" />
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                                </div>
                                                 <div class="item-info">
                                                     <h4>Hide all your statistics</h4>
                                                     <h5>Other users won't be able to view your statistics</h5>

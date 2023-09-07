@@ -116,9 +116,9 @@ ul {
 
 @media(min-width: 951px) {
   header {
-
-    width: 90%;
-    margin: auto;
+    width: 85%;
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
@@ -148,17 +148,11 @@ header .header-content {
 @media (max-width: 1068px) {
   .img-index.active {
     margin-left: 50px;
-    animation: AfterLogoActive 0.25s linear;
-    animation-iteration-count: 1;
   }
 }
 
 @media (min-width: 1070px) {
-  .img-index.active {
-
-    animation: AfterLogoActive 0.25s linear;
-    animation-iteration-count: 1;
-  }
+  .img-index.active {}
 }
 
 @media (max-width: 1068px) {
@@ -300,7 +294,7 @@ header .header-right .select-right {
   width: 84px;
   border-radius: 5px;
   border: 1px solid #393636;
-  background: linear-gradient(180deg, rgba(71, 71, 71, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+
   background-blend-mode: hue;
   box-shadow: 0px 0px 7px 0px #fff inset;
   padding: 2px 10px;
@@ -397,7 +391,7 @@ header #box-chat {
   width: 100%;
   position: absolute;
   right: 0;
-  height: 822px;
+  height: 1661px;
 }
 
 header #box-chat .list-user-online .info-user:not(:first-child) {
@@ -431,7 +425,7 @@ header #box-chat .list-user-online .info-user .message .cur-mess {
 }
 
 header #box-chat .box-body {
-  height: 600px;
+  height: 680px;
 }
 
 header .box-action {
@@ -588,10 +582,7 @@ header #box-ava.active {
 }
 
 @media (max-width: 1800px) {
-  header .header-right {
-    max-width: -moz-max-content;
-    max-width: max-content;
-  }
+
 
   header .header-content .header-action {
     position: static;
@@ -719,9 +710,20 @@ header.fixed-active {
   transition: 0.3s;
 }
 
-footer {
-  width: 100%;
+@media (max-width: 576px) {
+  footer {
+    width: 100%;
+    margin: auto;
 
+  }
+}
+
+@media (min-width: 577px) {
+  footer {
+    width: 85%;
+    margin: auto;
+
+  }
 }
 
 .footer-border {
@@ -730,7 +732,7 @@ footer {
 
 @media (min-width: 1201px) {
   footer.active {
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
   }
 }
@@ -763,7 +765,7 @@ footer .copy-right {
 }
 
 footer .footer-content {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 

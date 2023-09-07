@@ -682,7 +682,7 @@
   margin-top: 30px;
   position: relative;
   background: url("../images/wrapper-banner.png") no-repeat;
-  background-size: 100%;
+  background-size: 100% 276px;
 }
 
 .main-home .main-content .banner-main .banner-content {
@@ -734,8 +734,8 @@
 @media (min-width: 950px) {
   .main-home .main-content .banner-main img[alt=banner-home] {
     position: absolute;
-    top: -29px;
-    right: -80px;
+    top: -17px;
+    right: -33px;
     width: 877px;
   }
 
