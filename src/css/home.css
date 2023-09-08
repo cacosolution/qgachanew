@@ -571,6 +571,7 @@
   margin-right: auto;
   animation: expandAfterNotActive 0.25s linear;
   animation-iteration-count: 1;
+
 }
 
 .main-home.active {
@@ -626,7 +627,7 @@
   margin: 0px auto;
 }
 
-@media (max-width: 1800px) {
+@media (min-width: 951px) {
   .main-home .main-content {
     width: 80%;
     margin: 0px auto;
@@ -770,7 +771,7 @@
   }
 
   .main-home .main-contentevendetail {
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
   }
 
@@ -834,7 +835,7 @@
   margin-bottom: 40px;
 }
 
-.main-home .main-contentevendetail.main-event button.btn-event {
+.btn-event {
   color: #fff;
   font-size: 18px;
   font-weight: 900;
@@ -846,7 +847,7 @@
 }
 
 @media (max-width: 576px) {
-  .main-home .main-contentevendetail.main-event button.btn-event {
+  .btn-event {
     margin: 20px 0;
     padding: 12px;
     border-radius: 3px;
@@ -855,7 +856,7 @@
   }
 }
 
-.main-home .main-contentevendetail.main-event .group__btn-event .btn-event {
+.btn-event {
   border-radius: 3px;
   border-radius: 3px;
   border: 0.5px solid var(--xm, #9e9e9e);
@@ -870,18 +871,18 @@
 }
 
 @media (max-width: 576px) {
-  .main-home .main-contentevendetail.main-event .group__btn-event .btn-event {
+  .btn-event {
     margin: 12px 0;
     font-size: 11px;
   }
 }
 
-.main-home .main-contentevendetail.main-event .group__btn-event .btn-event.btn-last {
+.btn-event.btn-last {
   background: #291a3a;
   border: none;
 }
 
-.main-home .main-contentevendetail.main-event table {
+.main-event table {
   border-radius: 3px;
   border: 0.5px solid var(--xm, #9e9e9e);
   background: #291a3a;
@@ -892,57 +893,66 @@
   text-transform: capitalize;
 }
 
-.main-home .main-contentevendetail.main-event table tr th,
-.main-home .main-contentevendetail.main-event table tr td:first-child {
+.main-event table tr th,
+.main-event table tr td:first-child {
   color: var(--1, #05e8ff);
 }
 
-.main-home .main-contentevendetail.main-event table tr th,
-.main-home .main-contentevendetail.main-event table tr td:not(:last-child) {
+.main-event table tr th,
+.main-event table tr td:not(:last-child) {
   border-right: 1px solid #9e9e9e;
 }
 
-.main-home .main-contentevendetail.main-event table tr th,
-.main-home .main-contentevendetail.main-event table tr td {
+.main-event table tr th,
+.main-event table tr td {
   text-align: center;
   padding: 16px 0px 16px 0px;
 }
 
-.main-home .main-contentevendetail.main-event table tr td.status.confirm {
+.main-event table tr td.status.confirm {
   color: #74ff06;
 }
 
-.main-home .main-contentevendetail.main-event table tr td.status.unconfirm {
+.main-event table tr td.status.unconfirm {
   color: #f00;
 }
 
-.main-home .main-contentevendetail.main-event table tr:not(:last-child) {
+.main-event table tr:not(:last-child) {
   border-bottom: 1px solid #9e9e9e;
 }
 
 @media (max-width: 576px) {
-  .main-home .main-contentevendetail.main-event table {
+  .main-event table {
     width: 100%;
   }
 
-  .main-home .main-contentevendetail.main-event table tr {
+  .main-event table tr {
     padding: 0;
   }
 
-  .main-home .main-contentevendetail.main-event table tr th,
-  .main-home .main-contentevendetail.main-event table tr td {
+  .main-event table tr th,
+  .main-event table tr td {
     font-size: 11px;
     padding: 6px 2px;
   }
 }
 
-.main-home .main-contentevendetail.main-event .list-event .event-item {
+.main-event .list-event .event-item {
   border-radius: 3px;
   border: 0.5px solid var(--xm, #9e9e9e);
   background: #1b172f;
 }
 
-.main-home .main-contentevendetail.main-event .list-event .event-item .time {
+.text-event {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 15px;
+  letter-spacing: 0em;
+  margin-top: 40px;
+}
+
+.main-event .list-event .event-item .time {
   color: var(--xm, #9e9e9e);
   font-size: 13px;
   font-style: normal;
@@ -950,11 +960,11 @@
   line-height: 14px;
 }
 
-.main-home .main-contentevendetail.main-event .list-event .event-item .time p {
+.main-event .list-event .event-item .time p {
   margin-bottom: 0;
 }
 
-.main-home .main-contentevendetailtent.main-event .list-event .event-item button {
+.main-event .list-event .event-item button {
   width: 120px;
   line-height: 34px;
   color: white;
@@ -969,12 +979,12 @@
 
 
 @media (max-width: 576px) {
-  .main-home .main-contentevendetail.main-event .list-event .event-item .event-info {
+  .main-event .list-event .event-item .event-info {
     padding: 0 12px;
   }
 }
 
-.main-home .main-contentevendetail.main-event button.btn-event.btn-detail {
+.main-event button.btn-event.btn-detail {
   padding: 10px;
   border-radius: 3px;
   background: #291a3a;
@@ -986,34 +996,34 @@
   text-transform: capitalize;
 }
 
-.main-home .main-contentevendetail.main-event button.btn-event.btn-detail a {
+.main-event button.btn-event.btn-detail a {
   color: #fff;
   font-weight: 500;
 }
 
-.main-home .main-contentevendetail.main-event img[alt=banner-nft] {
-  width: 897px;
-  height: 395px;
+.main-event img[alt=banner-nft] {
+  width: 100%;
+  height: auto;
   flex-shrink: 0;
 }
 
-.main-home .main-contentevendetail.main-event .info-detail {
+.main-event .info-detail {
   max-width: 897px;
   margin-top: 32px;
   padding-bottom: 31px;
-  border-bottom: 1px solid #4f4d4d;
+  border-bottom: none;
 }
 
-.main-home .main-contentevendetail.main-event .info-detail h4 {
+.main-event .info-detail h4 {
   color: #fff;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 14px;
   text-transform: uppercase;
 }
 
-.main-home .main-contentevendetail.main-event .info-detail p {
+.main-event .info-detail p {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -1021,7 +1031,7 @@
   margin-bottom: 0;
 }
 
-.main-home .main-contentevendetail.main-event .info-detail p.time {
+.main-event .info-detail p.time {
   color: var(--xm, #9e9e9e);
   font-size: 15px;
   font-style: normal;
@@ -1029,11 +1039,11 @@
   line-height: 21px;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide {
-  max-width: 897px;
+.main-event .info-guide {
+  max-width: 100%;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .total-max {
+.main-event .info-guide .total-max {
   margin-top: 11px;
   display: flex;
   width: 418px;
@@ -1046,7 +1056,7 @@
   background: black;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .total-max span {
+.main-event .info-guide .total-max span {
   color: #fff;
   font-family: Montserrat;
   font-size: 20px;
@@ -1057,17 +1067,18 @@
   text-transform: uppercase;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+.main-event .info-guide .total-max span.total {
   max-width: 89px;
   line-height: 30px;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
+.main-event .info-guide .total-max span.max {
   color: #ffc700;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .rules {
-  margin-top: 23px;
+.main-event .info-guide .rules {
+  padding-top: 40px;
+
 }
 
 .main-home .main-content.main-event .info-guide .rules a {
@@ -1079,7 +1090,7 @@
   text-decoration-line: underline;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .text-game {
+.main-event .info-guide .text-game {
   color: var(--xm, #9e9e9e);
   text-align: center;
   font-size: 13px;
@@ -1088,33 +1099,35 @@
   line-height: 14px;
 }
 
-.main-home .main-contentevendetail.main-event .info-guide .guide {
-  width: 876px;
-  height: 237px;
+.main-event .info-guide .guide {
+  width: 100%;
+  height: 102px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #4f4d4d;
 }
 
 @media (max-width: 780px) {
-  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+  .main-event .info-guide .total-max span.total {
     max-width: 89px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 430px) {
-  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+  .main-event .info-guide .total-max span.total {
     max-width: 89px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 360px) {
-  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+  .main-event .info-guide .total-max {
     margin-top: 11px;
     display: flex;
     width: 418px;
+    padding: 22px 0;
     height: 35px;
     justify-content: center;
     align-items: center;
@@ -1124,12 +1137,12 @@
     background: black;
   }
 
-  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+  .main-event .info-guide .total-max span.total {
     max-width: 89px;
     line-height: 20px;
   }
 
-  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+  .main-event .info-guide .total-max {
     gap: 30px;
   }
 

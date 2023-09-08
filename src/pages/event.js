@@ -21,8 +21,9 @@ const Event = () => {
     }
     return (
         <Layout>
+
             <div className="main-content main-event">
-                <button className="btn-event">Event</button>
+                <p className="text-event">EVENT</p>
                 <div className="banner-event">
                     <img src="./images/event1.png" alt="banner-home" />
                 </div>
@@ -153,7 +154,9 @@ const Event = () => {
                 )}
 
                 <div className="spacer mb-5 pb-5"></div>
+
             </div>
+
         </Layout>
 
     )

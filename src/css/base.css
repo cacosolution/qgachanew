@@ -711,7 +711,7 @@ header.fixed-active {
 }
 
 footer {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -748,10 +748,14 @@ footer h5 {
 
 footer p {
 
-  font-size: 13px;
+  font-family: Montserrat;
+  font-size: 11px;
   font-style: italic;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 11px;
+  letter-spacing: 0em;
+  text-align: center;
+
 }
 
 footer .copy-right {
@@ -766,8 +770,19 @@ footer .footer-content {
 
 @media (max-width: 1800px) {
   footer .footer-content {
-    width: 95%;
+    width: 100%;
     margin: auto;
+  }
+
+  footer p {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   footer .footer-content.active {
@@ -806,12 +821,11 @@ footer .footer-content .img-box h5 {
 
 @media (max-width: 576px) {
   footer .footer-content .footer-contact {
-    width: 100%;
+    width: 95%;
     margin: auto;
   }
 
   .contact-para {
-    padding-right: 10px;
     margin: 0 0px auto 0;
   }
 
@@ -829,6 +843,20 @@ footer .footer-content .img-box h5 {
     margin: auto;
     padding-top: 40px;
   }
+
+  footer p {
+
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+  }
+
 }
 
 footer .footer-content .footer-contact .line-y {
@@ -942,7 +970,7 @@ footer .footer-content .footer-contact .get-intouch button {
 
 @media (max-width: 576px) {
   footer .footer-content .footer-info {
-    padding-top: 40px;
+    padding-top: 9px;
     padding-bottom: 20px;
     width: 100%;
     margin: auto;
@@ -1045,7 +1073,7 @@ footer .footer-content .footer-info .box-logo img {
 
 
 footer .footer-content .footer-info .box-logo p {
-  padding: 60px 0 0px;
+  padding: 24px 0 0px;
   margin: 0;
   max-width: 403px;
   width: 100%;
@@ -1055,8 +1083,9 @@ footer .footer-content .footer-info .box-logo p {
 
 @media (max-width: 576px) {
   footer .footer-content .footer-info .box-logo img {
-    width: 120px;
-    height: 40px;
+    width: 85px;
+    height: auto;
+    padding-top: 9px;
   }
 
   footer .footer-content .footer-info h4 {
@@ -1068,6 +1097,19 @@ footer .footer-content .footer-info .box-logo p {
     margin: 0;
     max-width: 368px;
     width: 100%;
+  }
+
+  footer p {
+    padding-top: 15px;
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
   }
 
 }
@@ -1645,6 +1687,7 @@ input {
   height: 100%;
   background-image: url("../images/bg-main.png");
   width: 100%;
+  background-size: cover;
 }
 
 .container-wrapper main button.btn-support {

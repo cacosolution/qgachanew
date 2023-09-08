@@ -16,7 +16,7 @@ const EventDetail = () => {
 
             <div>
                 <div className="main-contentevendetail main-event">
-                    <Link to="/eventlastest">
+                    <Link to="/event">
                         <button className="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><Link>Details</Link></strong></button>
                     </Link>
                     <div className="banner-event">
