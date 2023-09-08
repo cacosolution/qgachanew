@@ -1,6 +1,6 @@
 const initialState = {
-    isOpenWithdraw: true,
-    isOpenBalance: false,
+    isOpenWithdraw: false,
+    isOpenBalance: true,
     isOpenTransaction: false,
     isOpenDeposit: false,
 };

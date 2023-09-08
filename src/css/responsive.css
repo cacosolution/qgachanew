@@ -517,9 +517,9 @@
   .menu-featurefooter img,
   .menu-featurefooter .name-feature {
     transition: color 0.3s;
-    /* Thêm hiệu ứng chuyển đổi màu cho hình ảnh và văn bản */
+    
   }
-
+ 
   /* CSS cho hình ảnh và văn bản trong các phần tử menu-feature khi active */
   .menu-featurefooter.active img,
   .menu-featurefooter.active .name-feature {

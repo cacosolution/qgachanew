@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/flickity.css"
 import "../../css/base.css"
@@ -26,6 +26,10 @@ const WalletMobi = () => {
         isOpenWithdraw,
         isOpenTransaction,
     } = useSelector((state) => state.wallet);
+
+    const [isOpenDep, setIsOpenDep] = useState(true)
+    const [isOpenWD, setIsOpenWD] = useState(true)
+
     const dispatch = useDispatch();
 
     const handlerChangeBalance = () => {
@@ -49,9 +53,10 @@ const WalletMobi = () => {
             {/* <Navbar /> */}
             <main>
                 <Sidebar />
-                <div className="main-deposit">
+
+                <div className="main-deposit" style={{ background: "linear-gradient(261deg,#231f49 17%,#161b56 30%,#17161f 50%,#230833 72%)" }}>
                     <div className="deposit-content">
-                        <button className="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
+                        <button className="btn-wallet text-wallet-logo">Wallet
                             <Link to="/">
                                 <img className="mobile"
                                     src="./images/icons/deposit/icon-exit.svg" alt="" />
@@ -89,7 +94,7 @@ const WalletMobi = () => {
                                             <h4 className="feature-title text-15">Transaction</h4>
                                         </li>
 
-
+                                        ưa
                                     </ul>
 
                                 </div>
@@ -163,53 +168,55 @@ const WalletMobi = () => {
 
                                 </div>
                             ) : isOpenDeposit ? (
-                                <div className="feature-detail">
-                                    <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                        <li className="nav-item" role="presentation">
-                                            <button className="nav-link active" id="crypto-tab" data-toggle="tab"
+                                <div className="feature-detail" style={{ background: "transparent" }}>
+                                    <ul className="nav nav-tabs" style={{ backgroundColor: "#291A3A", paddingTop: "1px" }} id="myTab" role="tablist">
+                                        <li className="nav-item" role="presentation" onClick={() => setIsOpenDep(true)}>
+                                            <button className={`nav-link ${isOpenDep === true ? "active" : ""}`} id="crypto-tab" data-toggle="tab"
                                                 data-target="#crypto" type="button" role="tab" aria-controls="crypto"
                                                 aria-selected="true">Crypto</button>
                                         </li>
-                                        <li className="nav-item" role="presentation">
-                                            <button className="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
+                                        <li className="nav-item" role="presentation" onClick={() => setIsOpenDep(false)}>
+                                            <button className={`nav-link ${isOpenDep === false ? "active" : ""}`} id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                 type="button" role="tab" aria-controls="fiat"
                                                 aria-selected="false">Fiat (coming soon)</button>
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
-                                        <div className="tab-pane fade show active" id="crypto" role="tabpanel"
+                                        <div className={`tab-pane fade show ${isOpenDep === true ? "active" : ""}`} id="crypto" role="tabpanel"
                                             aria-labelledby="crypto-tab">
-                                            <h5 className="text-15 mt-3">Deposit Currency</h5>
-                                            <div className="list-currency mt-1 d-flex">
-                                                <button className="currency d-flex align-items-center">
+                                            <div style={{ backgroundColor: "#291A3A", margin: "auto", padding: "2px 20px 20px 20px" }}>
+                                                <h5 className="text-15 mt-3">Deposit Currency</h5>
+                                                <div className="list-currency mt-1 d-flex">
+                                                    <button className="currency d-flex align-items-center">
+                                                        <img src="./images/icons/deposit/usdt.svg" alt="" />
+                                                        <div className="text-cur">USDT</div>
+                                                    </button>
+                                                    <button className="currency d-flex align-items-center">
+                                                        <img src="./images/icons/qgc-coin.png" alt="" />
+                                                        <div className="text-cur">QGC</div>
+                                                    </button>
+                                                </div>
+                                                <div className="currency-show d-flex align-items-center">
                                                     <img src="./images/icons/deposit/usdt.svg" alt="" />
                                                     <div className="text-cur">USDT</div>
-                                                </button>
-                                                <button className="currency d-flex align-items-center">
-                                                    <img src="./images/icons/qgc-coin.png" alt="" />
-                                                    <div className="text-cur">QGC</div>
-                                                </button>
-                                            </div>
-                                            <div className="currency-show d-flex align-items-center">
-                                                <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                <div className="text-cur">USDT</div>
-                                            </div>
+                                                </div>
 
-                                            <h4 className="text-15 mt-4">Choose Network</h4>
-                                            <div className="mt-3 d-flex justify-content-between select-network align-items-center">
-                                                <select className="text-15">
-                                                    <option selected>BEP20</option>
-                                                    <option value="1">P2P</option>
-                                                    <option value="2">BEP2N</option>
-                                                </select>
-                                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                        fill="white" />
-                                                </svg>
+                                                <h4 className="text-15 mt-4">Choose Network</h4>
+                                                <div className="mt-3 d-flex justify-content-between select-network align-items-center">
+                                                    <select className="text-15">
+                                                        <option selected>BEP20</option>
+                                                        <option value="1">P2P</option>
+                                                        <option value="2">BEP2N</option>
+                                                    </select>
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <h4 className="text-15 mt-4">Minimum of 10.00 USDT deposit</h4>
                                             </div>
-                                            <h4 className="text-15 mt-4">Minimum of 10.00 USDT deposit</h4>
                                             <div
                                                 className="d-flex flex-column flex-sm-row align-items-center justify-content-between info-address mt-3">
                                                 <div className="qr d-flex justify-content-center align-items-center">
@@ -225,40 +232,63 @@ const WalletMobi = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="notice mt-3">
-                                                <p className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
+                                            <div className="notice mt-3" style={{ width: "75%", margin: "auto" }}>
+                                                <p style={{ padding: "5px" }} className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
                                                     address. Coins will be
                                                     deposited automatically after 6 network confirmations.
-                                                    Smart contract addresses are not supported(Contact us).</p>
+                                                    <br />
+                                                    <br />
+                                                    Smart contract addresses are not supported
+                                                    <br />(Contact us).</p>
                                             </div>
                                         </div>
-                                        <div className="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
+                                        <div className={`tab-pane fade show ${isOpenDep === false ? "active" : ""}`} id="fiat" role="tabpanel" aria-labelledby="fiat-tab">
+                                            <div style={{ backgroundColor: "#291A3A", margin: "auto", padding: "2px 20px 20px 20px" }}>
+                                                Fiat (coming soon)
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             ) : isOpenWithdraw ? (
-                                <div className="feature-detail">
-                                    <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                        <li className="nav-item" role="presentation">
-                                            <button className="nav-link active" id="crypto-tab" data-toggle="tab"
+                                <div className="feature-detail" style={{ background: "transparent" }}>
+
+                                    <ul className="nav nav-tabs" style={{ backgroundColor: "#291A3A", paddingTop: "1px" }} id="myTab" role="tablist">
+                                        <li className="nav-item" role="presentation" onClick={() => setIsOpenWD(true)}>
+                                            <button className={`nav-link ${isOpenWD === true ? "active" : ""}`} id="crypto-tab" data-toggle="tab"
                                                 data-target="#crypto" type="button" role="tab" aria-controls="crypto"
                                                 aria-selected="true">Crypto</button>
                                         </li>
-                                        <li className="nav-item" role="presentation">
-                                            <button className="nav-link" id="fiat-tab" data-toggle="tab" data-target="#fiat"
+                                        <li className="nav-item" role="presentation" onClick={() => setIsOpenWD(false)}>
+                                            <button className={`nav-link ${isOpenWD === false ? "active" : ""}`} id="fiat-tab" data-toggle="tab" data-target="#fiat"
                                                 type="button" role="tab" aria-controls="fiat"
                                                 aria-selected="false">Fiat (coming soon)</button>
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
-                                        <div className="tab-pane fade show active" id="crypto" role="tabpanel"
+                                        <div className={`tab-pane fade show ${isOpenWD === true ? "active" : ""}`} id="crypto" role="tabpanel"
                                             aria-labelledby="crypto-tab">
-                                            <h5 className="text-15 mt-3">Withdraw Currency</h5>
-                                            <div className="currency-show d-flex align-items-center balance">
-                                                <img src="./images/icons/deposit/usdt.svg" alt="" />
-                                                <div className="text-cur">USDT</div>
-                                                <div className="balance-detail flex-grow-1 text-end">
-                                                    <span>Blance <strong className="strong-withdraw">0,00</strong></span>
+                                            <div style={{ backgroundColor: "#291A3A", margin: "auto", padding: "2px 20px 20px 20px" }}>
+                                                <h5 className="title-wallet mt-3">Withdraw Currency</h5>
+                                                <div className="currency-show d-flex align-items-center balance">
+                                                    <img src="./images/icons/deposit/usdt.svg" alt="" />
+                                                    <div className="text-cur">USDT</div>
+                                                    <div className="balance-detail flex-grow-1 text-end">
+                                                        <span>Blance <strong className="strong-withdraw">0,00</strong></span>
+                                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <h4 className="title-wallet mt-4">Choose Network</h4>
+                                                <div className="mt-3 d-flex justify-content-between select-network align-items-center">
+                                                    <select className="text-15">
+                                                        <option selected>BEP20</option>
+                                                        <option value="1">P2P</option>
+                                                        <option value="2">BEP2N</option>
+                                                    </select>
                                                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path
@@ -266,45 +296,31 @@ const WalletMobi = () => {
                                                             fill="white" />
                                                     </svg>
                                                 </div>
-                                            </div>
-                                            <h4 className="text-15 mt-4">Choose Network</h4>
-                                            <div className="mt-3 d-flex justify-content-between select-network align-items-center">
-                                                <select className="text-15">
-                                                    <option selected>BEP20</option>
-                                                    <option value="1">P2P</option>
-                                                    <option value="2">BEP2N</option>
-                                                </select>
-                                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M4.76822 5.57814C4.36843 6.05789 3.63157 6.05789 3.23178 5.57813L0.36682 2.14018C-0.175952 1.48886 0.287204 0.499999 1.13504 0.499999L6.86496 0.5C7.7128 0.5 8.17595 1.48886 7.63318 2.14018L4.76822 5.57814Z"
-                                                        fill="white" />
-                                                </svg>
-                                            </div>
-                                            <h4 className="text-15 mt-4">Withdrawal Address</h4>
-                                            <div className="currency-show">
-                                                <p>Fill in carefully according to the specific currency</p>
-                                            </div>
-                                            <div style={{ height: "20px" }}
-                                                className="d-flex justify-content-between align-items-center mt-3">
-                                                <h4 className="text-15">Withdraw amount</h4>
-                                                <span>Min: 109.622844</span>
-                                            </div>
-                                            <div
-                                                className="currency-show show-list d-flex align-items-center justify-content-between">
-                                                <span>0.0000</span>
-                                                <div className="list-amount d-flex align-items-center">
-                                                    <div className="amount-item text-center">
-                                                        Min
-                                                    </div>
-                                                    <div className="amount-item text-center">
-                                                        25%
-                                                    </div>
-                                                    <div className="amount-item text-center">
-                                                        50%
-                                                    </div>
-                                                    <div className="amount-item text-center">
-                                                        Max
+                                                <h4 className="title-wallet mt-4">Withdrawal Address</h4>
+                                                <div className="currency-show">
+                                                    <p>Fill in carefully according to the specific currency</p>
+                                                </div>
+                                                <div style={{ height: "20px" }}
+                                                    className="d-flex justify-content-between align-items-center mt-3">
+                                                    <h4 className="title-wallet">Withdraw amount</h4>
+                                                    <span className="title-min">Min: 109.622844</span>
+                                                </div>
+                                                <div
+                                                    className="currency-show show-list d-flex align-items-center justify-content-between">
+                                                    <span>0.0000</span>
+                                                    <div className="list-amount d-flex align-items-center">
+                                                        <div className="amount-item text-center">
+                                                            Min
+                                                        </div>
+                                                        <div className="amount-item text-center">
+                                                            25%
+                                                        </div>
+                                                        <div className="amount-item text-center">
+                                                            50%
+                                                        </div>
+                                                        <div className="amount-item text-center">
+                                                            Max
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -324,10 +340,9 @@ const WalletMobi = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="notice mt-3">
-                                                <p className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit
-                                                    address. Coins will be
-                                                    deposited automatically after 6 network confirmations.
+                                            <div className="notice mt-3" >
+                                                <p className="text-15"><strong>NOTICE:</strong> Send only USDT to this deposit address. Coins will be deposited automatically after 6 network confirmations.
+
                                                     Smart contract addresses are not supported(Contact us).</p>
                                             </div>
 
@@ -335,7 +350,10 @@ const WalletMobi = () => {
                                                 <button id="confirm-withdraw" className="btn__purple-confirm">Confirm</button>
                                             </div>
                                         </div>
-                                        <div className="tab-pane fade" id="fiat" role="tabpanel" aria-labelledby="fiat-tab">fiat
+                                        <div className={`tab-pane fade show ${isOpenWD === false ? "active" : ""}`} id="fiat" role="tabpanel" aria-labelledby="fiat-tab">
+                                            <div style={{ backgroundColor: "#291A3A", margin: "auto", padding: "2px 20px 20px 20px" }}>
+                                                Fiat (coming soon)
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -356,13 +374,13 @@ const WalletMobi = () => {
 
 
 
-            </main>
+            </main >
             <div >
                 <FooterWallet />
                 {/* <div>alo</div> */}
             </div>
 
-        </div>
+        </div >
     );
 }
 
