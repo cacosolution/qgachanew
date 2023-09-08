@@ -50,7 +50,7 @@ const Sidebar = () => {
 
 
                 </div>
-                <div className="mobile bg-header">
+                <div className="mobile">
                     <div className="header-menu-mobile d-flex align-items-center justify-content-between ">
                         <img src="./images/icons/logo.svg" alt="sidebar-logo-mobile" />
                         <img id="exit__sidebar-mobile" onClick={() => dispatch({ type: "SET_IS_OPEN_SIDEBAR", payload: false, position: sideBarPosition })} src="./images/icons/deposit/icon-exit.svg" alt="icon-exit" />
@@ -252,7 +252,9 @@ const Sidebar = () => {
                             <div className="item-content">Top Member <span>(Upcoming)</span></div>
                         </div>
                         <div className="sidebar-item d-flex align-items-center">
-                            <img style={{ width: "24px" }} src="./images/icons/physic-gacha.png" alt="" className="item-icon" />
+                            <img style={{
+                                width: "24px", maxHeight: "28px", lineHeight: "12px"
+                            }} src="./images/icons/physic-gacha.png" alt="" className="item-icon" />
                             <div className="item-content">Physical Gacha Machine <span>(Upcoming)</span></div>
                         </div>
 

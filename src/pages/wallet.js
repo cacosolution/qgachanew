@@ -49,7 +49,7 @@ const Wallet = () => {
                 < Layout >
                     <div className="main-deposit">
                         <div className="deposit-content">
-                            <button className="btn-wallet text-15">{isOpenBalance ? ("Wallet") : isOpenDeposit ? ("Deposit") : isOpenTransaction ? ("Transaction") : isOpenWithdraw && ("Withdraw")}
+                            <button className="btn-wallet text-wallet-logo" >Wallet
                                 <img className="mobile"
                                     src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
                             <div className="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
