@@ -15,7 +15,7 @@ const EventDetail = () => {
         <Layout>
 
             <div>
-                <div className="main-content main-event">
+                <div className="main-contentevendetail main-event">
                     <Link to="/eventlastest">
                         <button className="btn-event btn-detail">Event <BiChevronRight size={20} />  <strong><Link>Details</Link></strong></button>
                     </Link>
@@ -38,19 +38,19 @@ const EventDetail = () => {
 
                         <div className="rules distribute">
                             <Link>
-                                General Rules
+                                <span style={{ color: "white" }}>General Rules</span>
                             </Link>
                         </div>
                         <div className="guide text-game">NỘI DUNG HƯỚNG DẪN CHƠI</div>
                         <div className="rules">
                             <Link>
-                                Prize Distribution
+                                <span style={{ color: "white" }}> Prize Distribution</span>
                             </Link>
                         </div>
                         <div className="text-center text-game py-2">NỘI DUNG GIẢI THƯỞNG</div>
                         <div className="rules terms">
                             <Link>
-                                Terms and Conditions
+                                <span style={{ color: "white" }}>Terms and Conditions</span>
                             </Link>
                         </div>
                         <div className="text-center text-game py-2">NỘI DUNG ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</div>

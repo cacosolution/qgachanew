@@ -571,27 +571,27 @@
     display: block !important;
   }
 
-  .main-home .main-content.main-event img[alt=banner-nft] {
+  .main-home .main-contentevendetail.main-event img[alt=banner-nft] {
     width: 100%;
-    height: 150px;
+    height: 300px;
   }
 
-  .main-home .main-content.main-event .info-guide .total-max {
+  .main-home .main-contentevendetail.main-event .info-guide .total-max {
     width: 81%;
   }
 
-  .main-home .main-content.main-event .info-guide .total-max span.total {
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
     font-size: 15px;
     max-width: 22%;
   }
 
-  .main-home .main-content.main-event .info-guide .total-max span.max {
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
     font-size: 15px;
     max-width: 50%;
 
   }
 
-  .main-home .main-content.main-event .info-guide .guide {
+  .main-home .main-contentevendetail.main-event .info-guide .guide {
     width: 100%;
   }
 
@@ -1053,14 +1053,27 @@
   }
 }
 
-
-
-@media (max-width: 360px) {
+@media (max-width: 860px) {
   main .main-home .main-content .banner-main .banner-content h3 {
     font-size: 21px;
     position: absolute;
     bottom: -3px;
     z-index: 1;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+    font-size: 15px;
+    max-width: 15%;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
+    font-size: 15px;
+    max-width: 70%;
+
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+    width: 45%;
   }
 
   main .main-home .main-content .banner-main .banner-content h1 {
@@ -1074,6 +1087,142 @@
     position: absolute;
     bottom: -69px;
     left: calc(50% - 57.5px);
+  }
+
+  .main-home .main-contentevendetail.main-event img[alt=banner-nft] {
+    width: 100%;
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 780px) {
+  main .main-home .main-content .banner-main .banner-content h3 {
+    font-size: 21px;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+    font-size: 15px;
+    max-width: 15%;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
+    font-size: 15px;
+    max-width: 70%;
+
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+    width: 45%;
+  }
+
+  main .main-home .main-content .banner-main .banner-content h1 {
+    font-size: 38px;
+    position: absolute;
+    bottom: -57px;
+    z-index: 99;
+  }
+
+  main .main-home .main-content .banner-main .list-social {
+    position: absolute;
+    bottom: -69px;
+    left: calc(50% - 57.5px);
+  }
+
+  .main-home .main-contentevendetail.main-event img[alt=banner-nft] {
+    width: 100%;
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  main .main-home .main-content .banner-main .banner-content h3 {
+    font-size: 21px;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+    font-size: 15px;
+    max-width: 15%;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
+    font-size: 15px;
+    max-width: 70%;
+
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+    width: 65%;
+  }
+
+  main .main-home .main-content .banner-main .banner-content h1 {
+    font-size: 38px;
+    position: absolute;
+    bottom: -57px;
+    z-index: 99;
+  }
+
+  main .main-home .main-content .banner-main .list-social {
+    position: absolute;
+    bottom: -69px;
+    left: calc(50% - 57.5px);
+  }
+
+  .main-home .main-contentevendetail.main-event img[alt=banner-nft] {
+    width: 100%;
+    height: 130px;
+  }
+
+}
+
+
+
+@media (max-width: 360px) {
+  main .main-home .main-content .banner-main .banner-content h3 {
+    font-size: 21px;
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
+    font-size: 15px;
+    max-width: 15%;
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max span.max {
+    font-size: 15px;
+    max-width: 70%;
+
+  }
+
+  .main-home .main-contentevendetail.main-event .info-guide .total-max {
+    width: 80%;
+  }
+
+  main .main-home .main-content .banner-main .banner-content h1 {
+    font-size: 38px;
+    position: absolute;
+    bottom: -57px;
+    z-index: 99;
+  }
+
+  main .main-home .main-content .banner-main .list-social {
+    position: absolute;
+    bottom: -69px;
+    left: calc(50% - 57.5px);
+  }
+
+  .main-home .main-contentevendetail.main-event img[alt=banner-nft] {
+    width: 100%;
+    height: 130px;
   }
 
 }
