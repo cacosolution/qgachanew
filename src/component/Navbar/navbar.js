@@ -55,16 +55,7 @@ const Navbar = () => {
     }
 
     const handleOutsideClick = (event) => {
-        if (
-            notiRef.current &&
-            !notiRef.current.contains(event.target) &&
-            profileRef.current &&
-            !profileRef.current.contains(event.target) &&
-            langRef.current &&
-            !langRef.current.contains(event.target)
-        ) {
-            setIsNofi(false);
-            setIsProfile(false);
+        if (langRef.current && !langRef.current.contains(event.target)) {
             setIsLang(false);
         }
     };
@@ -87,6 +78,7 @@ const Navbar = () => {
             setIsOpenProfileEdit(false)
         }
     };
+
 
 
 
@@ -179,7 +171,7 @@ const Navbar = () => {
                                 </Link>
 
 
-                                <div className="feature-item d-flex align-items-center " onClick={handlerChangeProfile}>
+                                <div className="feature-item d-flex align-items-center " onClick={handlerChangeProfile} >
                                     <img src="./images/icons/profile.svg" alt="" />
                                     <h5 className="feature-content">Profile</h5>
                                 </div>

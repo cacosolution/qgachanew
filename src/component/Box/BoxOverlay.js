@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { SidebarContext } from "../../context/sideBarContext";
 
 const BoxOverlay = () => {
@@ -43,6 +43,41 @@ const BoxOverlay = () => {
         setIsOpenProfileEdit(false)
     }
 
+    const modalRef = useRef(null);
+    const transactionDetailRef = useRef(null);
+
+    // const handleTransactionDetailClick = () => {
+    //     setIsOpenProfileAll(false);
+    // };
+
+    // const handleTransactionClick = () => {
+    //     setIsOpenProfileDetail(false);
+    // };
+
+    // const handleTransactionEditClick = () => {
+    //     setIsOpenProfileEdit(false);
+    // };
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (
+                modalRef.current &&
+                !modalRef.current.contains(event.target) &&
+                transactionDetailRef.current &&
+                event.target.classList.contains('transaction-detail2')
+            ) {
+
+                setIsOpenProfileAll(false);
+
+            }
+        };
+
+        document.addEventListener('mousedown', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, []);
 
     return (
         <>
@@ -404,7 +439,7 @@ const BoxOverlay = () => {
 
 
             {isOpenProfileAll ? (
-                <div className="transaction-detail2">
+                <div className="transaction-detail2" ref={modalRef} >
                     <div id="box__user-info" >
                         <div className="box-header d-flex justify-content-between">
                             User Information
@@ -450,7 +485,7 @@ const BoxOverlay = () => {
                 </div>
 
             ) : isOpenProfileEdit ? (
-                <div className="transaction-detail2">
+                <div className="transaction-detail2" ref={modalRef} >
                     <div id="box__edit-username">
                         <div className="box-header d-flex justify-content-between">
                             <button onClick={handlerProfileAll}>
@@ -487,7 +522,7 @@ const BoxOverlay = () => {
                 </div>
 
             ) : isOpenProfileDetail ? (
-                <div className="transaction-detail2">
+                <div className="transaction-detail2" ref={modalRef} >
                     <div id="box__user-detail">
                         <div className="box-header d-flex justify-content-between">
                             <button onClick={handlerProfileAll}>

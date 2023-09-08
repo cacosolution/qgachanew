@@ -1,6 +1,6 @@
 import "../../css/base.css"
 
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { SidebarContext } from "../../context/sideBarContext";
 
 const SidebarNoti = () => {
@@ -10,11 +10,28 @@ const SidebarNoti = () => {
         setIsSidebarNoti,
     } = useContext(SidebarContext)
 
+    const modalRef = useRef(null);
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            // Kiểm tra xem sự kiện click có xảy ra bên ngoài modal không
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setIsSidebarNoti(false);
+            }
+        };
+
+        // Thêm sự kiện lắng nghe vào document khi component được render
+        document.addEventListener('mousedown', handleOutsideClick);
+
+        // Hủy sự kiện lắng nghe khi component bị hủy
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, []);
 
 
     return (
         <>
-            <div className={isSidebarNoti === true ? "side-chat active-chat" : "side-chat"}>
+            <div className={isSidebarNoti === true ? "side-chat active-chat" : "side-chat"} ref={modalRef}>
                 <header >
                     <div className={isSidebarNoti === true ? `box-chat active` : null} id="box-noti" >
                         <div className="box-header d-flex justify-content-between">
