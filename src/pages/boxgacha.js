@@ -34,6 +34,7 @@ const Boxgacha = () => {
                             <img src="./images/box-gacha2.png" alt="" />
                             <img src="./images/box-comming-soon.png" alt="" />
                             <img src="./images/box-com2.png" alt="" />
+                            <img src="./images/box-comming-soon2.png" alt="" />
 
                         </div>
                     </div>

@@ -610,8 +610,16 @@
 }
 
 .main-deposit {
-  width: 90%;
+  width: 75%;
   margin: auto;
+}
+
+.text-sidebar-wallet {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
 
 }
 
@@ -765,7 +773,7 @@
 .main-deposit .deposit-content .feature-content .feature-detail ul li.nav-item button.active {
   background-color: inherit;
   border-bottom: 2px solid #d769ee;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .list-currency button.currency:last-child {
@@ -845,6 +853,28 @@
   flex-grow: 1;
   z-index: 2;
   position: static;
+  color: white;
+}
+
+.text-s15-w7 {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+
+.text-s15-w5 {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+.text-s13-w5 {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0em;
 }
 
 .main-deposit .deposit-content .feature-content .feature-detail .tab-content .select-network svg {
@@ -1094,8 +1124,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 700px;
-  width: 95%;
-  margin: auto;
+  width: 100%;
 }
 
 .items {

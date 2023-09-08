@@ -68,7 +68,7 @@ const Transaction = () => {
     };
     return (
 
-        <div className="customtran">
+        <div className="customtran" style={{ width: "100%" }}>
             <div className="list-button">
                 <button className="items" onClick={toggleDropdown}>
                     {selectedOption}
@@ -183,7 +183,7 @@ const Transaction = () => {
             <section className="transaction-table detail-trans">
                 <table>
                     <thead>
-                        <tr>
+                        <tr >
                             <th>
                                 Type
                             </th>
@@ -204,7 +204,7 @@ const Transaction = () => {
                     </thead>
 
                     <tbody>
-                        <tr>
+                        <tr style={{ height: "38px" }}>
                             <td>Deposit</td>
                             <td></td>
                             <td className="amount">+₫ 0.0000000</td>

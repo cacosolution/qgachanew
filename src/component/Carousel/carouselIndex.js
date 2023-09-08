@@ -45,24 +45,25 @@ const CarouselIndex = () => {
     return (
         <div>
             <div className="carou">
+
                 <Slider {...settings} autoplay autoplaySpeed={2000}>
 
-                    <Link to="/upgradesoon">
+                    <Link to="/upgradesoon" style={{ overflow: "visible" }}>
                         <img src="./images/img-main4.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
-                    <Link to="/boxgacha">
-                        <img src="./images/img-main5.png" alt="" width={"100%"} height={"150px"} style={{ objectFit: "cover" }} />
+                    <Link to="/boxgacha" style={{ overflow: "visible" }}>
+                        <img src="./images/boxgacha2.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
-                    <Link to="/mystery">
+                    <Link to="/mystery" style={{ overflow: "visible" }}>
                         <img src="./images/img-main6.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
-                    <Link to="/completedgacha">
+                    <Link to="/completedgacha" style={{ overflow: "visible" }}>
                         <img src="./images/img-main7.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
-                    <Link to="/reroll">
+                    <Link to="/reroll" style={{ overflow: "visible" }}>
                         <img src="./images/img-main8.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
-                    <Link to="/sugoroku">
+                    <Link to="/sugoroku" style={{ overflow: "visible" }}>
                         <img src="./images/img-main9.png" alt="" width={"100%"} height={"100%"} />
                     </Link>
                 </Slider>

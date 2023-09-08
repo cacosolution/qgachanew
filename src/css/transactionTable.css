@@ -84,7 +84,6 @@
 }
 
 .transaction-table.detail-trans table {
-  height: 369px !important;
   z-index: 2;
   position: absolute;
   height: 100%;
