@@ -49,11 +49,10 @@ const CarouselIndex = () => {
 
                     <Link to="/upgradesoon">
                         <img src="./images/img-main4.png" alt="" width={"100%"} height={"100%"} />
-
                     </Link>
-                    {/* <Link to="/boxgacha">
-                        <img src="./images/img-main5.png" alt="" width={"100%"} height={"100%"} style={{ objectFit: "cover" }} />
-                    </Link> */}
+                    <Link to="/boxgacha">
+                        <img src="./images/img-main5.png" alt="" width={"100%"} height={"150px"} style={{ objectFit: "cover" }} />
+                    </Link>
                     <Link to="/mystery">
                         <img src="./images/img-main6.png" alt="" width={"100%"} height={"100%"} />
                     </Link>

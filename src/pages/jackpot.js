@@ -6,9 +6,38 @@ import "../css/jackpot.css"
 import "../css/responsive.css"
 import Layout from '../layout';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Jackpot = () => {
+    const [isMyTicket, setMyTicket] = useState(false);
+    const [isResult, setResult] = useState(true);
+    const [isJackpot, setJackbot] = useState(false);
+    const [activeButtonTable, setActiveButtonTable] = useState("MyTicket");
+
+    const handelMyTicket = () => {
+        setMyTicket(true);
+        setResult(false);
+        setResult(false);
+        setActiveButtonTable("MyTicket");
+    }
+    const handelResult = () => {
+        setMyTicket(false);
+        setResult(true);
+        setResult(false);
+        setActiveButtonTable("Results");
+
+    }
+    const handelJackpot = () => {
+        setMyTicket(false);
+        setResult(false);
+        setJackbot(true);
+        setActiveButtonTable("Jackpot");
+
+    }
+
+
+
 
 
     return (
@@ -16,7 +45,7 @@ const Jackpot = () => {
         <Layout>
             <div id="jackpot" className="jackpot">
                 <div className="navbar-wrapper">
-                    <div className="nav-item">
+                    <div className={`nav-item ${activeButtonTable === "MyTicket" ? "nav-item--active" : ""}`} onClick={handelMyTicket}>
                         <Link>
                             <span>My Ticket (</span>
                             <span id="ticket-number">
@@ -25,12 +54,12 @@ const Jackpot = () => {
                             <span>)</span>
                         </Link>
                     </div>
-                    <div className="nav-item nav-item--active">
+                    <div className={`nav-item ${activeButtonTable === "Results" ? "nav-item--active" : ""}`} onClick={handelResult}>
                         <Link>
                             Result
                         </Link>
                     </div>
-                    <div className="nav-item">
+                    <div className={`nav-item ${activeButtonTable === "Jackpot" ? "nav-item--active" : ""}`} onClick={handelJackpot}>
                         <Link>
                             Jackpot winner
                         </Link>
@@ -52,13 +81,14 @@ const Jackpot = () => {
                             03/07/2023
                         </span>
                     </div>
-                    <div className="ticket-section">
+                    <div className="ticket-section ticketpc">
                         <div className="ticket">
                             <div className="ticket-bg"></div>
                             <div className="ticket-draw-time">
                                 Draw time: <span id="draw-time">22:55:00 29/7/2023</span>
                             </div>
                             <img className="ticket-img" src="./images/jackpot/lucky.png" alt="" />
+
                             <div className="total-ticket-sold">
                                 <img src="./images/jackpot/ticket.png" alt="" className="total-ticket-sold-img" />
                                 <p className="total-ticket-sold-desc">
@@ -77,6 +107,8 @@ const Jackpot = () => {
                                     </span>
                                 </p>
                             </div>
+
+
                         </div>
                         <div className="winner-section">
                             <div className="ticket-footer-winners-list">
@@ -100,6 +132,32 @@ const Jackpot = () => {
                         </div>
 
                     </div>
+
+                    <div className="ticket-section openmobile">
+
+
+                        <div className="ticket-draw-time">
+                            Draw time: <span id="draw-time">22:55:00 29/7/2023</span>
+                        </div>
+                        <img className="ticket-lucky" src="./images/jackpot/lucky.png" alt="" />
+                        <div className="ticket-logo">
+                            <img src="./images/jackpot/ticket.png" alt="" />
+                            <p>Total tickets sold this round:  <span id="">
+                                40992
+                            </span></p>
+                        </div>
+                        <div className="ticket-logocrown">
+                            <img src="./images/jackpot/crown.png" alt="" className='logocrown' />
+                            <p className="">
+                                Total winning tickets this round:
+                                <span>
+                                    328
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+
                     <div className="winner-table">
                         <div className="winner-table-rows">
                             <div className="winner-rows">
@@ -284,9 +342,11 @@ const Jackpot = () => {
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
-        </Layout>
+        </Layout >
     );
 }
 
