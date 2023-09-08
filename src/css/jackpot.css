@@ -411,8 +411,146 @@
   display: none;
 }
 
+@media (max-width: 840px) {
+  #jackpot .navbar-wrapper .nav-item {
+    width: 160px;
+    padding: 10px 10px 10px 10px;
+    height: 40px;
+  }
+
+  .game-id {
+    display: block;
+  }
+
+  #jackpot .header #header-game-date {
+    display: block;
+  }
+
+  #jackpot .header {
+    padding: 0px;
+  }
+
+  #jackpot .header #header-game-id {
+    width: 166px;
+  }
+
+  #jackpot .ticket-section .ticket .ticket-bg {
+    background-image: none;
+  }
+
+  #jackpot .ticket-section {
+    background: #321b41;
+    padding: 34px 30px 30px 30px;
+  }
+
+  #jackpot .ticket-section .ticket-lucky {
+    object-fit: fill;
+    width: 100%;
+    height: 70px;
+  }
+
+  #jackpot .ticket-section .ticket-logo {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown .logocrown {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .openmobile {
+    display: block;
+  }
+
+  #jackpot .ticketpc {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
-  
+  #jackpot .navbar-wrapper .nav-item {
+    width: 160px;
+    padding: 10px 10px 10px 10px;
+    height: 40px;
+  }
+
+  .game-id {
+    display: block;
+  }
+
+  #jackpot .header #header-game-date {
+    display: none;
+  }
+
+  #jackpot .header {
+    padding: 0px;
+  }
+
+  #jackpot .header #header-game-id {
+    width: 166px;
+  }
+
+  #jackpot .ticket-section .ticket .ticket-bg {
+    background-image: none;
+  }
+
+  #jackpot .ticket-section {
+    background: #321b41;
+    padding: 34px 30px 30px 30px;
+  }
+
+  #jackpot .ticket-section .ticket-lucky {
+    object-fit: fill;
+    width: 100%;
+    height: 70px;
+  }
+
+  #jackpot .ticket-section .ticket-logo {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown .logocrown {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .openmobile {
+    display: block;
+  }
+
+  #jackpot .ticketpc {
+    display: none;
+  }
 }
 
 @media (max-width: 564px) {
@@ -436,6 +574,77 @@
 
   #jackpot .header #header-game-id {
     width: 166px;
+  }
+
+  #jackpot .ticket-section .ticket .ticket-bg {
+    background-image: none;
+  }
+
+  #jackpot .ticket-section {
+    background: #321b41;
+    padding: 34px 30px 30px 30px;
+  }
+
+  #jackpot .ticket-section .ticket-lucky {
+    object-fit: fill;
+    width: 100%;
+    height: 40px;
+  }
+
+  #jackpot .ticket-section .ticket-logo {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  #jackpot .ticket-section .ticket-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .ticket-section .ticket-logocrown .logocrown {
+    width: 30px;
+    height: 30px;
+    object-fit: fill;
+  }
+
+  #jackpot .openmobile {
+    display: block;
+  }
+
+  #jackpot .ticketpc {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  #jackpot .navbar-wrapper .nav-item {
+    width: 95px;
+    padding: 10px 10px 10px 10px;
+    height: 60px;
+  }
+
+  .game-id {
+    display: none;
+  }
+
+  #jackpot .header #header-game-date {
+    display: none;
+  }
+
+  #jackpot .header {
+    padding: 0px;
+  }
+
+  #jackpot .header #header-game-id {
+    width: 120px;
   }
 
   #jackpot .ticket-section .ticket .ticket-bg {
