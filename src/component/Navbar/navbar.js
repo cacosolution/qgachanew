@@ -58,6 +58,9 @@ const Navbar = () => {
         if (langRef.current && !langRef.current.contains(event.target)) {
             setIsLang(false);
         }
+        if (profileRef.current && !profileRef.current.contains(event.target)) {
+            setIsProfile(false);
+        }
     };
 
     useEffect(() => {

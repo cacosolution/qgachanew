@@ -565,7 +565,7 @@
 }
 
 .main-home {
-  height: 1350px;
+  height: auto;
   margin-left: auto;
   width: 90%;
   margin-right: auto;
@@ -575,7 +575,7 @@
 }
 
 .main-home.active {
-  height: 1350px;
+  height: auto;
   width: 75%;
   animation: expandAfterActive 0.25s linear;
   animation-iteration-count: 1;
