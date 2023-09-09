@@ -43,6 +43,7 @@
   }
 }
 
+
 @media (min-width: 577px) {
   .mobile {
     display: none !important;
@@ -51,12 +52,6 @@
   .pc {
     display: block !important;
   }
-
-
-
-
-
-
 }
 
 @media (min-width: 577px) and (max-width: 949px) {
@@ -1164,6 +1159,8 @@
     bottom: -3px;
     z-index: 1;
   }
+
+ 
 
   .img-spin {
     width: 60px;
