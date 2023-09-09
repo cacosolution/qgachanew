@@ -8,6 +8,16 @@
   width: 45px;
 }
 
+.img-spin {
+  width: 60px;
+  height: 51px;
+  z-index: 99;
+  position: absolute;
+  top: -20%;
+  left: 80%;
+  display: none;
+}
+
 @media (max-width: 1368px) {
   header .header-right {
     width: -moz-max-content;
@@ -44,6 +54,9 @@
 
 
 
+
+
+
 }
 
 @media (min-width: 577px) and (max-width: 949px) {
@@ -72,6 +85,17 @@
   .pc {
     display: none !important;
   }
+
+  .img-spin {
+    width: 60px;
+    height: 51px;
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    display: block;
+  }
+
 
   main .side-bar {
     width: 0;
@@ -1088,6 +1112,16 @@
     z-index: 1;
   }
 
+  .img-spin {
+    width: 60px;
+    height: 51px;
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    display: block;
+  }
+
   .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
     font-size: 15px;
     max-width: 15%;
@@ -1131,6 +1165,16 @@
     z-index: 1;
   }
 
+  .img-spin {
+    width: 60px;
+    height: 51px;
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    display: block;
+  }
+
   .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {
     font-size: 15px;
     max-width: 15%;
@@ -1172,6 +1216,16 @@
     position: absolute;
     bottom: -3px;
     z-index: 1;
+  }
+
+  .img-spin {
+    width: 60px;
+    height: 51px;
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    display: block;
   }
 
   .main-home .main-contentevendetail.main-event .info-detail h4 {
@@ -1227,6 +1281,16 @@
     position: absolute;
     bottom: -3px;
     z-index: 1;
+  }
+
+  .img-spin {
+    width: 60px;
+    height: 51px;
+    z-index: 99;
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    display: block;
   }
 
   .main-home .main-contentevendetail.main-event .info-guide .total-max span.total {

@@ -2,11 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/flickity.css"
 import "../css/home.css"
 import "../css/responsive.css"
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CarouselIndex from '../component/Carousel/carouselIndex';
 
 import Layout from '../layout';
+import { SidebarContext } from '../context/sideBarContext';
 
 
 const Home = () => {
@@ -26,6 +27,16 @@ const Home = () => {
     const onlyLettersRegex = /^[a-zA-Z]+$/;
     const alphanumericRegex = /^[0-9a-zA-Z]+$/;
     const vietnameseCharactersRegex = "/[^\x00-\x7F]+/";
+    const {
+        isOpenSpin,
+        setIsOpenSpin,
+        isOpenQuest,
+        setIsOpenQuest,
+        isOpenRefer,
+        setIsOpenRefer,
+        isOpenSupport,
+        setIsOpenSupport
+    } = useContext(SidebarContext)
 
 
     const handlerLogin = () => {
@@ -369,12 +380,16 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="banner-main" >
+
                     <div className="banner-content">
                         <h3>Join and enjoy rewards</h3>
                         <h1>up to <span>100.000$</span></h1>
                         <button onClick={() => setIsOpenResgiter(!isOpenResgiter)} >SIGN UP NOW</button>
                     </div>
                     <img src="./images/img-main1.png" alt="banner-home" />
+                    <div>
+                        <img src='./images/icons/spin-lucky.svg' className='img-spin' onClick={() => setIsOpenSpin(!isOpenSpin)} />
+                    </div>
                     <div className="mobile">
                         <div className="list-social d-flex">
                             <a className="social-item" href="http://youtube.com/@qgacha" target="_blank" rel="noopener noreferrer">

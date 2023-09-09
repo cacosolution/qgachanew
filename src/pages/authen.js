@@ -387,6 +387,9 @@ const Authen = () => {
                 <h1>up to <span>100.000$</span></h1>
                 <button onClick={() => setIsOpenResgiter(!isOpenResgiter)} >SIGN UP NOW</button>
               </div>
+              <div>
+                <img src='./images/icons/spin-lucky.svg' className='img-spin' />
+              </div>
               <img src="./images/img-main1.png" alt="banner-home" />
               <div className="mobile">
                 <div className="list-social d-flex">
