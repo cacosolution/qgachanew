@@ -16,6 +16,10 @@ const Setting = () => {
     const [ghostMode, setGhostMode] = useState(true)
     const [statistics, setStatistics] = useState(false)
     const [emailMarketing, setEmailMarketing] = useState(true)
+
+
+
+
     const handelModal = (dropdownNumber) => {
         setIsOpenSelect(!isOpenSelect)
     }
@@ -49,14 +53,14 @@ const Setting = () => {
                     <div className="feature-content d-flex">
                         <div className="list-feature listmobile">
                             <ul>
-                                <li className={`feature-item d-flex align-items-center ${isSetting === true ? "active" : ""}`}>
-                                    <button style={{ background: "none", border: "none" }} className="feature-title text-15" onClick={handlerChangeSetting}>General</button>
+                                <li className={`feature-item d-flex align-items-center ${isSetting === true ? "active" : ""}`} onClick={handlerChangeSetting}>
+                                    <button style={{ background: "none", border: "none" }} className="feature-title text-15" >General</button>
                                 </li>
-                                <li className={`feature-item d-flex align-items-center ${isSecurity === true ? "active" : ""}`} >
-                                    <h4 className="feature-title text-15" onClick={handlerChangeSecurity}>Security</h4>
+                                <li className={`feature-item d-flex align-items-center ${isSecurity === true ? "active" : ""}`} onClick={handlerChangeSecurity}>
+                                    <h4 className="feature-title text-15" >Security</h4>
                                 </li>
-                                <li className={`feature-item d-flex align-items-center ${isReferences === true ? "active" : ""} border-bottom-0`} >
-                                    <h4 className="feature-title text-15" onClick={handlerChangeReferences}>Preferences</h4>
+                                <li className={`feature-item d-flex align-items-center ${isReferences === true ? "active" : ""} border-bottom-0`} onClick={handlerChangeReferences}>
+                                    <h4 className="feature-title text-15" >Preferences</h4>
                                 </li>
                                 <li className="feature-item d-flex align-items-center">
                                     <h4 className="feature-title text-15">Verify</h4>
@@ -66,7 +70,7 @@ const Setting = () => {
                         </div>
 
                         {isSetting ? (
-                            <div className="feature-detail">
+                            <div className="feature-detail" style={{ width: "987px" }}>
                                 <div className="feature-header pc">
                                     Email
                                 </div>
@@ -105,7 +109,7 @@ const Setting = () => {
                             </div>
 
                         ) : isSecurity ? (
-                            <div className="d-flex flex-column SecurityiPad" style={{ width: "1100px" }}>
+                            <div className="d-flex flex-column SecurityiPad" style={{ width: "987px" }}>
 
                                 <div className="box-change">
                                     <div className="Settingmobile" onClick={handelModal}>
@@ -186,7 +190,7 @@ const Setting = () => {
                                 </div>
                             </div>
                         ) : isReferences ? (
-                            <div className="d-flex flex-column">
+                            <div className="d-flex flex-column" style={{ width: "987px" }}>
                                 <div className="reference-box box-change">
                                     <div className="Settingmobile" onClick={handelModal}>
                                         General
@@ -216,7 +220,11 @@ const Setting = () => {
                                     <div className="content-sw">
                                         <div className="switch-item d-flex align-items-center">
                                             <div className="form-check form-switch">
-                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                                <input className="form-check-input swtich-btn"
+                                                    style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                                    checked={ghostMode}
+                                                    onChange={() => setGhostMode(!ghostMode)}
+                                                />
                                             </div>
                                             <div className="item-info">
                                                 <h4>Enable Ghost Mode</h4>
@@ -225,7 +233,11 @@ const Setting = () => {
                                         </div>
                                         <div className="switch-item d-flex align-items-center">
                                             <div className="form-check form-switch">
-                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                                <input className="form-check-input swtich-btn"
+                                                    style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                                    checked={statistics}
+                                                    onChange={() => setStatistics(!statistics)}
+                                                />
                                             </div>
                                             <div className="item-info">
                                                 <h4>Hide all your statistics</h4>
@@ -246,11 +258,16 @@ const Setting = () => {
                                     <div className="content-sw">
                                         <div className="switch-item d-flex align-items-center">
                                             <div className="form-check form-switch">
-                                                <input className="form-check-input swtich-btn" style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+                                                <input
+                                                    className="form-check-input swtich-btn"
+                                                    style={{ width: "44px", marginRight: "20px" }} type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                                    checked={emailMarketing}
+                                                    onChange={() => setEmailMarketing(!emailMarketing)}
+                                                />
                                             </div>
                                             <div className="item-info">
-                                                <h4>Hide all your statistics</h4>
-                                                <h5>Other users won't be able to view your statistics</h5>
+                                                <h4>Receive Email Marketing</h4>
+                                                <h5>Opt Out From Marketing Emails Or Offers</h5>
                                             </div>
                                         </div>
                                     </div>

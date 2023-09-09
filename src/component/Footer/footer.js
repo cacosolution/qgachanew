@@ -224,7 +224,7 @@ const Footer = () => {
         <div className="mobile menu-bottom" style={{ zIndex: 999999 }}>
           <div className="list-feature">
 
-            <Link to="/completedgacha">
+            <Link to="/boxgacha">
               <div className="menu-feature d-flex flex-column justify-content-center align-items-center w-49">
                 <img src="./images/icons/gacha.png" alt="" />
                 <div className="name-feature">Gacha</div>

@@ -168,9 +168,9 @@ const SidebarChat = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="box-action d-flex align-items-center">
-                            <input type="text" placeholder="Your message" />
-                            <button><img src="./images/icons/deposit/send.svg" alt="" /></button>
+                        <div className="box-action d-flex align-items-center" >
+                            <input type="text" placeholder="Your message" style={{ zIndex: 99999 }} />
+                            <button style={{ zIndex: 99999 }}><img src="./images/icons/deposit/send.svg" alt="" /></button>
                         </div>
                     </div>
                 </header>

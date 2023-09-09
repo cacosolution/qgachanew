@@ -81,10 +81,22 @@ const Navbar = () => {
             setIsOpenProfileEdit(false)
         }
     };
-
-
-
-
+    const handlerChangeBalance = async () => {
+        await dispatch({ type: "SET_IS_OPEN_BALANCE" })
+        await setIsProfile(!isProfile)
+    }
+    const handlerChangeDeposit = async () => {
+        await dispatch({ type: "SET_IS_OPEN_DEPOSIT" })
+        await setIsProfile(!isProfile)
+    }
+    const handlerChangeWithdraw = async () => {
+        await dispatch({ type: "SET_IS_OPEN_WITHDRAW" })
+        await setIsProfile(!isProfile)
+    }
+    const handlerChangeTransaction = async () => {
+        await dispatch({ type: "SET_IS_OPEN_TRANSACTION" })
+        await setIsProfile(!isProfile)
+    }
     return (
         <div className="bg-header">
             <header className="d-flex align-items-center">
@@ -108,7 +120,7 @@ const Navbar = () => {
                                     fill="white" />
                             </svg>
                         </div>
-                        <Link onClick={() => dispatch({ type: "SET_IS_OPEN_DEPOSIT" })} to={"/wallet"}>
+                        <Link onClick={handlerChangeDeposit} to={"/wallet"}>
 
                             <button className="btn-auth btn-deposit d-flex align-items-center ms-3" >
 
@@ -118,8 +130,6 @@ const Navbar = () => {
                         </Link>
 
                         {/* <!-- BOX NOTIFICATION --> */}
-
-
                         <div className="noti-container">
                             <img className="noti-icon" onClick={ModalNofi} src="./images/icons/bell.png" alt="" />
                         </div>
@@ -140,7 +150,7 @@ const Navbar = () => {
                         <div className="ava-container" style={{ zIndex: 999 }} ref={profileRef}>
                             <img className="ava-icon ms-3" onClick={ModalProfile} src="./images/icons/avatar-default.svg" alt="" />
                             <div id="box-ava" className={isProfile === true ? `active` : ``}>
-                                <Link onClick={() => dispatch({ type: "SET_IS_OPEN_BALANCE" })} to={"/wallet"} >
+                                <Link onClick={handlerChangeBalance} to={"/wallet"} >
                                     <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/credit-card.svg" alt="" />
                                         <h5 className="feature-content">
@@ -148,7 +158,7 @@ const Navbar = () => {
                                         </h5>
                                     </div>
                                 </Link>
-                                <Link onClick={() => dispatch({ type: "SET_IS_OPEN_WITHDRAW" })} to={"/wallet"} >
+                                <Link onClick={handlerChangeWithdraw} to={"/wallet"} >
                                     <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/withdrawdollar.svg" alt="" />
                                         <h5 className="feature-content">
@@ -157,7 +167,7 @@ const Navbar = () => {
                                     </div>
                                 </Link>
 
-                                <Link onClick={() => dispatch({ type: "SET_IS_OPEN_TRANSACTION" })} to={"/wallet"} >
+                                <Link onClick={handlerChangeTransaction} to={"/wallet"} >
                                     <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/transaction-ava.svg" alt="" />
                                         <h5 className="feature-content">
@@ -165,8 +175,7 @@ const Navbar = () => {
                                         </h5>
                                     </div>
                                 </Link>
-                                <Link to={"/affiliate"}>
-
+                                <Link onClick={() => setIsProfile(!isProfile)} to={"/affiliate"}>
                                     <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/affiliate.png" alt="" />
                                         <h5 className="feature-content">Affiliate</h5>
@@ -179,7 +188,7 @@ const Navbar = () => {
                                     <h5 className="feature-content">Profile</h5>
                                 </div>
 
-                                <Link to={"/setting"}>
+                                <Link onClick={() => setIsProfile(!isProfile)} to={"/setting"}>
                                     <div className="feature-item d-flex align-items-center">
                                         <img src="./images/icons/setting-icon.svg" alt="" />
                                         <h5 className="feature-content">Setting</h5>

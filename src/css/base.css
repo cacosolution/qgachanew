@@ -556,10 +556,7 @@ header #box-ava .feature-item h5 {
   line-height: 0px;
 }
 
-header #box-ava .feature-item:hover {
-  transition: 0.3s;
-  background-color: #53386a;
-}
+
 
 header #box-language,
 header #box-ava {
