@@ -13,7 +13,9 @@ const Setting = () => {
     const [isReferences, setIsReferences] = useState(false);
     const [isOpenVerification, setIsOpenVerification] = useState(false)
     const [isOpenSelect, setIsOpenSelect] = useState(false)
-
+    const [ghostMode, setGhostMode] = useState(true)
+    const [statistics, setStatistics] = useState(false)
+    const [emailMarketing, setEmailMarketing] = useState(true)
     const handelModal = (dropdownNumber) => {
         setIsOpenSelect(!isOpenSelect)
     }
