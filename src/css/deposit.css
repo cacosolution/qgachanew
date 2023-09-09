@@ -720,13 +720,17 @@
   margin-right: 11px;
   padding: 11px;
   height: -moz-max-content;
-  height: max-content;
+  height: 246px;
+  /* flex-shrink: 0; */
 }
 
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item {
   transition: 0.3s;
   cursor: pointer;
-  padding: 10px;
+  padding: 25px 25px 25px 11px;
+  height: 50px;
+  gap: 10;
+
 }
 
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item img {
@@ -758,7 +762,7 @@
 }
 
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item:last-child {
-  border-top: 1px solid #6b6b6b;
+  /* border-top: 1px solid #6b6b6b; */
 }
 
 .main-deposit .deposit-content .feature-content .feature-detail {

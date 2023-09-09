@@ -12,7 +12,7 @@ const Faq = () => {
   return (
     <Layout>
       <div className="main-faq">
-        <div className="main-content">
+        <div className="main-content-faq">
           <button className="btn-faq">FAQ</button>
           <section className="section-faq">
             <h2>Frequently asked questions</h2>
@@ -28,7 +28,8 @@ const Faq = () => {
                       aria-controls="collapseOne"
                     >
                       <div className="btn-title">
-                        <span className="no-faq">01</span> What is Gacha game?
+                        <span className="no-faq-number">01</span>
+                        <span className="no-faq"> What is Gacha game?</span>
                       </div>
                       <svg
                         width="8"
@@ -69,8 +70,9 @@ const Faq = () => {
                       aria-controls="collapseTwo"
                     >
                       <div className="btn-title">
-                        <span className="no-faq">02</span> What are the different
-                        genres of Gacha games?
+                        <span className="no-faq-number">02</span>
+                        <span className="no-faq"> What are the different
+                          genres of Gacha games?</span>
                       </div>
                       <svg
                         width="8"
@@ -110,8 +112,9 @@ const Faq = () => {
                       aria-controls="collapseThree"
                     >
                       <div className="btn-title">
-                        <span className="no-faq">03</span>What does the QGacha
-                        ecosystem offer?
+                        <span className="no-faq-number">03</span>
+                        <span className="no-faq">What does the QGacha
+                          ecosystem offer?</span>
                       </div>
                       <svg
                         width="8"
@@ -155,7 +158,8 @@ const Faq = () => {
                       aria-controls="collapseThree"
                     >
                       <div className="btn-title">
-                        <span className="no-faq">04</span>How to deposit?
+                        <span className="no-faq-number">04</span>
+                        <span className="no-faq">How to deposit?</span>
                       </div>
                       <svg
                         width="8"
@@ -218,7 +222,8 @@ const Faq = () => {
                       aria-controls="collapseThree"
                     >
                       <div className="btn-title">
-                        <span className="no-faq">05</span>How to withdraw?
+                        <span className="no-faq-number">05</span>
+                        <span className="no-faq">How to withdraw?</span>
                       </div>
                       <svg
                         width="8"
