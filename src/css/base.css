@@ -194,6 +194,28 @@ header .header-content .header-action {
   padding-right: 14px;
 }
 
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 840px) {
+  .img-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-mobile {
+    display: block;
+  }
+}
+
 header .header-content .header-action * {
   cursor: pointer;
 }

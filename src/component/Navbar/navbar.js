@@ -102,7 +102,7 @@ const Navbar = () => {
             <header className="d-flex align-items-center">
                 <div className="header-content d-flex align-items-center ">
                     <Link to={"/"} className={`img-index ${isOpenSideBar && "active"}`} >
-                        <img className="" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
+                        <img className="img-mobile" style={{ width: "30px" }} src="./images/icons/logo-mobile.svg" alt="logo-mobile" />
                         <img className="pc" style={{ width: "166px", height: "56px" }} src="./images/icons/logo.svg" alt="logo-pc" />
                     </Link>
                     <div className="header-action d-flex align-items-center">
