@@ -93,7 +93,7 @@ const Setting = () => {
                                 <div className="feature-body">
                                     <div className="email-action d-flex justify-content-between align-items-end">
                                         <div className="email-wrapper">
-                                            <label for="email">Email</label>
+                                            <label for="email" style={{ color: "#9E9E9E" }}>Email <span style={{ color: "red" }}>*</span></label>
                                             <input type="text" className="form-control" placeholder="Email" id="email" />
                                         </div>
                                         <div className="btn-resend d-flex align-items-center">
