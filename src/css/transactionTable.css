@@ -89,6 +89,15 @@
   height: 100%;
 }
 
+.text-s13-w7 {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
 .transaction-table.detail-trans table td.amount,
 .transaction-table.detail-trans table td.status {
   color: #e275f9;

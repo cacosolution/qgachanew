@@ -52,59 +52,21 @@ const Wallet = () => {
                             <button className="btn-wallet text-wallet-logo" >Wallet
                                 <img className="mobile"
                                     src="./images/icons/deposit/icon-exit.svg" alt="" /></button>
-                            <div className="feature-content d-flex" style={{ width: "470px", margin: "auto" }}>
-                                <div>
-                                    <div className="list-feature hide-pc">
-                                        <ul>
 
-                                            <li className="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
-                                                <img src="./images/icons/deposit/wallet.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Balance</h4>
-                                            </li>
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
-                                                <img src="./images/icons/deposit/deposit.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Deposit</h4>
-                                            </li>
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
-
-                                                <img src="./images/icons/deposit/withdraw.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Withdraw</h4>
-                                            </li>
-                                            <li className="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/buy.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Buy Crypto <span>(Coming Soon)</span></h4>
-                                            </li>
-                                            <li className="feature-item d-flex align-items-center">
-                                                <img src="./images/icons/deposit/nft.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">NFTs <span>(Coming Soon)</span></h4>
-                                            </li>
-
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
-                                                <img src="./images/icons/deposit/transaction.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Transaction</h4>
-                                            </li>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                            </div>
                             <div className="feature-content  d-flex">
                                 <div>
-                                    <div className="list-feature hide-mobi">
+                                    <div className="list-feature hide-mobi" style={{ height: "316px" }}>
                                         <ul>
 
-                                            <li className="feature-item d-flex align-items-center " onClick={handlerChangeBalance}>
+                                            <li className={`feature-item d-flex align-items-center ${isOpenBalance ? "active" : ""}`} onClick={handlerChangeBalance}>
                                                 <img src="./images/icons/deposit/wallet.svg" alt="" className="feature-icon" />
-                                                <h4 className="feature-title text-sidebar-wallet">Balance</h4>
+                                                <h4 className="feature-title text-sidebar-wallet ">Balance</h4>
                                             </li>
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeDeposit}>
+                                            <li className={`feature-item d-flex align-items-center ${isOpenDeposit ? "active" : ""}`} onClick={handlerChangeDeposit}>
                                                 <img src="./images/icons/deposit/deposit.svg" alt="" className="feature-icon" />
                                                 <h4 className="feature-title text-sidebar-wallet">Deposit</h4>
                                             </li>
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeWithdraw}>
+                                            <li className={`feature-item d-flex align-items-center ${isOpenWithdraw ? "active" : ""}`} onClick={handlerChangeWithdraw}>
 
                                                 <img src="./images/icons/deposit/withdraw.svg" alt="" className="feature-icon" />
                                                 <h4 className="feature-title text-sidebar-wallet">Withdraw</h4>
@@ -118,7 +80,7 @@ const Wallet = () => {
                                                 <h4 className="feature-title text-sidebar-wallet">NFTs <span>(Coming Soon)</span></h4>
                                             </li>
 
-                                            <li className="feature-item d-flex align-items-center" onClick={handlerChangeTransaction}>
+                                            <li className={`feature-item d-flex align-items-center ${isOpenTransaction ? "active" : ""}`} onClick={handlerChangeTransaction}>
                                                 <img src="./images/icons/deposit/transaction.svg" alt="" className="feature-icon" />
                                                 <h4 className="feature-title text-sidebar-wallet">Transaction</h4>
                                             </li>
@@ -130,7 +92,7 @@ const Wallet = () => {
                                 </div>
 
                                 {isOpenBalance ? (
-                                    <div className="feature-detail">
+                                    <div className="feature-detail" style={{ padding: "26px" }}>
                                         <div className="header-balance d-flex justify-content-between align-items-center pb-4">
                                             <div className="total d-flex align-items-center">
                                                 <img src="./images/icons/gold.svg" alt="" />
@@ -158,7 +120,7 @@ const Wallet = () => {
 
                                     </div>
                                 ) : isOpenDeposit ? (
-                                    <div className="feature-detail">
+                                    <div className="feature-detail" style={{ height: "661px", padding: "20px" }}>
                                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                                             <li className="nav-item" role="presentation">
                                                 <button className="nav-link active" id="crypto-tab" data-toggle="tab"
@@ -232,7 +194,7 @@ const Wallet = () => {
                                         </div>
                                     </div>
                                 ) : isOpenWithdraw ? (
-                                    <div className="feature-detail">
+                                    <div className="feature-detail" style={{ height: "833px", padding: "23px" }}>
                                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                                             <li className="nav-item" role="presentation">
                                                 <button className="nav-link active" id="crypto-tab" data-toggle="tab"

@@ -672,7 +672,6 @@
   }
 }
 
-
 @media (max-width: 576px) {
   .main-deposit .text-15 {
     font-size: 11px;
@@ -695,7 +694,7 @@
   padding-top: 33px;
   max-height: 860px;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .main-deposit .deposit-content .feature-content .list-feature,
@@ -762,7 +761,7 @@
 }
 
 .main-deposit .deposit-content .feature-content .list-feature ul li.feature-item:last-child {
-  /* border-top: 1px solid #6b6b6b; */
+  border-top: 1px solid #6b6b6b;
 }
 
 .main-deposit .deposit-content .feature-content .feature-detail {
@@ -926,6 +925,7 @@
   border: none;
   padding: 0 20px;
   line-height: 28px;
+  color: white;
 }
 
 @media (max-width: 576px) {
@@ -1155,7 +1155,7 @@
 
   .main-deposit {
     width: 100%;
-    height: 100vh;
+    height: 145vh;
   }
 
   .main-deposit .deposit-content {

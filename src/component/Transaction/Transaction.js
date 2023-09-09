@@ -211,7 +211,7 @@ const Transaction = () => {
                             <td>03/07/2023</td>
                             <td className="status text-end align-items-center" onClick={handlerModal}>
 
-                                <button style={{ background: "none", border: "none", color: "white" }}>
+                                <button className='text-s13-w7' style={{ background: "none", border: "none", color: "#E275F9", marginRight: "10px" }}>
                                     Success <svg width="8"
                                         height="6" viewBox="0 0 8 6" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
