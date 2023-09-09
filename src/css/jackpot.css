@@ -298,7 +298,7 @@
 
 #jackpot .winner-table .winner-table-paginate {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-top: 24px;
   padding-bottom: 43px;
 }

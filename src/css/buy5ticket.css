@@ -56,7 +56,7 @@
 
 .buy-five-ticket .luckynumber-form .form .form--wrapper {
   width: 100%;
-  align-items: start;
+  align-items: flex-start;
   display: flex;
 }
 
@@ -278,7 +278,7 @@
 
 .buy-five-ticket .luckynumber-form .form .form--wrapper .luckynumber-form-header--wraper .luckynumber-form-item-section-wrapper .luckynumber-form-item-input-suggestion-btn--wrapper .luckynumber-form-item-input-clear-btn--wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 46px;
 }
 
@@ -358,7 +358,7 @@
 
 .luckynumber-form-item-payment-amount--wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .luckynumber-form-item-payment-amount--wrapper #luckynumber-form-item-payment--currency {
