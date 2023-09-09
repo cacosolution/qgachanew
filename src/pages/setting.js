@@ -47,13 +47,13 @@ const Setting = () => {
                     <div className="feature-content d-flex">
                         <div className="list-feature listmobile">
                             <ul>
-                                <li className="feature-item d-flex align-items-center ">
+                                <li className={`feature-item d-flex align-items-center ${isSetting === true ? "active" : ""}`}>
                                     <button style={{ background: "none", border: "none" }} className="feature-title text-15" onClick={handlerChangeSetting}>General</button>
                                 </li>
-                                <li className="feature-item d-flex align-items-center">
+                                <li className={`feature-item d-flex align-items-center ${isSecurity === true ? "active" : ""}`} >
                                     <h4 className="feature-title text-15" onClick={handlerChangeSecurity}>Security</h4>
                                 </li>
-                                <li className="feature-item d-flex align-items-center border-bottom-0">
+                                <li className={`feature-item d-flex align-items-center ${isReferences === true ? "active" : ""} border-bottom-0`} >
                                     <h4 className="feature-title text-15" onClick={handlerChangeReferences}>Preferences</h4>
                                 </li>
                                 <li className="feature-item d-flex align-items-center">
@@ -103,7 +103,7 @@ const Setting = () => {
                             </div>
 
                         ) : isSecurity ? (
-                            <div className="d-flex flex-column SecurityiPad">
+                            <div className="d-flex flex-column SecurityiPad" style={{ width: "1100px" }}>
 
                                 <div className="box-change">
                                     <div className="Settingmobile" onClick={handelModal}>
@@ -296,7 +296,7 @@ const Setting = () => {
                 </div>
 
             </div>
-        </Layout>
+        </Layout >
 
     );
 };
